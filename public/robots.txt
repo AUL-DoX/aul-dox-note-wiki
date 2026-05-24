@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aul-dox-note-wiki.vercel.app/sitemap.xml
