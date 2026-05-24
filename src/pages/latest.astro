@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import WikiLayout from '../layouts/WikiLayout.astro';
+import WikiCard from '../components/WikiCard.astro';
+import { isPublicEntry, sortByUpdatedDesc } from '../content/wiki';
+
+const allEntries = await getCollection('wiki');
+const entries = sortByUpdatedDesc(allEntries.filter(isPublicEntry));
+---
+
+<WikiLayout wide title="最新更新 | AUL DoX note-wiki" description="AUL DoX note-wikiで最近更新されたページ一覧">
+  <section class="page-header">
+    <p class="eyebrow">Latest</p>
+    <h1>最新更新</h1>
+    <p>更新日順にページを並べています。各カードの更新メモで、何を追加・整理したページか確認できます。</p>
+  </section>
+  <div class="wiki-grid">
+    {entries.map((entry, index) => <WikiCard entry={entry} rank={index + 1} />)}
+  </div>
+</WikiLayout>

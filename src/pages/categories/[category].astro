@@ -1,0 +1,42 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import NoteArticleList from '../../components/NoteArticleList.astro';
+import WikiSidebar from '../../components/WikiSidebar.astro';
+import { getCategoryBySlug } from '../../content/categories';
+import { getNoteCategories, getNoteIndexData, getNotePageItems, getTotalNotePages } from '../../content/noteIndex';
+
+export async function getStaticPaths() {
+  const { categories } = await getNoteIndexData();
+  return categories.map((category) => ({ params: { category: category.slug } }));
+}
+
+const { category } = Astro.params;
+const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
+const categoryInfo = getCategoryBySlug(category);
+const filteredItems = allItems.filter((item) => getNoteCategories(item).includes(category));
+const currentPage = 1;
+const totalPages = getTotalNotePages(filteredItems);
+const pageItems = getNotePageItems(filteredItems, currentPage);
+const title = categoryInfo?.title ?? category;
+---
+
+<WikiLayout wide title={`${title} | AUL DoX note-wiki`} description={`${title}に関連するnote記事一覧`}>
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Category</p>
+      <h1>{title}</h1>
+      {categoryInfo?.description && <p>{categoryInfo.description}</p>}
+    </div>
+  </section>
+
+  <div class="wiki-shell">
+    <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
+    <NoteArticleList
+      items={pageItems}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      totalItems={filteredItems.length}
+      basePath={`/categories/${category}/`}
+    />
+  </div>
+</WikiLayout>

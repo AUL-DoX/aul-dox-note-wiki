@@ -1,0 +1,832 @@
+{
+  "source": "https://note.com/chic_wren6567/rss",
+  "fetchedAt": "2026-05-23T03:39:29.448Z",
+  "count": 117,
+  "items": [
+    {
+      "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
+      "url": "https://note.com/chic_wren6567/n/neb51186fbb51",
+      "published": "Sat, 09 May 2026 16:14:11 +0900",
+      "description": "ブロックを並べるだけで、LPのコードが完成する。AUL web block Basic 取扱説明書 – AUL｜Analyze U Labaul-dox.jp Webページを作りたいと思ったとき、選択肢はだいたいこうだ。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "「非エンジニア」は免罪符になるのか？AI時代のツール有料配布とE2Eテストの責任",
+      "url": "https://note.com/chic_wren6567/n/n6cb6fc2bd120",
+      "published": "Mon, 18 May 2026 18:43:26 +0900",
+      "description": "※この記事は「非エンジニア」を批判するものではありません（私も非エンジニア）。あくまでも「非エンジニア」という言葉の使い方の問題提起です。AIによって、プログラミングのハードルは大きく下がりました。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年5月 第2週】トリプル改定「5月15日デッドライン」通過！激動の1週間と6月施行に向けた次の一手",
+      "url": "https://note.com/chic_wren6567/n/n913ada26bbe5",
+      "published": "Sat, 16 May 2026 15:30:41 +0900",
+      "description": "医療・介護・障がい福祉分野トレンドワードTop5（2026年5月11日〜5月15日） – AUL｜Analyze U Labaul-dox.jp 医療・介護・障がい福祉の事務担当者の皆様、本当にお疲れ様でした。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年5月 第3週】トリプル改定カウントダウン！施行直前のシステムテストと「ベア額内示」のリアル",
+      "url": "https://note.com/chic_wren6567/n/n7729b0705041",
+      "published": "Sat, 23 May 2026 07:26:13 +0900",
+      "description": "医療福祉 週刊トレンドレポート（2026年5月18日〜5月22日調査） – AUL｜Analyze U Labaul-dox.jp 医療・介護・障がい福祉の経営者・管理職の皆様、本当にお疲れ様です。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年5月第1週】トリプル改定の正念場！5月15日のデッドラインと実務の最終チェック",
+      "url": "https://note.com/chic_wren6567/n/nac8e65c049de",
+      "published": "Sat, 09 May 2026 08:16:47 +0900",
+      "description": "医療・介護・障がい福祉分野トレンドワードTop5（2026年5月4日〜5月8日） – AUL｜Analyze U Labaul-dox.jp 2026年5月、大型連休が明けましたが、医療・介護・障がい福祉の経営者・事務担当者に休息の暇はありません。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【DX定着の壁①】自治体の約8割がDXツールを「紙・電話」に戻した——失敗の本質はどこにあるか",
+      "url": "https://note.com/chic_wren6567/n/nf6af94fb8923",
+      "published": "Tue, 19 May 2026 18:19:36 +0900",
+      "description": "【実態調査】自治体DX、導入後に待ち受ける「定着」の壁 約8割が「導入後、以前のやり方に戻った経験がある」と回答 〜ツール導入の“その後”に潜む、自治体DXの課題が明らかに〜 - rakumo株式会社rakumo 株式会社は、庁内ツールを導入済みの自治体において、DX推進担当者115名を対象に、自治体DXにおける庁内ツーcorporate.rakumo.com 2026年5月、rakumo株式会社が衝撃的な調査結果を発表した。庁内ツールを導入済みの自治体担当者115名に聞いたところ、78.3%がツール導入後に「以前のやり方への逆戻り」を経験しているというのだ。完全移行できたのはわずか16.5%。残りの8割超は、グループウェアやワークフローを導入したにもかかわらず、紙・メール・電話に戻っていた。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【DX定着の壁②】DX前に「やりとりの地図」を描け——社内トランザクション分析という視点",
+      "url": "https://note.com/chic_wren6567/n/n584f5521097a",
+      "published": "Wed, 20 May 2026 18:29:24 +0900",
+      "description": "前回、自治体の78.3%がDXツールを導入後に「以前のやり方」に戻したという調査を取り上げた。そしてその調査が、導入前に何をしたかを一切問うていないという盲点を指摘した。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【DX定着の壁③】「全員が使わないと意味がない」問題——ネットワーク効果と変革設計",
+      "url": "https://note.com/chic_wren6567/n/n68ef6fa52a0c",
+      "published": "Thu, 21 May 2026 17:13:21 +0900",
+      "description": "前回、DX導入前に「社内トランザクションの地図」を描くことの重要性を論じた。やりとりの構造を把握せずにツールを配っても、途中で断線する——という話だ。しかし地図が描けたとして、次の壁がある。「組織全体を、どうやって動かすか」だ。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【DX定着の壁④】説明会もマニュアルも効かない理由——大人の学習設計とOJT型定着",
+      "url": "https://note.com/chic_wren6567/n/ne9b1878ace74",
+      "published": "Fri, 22 May 2026 04:58:54 +0900",
+      "description": "前回は「ネットワーク効果」と「変革設計」の話をした。組織を動かす仕掛けを作っても、次の壁が待っている。個人がツールを使いこなせるようになるか、だ。今回の調査が明らかにしたひとつの不都合な事実がある。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【DX定着の壁⑤・最終回】DXツールは「業務の鏡」——福祉・介護・自治体に共通する定着の本質",
+      "url": "https://note.com/chic_wren6567/n/n93592120fdb9",
+      "published": "Fri, 22 May 2026 16:23:01 +0900",
+      "description": "このシリーズでは、自治体の78.3%がDXツールを「紙・電話」に戻したというrakumoの調査を出発点に、4回にわたって「なぜ定着しないのか」を掘り下げてきた。\n① 失敗の本質は導入前にある\n② 業務トランザクションを可視化せずにツールを入れると断線する\n③ ネットワーク効果を無視した任意移行は機能しない\n④ 説明会・マニュアルは「知識伝達」であり「動作習得」ではない\n続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【GAS×Obsidian】スプレッドシートに入力するだけで、社内の業務フローが「地図」になる——AUL In-house Transaction Pro",
+      "url": "https://note.com/chic_wren6567/n/n46a014a785a6",
+      "published": "Fri, 22 May 2026 18:38:00 +0900",
+      "description": "「うちの組織、なんとなく動きが重い」そう感じていても、どこが詰まっているかを正確に説明できる人は少ない。会議で「連携が悪い」「情報共有が足りない」という言葉は出ても、具体的にどの部署のどの業務が止まっているかは、誰も把握していない。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【その加算、誰のため？】①「加算って何？」なぜこんなに複雑なのか〜医療・介護・障がい福祉の報酬制度を解き明かす〜",
+      "url": "https://note.com/chic_wren6567/n/n1d77477216ad",
+      "published": "Mon, 11 May 2026 05:14:52 +0900",
+      "description": "介護や医療の現場で働いていると、「加算」という言葉を毎日のように耳にします。処遇改善加算、科学的介護推進体制加算、口腔衛生管理加算……。その種類はゆうに数十を超え、要件は改定のたびに変わります。でも、そもそも「加算」って何なのでしょう。なぜこんなに複雑になってしまったのでしょうか。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【その加算、誰のため？】②加算は「ボーナス」じゃない。事業所にとっての生命線〜収益の7割を加算が支える、歪んだ経営構造〜",
+      "url": "https://note.com/chic_wren6567/n/nd0eec134be8a",
+      "published": "Tue, 12 May 2026 04:54:00 +0900",
+      "description": "「加算は取れればラッキー」——そんなふうに思っている人がいたとしたら、現場の実情からは大きくかけ離れています。多くの事業所にとって、加算は経営を成り立たせるための生命線です。基本報酬だけでは赤字になる続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【その加算、誰のため？】③書類を書くために介護をしている？〜「手段の逆転」が現場を追い詰める〜",
+      "url": "https://note.com/chic_wren6567/n/n0b399a9e2590",
+      "published": "Wed, 13 May 2026 04:48:14 +0900",
+      "description": "夜勤明けに書類を書く。休日に委員会の議事録を作る。利用者と向き合う時間より、パソコンの前に座る時間の方が長い——。これは誇張ではなく、多くの介護・医療・福祉の現場で起きているリアルです。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【その加算、誰のため？】④不正はなぜ生まれるのか〜真面目な事業所が「地雷」を踏む制度の構造〜",
+      "url": "https://note.com/chic_wren6567/n/n56e9e51c5284",
+      "published": "Thu, 14 May 2026 04:53:19 +0900",
+      "description": "介護・医療の不正請求のニュースが後を絶ちません。しかしその背景には、「悪意ある事業者」だけでは説明しきれない、制度の構造的な問題が潜んでいます。複雑な制度が「不正の温床」を生む続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【その加算、誰のため？】⑤制度はどこへ向かうのか〜「手段」から「インフラ」へ、加算制度の再定義〜",
+      "url": "https://note.com/chic_wren6567/n/n6ed534fce8c2",
+      "published": "Fri, 15 May 2026 04:41:31 +0900",
+      "description": "ここまで4回にわたって、加算制度の構造と、それが現場にもたらす光と影を見てきました。最終回は、制度改革の現在地と、これからあるべき姿について考えます。変化の兆し：一本化とデジタル化続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【札幌大通り】2026年の夏休みの自由研究は、親子でChatGPTで「作って、試して、考える」体験をしてみませんか？",
+      "url": "https://note.com/chic_wren6567/n/n4e896a772381",
+      "published": "Mon, 18 May 2026 04:54:56 +0900",
+      "description": "夏休み親子AI教室「ChatGPTで自由研究を作ってみよう」チャットの仕方・プロンプト・プロジェクト・GPTsまで親子で体験 – AUL｜Analyze U Labaul-dox.jp 夏休みの自由研究。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【障害福祉サービス】届出率87%の陰で——処遇改善加算（新加算）、サービス別格差が示す5つの現実",
+      "url": "https://note.com/chic_wren6567/n/n7e9fddf36a15",
+      "published": "Sun, 17 May 2026 17:39:34 +0900",
+      "description": "福祉・介護職員等処遇改善加算（新加算）― 全体概況（令和６年６月以降 / 対象6,543施設・事業所） – AUL｜Analyze U Labaul-dox.jp 福祉の現場に関わる人間として、この数字を正直に受け止めたい。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "①NotionはGoogle Workspaceの代わりになるのか？便利だから使う前に考えたいこと",
+      "url": "https://note.com/chic_wren6567/n/ncda4ce391fbf",
+      "published": "Tue, 19 May 2026 04:53:23 +0900",
+      "description": "Notionは、最近よく聞く業務ツールのひとつです。メモ、社内Wiki、タスク管理、データベース、プロジェクト管理、議事録、マニュアル作成。これらを1つの画面にまとめられるため、「これだけで仕事が回るのでは？」と感じる人も多いと思います。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "②個人情報を扱う企業がNotion導入前に確認すべきセキュリティと情報漏洩リスク",
+      "url": "https://note.com/chic_wren6567/n/nac4f0d1631d4",
+      "published": "Wed, 20 May 2026 05:30:09 +0900",
+      "description": "Notionは、社内Wiki、タスク管理、案件管理、ナレッジ共有に使いやすいツールです。情報を1か所にまとめられるため、チーム内の共有はかなり楽になります。会議メモ、顧客対応履歴、マニュアル、進捗管理、社内FAQなどをNotionに集約すれば、仕事の見通しは良くなります。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "③AIツール導入は「便利」より「守れるか」――企業が見落としがちな情報管理の落とし穴",
+      "url": "https://note.com/chic_wren6567/n/n973560972c6e",
+      "published": "Thu, 21 May 2026 05:03:07 +0900",
+      "description": "Notion、ChatGPT、Claude、Gemini、NotebookLM、Obsidian、Slack、Google Drive。今の業務ツールは、どれも便利です。文章を要約できる。資料を整理できる。議事録を作れる。顧客対応メモをまとめられる。タスクを自動化できる。社内ナレッジを検索できる。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Googleフォームの通知が届かない原因はDOM変更？問い合わせ対応で見えたGoogleプロダクト運用の怖さ",
+      "url": "https://note.com/chic_wren6567/n/n1566fd6f5ea8",
+      "published": "Sun, 17 May 2026 06:24:02 +0900",
+      "description": "「ホームページの問い合わせフォームから送信したのですが、回答がないので電話しました」この一言で、はじめて異変に気づきました。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "ObsidianでPC内フォルダを索引化するプラグイン「AUL Local Folder Index」～拡張子分類、元ファイルを閲覧可能～",
+      "url": "https://note.com/chic_wren6567/n/nf21f8599877c",
+      "published": "Fri, 15 May 2026 19:35:26 +0900",
+      "description": "Obsidianを使っていると、こんな悩みがありません？「PCの中にあるPDF、画像、動画、音声ファイルを、Obsidianから探せるようにしたい」続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Obsidianの外でファイルを選び、Obsidianの中で自動整理する。AUL Docshelf+という文書管理の考え方",
+      "url": "https://note.com/chic_wren6567/n/nce5457debbae",
+      "published": "Mon, 11 May 2026 19:27:13 +0900",
+      "description": "もともとは下記記事で紹介していたツールをObsidianのプラグイン申請をしようというところから始まりました。やっていくうちに、「pythonでやってることよりシンプルにしたら、どうなる？」ところが、今回作ったツールの原点です。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "医療・介護・障がい福祉を家族（KP）が一元管理できるアプリ「AUL C-ISIT（シージット）β版」公開～仮に要介護のお父さんが倒れたとき、あなたは何番に電話しますか？",
+      "url": "https://note.com/chic_wren6567/n/n20b7c91c136a",
+      "published": "Sat, 16 May 2026 08:10:52 +0900",
+      "description": "この「AUL C-ISIT（シージット）」は、私の経験上、感じていることをアプリにしました。・利用者さんが事業所を変更するたびに、本人やご家族に何度も同じことを聴かなければいけない・KPを担っているご家族は、すでに何度も同じこと話していることに疲弊している・事業所と家族間の情報が分断されているため、サービス利用までのスピード感が非常に遅い続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "「Gemini for Workspace＝短期記憶・長期記憶ともに要介護3 ...",
+      "url": "https://note.com/chic_wren6567/n/nbc0854e53b49",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "「Markdown ➡ テーブル変換くん」v4.0公開。note用の表だけで ...",
+      "url": "https://note.com/chic_wren6567/n/ne78b9bb96831",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "「このGASは、凄すぎ！」 GASでGoogle Workspaceを「魔改造 ...",
+      "url": "https://note.com/chic_wren6567/n/n48b29d31370a",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "「人材育成」はどこで壊れたのか──育成放棄する組織と",
+      "url": "https://note.com/chic_wren6567/n/n755c995e030d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "「清掃で終わらない未来」をつくるために──札幌の特別高等 ...",
+      "url": "https://note.com/chic_wren6567/n/n151b8353d4d5",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【2026年4月 第3週】医療・介護・障がい福祉改定の「デッド ...",
+      "url": "https://note.com/chic_wren6567/n/n72baaf0dac3d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【2026年度スタート】医療・介護・障がい福祉「トリプル改定」 ...",
+      "url": "https://note.com/chic_wren6567/n/nb539bd085b1d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【STEAM教育 × GAS】Google Apps Scriptで作るSTEAM探究 ...",
+      "url": "https://note.com/chic_wren6567/n/n127c2ad3c383",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【考察】ケアマネ更新研修の廃止は賛成！しかし、専門職として ...",
+      "url": "https://note.com/chic_wren6567/n/n6c6f67329f29",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【深掘り13】あなたの事業所なら、どうする？ーー「認知症のデイ ...",
+      "url": "https://note.com/chic_wren6567/n/n1b2f4a070450",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【深掘り8】あなたの事業所なら、どうする？ーー「加算って",
+      "url": "https://note.com/chic_wren6567/n/n4ad92a2fce3a",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "【要注意】Gemini 2.0 Flash提供終了で何が起こる？Google AI ...",
+      "url": "https://note.com/chic_wren6567/n/n356bb0a994b1",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "④【これは本当に福祉なのか？就労A型・年金・生活保護・労働 ...",
+      "url": "https://note.com/chic_wren6567/n/n9b08c2cefcef",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "⑥【これは本当に福祉なのか？就労A型・年金・生活保護・労働 ...",
+      "url": "https://note.com/chic_wren6567/n/n1b310b0d4780",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "60歳のオヤジが『Google Prompting Essentials』無事修了",
+      "url": "https://note.com/chic_wren6567/n/n237dd2bb3b36",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "85〜89歳が最多25.8%・女性比率67.3%・95歳以上の重度化 ...",
+      "url": "https://note.com/chic_wren6567/n/ndc9bbdad675c",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "⑧障害者雇用はなぜ強化されるのか？法定雇用率引き上げと ...",
+      "url": "https://note.com/chic_wren6567/n/nf05475dcda8d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AIコード生成でエラー解決しない？そんな時は「Gemini Code ...",
+      "url": "https://note.com/chic_wren6567/n/n3137541555b5",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AIに会社を経営させてみたくなった【第5話】— 画面を作った。 ...",
+      "url": "https://note.com/chic_wren6567/n/nec5216a74c31",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AIに会社を経営させてみたくなった【第9話】— ダッシュボードに",
+      "url": "https://note.com/chic_wren6567/n/n1b955783fe42",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AIの使い方が分からない人へ 〜一緒に考えましょう",
+      "url": "https://note.com/chic_wren6567/n/ne4b677880174",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AIの審判：AppleとMicrosoftは安泰か、それとも過去の栄光に ...",
+      "url": "https://note.com/chic_wren6567/n/n1d2544293bfa",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AI業務効率化ツールは、もうレッドオーシャン：次に見るべき ...",
+      "url": "https://note.com/chic_wren6567/n/nba37d030ce66",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AUL Doc Flow（書類整理）は、士業事務所の「書類が多すぎる ...",
+      "url": "https://note.com/chic_wren6567/n/ne09ba08b197b",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AUL DoX - 介護サービスの「単位数・回数」を要介護度別に読む",
+      "url": "https://note.com/chic_wren6567/n/n50fed557e6cb",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "AUL DoX - 人が忙しいんじゃない。仕事の設計が古いだけ",
+      "url": "https://note.com/chic_wren6567/n/nf675d9a5eab9",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Chrome拡張「AI Telemetry Console」をリリースするまで",
+      "url": "https://note.com/chic_wren6567/n/n06326db8b21e",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Chrome拡張機能、今回は一発合格！ プロンプトのお助け ...",
+      "url": "https://note.com/chic_wren6567/n/n2f57b37e9859",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Chrome拡張機能はChrome Web Storeと自サイト配布どっち ...",
+      "url": "https://note.com/chic_wren6567/n/nb56fb31fcc38",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Claude Opus 4.6に感動した。感動した一因には自作の拡張 ...",
+      "url": "https://note.com/chic_wren6567/n/n456eefdb8b8d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Claudeの週次上限は“安全装置”か？そのメリットは、AIが不 ...",
+      "url": "https://note.com/chic_wren6567/n/n0c6ebb2ceac8",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Claudianが話題だけど、私には必要なかった理由【Obsidianと ...",
+      "url": "https://note.com/chic_wren6567/n/n07911f2a8f95",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "DXの前に、OXをやろう― デジタルは組織を変えない。 ...",
+      "url": "https://note.com/chic_wren6567/n/nd7caa9dfccda",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "DX人材に向いてる人・向いてない人の違いは",
+      "url": "https://note.com/chic_wren6567/n/n3b3304e86810",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "DX推進部のための「社内トランザクション診断ツール」を大幅 ...",
+      "url": "https://note.com/chic_wren6567/n/n543ff58efc38",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Gemini 3.0 Proに率直なことを聞いてみた｜AUL DoX",
+      "url": "https://note.com/chic_wren6567/n/n1e53df68835b",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Gemini 3.0を使って感じたこと——ベンチマークは爆上がり",
+      "url": "https://note.com/chic_wren6567/n/n6df4db861f04",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Gemini Canvasに対抗して分かった、AI活用は「完成後の設計 ...",
+      "url": "https://note.com/chic_wren6567/n/n2efc53f282d1",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Gemini3.0が10月22日にリリース？これが本当なら",
+      "url": "https://note.com/chic_wren6567/n/n7d292da65fb6",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Geminiにおけるマルチモーダル機能の減退とスクリーンショット ...",
+      "url": "https://note.com/chic_wren6567/n/n2748cd3fdf29",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Geminiのプロジェクト機能不足を自作ツール「Gemini Prompt ...",
+      "url": "https://note.com/chic_wren6567/n/n7c14daff7269",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Google Apps ScriptでAIエージェント「コード生成」「記事作成」 ...",
+      "url": "https://note.com/chic_wren6567/n/nfeeac9a64ee2",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Google Workspace Flows と GASの関係をちゃんと整理して ...",
+      "url": "https://note.com/chic_wren6567/n/nc7b99b33ef3b",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "Google Workspace Studio で何が変わった？Flows からの ...",
+      "url": "https://note.com/chic_wren6567/n/nc0e85f4715c3",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "My note Explorerは「自分の記事だけ」を効率よく探す便利アプリ",
+      "url": "https://note.com/chic_wren6567/n/ncb63b9caa263",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "noteに表を貼りたいときのMarkdown→Table変換くん v2をv3 ...",
+      "url": "https://note.com/chic_wren6567/n/n5f121f1d3008",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "OCR・書類整理が工賃作業として成立する｜AUL DoX",
+      "url": "https://note.com/chic_wren6567/n/n367480b32ece",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "あなたの県は高い？安い？——都道府県別1人あたり費用額を ...",
+      "url": "https://note.com/chic_wren6567/n/n858b1f60ea86",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "え、俺のツール映ってるんだけど笑｜Googleドライブ整理 ...",
+      "url": "https://note.com/chic_wren6567/n/nbc2d8f8b20b6",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "これで解決｜Markdownテーブル変換ツール v3.1 アップデート ...",
+      "url": "https://note.com/chic_wren6567/n/n53d6a7be0529",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "シュワシュワ」、Claude Codeで「仕上げは、おかあさん」──私 ...",
+      "url": "https://note.com/chic_wren6567/n/na69541f42152",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうしてますか？── 私は今までGistだったけど『Markdown ➡ ...",
+      "url": "https://note.com/chic_wren6567/n/n07e35b8be75e",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうする？ーー「総合事業って、うちの規模で採算が取れている ...",
+      "url": "https://note.com/chic_wren6567/n/n2c244197d9ca",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうする？ーー「総合事業って、県によってこんなに違うの？」と ...",
+      "url": "https://note.com/chic_wren6567/n/n4ef8b120f00c",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうする？ーー「総合事業って、重くなるほど費用がどれくらい ...",
+      "url": "https://note.com/chic_wren6567/n/n29fa98258ca4",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうする？ーー「総合事業の通所って、みんな月額でまとめ ...",
+      "url": "https://note.com/chic_wren6567/n/nc9173c33efea",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "どうする？ーー「総合事業を使っているのって、どんな人が多い ...",
+      "url": "https://note.com/chic_wren6567/n/na4a5f9437873",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "もしかして「AI疲れ」？その正体は「プロンプト疲れ」かもしれません",
+      "url": "https://note.com/chic_wren6567/n/n8f850b2bc700",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "よく使うPersonaを数種固定設定して、必要な「Why / What / ...",
+      "url": "https://note.com/chic_wren6567/n/n3ae9853c7174",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "医療・介護・障がい福祉 週刊トレンドレポート（2025年12月22日 ...",
+      "url": "https://note.com/chic_wren6567/n/nf7636fd92b0a",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "医療・介護・障がい福祉トレンド総まとめ 2026年1月5日〜9日",
+      "url": "https://note.com/chic_wren6567/n/n636f998b2e36",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "医療・介護・障がい福祉の月刊トレンドワード - AUL DoX",
+      "url": "https://note.com/chic_wren6567/n/n1f3337060eb8",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "医療・介護・福祉の報酬改定が「具体的」に。今週の重要トレンド ...",
+      "url": "https://note.com/chic_wren6567/n/nb504edc0d663",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "一般公開しているGPTsやGemsの個人情報保護の問題点",
+      "url": "https://note.com/chic_wren6567/n/n78bf977fdddf",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "介護DXは「ツール導入」では終わらない。介護の管理者兼 ...",
+      "url": "https://note.com/chic_wren6567/n/n3cacbdfe798a",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "介護支援総合ツール (ケアマネージャー版)【デモ版】を作成しま ...",
+      "url": "https://note.com/chic_wren6567/n/n6d5bf3b19a8b",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "介護予防サービスの「単位数・回数」から見えてくるもの。新人 ...",
+      "url": "https://note.com/chic_wren6567/n/na1a80df6b66d",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "虐待防止の鍵は「支援力」の向上にあり：現場の笑顔を守るため ...",
+      "url": "https://note.com/chic_wren6567/n/n0ff3c3a3f06f",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "行政の「B型潰し？」に行き場を失う特別支援学校の生徒たち",
+      "url": "https://note.com/chic_wren6567/n/n481ae270dc26",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "札幌観光なら地下鉄「ドニチカキップ」が最強｜中国人カップル ...",
+      "url": "https://note.com/chic_wren6567/n/ne0d167958193",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "社内で個人アカウントの生成AIを使って仕事して大丈夫？今 ...",
+      "url": "https://note.com/chic_wren6567/n/nc552ae4aa7eb",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "重度療養管理の要介護4+5が100%・リハビリ系37.1%・褥瘡 ...",
+      "url": "https://note.com/chic_wren6567/n/n99baa8ffafd4",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "障がい福祉サービス支援総合ツール 【デモ版】を作成しました",
+      "url": "https://note.com/chic_wren6567/n/nd030fb926f6e",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "人事評価で本当に見られている「エビデンス」と「考察力」",
+      "url": "https://note.com/chic_wren6567/n/n70971e063d81",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "生成AIが拓く！新しい「認知症・フレイル予防」レクリエーション ...",
+      "url": "https://note.com/chic_wren6567/n/n31a3ac162083",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "生成AIで作る、新人職員向け介護技術指導書「移乗」｜AUL DoX",
+      "url": "https://note.com/chic_wren6567/n/n752eb73f04f0",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "昔は「たまごクラブ」「ひよこクラブ」——いまはAIが育児の相棒 ...",
+      "url": "https://note.com/chic_wren6567/n/n79cb21ee1206",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "先生の「考える時間」を減らすための学級通信アシストを作り ...",
+      "url": "https://note.com/chic_wren6567/n/nfc3c2b6069ef",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "全校種対応：次世代型校務支援ツール「AUL Education ...",
+      "url": "https://note.com/chic_wren6567/n/n77aa96183886",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "総合事業サービス受給者数958千人を性別・年齢階級別に徹底 ...",
+      "url": "https://note.com/chic_wren6567/n/n84b3b9569938",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "第3章 介護経営分析Gemでサクッと見える化（訪問介護を ...",
+      "url": "https://note.com/chic_wren6567/n/nf7db979fe694",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "難解マトリクスの医療福祉シフト自動作成ツールβ版を",
+      "url": "https://note.com/chic_wren6567/n/ne8ea17055d48",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "評価は労働実績――就労継続支援A型の制度矛盾を問う - 福祉",
+      "url": "https://note.com/chic_wren6567/n/n4c7a15eb1a30",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "不満を言う人が集まる。「人手不足だ」と嘆く前に。本当に ...",
+      "url": "https://note.com/chic_wren6567/n/n97f318894d41",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "訪問介護の「所要時間」から見えてくるもの——月報第10表 ...",
+      "url": "https://note.com/chic_wren6567/n/n6386f4863f27",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "訪問介護の赤字は「移動費」で決まる｜元管理者が実践した“要 ...",
+      "url": "https://note.com/chic_wren6567/n/n803671899347",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "訪問看護支援総合ツール【デモ版】を作成しました｜AUL DoX",
+      "url": "https://note.com/chic_wren6567/n/n947c9f3482c5",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "傍から見て、ひっ迫感を感じない就労B型「500円もしない ...",
+      "url": "https://note.com/chic_wren6567/n/n4455ba5ca68b",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "要介護度が上がるほど費用はどう変わるか｜介護サービス1人 ...",
+      "url": "https://note.com/chic_wren6567/n/nf3e4a36c595e",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "良いAIプロンプトは「要約力」で決まる‼️抽象的な指示がダメな ...",
+      "url": "https://note.com/chic_wren6567/n/nac441034fcc7",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "令和6年度の医療費は47.98兆円——増加傾向が続く日本 ...",
+      "url": "https://note.com/chic_wren6567/n/n1584d2dba037",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    },
+    {
+      "title": "令和8年度の就労継続支援B型はどう変わる？報酬見直し ...",
+      "url": "https://note.com/chic_wren6567/n/n502144899672",
+      "published": "",
+      "description": "Google検索結果から取得したnote記事URLです。",
+      "source": "google"
+    }
+  ],
+  "googleFetchedAt": "2026-05-23T01:28:53.3295876Z",
+  "sources": [
+    "RSS",
+    "Google browser search",
+    "https://note.com/chic_wren6567/rss"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "aul-dox-note-wiki",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fetch:note": "node scripts/fetch-note-links.mjs",
+    "fetch:note:google": "node scripts/fetch-note-google-search.mjs",
+    "suggest:note-links": "node scripts/suggest-note-links.mjs",
+    "sync:note": "npm run fetch:note && npm run suggest:note-links"
+  },
+  "dependencies": {
+    "astro": "^6.3.7"
+  }
+}

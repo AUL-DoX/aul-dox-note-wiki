@@ -1,0 +1,78 @@
+---
+import { getCollection, render } from 'astro:content';
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import { formatDate, getEntryUpdatedTime, isPublicEntry } from '../../content/wiki';
+import { getCategorySlug } from '../../content/categories';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('wiki')).filter(isPublicEntry);
+
+  return entries.map((entry) => {
+    const slug = entry.id.replace(/\.mdx?$/, '').replace(/\/index$/, '');
+    return {
+      params: { slug },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const categorySlug = getCategorySlug(entry.data.category, entry.data.categorySlug);
+---
+
+<WikiLayout title={`${entry.data.title} | AUL DoX note-wiki`} description={entry.data.description} noteUrl={entry.data.noteUrl}>
+  <article class="article">
+    <div class="article-meta">
+      <a href={`/categories/${categorySlug}/`}>{entry.data.category}</a>
+      <span>公開: {formatDate(entry.data.date)}</span>
+      <span>更新: {formatDate(getEntryUpdatedTime(entry))}</span>
+    </div>
+    <h1>{entry.data.title}</h1>
+    <p class="article-description">{entry.data.description}</p>
+    <div class="tag-list article-tags">
+      {entry.data.tags.map((tag) => <a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a>)}
+    </div>
+    <section class="update-panel" aria-labelledby="update-panel-heading">
+      <h2 id="update-panel-heading">このページの更新情報</h2>
+      <dl>
+        <div>
+          <dt>更新日</dt>
+          <dd>{formatDate(getEntryUpdatedTime(entry))}</dd>
+        </div>
+        <div>
+          <dt>ページ</dt>
+          <dd>{entry.data.title}</dd>
+        </div>
+        {
+          entry.data.updateNote && (
+            <div>
+              <dt>更新メモ</dt>
+              <dd>{entry.data.updateNote}</dd>
+            </div>
+          )
+        }
+      </dl>
+      <a href="/latest/">最新更新一覧へ戻る</a>
+    </section>
+    {
+      entry.data.noteArticles && entry.data.noteArticles.length > 0 && (
+        <section class="note-articles" aria-labelledby="note-articles-heading">
+          <h2 id="note-articles-heading">note記事</h2>
+          <ol>
+            {entry.data.noteArticles.map((article) => (
+              <li>
+                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                  {article.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</WikiLayout>

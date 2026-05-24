@@ -1,0 +1,21 @@
+---
+import { formatDate, getEntryUpdatedTime, getWikiPath } from '../content/wiki';
+import { getCategorySlug } from '../content/categories';
+
+const { entry, rank } = Astro.props;
+const categorySlug = getCategorySlug(entry.data.category, entry.data.categorySlug);
+---
+
+<article class="wiki-card">
+  <div class="wiki-card__meta">
+    {rank && <span class="latest-rank">更新 {rank}</span>}
+    <a href={`/categories/${categorySlug}/`}>{entry.data.category}</a>
+    <span>更新: {formatDate(getEntryUpdatedTime(entry))}</span>
+  </div>
+  <h3><a href={getWikiPath(entry)}>{entry.data.title}</a></h3>
+  <p>{entry.data.description}</p>
+  {entry.data.updateNote && <p class="wiki-card__update">更新メモ: {entry.data.updateNote}</p>}
+  <div class="tag-list" aria-label="タグ">
+    {entry.data.tags.map((tag) => <a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a>)}
+  </div>
+</article>

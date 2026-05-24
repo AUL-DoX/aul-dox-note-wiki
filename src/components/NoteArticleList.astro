@@ -1,0 +1,59 @@
+---
+const { items, currentPage, totalPages, totalItems, basePath = '/' } = Astro.props;
+
+function pageHref(page: number) {
+  if (basePath === '/') {
+    return page === 1 ? '/' : `/page/${page}/`;
+  }
+
+  return page === 1 ? basePath : `${basePath}page/${page}/`;
+}
+---
+
+<section class="wiki-index" aria-label="note記事一覧">
+  <div class="wiki-index-heading">
+    <div>
+      <p class="eyebrow">Note Articles</p>
+      <h2>note記事一覧</h2>
+    </div>
+    <p>{totalItems}件中 {items.length}件</p>
+  </div>
+
+  <div class="note-list note-list--compact">
+    {
+      items.map((item) => (
+        <article class="note-item">
+          <div class="note-item__meta">
+            {item.published && <span>{new Date(item.published).toLocaleDateString('ja-JP')}</span>}
+            <span>{item.source === 'google' ? 'Google由来' : item.source === 'manual' ? '手動採用' : 'RSS由来'}</span>
+          </div>
+          <h2>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              {item.title}
+            </a>
+          </h2>
+          {item.description && <p>{item.description}</p>}
+          <div class="note-item__actions">
+            <a class="note-read-link" href={item.url} target="_blank" rel="noopener noreferrer">noteで読む</a>
+            {item.linkedPages.length > 0 && (
+              <div class="linked-pages">
+                <span>関連wiki</span>
+                {item.linkedPages.map((page) => (
+                  <a href={page.path}>{page.title}</a>
+                ))}
+              </div>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <nav class="pagination" aria-label="ページ送り">
+    {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+      <a class:list={[page === currentPage && 'is-active']} href={pageHref(page)} aria-current={page === currentPage ? 'page' : undefined}>
+        {page}
+      </a>
+    ))}
+  </nav>
+</section>

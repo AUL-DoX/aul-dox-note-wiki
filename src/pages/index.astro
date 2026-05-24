@@ -1,0 +1,44 @@
+---
+import WikiLayout from '../layouts/WikiLayout.astro';
+import NoteArticleList from '../components/NoteArticleList.astro';
+import WikiSidebar from '../components/WikiSidebar.astro';
+import { getNoteIndexData, getNotePageItems, getTotalNotePages } from '../content/noteIndex';
+
+const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
+const currentPage = 1;
+const totalPages = getTotalNotePages(allItems);
+const pageItems = getNotePageItems(allItems, currentPage);
+---
+
+<WikiLayout wide title="AUL DoX note-wiki">
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Note Index</p>
+      <h1>AUL DoX note-wiki</h1>
+      <p>福祉DX、介護DX、就労継続支援、Obsidian活用、GASツール、AI制作メモを調べる入口です。note本文へ移動できる記事一覧を新しい順に整理しています。</p>
+    </div>
+  </section>
+
+  <section class="wiki-search" aria-label="記事検索">
+    <label for="wiki-search-input">記事を検索</label>
+    <input id="wiki-search-input" type="search" placeholder="note記事タイトル、説明文で検索" autocomplete="off" />
+  </section>
+
+  <div class="wiki-shell">
+    <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
+    <NoteArticleList items={pageItems} currentPage={currentPage} totalPages={totalPages} totalItems={allItems.length} />
+  </div>
+
+  <script is:inline>
+    (() => {
+      const input = document.querySelector('#wiki-search-input');
+      const items = [...document.querySelectorAll('.note-item')];
+      input?.addEventListener('input', () => {
+        const query = input.value.trim().toLowerCase();
+        for (const item of items) {
+          item.hidden = !item.textContent.toLowerCase().includes(query);
+        }
+      });
+    })();
+  </script>
+</WikiLayout>

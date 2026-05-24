@@ -1,0 +1,48 @@
+---
+import WikiLayout from '../../../../layouts/WikiLayout.astro';
+import NoteArticleList from '../../../../components/NoteArticleList.astro';
+import WikiSidebar from '../../../../components/WikiSidebar.astro';
+import { getNoteIndexData, getNotePageItems, getNoteTags, getTotalNotePages } from '../../../../content/noteIndex';
+
+export async function getStaticPaths() {
+  const { allItems, sortedTags } = await getNoteIndexData();
+  const paths = [];
+
+  for (const [tag] of sortedTags) {
+    const filteredItems = allItems.filter((item) => getNoteTags(item).includes(tag));
+    const totalPages = getTotalNotePages(filteredItems);
+    for (let page = 2; page <= totalPages; page += 1) {
+      paths.push({ params: { tag, page: String(page) }, props: { tag, page } });
+    }
+  }
+
+  return paths;
+}
+
+const { tag, page: currentPage } = Astro.props;
+const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
+const filteredItems = allItems.filter((item) => getNoteTags(item).includes(tag));
+const totalPages = getTotalNotePages(filteredItems);
+const pageItems = getNotePageItems(filteredItems, currentPage);
+---
+
+<WikiLayout wide title={`#${tag} ${currentPage}ページ目 | AUL DoX note-wiki`} description={`#${tag} に関連するnote記事一覧`}>
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Tag</p>
+      <h1>#{tag}</h1>
+      <p>note記事を10件ずつ表示しています。</p>
+    </div>
+  </section>
+
+  <div class="wiki-shell">
+    <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
+    <NoteArticleList
+      items={pageItems}
+      currentPage={currentPage}
+      totalPages={totalPages}
+      totalItems={filteredItems.length}
+      basePath={`/tags/${encodeURIComponent(tag)}/`}
+    />
+  </div>
+</WikiLayout>

@@ -1,0 +1,36 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import NoteArticleList from '../../components/NoteArticleList.astro';
+import WikiSidebar from '../../components/WikiSidebar.astro';
+import { getNoteIndexData, getNotePageItems, getTotalNotePages } from '../../content/noteIndex';
+
+export async function getStaticPaths() {
+  const { allItems } = await getNoteIndexData();
+  const totalPages = getTotalNotePages(allItems);
+
+  return Array.from({ length: totalPages - 1 }, (_, index) => {
+    const page = index + 2;
+    return { params: { page: String(page) }, props: { page } };
+  });
+}
+
+const { page: currentPage } = Astro.props;
+const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
+const totalPages = getTotalNotePages(allItems);
+const pageItems = getNotePageItems(allItems, currentPage);
+---
+
+<WikiLayout wide title={`note記事一覧 ${currentPage}ページ目 | AUL DoX note-wiki`}>
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Note Index</p>
+      <h1>note記事一覧</h1>
+      <p>note記事を10件ずつ、新しい順に表示しています。</p>
+    </div>
+  </section>
+
+  <div class="wiki-shell">
+    <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
+    <NoteArticleList items={pageItems} currentPage={currentPage} totalPages={totalPages} totalItems={allItems.length} />
+  </div>
+</WikiLayout>

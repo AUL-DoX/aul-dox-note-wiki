@@ -1,0 +1,37 @@
+---
+const { categories, categoryCounts, sortedTags, totalItems } = Astro.props;
+---
+
+<aside class="wiki-sidebar" aria-label="カテゴリとタグ">
+  <section>
+    <h2>カテゴリ</h2>
+    <nav class="sidebar-list">
+      <a class="filter-control is-active" href="/">
+        <span>すべて</span>
+        <strong>{totalItems}</strong>
+      </a>
+      {
+        categories.map((category) => (
+          <a class="filter-control" href={`/categories/${category.slug}/`}>
+            <span>{category.title}</span>
+            <strong>{categoryCounts.get(category.slug) ?? 0}</strong>
+          </a>
+        ))
+      }
+    </nav>
+  </section>
+
+  <section>
+    <h2>タグ</h2>
+    <nav class="sidebar-tags">
+      {
+        sortedTags.map(([tag, count]) => (
+          <a class="filter-control" href={`/tags/${encodeURIComponent(tag)}/`}>
+            <span>#{tag}</span>
+            <strong>{count}</strong>
+          </a>
+        ))
+      }
+    </nav>
+  </section>
+</aside>

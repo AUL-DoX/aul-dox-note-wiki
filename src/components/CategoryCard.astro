@@ -1,0 +1,9 @@
+---
+const { title, slug, description, count = 0 } = Astro.props;
+---
+
+<a class="category-card" href={`/categories/${slug}/`}>
+  <span class="category-card__title">{title}</span>
+  <span class="category-card__description">{description}</span>
+  <span class="category-card__count">{count}件</span>
+</a>

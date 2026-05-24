@@ -1,0 +1,11 @@
+---
+const { href } = Astro.props;
+---
+
+{
+  href && (
+    <a class="note-button" href={href} target="_blank" rel="noopener noreferrer">
+      note本編を読む
+    </a>
+  )
+}

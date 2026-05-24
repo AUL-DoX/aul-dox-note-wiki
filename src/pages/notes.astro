@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import WikiLayout from '../layouts/WikiLayout.astro';
+import noteLinks from '../../data/note-links.json';
+import { getWikiPath, isPublicEntry } from '../content/wiki';
+
+const entries = (await getCollection('wiki')).filter(isPublicEntry);
+const linkedPages = new Map<string, { title: string; path: string; articleTitle: string }[]>();
+
+for (const entry of entries) {
+  for (const article of entry.data.noteArticles ?? []) {
+    const pages = linkedPages.get(article.url) ?? [];
+    pages.push({ title: entry.data.title, path: getWikiPath(entry), articleTitle: article.title });
+    linkedPages.set(article.url, pages);
+  }
+}
+
+const items = noteLinks.items.map((item) => ({
+  ...item,
+  source: item.source ?? 'RSS',
+  linkedPages: linkedPages.get(item.url) ?? [],
+}));
+
+const rssUrls = new Set(items.map((item) => item.url));
+const manualItems = [...linkedPages.entries()]
+  .filter(([url]) => !rssUrls.has(url))
+  .map(([url, pages]) => ({
+    title: pages[0]?.articleTitle ?? url,
+    url,
+    published: '',
+    description: 'RSS最新一覧には含まれていませんが、wikiページのnoteArticlesに採用済みのリンクです。',
+    source: '手動',
+    linkedPages: pages,
+  }));
+
+const allItems = [...items, ...manualItems];
+const rssCount = items.filter((item) => item.source !== 'google').length;
+const googleCount = items.filter((item) => item.source === 'google').length;
+const linkedCount = items.filter((item) => item.linkedPages.length > 0).length;
+const unlinkedCount = items.length - linkedCount;
+---
+
+<WikiLayout wide title="note記事一覧 | AUL DoX note-wiki" description="note RSSから取得した記事URLの一覧">
+  <section class="page-header">
+    <p class="eyebrow">Notes</p>
+    <h1>note記事一覧</h1>
+    <p>note RSSから取得した記事URLです。wikiページに採用済みの記事と、まだ未整理の記事を確認できます。</p>
+  </section>
+
+  <section class="note-summary" aria-label="note記事の集計">
+    <div>
+      <span>{rssCount}</span>
+      <p>RSS由来</p>
+    </div>
+    <div>
+      <span>{googleCount}</span>
+      <p>Google由来</p>
+    </div>
+    <div>
+      <span>{unlinkedCount}</span>
+      <p>未整理</p>
+    </div>
+    <div>
+      <span>{manualItems.length}</span>
+      <p>手動採用</p>
+    </div>
+    <div>
+      <span>{linkedCount + manualItems.length}</span>
+      <p>紐づけ済み</p>
+    </div>
+  </section>
+
+  <div class="note-list">
+    {
+      allItems.map((item) => (
+        <article class="note-item">
+          <div class="note-item__meta">
+            <span class:list={['status-pill', item.linkedPages.length > 0 ? 'status-pill--linked' : 'status-pill--unlinked']}>
+              {item.linkedPages.length > 0 ? '紐づけ済み' : '未整理'}
+            </span>
+            <span>{item.source}</span>
+            {item.published && <span>{new Date(item.published).toLocaleDateString('ja-JP')}</span>}
+          </div>
+          <h2>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              {item.title}
+            </a>
+          </h2>
+          <p>{item.description}</p>
+          {item.linkedPages.length > 0 && (
+            <div class="linked-pages">
+              <span>掲載ページ</span>
+              {item.linkedPages.map((page) => (
+                <a href={page.path}>{page.title}</a>
+              ))}
+            </div>
+          )}
+        </article>
+      ))
+    }
+  </div>
+</WikiLayout>
