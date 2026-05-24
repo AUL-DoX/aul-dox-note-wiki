@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/chic_wren6567/rss",
-  "fetchedAt": "2026-05-23T03:39:29.448Z",
-  "count": 117,
+  "fetchedAt": "2026-05-24T03:57:44.118Z",
+  "count": 120,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -821,6 +821,27 @@
       "published": "",
       "description": "Google検索結果から取得したnote記事URLです。",
       "source": "google"
+    },
+    {
+      "title": "【GAS×Obsidian】医療・福祉スタッフの離職は「見えない連鎖」から起きている──支援の詰まりを可視化するツール",
+      "url": "https://note.com/chic_wren6567/n/nbcc895701f22",
+      "published": "Sun, 24 May 2026 08:33:09 +0900",
+      "description": "医療・福祉の支援の詰まりを可視化するツール『AUL Care Canvas v1.0』取扱説明書 – AUL｜Analyze U Labaul-dox.jp 「田中さん、最近なんか元気ないよね」続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【リスク管理】AI暴走の恐怖、高額請求＆データ破壊を抑止する常駐型LLMガードレール『AI-Agent Shield Pro』",
+      "url": "https://note.com/chic_wren6567/n/n8e863f83e259",
+      "published": "Sun, 24 May 2026 06:07:57 +0900",
+      "description": "AI-Agent Shield 取扱説明書 — ローカル環境におけるAI暴走・インジェクションリスク管理マニュアル – AUL｜Analyze U Labaul-dox.jp 導入：AIエージェントの「暴走」は、PC破壊だけではない続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【AIエージェント暴走対策】プロンプトインジェクションから、ローカルPCを守るLLMガードレール『AI-Agent Shield Basic』",
+      "url": "https://note.com/chic_wren6567/n/n3f65402fa886",
+      "published": "Sun, 24 May 2026 05:50:35 +0900",
+      "description": "AI-Agent Shield 取扱説明書 — ローカル環境におけるAI暴走・インジェクションリスク管理マニュアル – AUL｜Analyze U Labaul-dox.jp 導入：AIエージェントをローカルで動かす「本当の恐怖」を知っていますか？続きをみる",
+      "source": "rss"
     }
   ],
   "googleFetchedAt": "2026-05-23T01:28:53.3295876Z",
