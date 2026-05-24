@@ -8,6 +8,15 @@ function pageHref(page: number) {
 
   return page === 1 ? basePath : `${basePath}page/${page}/`;
 }
+
+function formatPublishedDate(value: string) {
+  return new Intl.DateTimeFormat('ja-JP', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    timeZone: 'Asia/Tokyo',
+  }).format(new Date(value));
+}
 ---
 
 <section class="wiki-index" aria-label="note記事一覧">
@@ -24,7 +33,7 @@ function pageHref(page: number) {
       items.map((item) => (
         <article class="note-item">
           <div class="note-item__meta">
-            {item.published && <span>{new Date(item.published).toLocaleDateString('ja-JP')}</span>}
+            {item.published && <span>{formatPublishedDate(item.published)}</span>}
             <span>{item.source === 'google' ? 'Google由来' : item.source === 'manual' ? '手動採用' : 'RSS由来'}</span>
           </div>
           <h2>

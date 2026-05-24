@@ -17,7 +17,7 @@ for (const entry of entries) {
 
 const items = noteLinks.items.map((item) => ({
   ...item,
-  source: item.source ?? 'RSS',
+  source: item.source ?? 'rss',
   linkedPages: linkedPages.get(item.url) ?? [],
 }));
 
@@ -28,23 +28,37 @@ const manualItems = [...linkedPages.entries()]
     title: pages[0]?.articleTitle ?? url,
     url,
     published: '',
-    description: 'RSS最新一覧には含まれていませんが、wikiページのnoteArticlesに採用済みのリンクです。',
-    source: '手動',
+    description: 'wikiページのnoteArticlesに採用済みのリンクです。',
+    source: 'manual',
     linkedPages: pages,
   }));
 
-const allItems = [...items, ...manualItems];
+const allItems = [...items, ...manualItems].sort((a, b) => {
+  const aTime = a.published ? new Date(a.published).getTime() : 0;
+  const bTime = b.published ? new Date(b.published).getTime() : 0;
+  return bTime - aTime || a.title.localeCompare(b.title, 'ja');
+});
+
 const rssCount = items.filter((item) => item.source !== 'google').length;
 const googleCount = items.filter((item) => item.source === 'google').length;
 const linkedCount = items.filter((item) => item.linkedPages.length > 0).length;
 const unlinkedCount = items.length - linkedCount;
+
+function formatPublishedDate(value: string) {
+  return new Intl.DateTimeFormat('ja-JP', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    timeZone: 'Asia/Tokyo',
+  }).format(new Date(value));
+}
 ---
 
-<WikiLayout wide title="note記事一覧 | AUL DoX note-wiki" description="note RSSから取得した記事URLの一覧">
+<WikiLayout wide title="note記事一覧 | AUL DoX note-wiki" description="note RSSとGoogle検索由来の記事URL一覧">
   <section class="page-header">
     <p class="eyebrow">Notes</p>
     <h1>note記事一覧</h1>
-    <p>note RSSから取得した記事URLです。wikiページに採用済みの記事と、まだ未整理の記事を確認できます。</p>
+    <p>note RSSとGoogle検索から取得した記事URLの確認ページです。wikiページに採用済みの記事と、未整理の記事を確認できます。</p>
   </section>
 
   <section class="note-summary" aria-label="note記事の集計">
@@ -78,15 +92,15 @@ const unlinkedCount = items.length - linkedCount;
             <span class:list={['status-pill', item.linkedPages.length > 0 ? 'status-pill--linked' : 'status-pill--unlinked']}>
               {item.linkedPages.length > 0 ? '紐づけ済み' : '未整理'}
             </span>
-            <span>{item.source}</span>
-            {item.published && <span>{new Date(item.published).toLocaleDateString('ja-JP')}</span>}
+            <span>{item.source === 'google' ? 'Google由来' : item.source === 'manual' ? '手動採用' : 'RSS由来'}</span>
+            {item.published && <span>{formatPublishedDate(item.published)}</span>}
           </div>
           <h2>
             <a href={item.url} target="_blank" rel="noopener noreferrer">
               {item.title}
             </a>
           </h2>
-          <p>{item.description}</p>
+          {item.description && <p>{item.description}</p>}
           {item.linkedPages.length > 0 && (
             <div class="linked-pages">
               <span>掲載ページ</span>
