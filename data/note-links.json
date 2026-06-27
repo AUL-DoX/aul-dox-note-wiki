@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/chic_wren6567/rss",
-  "fetchedAt": "2026-06-22T07:42:51.939Z",
-  "count": 164,
+  "fetchedAt": "2026-06-27T20:39:22.748Z",
+  "count": 178,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -1064,7 +1064,7 @@
       "title": "汎用AIエージェントより「開発用ワークスペース」が欲しかった｜Codex×Claude Codeを1画面で切り替えるツールを作っちゃえ！",
       "url": "https://note.com/chic_wren6567/n/nad24887ec138",
       "published": "Sat, 20 Jun 2026 17:23:09 +0900",
-      "description": "きっかけ：汎用型AIエージェントへの違和感Genspark、Manus、HIX AIなど、複数のAIモデルを1つのワークスペースに統合した「汎用型AIエージェント」が次々と登場しています。文章作成、画像生成、動画生成、スライド作成、そしてコーディングまで、何でもこなせる便利な素晴らしいツールです。続きをみる",
+      "description": "※スタートは、VS CordでCodexとClaude codeを同居させて使ったので、VS Codeで動かすのが面倒ではない方は、VS Codeで試してみてください続きをみる",
       "source": "rss"
     },
     {
@@ -1149,6 +1149,104 @@
       "url": "https://note.com/chic_wren6567/n/nf26df31b9f13",
       "published": "Sat, 13 Jun 2026 12:41:37 +0900",
       "description": "医療福祉 週刊トレンドレポート（2026年6月8日〜6月12日調査） – AUL｜Analyze U Labaul-dox.jp 医療・介護・障がい福祉の経営者・管理職・事務担当の皆様、本当にお疲れ様です。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉓総合事業の受給者95万人、女性が73%を占める2026年データの実態",
+      "url": "https://note.com/chic_wren6567/n/nfe44da0c62e6",
+      "published": "Sun, 28 Jun 2026 04:57:39 +0900",
+      "description": "㉓【2026年2月】総合事業受給者95万人、85歳以上が5割超の実態 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "AUL 7Pips｜7人のAI分析エージェントが成果物を組み上げるパイプラインツール",
+      "url": "https://note.com/chic_wren6567/n/n1ae6d30a2dc4",
+      "published": "Sat, 27 Jun 2026 20:08:00 +0900",
+      "description": "※今回の制作は、ここまで納得できる精度になるまで、一ヶ月くらいかかった笑AIを使った作業で難しいのは、「AIに何をさせるか」よりも、「どの順番で、どこまで任せるか」だと思う。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年6月 第4週】施行から1ヶ月！7月初請求（レセプト・国保連）で大失敗しないための最終チェックリスト",
+      "url": "https://note.com/chic_wren6567/n/n3085f1286ca4",
+      "published": "Sat, 27 Jun 2026 11:55:47 +0900",
+      "description": "医療福祉 週刊トレンドレポート（2026年6月22日〜6月26日調査） – AUL｜Analyze U Labaul-dox.jp 医療・介護・障がい福祉の経営者、現場リーダー、そして事務担当の皆様、今週もお疲れ様です！続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉒介護予防の通所型が費用67%を独占｜2026年2月・95万人の利用実態を読み解く",
+      "url": "https://note.com/chic_wren6567/n/nf5c1f88ee9c6",
+      "published": "Sat, 27 Jun 2026 06:01:53 +0900",
+      "description": "㉒【2026年2月】総合事業の利用実態｜通所型が7割・生活支援は未活用 – AUL｜Analyze U Labaul-dox.jp 「総合事業って、結局うちの事業所に関係あるの？」続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【第5のパラダイム】AI for Scienceの現状と未来｜AIは科学者になるのか、それとも共同研究者になるのか",
+      "url": "https://note.com/chic_wren6567/n/n48d65c5d4d26",
+      "published": "Fri, 26 Jun 2026 18:14:48 +0900",
+      "description": "▼C.C. Coding Boardは、AI Co-Scientist続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉑特養が補足給付の67%独占｜低所得者184億円を支える制度の実態",
+      "url": "https://note.com/chic_wren6567/n/n2293f54f991c",
+      "published": "Fri, 26 Jun 2026 04:44:51 +0900",
+      "description": "㉑2026年2月・特養が補足給付の67%占有、184億円の食費・滞在費補助の実態 – AUL｜Analyze U Labaul-dox.jp はじめに：「補足給付」という制度、正しく理解していますか？続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Codexが使いづらくなった。便利な道具から「消費を気にする開発支援ツール」へ",
+      "url": "https://note.com/chic_wren6567/n/nb4ee6f9cea1d",
+      "published": "Thu, 25 Jun 2026 18:58:57 +0900",
+      "description": "最近、Codexが使いづらくなったと感じています。以前は、思いついたことを投げて、コードを書かせて、エラーを見せて、また直させる。そういう流れで使えました。開発中の相棒として、かなり気軽に使えた印象があります。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "⑳施設系3割超、居宅支援は費用7位止まり──2026年2月・1兆160億円の内訳",
+      "url": "https://note.com/chic_wren6567/n/nd016386569ed",
+      "published": "Thu, 25 Jun 2026 04:51:09 +0900",
+      "description": "⑳2026年2月介護費用1兆円突破、施設系32%・訪問通所が同規模で拮抗 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Claude×Blenderで3Dをテクスチャ化。AI×3Dは「形を作る」から「質感を伝える」段階へ進んだ",
+      "url": "https://note.com/chic_wren6567/n/n60feff347f19",
+      "published": "Wed, 24 Jun 2026 19:06:45 +0900",
+      "description": "Claude × Blender 新たな進路作りの実験｜AUL DoX｜note【Claude × Blender】AUL AI × 3Dは、特別高等支援学校や高校生の卒後の新たな進路作りの実験をしていnote.com Claude Code × Blenderの実験を続けている。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "⑲介護認定者760万人の67%が女性｜2026年データが示す5つの経営課題",
+      "url": "https://note.com/chic_wren6567/n/ncc3fccf61e21",
+      "published": "Wed, 24 Jun 2026 05:03:39 +0900",
+      "description": "⑲介護認定761万人【2026年2月】女性67%・85歳ピーク・重度258万人の実態分析 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Claude Code・Codexで開発中の私が、HIX AIのAIコーディングを試してみた【PR】",
+      "url": "https://note.com/chic_wren6567/n/n80597d48c31a",
+      "published": "Tue, 23 Jun 2026 18:52:20 +0900",
+      "description": "普段、Claude CodeやCodexを使ってツール開発をしている私のもとに、シンガポールのHIX AI Japanさんから「実際に使ってみて紹介記事を書いてほしい」という依頼が届きました。良かった点だけでなく、正直に感じたことも書いていきます。先方からも「ネガティブな感想を含めても問題ない」とのご回答をいただいているので、忖度なしで書かせていただきます。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "「Claude Codeがクラッシュしました」。一昨日は、ログインできず。今日は、クラッシュ！Claude Code、どうした？",
+      "url": "https://note.com/chic_wren6567/n/nfd5103e8cc18",
+      "published": "Tue, 23 Jun 2026 17:14:57 +0900",
+      "description": "Claude Codeの画面続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "コードが書けることより「現場を知っていること」── Anthropicの40万セッション分析が示す、AIエージェント時代の本当の武器",
+      "url": "https://note.com/chic_wren6567/n/n963695d3b92e",
+      "published": "Tue, 23 Jun 2026 17:01:22 +0900",
+      "description": "Agentic coding and persistent returns to expertiseThis report provides evidence on how Claude Code is used in pwww.anthropic.com はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "⑱要支援の利用率27%、要介護5は67%──2026年データが示す「18倍格差」の真実",
+      "url": "https://note.com/chic_wren6567/n/n9674eafbc721",
+      "published": "Tue, 23 Jun 2026 04:48:20 +0900",
+      "description": "⑱2026年2月・要介護5の利用率67.5%、居宅サービス限度額充足の実態と課題 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
       "source": "rss"
     }
   ],
