@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/chic_wren6567/rss",
-  "fetchedAt": "2026-06-27T20:39:22.748Z",
-  "count": 178,
+  "fetchedAt": "2026-07-04T11:14:24.260Z",
+  "count": 197,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -1247,6 +1247,139 @@
       "url": "https://note.com/chic_wren6567/n/n9674eafbc721",
       "published": "Tue, 23 Jun 2026 04:48:20 +0900",
       "description": "⑱2026年2月・要介護5の利用率67.5%、居宅サービス限度額充足の実態と課題 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "通所介護 収支・差引比率6.2%｜令和6年度決算の経営状況　第8表",
+      "url": "https://note.com/chic_wren6567/n/ndade5211cd8e",
+      "published": "Sat, 04 Jul 2026 19:50:35 +0900",
+      "description": "通所介護 収支・差引比率6.2%｜令和6年度決算の経営状況　第8表 – AUL｜Analyze U Labaul-dox.jp        20260704-1_report.pdf 1.8 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "トリプル改定後初のレセプト請求がスタート！初月ならではのエラー対策と7月10日までにやるべき最終チェック（2026年2026年6月29日〜7月3日）",
+      "url": "https://note.com/chic_wren6567/n/n7f85ee6f9976",
+      "published": "Sat, 04 Jul 2026 10:59:34 +0900",
+      "description": "医療福祉 週刊トレンドレポート（2026年6月29日〜7月3日調査） – AUL｜Analyze U Labaul-dox.jp 医療福祉 週刊トレンドレポート （2026年6月29日〜7月3日調査 ／ 7月4日発行）続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Google OR-Toolsを使った、介護シフト自動作成ツール。パート・扶養内パート・派遣の勤務配置を改善",
+      "url": "https://note.com/chic_wren6567/n/n28c7ecc82847",
+      "published": "Sat, 04 Jul 2026 06:43:28 +0900",
+      "description": "続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問リハビリテーション 収支・差引比率10.8%｜令和6年度決算の経営状況　第7表",
+      "url": "https://note.com/chic_wren6567/n/nb75df98f8945",
+      "published": "Sat, 04 Jul 2026 04:58:40 +0900",
+      "description": "訪問リハビリテーション 収支・差引比率10.8%｜令和6年度決算の経営状況　第7表 – AUL｜Analyze U Labaul-dox.jp        20260704-1_report.pdf 1.8 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "「Next.js for Agents」は本当に次の標準になるのか - Vercel eveを触ってみた雑感",
+      "url": "https://note.com/chic_wren6567/n/ne9021b5b612d",
+      "published": "Fri, 03 Jul 2026 19:51:22 +0900",
+      "description": "Vercelが新しいエージェントフレームワーク「eve」を発表した。キャッチコピーは「Like Next.js for web apps, but for agents」。Next.jsがWeb開発の書き方を標準化したように、eveはエージェント開発の書き方を標準化する、という主張だ。正直、この手の「〇〇 for X」系のキャッチコピーには食傷気味なところがある。ただ中身を見てみると、GAS + Claude APIでツールを作り続けてきた身としては、思想的に共感できる部分と、根本的に相容れない部分がはっきり分かれていて面白かったので整理しておく。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問看護 収支・差引比率10.3%｜令和6年度決算の経営状況　第6表",
+      "url": "https://note.com/chic_wren6567/n/n6305b151203e",
+      "published": "Fri, 03 Jul 2026 18:02:19 +0900",
+      "description": "訪問看護 収支・差引比率10.3%｜令和6年度決算の経営状況　第6表 – AUL｜Analyze U Labaul-dox.jp        20260702-1_report.pdf 1.79 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問入浴介護 収支・差引比率5.3%｜令和6年度決算の経営状況　第5表",
+      "url": "https://note.com/chic_wren6567/n/n523523521cca",
+      "published": "Fri, 03 Jul 2026 04:50:31 +0900",
+      "description": "訪問入浴介護 収支・差引比率5.3%｜令和6年度決算の経営状況　第5表 – AUL｜Analyze U Labaul-dox.jp        20260702-5_report.pdf 1.79 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【Claude Code × Blender】特別支援学校の生徒が、画面操作で3D作図できるツールへ",
+      "url": "https://note.com/chic_wren6567/n/na4206579fa4f",
+      "published": "Thu, 02 Jul 2026 19:46:53 +0900",
+      "description": "Claude × Blender 新たな進路作りの実験｜AUL DoX｜note【Claude × Blender】AUL AI × 3Dは、特別高等支援学校や高校生の卒後の新たな進路作りの実験をしていnote.com 特別支援学校の生徒の卒後の進路を、少しでも広げられないか。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問介護 収支・差引比率9.6%｜令和6年度決算の経営状況　第4表",
+      "url": "https://note.com/chic_wren6567/n/n9594f308b35e",
+      "published": "Thu, 02 Jul 2026 18:08:56 +0900",
+      "description": "訪問介護 収支・差引比率9.6%｜令和6年度決算の経営状況　第4表 – AUL｜Analyze U Labaul-dox.jp        20260701-1_report.pdf 1.83 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護医療院、黒字なのに資金繰り指標はマイナス転落｜令和6年度決算に見る収支の分岐点　第3表",
+      "url": "https://note.com/chic_wren6567/n/nbc49623e2fe2",
+      "published": "Thu, 02 Jul 2026 05:04:02 +0900",
+      "description": "介護医療院 収支・差引比率3.5%｜令和6年度決算の経営状況　第3表 – AUL｜Analyze U Labaul-dox.jp        20260701-1_report.pdf 1.81 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護老人保健施設 収支・差引比率0.6%｜令和6年度決算の経営状況　第2表",
+      "url": "https://note.com/chic_wren6567/n/n690c5dd3dd1b",
+      "published": "Wed, 01 Jul 2026 18:34:04 +0900",
+      "description": "介護事業経営概況調査・第2表「介護老人保健施設経営概況ダッシュボード令和3年度決算〜令和6年度決算の4か年推移 – AUL｜Analyze U Labaul-dox.jp        20260701-1_report.pdf 1.8 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護老人福祉施設 収支・差引比率1.4%｜令和6年度決算の経営状況　第1表",
+      "url": "https://note.com/chic_wren6567/n/n32816c7d5bd6",
+      "published": "Wed, 01 Jul 2026 04:51:44 +0900",
+      "description": "①介護老人福祉施設（特養）経営概況ダッシュボード令和3年度決算〜令和6年度決算の4か年推移 – AUL｜Analyze U Labaul-dox.jp        20260701-1_report.pdf 1.81 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉗【2026年2月】総合事業の経営効率分析｜通所型vs訪問型の収益格差2倍",
+      "url": "https://note.com/chic_wren6567/n/n71ce1428609a",
+      "published": "Tue, 30 Jun 2026 17:04:48 +0900",
+      "description": "㉗【2026年2月】総合事業の経営効率分析｜通所型vs訪問型の収益格差2倍 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉖【2026年2月】総合事業の単位効率分析｜通所型集中と報酬格差の実態",
+      "url": "https://note.com/chic_wren6567/n/n7be404a08e73",
+      "published": "Tue, 30 Jun 2026 04:44:19 +0900",
+      "description": "㉖【2026年2月】総合事業の単位効率分析｜通所型集中と報酬格差の実態 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉕【2026年2月】総合事業費用額の都道府県格差1.4倍、経営戦略への影響分析",
+      "url": "https://note.com/chic_wren6567/n/n7fd8c52ef5ea",
+      "published": "Mon, 29 Jun 2026 18:07:51 +0900",
+      "description": "㉕【2026年2月】総合事業費用額の都道府県格差1.4倍、経営戦略への影響分析 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "㉔【2026年2月】総合事業1人当たり費用分析｜通所型と要支援2が収益の鍵",
+      "url": "https://note.com/chic_wren6567/n/ne16f04b31866",
+      "published": "Mon, 29 Jun 2026 04:51:20 +0900",
+      "description": "㉔【2026年2月】総合事業1人当たり費用分析｜通所型と要支援2が収益の鍵 – AUL｜Analyze U Labaul-dox.jp はじめに続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "黒字リストラはAI時代に逆行するのか｜OpenAIとAnthropicの論文から読み解く「会社のknowledge」を捨てる危うさ",
+      "url": "https://note.com/chic_wren6567/n/nf17843c3b02b",
+      "published": "Sun, 28 Jun 2026 08:13:08 +0900",
+      "description": "続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "OpenAI最新レポート「How agents are transforming work」を読む｜AIエージェントは「質問に答える道具」から「仕事を預ける道具」へ",
+      "url": "https://note.com/chic_wren6567/n/n809c512bb1ab",
+      "published": "Sun, 28 Jun 2026 08:11:01 +0900",
+      "description": "the-shift-to-agentic-ai-evidence-from-codex.pdf 5.02 MB  ファイルダウンロードについて      ダウンロード      OpenAIが公開した「How agents are transforming work」は、AIエージェントの現在地を読むうえでかなり面白いレポートです。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Anthropic Economic Index【人間経済指数】最新レポートを読む — AIは「いつ」「何を」作っているのか",
+      "url": "https://note.com/chic_wren6567/n/n697d7bc7f8f9",
+      "published": "Sun, 28 Jun 2026 08:10:35 +0900",
+      "description": "Anthropicが6月26日に公開した最新の経済指数レポート「Cadences(リズム)」を読みました。タイトルが示す通り、今回の主眼は「Claudeがいつ使われ、何を生み出し、人々はそれをどう感じているか」という、これまでより一段細かい時間軸・出力軸の分析です。福祉・介護の現場でAIツールを作っている立場から見て、特に気になったポイントを整理します。1. 「平日のClaude」と「週末のClaude」は別人格続きをみる",
       "source": "rss"
     }
   ],
