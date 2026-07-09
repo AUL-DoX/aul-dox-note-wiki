@@ -606,6 +606,19 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.year-heading {
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--green);
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.year-heading:first-child {
+  margin-top: 0;
+}
+
 .note-summary div {
   padding: 18px;
 }

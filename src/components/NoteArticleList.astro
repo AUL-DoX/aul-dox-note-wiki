@@ -17,6 +17,12 @@ function formatPublishedDate(value: string) {
     timeZone: 'Asia/Tokyo',
   }).format(new Date(value));
 }
+
+function publishedYear(value: string) {
+  return value ? new Intl.DateTimeFormat('ja-JP', { year: 'numeric', timeZone: 'Asia/Tokyo' }).format(new Date(value)) : null;
+}
+
+let previousYear: string | null = null;
 ---
 
 <section class="wiki-index" aria-label="note記事一覧">
@@ -30,31 +36,40 @@ function formatPublishedDate(value: string) {
 
   <div class="note-list note-list--compact">
     {
-      items.map((item) => (
-        <article class="note-item">
-          <div class="note-item__meta">
-            {item.published && <span>{formatPublishedDate(item.published)}</span>}
-            <span>{item.source === 'google' ? 'Google由来' : item.source === 'manual' ? '手動採用' : 'RSS由来'}</span>
-          </div>
-          <h2>
-            <a href={item.url} target="_blank" rel="noopener noreferrer">
-              {item.title}
-            </a>
-          </h2>
-          {item.description && <p>{item.description}</p>}
-          <div class="note-item__actions">
-            <a class="note-read-link" href={item.url} target="_blank" rel="noopener noreferrer">noteで読む</a>
-            {item.linkedPages.length > 0 && (
-              <div class="linked-pages">
-                <span>関連wiki</span>
-                {item.linkedPages.map((page) => (
-                  <a href={page.path}>{page.title}</a>
-                ))}
+      items.map((item) => {
+        const year = publishedYear(item.published);
+        const showYearHeading = year !== null && year !== previousYear;
+        previousYear = year;
+
+        return (
+          <>
+            {showYearHeading && <h3 class="year-heading">{year}</h3>}
+            <article class="note-item">
+              <div class="note-item__meta">
+                {item.published && <span>{formatPublishedDate(item.published)}</span>}
+                <span>{item.source === 'google' ? 'Google由来' : item.source === 'manual' ? '手動採用' : 'RSS由来'}</span>
               </div>
-            )}
-          </div>
-        </article>
-      ))
+              <h2>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.title}
+                </a>
+              </h2>
+              {item.description && <p>{item.description}</p>}
+              <div class="note-item__actions">
+                <a class="note-read-link" href={item.url} target="_blank" rel="noopener noreferrer">noteで読む</a>
+                {item.linkedPages.length > 0 && (
+                  <div class="linked-pages">
+                    <span>関連wiki</span>
+                    {item.linkedPages.map((page) => (
+                      <a href={page.path}>{page.title}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          </>
+        );
+      })
     }
   </div>
 
