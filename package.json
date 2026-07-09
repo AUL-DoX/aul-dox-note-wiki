@@ -12,8 +12,10 @@
     "astro": "astro",
     "fetch:note": "node scripts/fetch-note-links.mjs",
     "fetch:note:google": "node scripts/fetch-note-google-search.mjs",
+    "fetch:note-magazines": "node scripts/fetch-note-magazines.mjs",
+    "fetch:note-hashtags": "node scripts/fetch-note-hashtags.mjs",
     "suggest:note-links": "node scripts/suggest-note-links.mjs",
-    "sync:note": "npm run fetch:note && npm run suggest:note-links"
+    "sync:note": "npm run fetch:note && npm run fetch:note-magazines && npm run fetch:note-hashtags && npm run suggest:note-links"
   },
   "dependencies": {
     "astro": "^6.3.7"

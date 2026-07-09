@@ -1,7 +1,20 @@
 import { getCollection } from 'astro:content';
 import noteLinks from '../../data/note-links.json';
-import { categories } from './categories';
+import noteMagazines from '../../data/note-magazines.json';
+import noteHashtags from '../../data/note-hashtags.json';
+import { categories, UNCATEGORIZED_SLUG } from './categories';
 import { getWikiPath, isPublicEntry } from './wiki';
+
+const urlToMagazineSlugs = new Map<string, string[]>();
+for (const magazine of noteMagazines.magazines) {
+  for (const url of magazine.articleUrls) {
+    const slugs = urlToMagazineSlugs.get(url) ?? [];
+    slugs.push(magazine.key);
+    urlToMagazineSlugs.set(url, slugs);
+  }
+}
+
+const urlToHashtags = noteHashtags.items as Record<string, string[]>;
 
 export const NOTE_PAGE_SIZE = 10;
 
@@ -51,62 +64,29 @@ export async function getNoteIndexData() {
   };
 }
 
-export function getNoteText(item: { title?: string; description?: string }) {
-  return `${item.title ?? ''} ${item.description ?? ''}`.toLowerCase();
-}
+export function getNoteCategories(item: { url: string; linkedPages?: { path: string }[] }) {
+  const magazineSlugs = urlToMagazineSlugs.get(item.url);
+  if (magazineSlugs && magazineSlugs.length > 0) {
+    return magazineSlugs;
+  }
 
-export function getNoteCategories(item: { title?: string; description?: string; linkedPages?: { path: string }[] }) {
-  const text = getNoteText(item);
   const matched = new Set<string>();
-
   for (const page of item.linkedPages ?? []) {
-    const category = categories.find((item) => page.path.includes(`/wiki/${item.slug}/`));
+    const category = categories.find((candidate) => page.path.includes(`/wiki/${candidate.slug}/`));
     if (category) {
       matched.add(category.slug);
     }
   }
 
-  const rules: [string, RegExp][] = [
-    ['welfare-dx', /福祉|障害福祉|医療福祉|dx|処遇改善|制度|トリプル改定/i],
-    ['employment-support', /就労|a型|b型|工賃|生活保護|年金/i],
-    ['care-facility-dx', /介護|要介護|施設|ケア|サービス提供責任者/i],
-    ['obsidian', /obsidian|markdown|docshelf|folder index/i],
-    ['gas-tools', /gas|google apps script|googleフォーム|spreadsheet|スプレッドシート/i],
-    ['aul-tools', /aul|ツール|web block|c-isit|transaction|docshelf/i],
-    ['note-series', /①|②|③|④|⑤|⑥|シリーズ|第[0-9１-９一二三四五六七八九十]+回/i],
-    ['policy-docs', /行政|自治体|制度|届出|加算|改定|報酬/i],
-    ['ai-music-youtube', /youtube|音楽|ai音楽|suno|udio/i],
-  ];
-
-  for (const [slug, pattern] of rules) {
-    if (pattern.test(text)) {
-      matched.add(slug);
-    }
+  if (matched.size > 0) {
+    return [...matched];
   }
 
-  return [...matched];
+  return [UNCATEGORIZED_SLUG];
 }
 
-export function getNoteTags(item: { title?: string; description?: string }) {
-  const text = getNoteText(item);
-  const tags = new Set<string>();
-  const rules: [string, RegExp][] = [
-    ['福祉DX', /福祉|障害福祉|医療福祉|dx/i],
-    ['就労継続支援', /就労|a型|b型|工賃/i],
-    ['介護DX', /介護|要介護|施設/i],
-    ['Obsidian', /obsidian|markdown/i],
-    ['GAS', /gas|google apps script|googleフォーム/i],
-    ['AI活用', /ai|chatgpt|claude|gemini/i],
-    ['制度メモ', /制度|加算|報酬|改定|届出/i],
-  ];
-
-  for (const [tag, pattern] of rules) {
-    if (pattern.test(text)) {
-      tags.add(tag);
-    }
-  }
-
-  return [...tags];
+export function getNoteTags(item: { url: string }) {
+  return urlToHashtags[item.url] ?? [];
 }
 
 export function getNotePageItems(items: unknown[], page: number) {
