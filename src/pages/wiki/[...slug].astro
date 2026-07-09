@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import { formatDate, getEntryUpdatedTime, isPublicEntry } from '../../content/wiki';
-import { getCategorySlug } from '../../content/categories';
+import { getCategoryBySlug, getCategorySlug } from '../../content/categories';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('wiki')).filter(isPublicEntry);
@@ -19,12 +19,13 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const categorySlug = getCategorySlug(entry.data.category, entry.data.categorySlug);
+const categoryExists = Boolean(getCategoryBySlug(categorySlug));
 ---
 
 <WikiLayout title={`${entry.data.title} | AUL DoX Reference`} description={entry.data.description} noteUrl={entry.data.noteUrl}>
   <article class="article">
     <div class="article-meta">
-      <a href={`/categories/${categorySlug}/`}>{entry.data.category}</a>
+      {categoryExists ? <a href={`/categories/${categorySlug}/`}>{entry.data.category}</a> : <span>{entry.data.category}</span>}
       <span>公開: {formatDate(entry.data.date)}</span>
       <span>更新: {formatDate(getEntryUpdatedTime(entry))}</span>
     </div>
