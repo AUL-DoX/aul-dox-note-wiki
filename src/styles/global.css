@@ -1,5 +1,5 @@
 :root {
-  --bg: #f3effa;
+  --bg: #d9c7f0;
   --text: #111827;
   --muted: #6b7280;
   --card: #ffffff;
@@ -55,7 +55,7 @@ a {
   top: 0;
   z-index: 10;
   border-bottom: 1px solid var(--border);
-  background: rgba(243, 239, 250, 0.94);
+  background: rgba(217, 199, 240, 0.94);
   backdrop-filter: blur(14px);
 }
 
@@ -188,7 +188,7 @@ h3 {
   display: grid;
   gap: 8px;
   border-bottom: 1px solid var(--border);
-  background: rgba(243, 239, 250, 0.95);
+  background: rgba(217, 199, 240, 0.95);
   padding: 14px 0 18px;
   backdrop-filter: blur(14px);
 }
