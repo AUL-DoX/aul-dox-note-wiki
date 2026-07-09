@@ -21,7 +21,7 @@ const { Content } = await render(entry);
 const categorySlug = getCategorySlug(entry.data.category, entry.data.categorySlug);
 ---
 
-<WikiLayout title={`${entry.data.title} | AUL DoX note-wiki`} description={entry.data.description} noteUrl={entry.data.noteUrl}>
+<WikiLayout title={`${entry.data.title} | AUL DoX Reference`} description={entry.data.description} noteUrl={entry.data.noteUrl}>
   <article class="article">
     <div class="article-meta">
       <a href={`/categories/${categorySlug}/`}>{entry.data.category}</a>

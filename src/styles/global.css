@@ -229,6 +229,8 @@ h3 {
   top: 150px;
   display: grid;
   gap: 26px;
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
 }
 
 .wiki-sidebar h2,
@@ -817,6 +819,8 @@ h3 {
 
   .wiki-sidebar {
     position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .sidebar-list,
