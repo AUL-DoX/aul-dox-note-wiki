@@ -45,15 +45,20 @@ note記事URL一覧を更新します。
 npm run sync:note
 ```
 
-`sync:note` はRSSの新着・更新記事を `data/note-links.json` にマージし、wikiページごとの候補レポートを再生成します。
+`sync:note` はRSSの新着・更新記事を `data/note-links.json` にマージし、noteのマガジン・ハッシュタグ情報を取得し直し、wikiページごとの候補レポートを再生成します。
 
 個別に実行する場合:
 
 ```bash
 npm run fetch:note
 npm run fetch:note:google
+npm run fetch:note-magazines
+npm run fetch:note-hashtags
 npm run suggest:note-links
 ```
+
+- `fetch:note-magazines`: 自分のnoteマガジン一覧を取得し、マガジンごとのRSSから収録記事URLを `data/note-magazines.json` に保存します。**カテゴリはここで取得したマガジン名がそのまま使われます**（マガジンに入っていない記事は「未分類」になります）。新しいマガジンを作れば、次の`sync:note`で自動的に新カテゴリとして反映されます。
+- `fetch:note-hashtags`: 記事ごとに note.com の記事API (`/api/v3/notes/{key}`) からハッシュタグを取得し `data/note-hashtags.json` に保存します。**タグは記事に付けたハッシュタグがそのまま使われます**。197記事分を1件ずつ取得するため数十秒かかります。
 
 ブラウザで開いたGoogle検索結果をHTML保存した場合は、そのHTMLも取り込めます。
 
