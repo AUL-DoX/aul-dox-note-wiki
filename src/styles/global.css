@@ -193,6 +193,44 @@ h3 {
   backdrop-filter: blur(14px);
 }
 
+.wiki-search-row {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  max-width: 760px;
+}
+
+.wiki-search-field {
+  display: grid;
+  gap: 8px;
+  flex: 1 1 auto;
+}
+
+.wiki-search-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wiki-search-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font-weight: 800;
+  padding: 6px 16px;
+  text-decoration: none;
+}
+
+.wiki-search-nav a:hover {
+  border-color: #bfdbfe;
+  color: var(--accent);
+}
+
 .wiki-search label {
   color: var(--muted);
   font-size: 0.9rem;
@@ -812,6 +850,12 @@ h3 {
 
   .wiki-search {
     top: 124px;
+  }
+
+  .wiki-search-row {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: none;
   }
 
   .wiki-shell {

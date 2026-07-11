@@ -20,8 +20,15 @@ const pageItems = getNotePageItems(allItems, currentPage);
   </section>
 
   <section class="wiki-search" aria-label="記事検索">
-    <label for="wiki-search-input">記事を検索</label>
-    <input id="wiki-search-input" type="search" placeholder="note記事タイトル、説明文で検索" autocomplete="off" />
+    <div class="wiki-search-row">
+      <div class="wiki-search-field">
+        <label for="wiki-search-input">記事を検索</label>
+        <input id="wiki-search-input" type="search" placeholder="note記事タイトル、説明文で検索" autocomplete="off" />
+      </div>
+      <nav class="wiki-search-nav" aria-label="サイト内セクション">
+        <a href="/data/">データ分析</a>
+      </nav>
+    </div>
   </section>
 
   <div class="wiki-shell">

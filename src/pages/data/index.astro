@@ -1,0 +1,40 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+const htmlModules = import.meta.glob('../../dashboards/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+function extractTitle(html: string, fallback: string) {
+  const match = html.match(/<h1>([\s\S]*?)<\/h1>/);
+  if (!match) return fallback;
+  return match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+const dashboards = Object.entries(htmlModules)
+  .map(([path, html]) => {
+    const slug = path.replace('../../dashboards/', '').replace(/\.html$/, '');
+    return { slug, title: extractTitle(html, slug) };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
+---
+
+<WikiLayout wide title="データ分析 | AUL DoX Reference">
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Data Index</p>
+      <h1>データ分析ダッシュボード</h1>
+      <p>厚生労働省統計等をもとにしたデータ分析ダッシュボードの一覧です。</p>
+    </div>
+  </section>
+
+  <ul class="wiki-index-list">
+    {dashboards.map((d) => (
+      <li class="wiki-index-item">
+        <a href={`/data/${d.slug}/`}>{d.title}</a>
+      </li>
+    ))}
+  </ul>
+</WikiLayout>

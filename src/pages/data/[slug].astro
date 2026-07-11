@@ -1,0 +1,32 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+const htmlModules = import.meta.glob('../../dashboards/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+export function getStaticPaths() {
+  const files = import.meta.glob('../../dashboards/*.html', {
+    query: '?raw',
+    import: 'default',
+    eager: true,
+  }) as Record<string, string>;
+
+  return Object.keys(files).map((path) => {
+    const slug = path.replace('../../dashboards/', '').replace(/\.html$/, '');
+    return { params: { slug } };
+  });
+}
+
+const { slug } = Astro.params;
+const entry = Object.entries(htmlModules).find(
+  ([path]) => path === `../../dashboards/${slug}.html`,
+);
+const dashboardHtml = entry?.[1] ?? '';
+---
+
+<WikiLayout wide title={`${slug} | データ分析 | AUL DoX Reference`}>
+  <Fragment set:html={dashboardHtml} />
+</WikiLayout>
