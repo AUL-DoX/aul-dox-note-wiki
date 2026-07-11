@@ -218,7 +218,7 @@ h3 {
 
 .wiki-shell {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 26px;
   align-items: start;
   padding-top: 24px;
@@ -231,6 +231,7 @@ h3 {
   gap: 26px;
   max-height: calc(100vh - 170px);
   overflow-y: auto;
+  padding-right: 14px;
 }
 
 .wiki-sidebar h2,
