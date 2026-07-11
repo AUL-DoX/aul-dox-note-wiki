@@ -1,24 +1,15 @@
 {
-  "fetchedAt": "2026-07-10T08:10:48.301Z",
+  "fetchedAt": "2026-07-11T03:00:01.764Z",
   "magazines": [
-    {
-      "key": "mb106bb82c088",
-      "title": "Claude × Blender 新たな進路作りの実験",
-      "url": "https://note.com/chic_wren6567/m/mb106bb82c088",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/ned93c53ccc54",
-        "https://note.com/chic_wren6567/n/n60feff347f19",
-        "https://note.com/chic_wren6567/n/n2dbe2b6d4996",
-        "https://note.com/chic_wren6567/n/n9092a4770556",
-        "https://note.com/chic_wren6567/n/n6d8f00b52090",
-        "https://note.com/chic_wren6567/n/n20901123a112"
-      ]
-    },
     {
       "key": "m905f40a26057",
       "title": "令和７年度介護事業経営概況調査",
       "url": "https://note.com/chic_wren6567/m/m905f40a26057",
       "articleUrls": [
+        "https://note.com/chic_wren6567/n/nc7a7ee8da8f9",
+        "https://note.com/chic_wren6567/n/n2be666e154e2",
+        "https://note.com/chic_wren6567/n/n96f165144f67",
+        "https://note.com/chic_wren6567/n/n5ab72413146e",
         "https://note.com/chic_wren6567/n/n1251411b2bc4",
         "https://note.com/chic_wren6567/n/nceed2e56bb62",
         "https://note.com/chic_wren6567/n/n81038018e47f",
@@ -32,6 +23,19 @@
         "https://note.com/chic_wren6567/n/n523523521cca",
         "https://note.com/chic_wren6567/n/n690c5dd3dd1b",
         "https://note.com/chic_wren6567/n/n32816c7d5bd6"
+      ]
+    },
+    {
+      "key": "mb106bb82c088",
+      "title": "Claude × Blender 新たな進路作りの実験",
+      "url": "https://note.com/chic_wren6567/m/mb106bb82c088",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/ned93c53ccc54",
+        "https://note.com/chic_wren6567/n/n60feff347f19",
+        "https://note.com/chic_wren6567/n/n2dbe2b6d4996",
+        "https://note.com/chic_wren6567/n/n9092a4770556",
+        "https://note.com/chic_wren6567/n/n6d8f00b52090",
+        "https://note.com/chic_wren6567/n/n20901123a112"
       ]
     },
     {
