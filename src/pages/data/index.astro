@@ -1,7 +1,13 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
 
-const htmlModules = import.meta.glob('../../dashboards/*.html', {
+const dashboardModules = import.meta.glob('../../dashboards/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const reportModules = import.meta.glob('../../reports/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -13,9 +19,16 @@ function extractTitle(html: string, fallback: string) {
   return match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-const dashboards = Object.entries(htmlModules)
+const dashboards = Object.entries(dashboardModules)
   .map(([path, html]) => {
     const slug = path.replace('../../dashboards/', '').replace(/\.html$/, '');
+    return { slug, title: extractTitle(html, slug) };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
+
+const reports = Object.entries(reportModules)
+  .map(([path, html]) => {
+    const slug = path.replace('../../reports/', '').replace(/\.html$/, '');
     return { slug, title: extractTitle(html, slug) };
   })
   .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
@@ -30,10 +43,20 @@ const dashboards = Object.entries(htmlModules)
     </div>
   </section>
 
+  <h2>ダッシュボード</h2>
   <ul class="wiki-index-list">
     {dashboards.map((d) => (
       <li class="wiki-index-item">
         <a href={`/data/${d.slug}/`}>{d.title}</a>
+      </li>
+    ))}
+  </ul>
+
+  <h2>分析レポート</h2>
+  <ul class="wiki-index-list">
+    {reports.map((r) => (
+      <li class="wiki-index-item">
+        <a href={`/reports/${r.slug}/`}>{r.title}</a>
       </li>
     ))}
   </ul>
