@@ -1,0 +1,38 @@
+---
+// 完結した1ページ形式のHTML（<html>から始まる独立レポート）をそのまま公開する生ページルート。
+// 7Pipsダッシュボード（src/dashboards/、スコープ付きフラグメント）とは別物。
+// WikiLayoutで包まず、<body>直後にサイトへ戻る小さなバーだけ自動挿入する。
+
+const htmlModules = import.meta.glob('../../reports/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+export function getStaticPaths() {
+  const files = import.meta.glob('../../reports/*.html', {
+    query: '?raw',
+    import: 'default',
+    eager: true,
+  }) as Record<string, string>;
+
+  return Object.keys(files).map((path) => {
+    const slug = path.replace('../../reports/', '').replace(/\.html$/, '');
+    return { params: { slug } };
+  });
+}
+
+const { slug } = Astro.params;
+const entry = Object.entries(htmlModules).find(
+  ([path]) => path === `../../reports/${slug}.html`,
+);
+const rawHtml = entry?.[1] ?? '<!doctype html><html><body>Not found</body></html>';
+
+const backBar = `<div style="position:sticky;top:0;z-index:999;background:#13212f;color:#fff;font:14px/1.6 -apple-system,'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">` +
+  `<a href="/" style="color:#fff;text-decoration:none;font-weight:700">← AUL DoX Reference</a>` +
+  `<a href="/data/" style="color:#9fd6cb;text-decoration:none">データ分析一覧</a>` +
+  `</div>`;
+
+const html = rawHtml.replace(/<body([^>]*)>/, (_match: string, attrs: string) => `<body${attrs}>${backBar}`);
+---
+<Fragment set:html={html} />

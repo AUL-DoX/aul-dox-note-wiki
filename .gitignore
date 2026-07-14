@@ -3,8 +3,8 @@ dist/
 # generated types
 .astro/
 
-# generated reports
-reports/
+# generated reports (top-level only; src/reports and src/pages/reports are published content)
+/reports/
 
 # dependencies
 node_modules/
