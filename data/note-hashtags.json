@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-11T03:23:42.405Z",
+  "fetchedAt": "2026-07-14T21:29:46.073Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -681,8 +681,8 @@
       "GAS",
       "GPTs",
       "スプレッドシート",
-      "GoogleCloud",
       "個人情報保護",
+      "GoogleCloud",
       "AppSheet",
       "Firebase",
       "GEMS"
@@ -1651,6 +1651,80 @@
       "経営概況調査",
       "収支分析",
       "地域密着型特定施設入居者生活介護"
+    ],
+    "https://note.com/chic_wren6567/n/n503c45582a49": [
+      "訪問看護",
+      "介護経営",
+      "訪問系サービス",
+      "経営概況調査",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/n184c628e53be": [
+      "介護経営",
+      "訪問系サービス",
+      "経営概況調査",
+      "訪問入浴介護",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/n5cfa1718ac05": [
+      "訪問介護",
+      "介護経営",
+      "訪問系サービス",
+      "経営概況調査",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/n13b0ca7f8e77": [
+      "介護経営",
+      "介護医療院",
+      "経営概況調査",
+      "施設系サービス",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/na9226ff4788c": [
+      "介護経営",
+      "介護老人保健施設",
+      "経営概況調査",
+      "施設系サービス",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/n74b84fd60001": [
+      "介護経営",
+      "介護老人福祉施設",
+      "経営概況調査",
+      "施設系サービス",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/na2a200eaa8ee": [
+      "python",
+      "ClaudeCode",
+      "Blender",
+      "就労継続支援B型",
+      "特別支援教育",
+      "就労継続支援A型",
+      "AI3D"
+    ],
+    "https://note.com/chic_wren6567/n/n36b9b07588fc": [
+      "ClaudeCode",
+      "Blender",
+      "特別支援教育",
+      "CAD",
+      "AI3D",
+      "卒後支援"
+    ],
+    "https://note.com/chic_wren6567/n/n12366906bcad": [
+      "介護経営",
+      "経営概況調査",
+      "収支分析",
+      "通所系サービス",
+      "通所介護及び地域密着型通所介護"
+    ],
+    "https://note.com/chic_wren6567/n/n7e023cd92148": [
+      "特別養護老人ホーム",
+      "介護経営",
+      "介護老人福祉施設",
+      "看護小規模多機能型居宅介護",
+      "経営概況調査",
+      "収支分析"
     ]
   }
 }

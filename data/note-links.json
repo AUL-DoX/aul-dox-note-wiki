@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/chic_wren6567/rss",
-  "fetchedAt": "2026-07-11T03:22:27.757Z",
-  "count": 217,
+  "fetchedAt": "2026-07-14T21:28:28.478Z",
+  "count": 227,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -1520,6 +1520,76 @@
       "url": "https://note.com/chic_wren6567/n/nc7a7ee8da8f9",
       "published": "Fri, 10 Jul 2026 18:41:31 +0900",
       "description": "地域密着型特定施設入居者生活介護 収支・差引比率0.4%｜令和6年度決算の経営状況　第20表 – AUL｜Analyze U Labaul-dox.jp        20260708-1_report.pdf 1.82 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問看護 地域区分別の収支比較｜令和6年度決算の経営状況　第29表",
+      "url": "https://note.com/chic_wren6567/n/n503c45582a49",
+      "published": "Wed, 15 Jul 2026 04:49:32 +0900",
+      "description": "訪問看護 地域区分別の収支比較｜令和6年度決算の経営状況　第29表 – AUL｜Analyze U Labaul-dox.jp        20260713-1_report.pdf 1.03 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問入浴介護 地域区分別の収支比較｜令和6年度決算の経営状況　第28表",
+      "url": "https://note.com/chic_wren6567/n/n184c628e53be",
+      "published": "Tue, 14 Jul 2026 19:06:17 +0900",
+      "description": "訪問入浴介護 地域区分別の収支比較｜令和6年度決算の経営状況　第28表 – AUL｜Analyze U Labaul-dox.jp        20260712-1_report.pdf 1.01 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "訪問介護 地域区分別の収支比較｜令和6年度決算の経営状況　第27表",
+      "url": "https://note.com/chic_wren6567/n/n5cfa1718ac05",
+      "published": "Tue, 14 Jul 2026 05:07:10 +0900",
+      "description": "訪問介護 地域区分別の収支比較｜令和6年度決算の経営状況　第27表 – AUL｜Analyze U Labaul-dox.jp        20260712-1_report.pdf 1.03 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護医療院 地域区分別の収支比較｜令和6年度決算の経営状況　第26表",
+      "url": "https://note.com/chic_wren6567/n/n13b0ca7f8e77",
+      "published": "Mon, 13 Jul 2026 18:21:20 +0900",
+      "description": "介護医療院 地域区分別の収支比較｜令和6年度決算の経営状況　第26表 – AUL｜Analyze U Labaul-dox.jp        20260711-1_report.pdf 1.04 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護老人保健施設 地域区分別の収支比較｜令和6年度決算の経営状況　第25表",
+      "url": "https://note.com/chic_wren6567/n/na9226ff4788c",
+      "published": "Mon, 13 Jul 2026 04:49:14 +0900",
+      "description": "介護老人保健施設 地域区分別の収支比較｜令和6年度決算の経営状況　第25表 – AUL｜Analyze U Labaul-dox.jp        20260711-1_report.pdf 1.02 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "介護老人福祉施設 地域区分別の収支比較｜令和6年度決算の経営状況　第24表",
+      "url": "https://note.com/chic_wren6567/n/n74b84fd60001",
+      "published": "Sun, 12 Jul 2026 16:46:11 +0900",
+      "description": "介護老人福祉施設 地域区分別の収支比較｜令和6年度決算の経営状況　第24表 – AUL｜Analyze U Labaul-dox.jp        20260711-4_report.pdf 1.01 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "Claude×Blender×Pythonで、特別高等支援学校の生徒が作図に関われるかの実験終了",
+      "url": "https://note.com/chic_wren6567/n/na2a200eaa8ee",
+      "published": "Sun, 12 Jul 2026 14:54:44 +0900",
+      "description": "Claude × Blender 新たな進路作りの実験｜AUL DoX｜note【Claude × Blender】AUL AI × 3Dは、特別高等支援学校や高校生の卒後の新たな進路作りの実験をしていnote.com Claude、Blender、Pythonを使って、特別高等支援学校の生徒がマンションや一戸建ての作図にどこまで関われるか。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "【Claude × Blender】かんたん作図ツール、マンション作図がさらに実用寄りになってきた",
+      "url": "https://note.com/chic_wren6567/n/n36b9b07588fc",
+      "published": "Sun, 12 Jul 2026 11:55:12 +0900",
+      "description": "前回の記事では、AUL AI×3Dの「かんたん作図ツール」に、AI相談パネルを追加したところまで書いた。Claude APIを直接使うのではなく、ツールが質問文を作り、生徒がClaude.aiにコピーして相談し、その回答をツールへ貼り付ける。続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "通所介護及び地域密着型通所介護 収支・差引比率6.3%｜令和6年度決算の経営状況　第23表",
+      "url": "https://note.com/chic_wren6567/n/n12366906bcad",
+      "published": "Sun, 12 Jul 2026 05:00:02 +0900",
+      "description": "通所介護及び地域密着型通所介護 収支・差引比率6.3%｜令和6年度決算の経営状況　第23表 – AUL｜Analyze U Labaul-dox.jp        20260711-1_report.pdf 1.87 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
+      "source": "rss"
+    },
+    {
+      "title": "看護小規模多機能型居宅介護 収支・差引比率6.5%｜令和6年度決算の経営状況　第22表",
+      "url": "https://note.com/chic_wren6567/n/n7e023cd92148",
+      "published": "Sat, 11 Jul 2026 17:23:53 +0900",
+      "description": "看護小規模多機能型居宅介護 収支・差引比率6.5%｜令和6年度決算の経営状況　第22表 – AUL｜Analyze U Labaul-dox.jp        20260711-2_report.pdf 1.86 MB  ファイルダウンロードについて      ダウンロード      続きをみる",
       "source": "rss"
     }
   ],
