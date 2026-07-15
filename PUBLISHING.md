@@ -65,6 +65,14 @@ draft: false
 | `<div class="aul-...">`（`<html>`タグなし） | ダッシュボード（スコープ付きフラグメント） | `src/dashboards/` |
 | `<!doctype html>` または `<html` | 分析レポート（完結した1ページ） | `src/reports/` |
 
+### スラッグ名について
+
+日本語ファイル名でも技術的には動作する（`import.meta.glob`・Astroのルーティングは問題なくURLを生成する）。
+ただし実用面で英数字（ローマ字）のスラッグを推奨する：
+
+- コピペやSNS共有時に`%E4%BB%8B%E8%AD%B7...`のような長いパーセントエンコード文字列に化けやすい
+- gitやシェル操作で日本語ファイル名は引用符が必要になる等、扱いが煩雑になりがち
+
 ### 2-A. ダッシュボード（7Pipsパイプライン出力）
 
 `C:\AUL 7Pips-welfare`（後継：`C:\AUL 7Pips-welfare REF`）が生成する自己完結HTML。
@@ -72,9 +80,9 @@ draft: false
 
 1. `06_writer/{prefix}_report.html`（2026-07-11以降はサマリー統合済み。旧プロジェクトは
    `{prefix}_wordpress.html`）を `src/dashboards/` にコピー
-2. わかりやすいスラッグ名にリネーム（例: `kaigo-keiei-chosa-22.html`）
+2. わかりやすいスラッグ名にリネーム（例: `kaigo-keiei-chosa-22.html`。英数字推奨、理由は下記コラム参照）
 3. `npm run dev` で `http://localhost:4321/data/<スラッグ>/` を確認
-4. `git add src/dashboards/ src/pages/data/` → `git commit` → `git push`
+4. `scripts\publish.cmd` を実行（`src/dashboards/`・`src/pages/data/`も自動でstage・commit・pushされる）
 
 注意：同一ページに複数ダッシュボードを並べるとID・クラス名が衝突する（現状1ページ1ダッシュボード前提）。
 
@@ -85,9 +93,9 @@ Codex・Claude等で生成する「Deep Research」系レポートのように�
 **生ページとしてそのまま出力**する（ビルド時に`<body>`直後へ戻りリンクだけ自動挿入、元ファイルは無編集）。
 
 1. 生成されたHTMLをそのまま `src/reports/` にコピー
-2. わかりやすいスラッグ名にリネーム（例: `shogaisha-koyo-gap.html`）
+2. わかりやすいスラッグ名にリネーム（例: `shogaisha-koyo-gap.html`。英数字推奨、理由は下記コラム参照）
 3. `npm run dev` で `http://localhost:4321/reports/<スラッグ>/` を確認
-4. `git add src/reports/ src/pages/reports/` → `git commit` → `git push`
+4. `scripts\publish.cmd` を実行（`src/reports/`・`src/pages/reports/`も自動でstage・commit・pushされる）
 
 ### 共通の注意点
 
