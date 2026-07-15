@@ -1,14 +1,14 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
-import { reportCategories, formatYearMonth } from '../../reports-config';
+import { dataCategories, deepResearchTags, formatYearMonth } from '../../data-categories';
 
-const dashboardModules = import.meta.glob('../../dashboards/*.html', {
+const dashboardModules = import.meta.glob('../../dashboards/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
-const reportModules = import.meta.glob('../../reports/**/*.html', {
+const deepResearchModules = import.meta.glob('../../Deep-Research/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -20,35 +20,38 @@ function extractTitle(html: string, fallback: string) {
   return match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-const dashboards = Object.entries(dashboardModules)
-  .map(([path, html]) => {
-    const slug = path.replace('../../dashboards/', '').replace(/\.html$/, '');
-    return { slug, title: extractTitle(html, slug) };
-  })
-  .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
+function getTagLabel(slug: string) {
+  return deepResearchTags.find((t) => t.slug === slug)?.label ?? slug;
+}
 
-// src/reports/<カテゴリ>/<年月>/<ファイル>.html を分解して { category, month, slug, title } に。
-const reports = Object.entries(reportModules).map(([path, html]) => {
-  const rel = path.replace('../../reports/', '').replace(/\.html$/, '');
+// src/dashboards/<カテゴリ>/<ファイル>.html -> { category, slug, title, href }
+const dashboardItems = Object.entries(dashboardModules).map(([path, html]) => {
+  const rel = path.replace('../../dashboards/', '').replace(/\.html$/, '');
+  const category = rel.split('/')[0] ?? '';
+  return { category, title: extractTitle(html, rel), href: `/data/${rel}/` };
+});
+
+// dashboards側の3タブ（介護分野・障がい分野・経営の見える化）。
+const dashboardTabs = dataCategories.map((cat) => ({
+  ...cat,
+  items: dashboardItems.filter((i) => i.category === cat.slug),
+}));
+
+// src/Deep-Research/<カテゴリ>/<年月>/<ファイル>.html -> { tag, month, title, href }
+const deepResearchItems = Object.entries(deepResearchModules).map(([path, html]) => {
+  const rel = path.replace('../../Deep-Research/', '').replace(/\.html$/, '');
   const segments = rel.split('/');
-  const category = segments[0] ?? '';
+  const tag = segments[0] ?? '';
   const month = /^\d{4}-\d{2}$/.test(segments[1] ?? '') ? segments[1] : '';
-  return { category, month, slug: rel, title: extractTitle(html, rel) };
-});
+  return { tag, month, title: extractTitle(html, rel), href: `/reports/${rel}/` };
+}).sort((a, b) => b.month.localeCompare(a.month) || a.title.localeCompare(b.title, 'ja'));
 
-// カテゴリごとに束ね、年月（新しい順）も抽出。
-const reportsByCategory = reportCategories.map((cat) => {
-  const items = reports
-    .filter((r) => r.category === cat.slug)
-    .sort((a, b) => b.month.localeCompare(a.month) || a.title.localeCompare(b.title, 'ja'));
-  const months = [...new Set(items.map((i) => i.month).filter(Boolean))].sort().reverse();
-  return { ...cat, items, months };
-});
+const deepResearchMonths = [...new Set(deepResearchItems.map((i) => i.month).filter(Boolean))].sort().reverse();
 
-// タブ定義：各レポートカテゴリ（介護・障がい）＋経営の見える化（ダッシュボード）。
+// 4タブ：介護分野・障がい分野・経営の見える化・Deep Research。
 const tabs = [
-  ...reportCategories.map((c) => ({ id: c.slug, label: c.label })),
-  { id: 'dashboards', label: '経営の見える化' },
+  ...dashboardTabs.map((t) => ({ slug: t.slug, label: t.label })),
+  { slug: 'deep-research', label: 'Deep Research' },
 ];
 ---
 
@@ -66,33 +69,21 @@ const tabs = [
       <button
         class:list={['data-tab', i === 0 && 'is-active']}
         role="tab"
-        data-tab={tab.id}
+        data-tab={tab.slug}
       >{tab.label}</button>
     ))}
   </div>
 
-  {/* レポートカテゴリ（介護分野・障がい分野）。先頭カテゴリを既定表示。 */}
-  {reportsByCategory.map((cat, i) => (
+  {/* 介護分野・障がい分野・経営の見える化（dashboards） */}
+  {dashboardTabs.map((cat, i) => (
     <section class:list={['data-panel', i === 0 && 'is-active']} data-panel={cat.slug}>
-      {cat.months.length > 0 && (
-        <div class="data-filter">
-          <label for={`month-${cat.slug}`}>年月で絞り込み</label>
-          <select id={`month-${cat.slug}`} class="data-month-select" data-for={cat.slug}>
-            <option value="">すべての年月</option>
-            {cat.months.map((m) => (
-              <option value={m}>{formatYearMonth(m)}</option>
-            ))}
-          </select>
-        </div>
-      )}
       {cat.items.length === 0 ? (
-        <p class="data-empty">このカテゴリのレポートはまだありません。</p>
+        <p class="data-empty">このカテゴリのコンテンツはまだありません。</p>
       ) : (
-        <ul class="wiki-index-list" data-list={cat.slug}>
-          {cat.items.map((r) => (
-            <li class="wiki-index-item" data-month={r.month}>
-              <a href={`/reports/${r.slug}/`}>{r.title}</a>
-              {r.month && <span class="data-month-tag">{formatYearMonth(r.month)}</span>}
+        <ul class="wiki-index-list">
+          {cat.items.map((item) => (
+            <li class="wiki-index-item">
+              <a href={item.href}>{item.title}</a>
             </li>
           ))}
         </ul>
@@ -100,15 +91,32 @@ const tabs = [
     </section>
   ))}
 
-  {/* 経営の見える化＝ダッシュボード */}
-  <section class="data-panel" data-panel="dashboards">
-    <ul class="wiki-index-list">
-      {dashboards.map((d) => (
-        <li class="wiki-index-item">
-          <a href={`/data/${d.slug}/`}>{d.title}</a>
-        </li>
-      ))}
-    </ul>
+  {/* Deep Research（Codex等） */}
+  <section class="data-panel" data-panel="deep-research">
+    {deepResearchMonths.length > 0 && (
+      <div class="data-filter">
+        <label for="month-deep-research">年月で絞り込み</label>
+        <select id="month-deep-research" class="data-month-select" data-for="deep-research">
+          <option value="">すべての年月</option>
+          {deepResearchMonths.map((m) => (
+            <option value={m}>{formatYearMonth(m)}</option>
+          ))}
+        </select>
+      </div>
+    )}
+    {deepResearchItems.length === 0 ? (
+      <p class="data-empty">Deep Researchのコンテンツはまだありません。</p>
+    ) : (
+      <ul class="wiki-index-list" data-list="deep-research">
+        {deepResearchItems.map((item) => (
+          <li class="wiki-index-item" data-month={item.month}>
+            <a href={item.href}>{item.title}</a>
+            <span class="data-tag">{getTagLabel(item.tag)}</span>
+            {item.month && <span class="data-month-tag">{formatYearMonth(item.month)}</span>}
+          </li>
+        ))}
+      </ul>
+    )}
   </section>
 
   <script is:inline>
@@ -203,8 +211,18 @@ const tabs = [
       cursor: pointer;
     }
 
-    .data-month-tag {
+    .data-tag {
       margin-left: 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--soft);
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+
+    .data-month-tag {
+      margin-left: 8px;
       font-size: 0.8rem;
       font-weight: 700;
       color: var(--muted);

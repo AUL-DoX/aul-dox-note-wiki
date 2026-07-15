@@ -1,30 +1,31 @@
 ---
-// 完結した1ページ形式のHTML（<html>から始まる独立レポート）をそのまま公開する生ページルート。
-// src/reports/<カテゴリ>/<年月>/<ファイル>.html を /reports/<カテゴリ>/<年月>/<ファイル>/ として配信する。
+// 完結した1ページ形式のHTML（<html>から始まる独立レポート、Codex等のDeep Research出力）を
+// そのまま公開する生ページルート。
+// src/Deep-Research/<カテゴリ>/<年月>/<ファイル>.html を /reports/<カテゴリ>/<年月>/<ファイル>/ として配信する。
 // WikiLayoutで包まず、<body>直後にサイトへ戻る小さなバーだけ自動挿入する。
 
-const htmlModules = import.meta.glob('../../reports/**/*.html', {
+const htmlModules = import.meta.glob('../../Deep-Research/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
 export function getStaticPaths() {
-  const files = import.meta.glob('../../reports/**/*.html', {
+  const files = import.meta.glob('../../Deep-Research/**/*.html', {
     query: '?raw',
     import: 'default',
     eager: true,
   }) as Record<string, string>;
 
   return Object.keys(files).map((path) => {
-    const slug = path.replace('../../reports/', '').replace(/\.html$/, '');
+    const slug = path.replace('../../Deep-Research/', '').replace(/\.html$/, '');
     return { params: { slug } };
   });
 }
 
 const { slug } = Astro.params;
 const entry = Object.entries(htmlModules).find(
-  ([path]) => path === `../../reports/${slug}.html`,
+  ([path]) => path === `../../Deep-Research/${slug}.html`,
 );
 const rawHtml = entry?.[1] ?? '<!doctype html><html><body>Not found</body></html>';
 

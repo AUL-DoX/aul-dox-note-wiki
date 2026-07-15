@@ -1,14 +1,17 @@
 ---
+// 7Pipsが生成するスコープ付きフラグメント（<html>タグなし）をWikiLayout内に埋め込むルート。
+// src/dashboards/<カテゴリ>/<ファイル>.html を /data/<カテゴリ>/<ファイル>/ として配信する。
+
 import WikiLayout from '../../layouts/WikiLayout.astro';
 
-const htmlModules = import.meta.glob('../../dashboards/*.html', {
+const htmlModules = import.meta.glob('../../dashboards/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
 export function getStaticPaths() {
-  const files = import.meta.glob('../../dashboards/*.html', {
+  const files = import.meta.glob('../../dashboards/**/*.html', {
     query: '?raw',
     import: 'default',
     eager: true,
