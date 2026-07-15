@@ -92,10 +92,35 @@ Codex・Claude等で生成する「Deep Research」系レポートのように�
 グローバルなCSSセレクタ（`body`、`h1`等）を使っているため、サイト共通レイアウトには埋め込まず、
 **生ページとしてそのまま出力**する（ビルド時に`<body>`直後へ戻りリンクだけ自動挿入、元ファイルは無編集）。
 
-1. 生成されたHTMLをそのまま `src/reports/` にコピー
-2. わかりやすいスラッグ名にリネーム（例: `shogaisha-koyo-gap.html`。英数字推奨、理由は下記コラム参照）
-3. `npm run dev` で `http://localhost:4321/reports/<スラッグ>/` を確認
+**フォルダ構造：`src/reports/<カテゴリ>/<年月>/<ファイル>.html`**
+
+```
+src/reports/
+  kaigo/          ← 介護分野
+    2026-07/      ← 年月（YYYY-MM 形式）
+      kaig-human-chyousa.html
+  shogai/         ← 障がい分野
+    2026-07/
+      shogaisha-koyo-gap.html
+```
+
+- 親カテゴリ（`kaigo`／`shogai`）と画面表示名（介護分野／障がい分野）の対応は
+  `src/reports-config.ts` で定義。**新しい親カテゴリを増やすときは、まずここに1行足してから**
+  `src/reports/<slug>/` フォルダを作る（登録し忘れるとフォルダ名がそのまま表示名になる）
+- 年月フォルダは必ず `YYYY-MM` 形式（例: `2026-07`）。`/data`ページの年月プルダウンが
+  この形式を前提に「2026年7月」と表示する
+
+手順:
+
+1. 生成されたHTMLを `src/reports/<カテゴリ>/<年月>/` にコピー
+   （例: `src/reports/kaigo/2026-07/`。フォルダが無ければ作る）
+2. わかりやすいスラッグ名にリネーム（例: `kaig-human-chyousa.html`。英数字推奨、理由は下記コラム参照）
+3. `npm run dev` で `http://localhost:4321/reports/<カテゴリ>/<年月>/<スラッグ>/` を確認
 4. `scripts\publish.cmd` を実行（`src/reports/`・`src/pages/reports/`も自動でstage・commit・pushされる）
+
+`/data`ページでは「経営の見える化（ダッシュボード）」「介護分野」「障がい分野」の3タブに分かれ、
+介護・障がい分野は年月プルダウンで絞り込める。ファイルを正しいカテゴリ／年月フォルダに置けば、
+タブ・プルダウンへの反映は自動。
 
 ### 共通の注意点
 

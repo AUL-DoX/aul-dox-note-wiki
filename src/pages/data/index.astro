@@ -1,5 +1,6 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
+import { reportCategories, formatYearMonth } from '../../reports-config';
 
 const dashboardModules = import.meta.glob('../../dashboards/*.html', {
   query: '?raw',
@@ -7,7 +8,7 @@ const dashboardModules = import.meta.glob('../../dashboards/*.html', {
   eager: true,
 }) as Record<string, string>;
 
-const reportModules = import.meta.glob('../../reports/*.html', {
+const reportModules = import.meta.glob('../../reports/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -26,38 +27,192 @@ const dashboards = Object.entries(dashboardModules)
   })
   .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
 
-const reports = Object.entries(reportModules)
-  .map(([path, html]) => {
-    const slug = path.replace('../../reports/', '').replace(/\.html$/, '');
-    return { slug, title: extractTitle(html, slug) };
-  })
-  .sort((a, b) => a.slug.localeCompare(b.slug, 'ja'));
+// src/reports/<カテゴリ>/<年月>/<ファイル>.html を分解して { category, month, slug, title } に。
+const reports = Object.entries(reportModules).map(([path, html]) => {
+  const rel = path.replace('../../reports/', '').replace(/\.html$/, '');
+  const segments = rel.split('/');
+  const category = segments[0] ?? '';
+  const month = /^\d{4}-\d{2}$/.test(segments[1] ?? '') ? segments[1] : '';
+  return { category, month, slug: rel, title: extractTitle(html, rel) };
+});
+
+// カテゴリごとに束ね、年月（新しい順）も抽出。
+const reportsByCategory = reportCategories.map((cat) => {
+  const items = reports
+    .filter((r) => r.category === cat.slug)
+    .sort((a, b) => b.month.localeCompare(a.month) || a.title.localeCompare(b.title, 'ja'));
+  const months = [...new Set(items.map((i) => i.month).filter(Boolean))].sort().reverse();
+  return { ...cat, items, months };
+});
+
+// タブ定義：各レポートカテゴリ（介護・障がい）＋経営の見える化（ダッシュボード）。
+const tabs = [
+  ...reportCategories.map((c) => ({ id: c.slug, label: c.label })),
+  { id: 'dashboards', label: '経営の見える化' },
+];
 ---
 
 <WikiLayout wide title="データ分析 | AUL DoX Reference">
   <section class="wiki-home-header">
     <div>
       <p class="eyebrow">Data Index</p>
-      <h1>データ分析ダッシュボード</h1>
-      <p>厚生労働省統計等をもとにしたデータ分析ダッシュボードの一覧です。</p>
+      <h1>データ分析</h1>
+      <p>厚生労働省統計等をもとにした、AUL DoXのデータ分析ダッシュボード・レポートの一覧です。</p>
     </div>
   </section>
 
-  <h2>ダッシュボード</h2>
-  <ul class="wiki-index-list">
-    {dashboards.map((d) => (
-      <li class="wiki-index-item">
-        <a href={`/data/${d.slug}/`}>{d.title}</a>
-      </li>
+  <div class="data-tabs" role="tablist">
+    {tabs.map((tab, i) => (
+      <button
+        class:list={['data-tab', i === 0 && 'is-active']}
+        role="tab"
+        data-tab={tab.id}
+      >{tab.label}</button>
     ))}
-  </ul>
+  </div>
 
-  <h2>分析レポート</h2>
-  <ul class="wiki-index-list">
-    {reports.map((r) => (
-      <li class="wiki-index-item">
-        <a href={`/reports/${r.slug}/`}>{r.title}</a>
-      </li>
-    ))}
-  </ul>
+  {/* レポートカテゴリ（介護分野・障がい分野）。先頭カテゴリを既定表示。 */}
+  {reportsByCategory.map((cat, i) => (
+    <section class:list={['data-panel', i === 0 && 'is-active']} data-panel={cat.slug}>
+      {cat.months.length > 0 && (
+        <div class="data-filter">
+          <label for={`month-${cat.slug}`}>年月で絞り込み</label>
+          <select id={`month-${cat.slug}`} class="data-month-select" data-for={cat.slug}>
+            <option value="">すべての年月</option>
+            {cat.months.map((m) => (
+              <option value={m}>{formatYearMonth(m)}</option>
+            ))}
+          </select>
+        </div>
+      )}
+      {cat.items.length === 0 ? (
+        <p class="data-empty">このカテゴリのレポートはまだありません。</p>
+      ) : (
+        <ul class="wiki-index-list" data-list={cat.slug}>
+          {cat.items.map((r) => (
+            <li class="wiki-index-item" data-month={r.month}>
+              <a href={`/reports/${r.slug}/`}>{r.title}</a>
+              {r.month && <span class="data-month-tag">{formatYearMonth(r.month)}</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  ))}
+
+  {/* 経営の見える化＝ダッシュボード */}
+  <section class="data-panel" data-panel="dashboards">
+    <ul class="wiki-index-list">
+      {dashboards.map((d) => (
+        <li class="wiki-index-item">
+          <a href={`/data/${d.slug}/`}>{d.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <script is:inline>
+    (() => {
+      const tabs = [...document.querySelectorAll('.data-tab')];
+      const panels = [...document.querySelectorAll('.data-panel')];
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const id = tab.dataset.tab;
+          tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
+          panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+        });
+      });
+
+      document.querySelectorAll('.data-month-select').forEach((select) => {
+        select.addEventListener('change', () => {
+          const listId = select.dataset.for;
+          const value = select.value;
+          const list = document.querySelector(`[data-list="${listId}"]`);
+          if (!list) return;
+          list.querySelectorAll('.wiki-index-item').forEach((item) => {
+            item.hidden = value !== '' && item.dataset.month !== value;
+          });
+        });
+      });
+    })();
+  </script>
+
+  <style>
+    .data-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 22px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .data-tab {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--muted);
+      font: inherit;
+      font-weight: 800;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+
+    .data-tab:hover {
+      border-color: #bfdbfe;
+      color: var(--accent);
+    }
+
+    .data-tab.is-active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .data-panel {
+      display: none;
+    }
+
+    .data-panel.is-active {
+      display: block;
+    }
+
+    .data-filter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .data-filter label {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .data-month-select {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--text);
+      font: inherit;
+      padding: 8px 12px;
+      min-height: 40px;
+      cursor: pointer;
+    }
+
+    .data-month-tag {
+      margin-left: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .data-empty {
+      color: var(--muted);
+    }
+  </style>
 </WikiLayout>

@@ -1,16 +1,16 @@
 ---
 // 完結した1ページ形式のHTML（<html>から始まる独立レポート）をそのまま公開する生ページルート。
-// 7Pipsダッシュボード（src/dashboards/、スコープ付きフラグメント）とは別物。
+// src/reports/<カテゴリ>/<年月>/<ファイル>.html を /reports/<カテゴリ>/<年月>/<ファイル>/ として配信する。
 // WikiLayoutで包まず、<body>直後にサイトへ戻る小さなバーだけ自動挿入する。
 
-const htmlModules = import.meta.glob('../../reports/*.html', {
+const htmlModules = import.meta.glob('../../reports/**/*.html', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>;
 
 export function getStaticPaths() {
-  const files = import.meta.glob('../../reports/*.html', {
+  const files = import.meta.glob('../../reports/**/*.html', {
     query: '?raw',
     import: 'default',
     eager: true,
