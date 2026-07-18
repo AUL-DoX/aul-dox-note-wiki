@@ -1,0 +1,170 @@
+<div class="aul-report aul-dr" style="background:#eef2f6"><style>
+.aul-dr{--ink:#16263a;--ink-soft:#3d5166;--ink-faint:#8494a5;--teal:#2f9e8a;--teal-deep:#1d6f60;
+  --card:#ffffff;--line:#d9e2ea;--clay:#b4544a;--r:14px;--shadow:0 2px 10px rgba(19,33,47,.07);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);
+  line-height:1.7;max-width:980px;margin:0 auto;padding:18px 14px}
+.aul-dr *,.aul-dr *::before,.aul-dr *::after{box-sizing:border-box}
+.aul-dr h1,.aul-dr h2,.aul-dr h3,.aul-dr h4,.aul-dr h5,.aul-dr p,.aul-dr ul,.aul-dr figure{margin:0;padding:0}
+.aul-dr .aul-dr-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-dr .aul-dr-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:var(--teal);vertical-align:middle;margin-right:8px}
+
+/* ── summary部 ── */
+.aul-dr-sum .aul-dr-swhead{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;
+  padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-dr-sum h1{font-size:clamp(19px,2.6vw,25px);font-weight:800;line-height:1.4}
+.aul-dr-sum .aul-dr-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-dr-sum .aul-dr-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-dr-sum .aul-dr-swdoc{background:var(--card);border:1px solid var(--line);border-top:none;
+  border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-dr-sum .aul-dr-subtitle{font-size:15px;font-weight:700;color:var(--teal-deep);margin-bottom:12px}
+.aul-dr-sum h2{font-size:17px;font-weight:800;margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-dr-sum p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-dr-sum ul{margin:10px 0 10px 22px}
+.aul-dr-sum li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-dr .aul-dr-quote{background:#e8f3f0;border-left:4px solid var(--teal);border-radius:0 8px 8px 0;
+  padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-dr .aul-dr-keymsg{font-size:14.5px;font-weight:700}
+.aul-dr-sum .aul-dr-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+
+/* ── 表（summary/dashboard共通） ── */
+.aul-dr table.aul-dr-table{width:100%;border-collapse:collapse;margin:14px 0 4px;font-size:13.5px;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-dr table.aul-dr-table th,.aul-dr table.aul-dr-table td{padding:9px 12px;text-align:right;border-bottom:1px solid #e8eef3}
+.aul-dr table.aul-dr-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-dr table.aul-dr-table th.l,.aul-dr table.aul-dr-table td.l{text-align:left}
+.aul-dr table.aul-dr-table td.l{font-weight:600;color:var(--ink)}
+.aul-dr table.aul-dr-table td.neg{color:var(--clay);font-weight:700}
+.aul-dr table.aul-dr-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-dr table.aul-dr-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-dr .aul-dr-tnote{font-size:11.5px;color:var(--ink-faint);margin:4px 0 0}
+
+/* ── dashboard部 ── */
+.aul-dr-db{margin-top:22px}
+.aul-dr-db .aul-dr-hero{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;
+  padding:32px 32px 28px;border-radius:var(--r)}
+.aul-dr-db .aul-dr-htitle{font-size:clamp(19px,2.8vw,26px);font-weight:800;line-height:1.45}
+.aul-dr-db .aul-dr-hsub{font-size:.72em;font-weight:700;color:#9fd6cb}
+.aul-dr-db .aul-dr-hlead{margin-top:14px;font-size:13.5px;line-height:1.8;color:#cfdae4;
+  background:rgba(255,255,255,.06);border-left:3px solid var(--teal);padding:10px 14px;border-radius:0 8px 8px 0}
+.aul-dr-db .aul-dr-sec{margin-top:26px}
+.aul-dr-db .aul-dr-sec>h3{font-size:16px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.aul-dr-db .aul-dr-secno{font-size:11px;font-weight:800;color:var(--teal);border:1.5px solid var(--teal);
+  border-radius:6px;padding:2px 7px;letter-spacing:.08em}
+.aul-dr-db .aul-dr-kpistrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.aul-dr-db .aul-dr-kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:14px 16px}
+.aul-dr-db .aul-dr-klabel{font-size:11.5px;font-weight:700;color:var(--ink-faint);margin-bottom:6px}
+.aul-dr-db .aul-dr-kval{font-size:26px;font-weight:800;color:var(--ink);line-height:1.1}
+.aul-dr-db .aul-dr-kunit{font-size:13px;font-weight:700;color:var(--ink-soft);margin-left:3px}
+.aul-dr-db .aul-dr-kchg{display:inline-block;font-size:12px;font-weight:700;margin-top:7px;color:var(--ink-soft)}
+.aul-dr-db .aul-dr-kchg.bad{color:var(--clay)}
+.aul-dr-db .aul-dr-kchg.good{color:var(--teal-deep)}
+.aul-dr-db .aul-dr-knote{display:block;font-size:10.5px;color:var(--ink-faint);margin-top:3px}
+.aul-dr-db .aul-dr-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.aul-dr .aul-dr-card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:16px 18px 14px}
+.aul-dr .aul-dr-card h4{font-size:14.5px;font-weight:800;margin-bottom:10px}
+.aul-dr .aul-dr-card h5{font-size:12.5px;font-weight:800;margin-bottom:6px}
+.aul-dr .aul-dr-cunit{font-size:11px;font-weight:600;color:var(--ink-faint);margin-left:8px}
+.aul-dr .aul-dr-card figcaption{font-size:12.5px;color:var(--teal-deep);font-weight:700;margin-top:10px;
+  padding-top:8px;border-top:1px dashed var(--line)}
+.aul-dr .aul-dr-csrc{font-size:10.5px;color:var(--ink-faint);margin-top:4px}
+.aul-dr .aul-dr-legend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:8px}
+.aul-dr .aul-dr-lg{font-size:11.5px;font-weight:700;color:var(--ink-soft);display:inline-flex;align-items:center;gap:5px}
+.aul-dr .aul-dr-lgdot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.aul-dr-db .aul-dr-smgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.aul-dr-db .aul-dr-sm{padding:12px 13px 10px}
+.aul-dr-db .aul-dr-sm figcaption{font-size:11px;margin-top:7px;padding-top:6px}
+.aul-dr-db .aul-dr-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.aul-dr-db .aul-dr-topic{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:16px 18px}
+.aul-dr-db .aul-dr-ttag{font-size:10.5px;font-weight:800;color:var(--teal);letter-spacing:.1em;margin-bottom:7px}
+.aul-dr-db .aul-dr-topic h4{font-size:14px;font-weight:800;margin-bottom:8px}
+.aul-dr-db .aul-dr-topic p{font-size:12.5px;line-height:1.75;color:var(--ink-soft)}
+.aul-dr-db .aul-dr-dbfoot{margin-top:24px;border-top:1px solid var(--line);padding-top:14px}
+.aul-dr-db .aul-dr-dbfoot ul{margin:0 0 8px 20px}
+.aul-dr-db .aul-dr-dbfoot li,.aul-dr-db .aul-dr-dbfoot p{font-size:11px;line-height:1.7;color:var(--ink-faint)}
+@media(min-width:760px){.aul-dr-db .aul-dr-grid{grid-template-columns:1fr 1fr}
+  .aul-dr-db .aul-dr-grid>figure:first-child{grid-column:1/-1}}
+@media(max-width:600px){
+  .aul-dr-sum .aul-dr-swhead{padding:24px 20px 20px}
+  .aul-dr-sum .aul-dr-swdoc{padding:22px 20px}
+  .aul-dr table.aul-dr-table{display:block;overflow-x:auto}
+  .aul-dr-db .aul-dr-hero{padding:24px 20px}}
+@page{size:A4;margin:12mm}
+@media print{
+  .aul-dr,.aul-dr *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .aul-dr{max-width:none;padding:0}
+  .aul-dr .aul-dr-card,.aul-dr-db .aul-dr-topic,.aul-dr-db .aul-dr-kpi{box-shadow:none;break-inside:avoid}
+  .aul-dr-db .aul-dr-hero,.aul-dr-sum .aul-dr-swhead{break-inside:avoid}
+  .aul-dr table.aul-dr-table tr{break-inside:avoid}
+  .aul-dr-db{break-before:page}}
+</style><div class="aul-dr-sum">
+<div class="aul-dr-swhead">
+  <p class="aul-dr-eyebrow">WAM経営動向調査分析</p>
+  <h1>社会福祉法人経営動向調査の概要</h1>
+  <div class="aul-dr-tags"><span class="aul-dr-tag">特別養護老人ホーム</span><span class="aul-dr-tag">経営動向調査</span><span class="aul-dr-tag">WAM</span><span class="aul-dr-tag">2026年6月調査</span></div>
+</div>
+<div class="aul-dr-swdoc">
+  <p class="aul-dr-subtitle">2026年6月調査｜特別養護老人ホーム運営法人351法人の景況感</p>
+  <div class="aul-dr-quote aul-dr-keymsg">特養の経営DIは3月調査から小幅に改善したが、介護職員の確保DI（△87）は全項目中もっとも深刻な水準でなお悪化している。人件費・業務委託費の上昇も続いており、収支の持ち直しは職員確保という構造課題の解決を伴っていない。</div>
+  <p>本レポートは、独立行政法人福祉医療機構（WAM）が2026年6月に実施した「社会福祉法人経営動向調査」（特別養護老人ホームを運営する社会福祉法人351法人が回答）の結果を整理したものである。厚生労働省の介護事業経営概況調査（実額の収支データ）とは別の調査主体・調査方式による、経営者・事務長の景況感（DI）調査である。</p>
+  <h2>1. 経営DIは全体として小幅に改善</h2><p>特養のサービス活動収益DIは2026年3月調査の△15から6月調査の△5へ、10ポイント改善した。サービス活動収支（黒字・赤字）DIも0から1へとほぼ収支均衡ラインまで持ち直している。稼働率DIも△13から△5へ8ポイント改善した。</p><table class="aul-dr-table"><thead><tr><th class="l">指標</th><th class="">2026年3月調査</th><th class="">2026年6月調査</th><th class="">変化幅</th></tr></thead><tbody><tr class="g"><td colspan="4">【特養・経営DI】</td></tr><tr><td class="l">サービス活動収益</td><td class="">△15</td><td class="">△5</td><td class="">+10pt</td></tr><tr><td class="l">サービス活動増減差額</td><td class="">△22</td><td class="">△12</td><td class="">+9pt</td></tr><tr><td class="l">サービス活動収支（黒字・赤字）</td><td class="">0</td><td class="">1</td><td class="">+1pt</td></tr><tr><td class="l">施設全体の従業員数</td><td class="">△57</td><td class="">△54</td><td class="">+3pt</td></tr><tr><td class="l">介護職員の確保</td><td class="">△85</td><td class="">△87</td><td class="">△2pt</td></tr><tr><td class="l">人件費</td><td class="">54</td><td class="">58</td><td class="">+4pt</td></tr><tr><td class="l">稼働率</td><td class="">△13</td><td class="">△5</td><td class="">+8pt</td></tr><tr><td class="l">他施設との競合</td><td class="">△45</td><td class="">△46</td><td class="">△2pt</td></tr><tr><td class="l">待機者</td><td class="">△29</td><td class="">△34</td><td class="">△5pt</td></tr><tr class="g"><td colspan="4">【社会福祉法人全体・経営課題（複数回答、%）】</td></tr><tr><td class="l">職員確保難</td><td class="">66.7%</td><td class="">71.2%</td><td class="">+4.6pt</td></tr><tr><td class="l">人件費の増加</td><td class="">70.1%</td><td class="">65.5%</td><td class="">△4.6pt</td></tr></tbody></table><p class="aul-dr-tnote">△はマイナス（悪化・不足方向）を表す。DIは第1選択肢回答割合－第3選択肢回答割合（人件費のみ算出が逆）</p><h2>2. 介護職員の確保は依然として最も深刻な課題</h2><p>一方、介護職員の確保DIは△85から△87へと、改善どころかさらに2ポイント悪化した。これは今回調査したすべてのDI項目の中でもっとも深刻な水準である。</p><div class="aul-dr-quote">収支・稼働率が改善する一方で、職員確保の体感はむしろ悪化している。経営指標の改善が人手不足の解消を伴っていない点に注意が必要。</div><h2>3. 収益変動の主因は「利用者数」</h2><p>2025年度に前年度比でサービス活動収益が増加した施設（n=70）のうち64.3%が「利用者数の増加」を理由に挙げ、減少した施設（n=56）でも87.5%が「利用者数の減少」を理由に挙げた。単価要因（介護報酬・加算等）は増加施設で24.3%、減少施設で10.7%にとどまる。</p><h2>4. 人件費・業務委託費の上昇圧力は継続</h2><p>特養の人件費DIは54から58へ上昇し、コスト増加の実感は強まっている。定員1人当たり業務委託費（全体）も2021年度343千円から2025年度374千円へ5年連続で上昇し、直近5年間で73.2%の施設が委託費の増加を経験した。</p>
+  <h2>経営・実務インプリケーション</h2><ul><li>自施設の収支改善が、介護職員確保の実感改善を伴っているかを分けて確認する。</li><li>収益変動要因を「利用者数」と「単価」で分解し、稼働率対策と加算取得対策を混同しない。</li><li>業務委託費（特に給食業務）の上昇ペースを、直近5年の実額推移で自施設と比較する。</li><li>本調査は景況感（DI）であり、厚労省の介護事業経営概況調査の実額データと併せて確認することで、「体感」と「実額」の両面から経営状況を把握できる。</li></ul>
+  <h2>注記・出典</h2><ul><li>本調査は独立行政法人福祉医療機構（WAM）が実施する景況感（DI）調査であり、厚生労働省の介護事業経営概況調査（実額の収支データ）とは別の調査主体・調査方式によるもの。両者を混同しないこと。</li><li>調査対象はWAMに登録しているモニター法人531法人中、有効回答351法人（回答率66.1%）。母集団全体への代表性は別途確認が必要。</li><li>DIは各項目の第1選択肢の回答割合から第3選択肢の回答割合を差し引いて算出（人件費のみ算出が逆）。数値は四捨五入のため合計が一致しない場合がある。</li><li>月次の時系列推移（2023年6月〜）はグラフ画像として掲載されているが、本レポートでは数値表で確定している「2026年3月調査・6月調査・変化幅」のみを使用した。</li></ul>
+  <ul><li>独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）</li></ul>
+  <p class="aul-dr-foot">作成：AUL（aul-dox.jp）／生成日時: 2026-07-19 06:51</p>
+</div>
+</div><div class="aul-dr-db">
+<header class="aul-dr-hero">
+  <p class="aul-dr-eyebrow">WAM経営動向調査分析・ダッシュボード</p>
+  <h2 class="aul-dr-htitle">社会福祉法人経営動向調査の概要<br><span class="aul-dr-hsub">2026年6月調査｜特別養護老人ホーム運営法人351法人の景況感</span></h2>
+  <p class="aul-dr-hlead">特養の経営DIは3月調査から小幅に改善したが、介護職員の確保DI（△87）は全項目中もっとも深刻な水準でなお悪化している。人件費・業務委託費の上昇も続いており、収支の持ち直しは職員確保という構造課題の解決を伴っていない。</p>
+</header>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">01</span>主要指標</h3>
+  <div class="aul-dr-kpistrip"><div class="aul-dr-kpi"><p class="aul-dr-klabel">介護職員の確保DI</p><p class="aul-dr-kval">-87<span class="aul-dr-kunit"></span></p><span class="aul-dr-kchg bad">▼ -2pt</span><span class="aul-dr-knote">2026年6月調査・全項目中最も深刻</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">人件費DI</p><p class="aul-dr-kval">58<span class="aul-dr-kunit"></span></p><span class="aul-dr-kchg bad">▲ +4pt</span><span class="aul-dr-knote">2026年3月調査比、増加圧力が強まる</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">サービス活動収支DI（黒字・赤字）</p><p class="aul-dr-kval">1<span class="aul-dr-kunit"></span></p><span class="aul-dr-kchg good">▲ +1pt</span><span class="aul-dr-knote">ほぼ収支均衡ラインまで持ち直し</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">稼働率DI</p><p class="aul-dr-kval">-5<span class="aul-dr-kunit"></span></p><span class="aul-dr-kchg good">▲ +8pt</span><span class="aul-dr-knote">改善傾向</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">待機者DI</p><p class="aul-dr-kval">-34<span class="aul-dr-kunit"></span></p><span class="aul-dr-kchg bad">▼ -5pt</span><span class="aul-dr-knote">待機者の減少傾向が強まる</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">定員1人当たり業務委託費</p><p class="aul-dr-kval">374<span class="aul-dr-kunit">千円</span></p><span class="aul-dr-kchg bad">▲ +9.0%</span><span class="aul-dr-knote">2021年度比・5年間</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">経営課題「職員確保難」回答率</p><p class="aul-dr-kval">71.2<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg bad">▲ +4.6pt</span><span class="aul-dr-knote">社会福祉法人全体、複数回答で最多</span></div></div>
+</section>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">02</span>主要チャート</h3>
+  <div class="aul-dr-grid"><figure class="aul-dr-card " id="aul-dr-shakai-fukushi-hojin-keiei-doukou-202606-tokuyou-di-latest">
+  <h4>特養の経営DI一覧（2026年6月調査・最近）<span class="aul-dr-cunit">単位：DI（%ポイント）</span></h4>
+  
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="特養の経営DI一覧（2026年6月調査・最近）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">-100</text><line x1="52" y1="222.5" x2="626" y2="222.5" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="226.4" text-anchor="end" font-size="11" fill="#8494a5">-80</text><line x1="52" y1="171.0" x2="626" y2="171.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="174.9" text-anchor="end" font-size="11" fill="#8494a5">-60</text><line x1="52" y1="119.5" x2="626" y2="119.5" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="123.4" text-anchor="end" font-size="11" fill="#8494a5">-40</text><line x1="52" y1="68.1" x2="626" y2="68.1" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="71.9" text-anchor="end" font-size="11" fill="#8494a5">-20</text><line x1="52" y1="16.6" x2="626" y2="16.6" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="20.4" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="16.6" x2="626" y2="16.6" stroke="#d9e2ea" stroke-width="1.4"/><text x="164" y="34.1" text-anchor="end" font-size="11" fill="#3d5166">介護職員の確保</text><rect x="172" y="20.8" width="394.0" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="572.0" y="34.3" font-size="11.5" font-weight="700" fill="#1d6f60">-87</text><text x="164" y="66.6" text-anchor="end" font-size="11" fill="#3d5166">他施設との競合</text><rect x="172" y="53.3" width="208.3" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="386.3" y="66.8" font-size="11.5" font-weight="700" fill="#1d6f60">-46</text><text x="164" y="99.1" text-anchor="end" font-size="11" fill="#3d5166">待機者</text><rect x="172" y="85.8" width="154.0" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="332.0" y="99.3" font-size="11.5" font-weight="700" fill="#1d6f60">-34</text><text x="164" y="131.6" text-anchor="end" font-size="11" fill="#3d5166">施設全体の従業員数</text><rect x="172" y="118.3" width="244.6" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="422.6" y="131.8" font-size="11.5" font-weight="700" fill="#1d6f60">-54</text><text x="164" y="164.1" text-anchor="end" font-size="11" fill="#3d5166">サービス活動増減差額</text><rect x="172" y="150.8" width="54.3" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="232.3" y="164.3" font-size="11.5" font-weight="700" fill="#1d6f60">-12</text><text x="164" y="196.6" text-anchor="end" font-size="11" fill="#3d5166">サービス活動収益</text><rect x="172" y="183.3" width="22.6" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="200.6" y="196.8" font-size="11.5" font-weight="700" fill="#1d6f60">-5</text><text x="164" y="229.1" text-anchor="end" font-size="11" fill="#3d5166">稼働率</text><rect x="172" y="215.8" width="22.6" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="200.6" y="229.3" font-size="11.5" font-weight="700" fill="#1d6f60">-5</text><text x="164" y="261.6" text-anchor="end" font-size="11" fill="#3d5166">サービス活動収支（黒字・赤字）</text><rect x="172" y="248.3" width="4.5" height="18.8" rx="2.5" fill="#2f9e8a"/><text x="182.5" y="261.8" font-size="11.5" font-weight="700" fill="#1d6f60">1</text></svg>
+  <figcaption>8項目中、介護職員の確保が△87ともっとも深刻な水準にある。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-shakai-fukushi-hojin-keiei-doukou-202606-tokuyou-di-trend">
+  <h4>改善する経営指標と悪化する職員確保（3月調査→6月調査）<span class="aul-dr-cunit">単位：DI（%ポイント）</span></h4>
+  <div class="aul-dr-legend"><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>人件費</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#c98a2d"></span>介護職員の確保</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#5b7a99"></span>稼働率</span></div>
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="改善する経営指標と悪化する職員確保（3月調査→6月調査）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">-100</text><line x1="52" y1="191.7" x2="626" y2="191.7" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="195.6" text-anchor="end" font-size="11" fill="#8494a5">-50</text><line x1="52" y1="109.4" x2="626" y2="109.4" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="113.3" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="27.2" x2="626" y2="27.2" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="31.0" text-anchor="end" font-size="11" fill="#8494a5">50</text><line x1="52" y1="109.4" x2="626" y2="109.4" stroke="#d9e2ea" stroke-width="1.4"/><text x="195.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2026年3月調査</text><text x="482.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2026年6月調査</text><rect x="106.5" y="20.6" width="54.6" height="88.9" rx="2" fill="#2f9e8a"/><text x="133.8" y="15.6" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">54</text><rect x="393.5" y="14.0" width="54.6" height="95.4" rx="2" fill="#2f9e8a"/><text x="420.8" y="9.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">58</text><rect x="165.8" y="109.4" width="54.6" height="139.9" rx="2" fill="#c98a2d"/><text x="193.1" y="104.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-85</text><rect x="452.8" y="109.4" width="54.6" height="143.2" rx="2" fill="#c98a2d"/><text x="480.1" y="104.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-87</text><rect x="225.2" y="109.4" width="54.6" height="21.4" rx="2" fill="#5b7a99"/><text x="252.4" y="104.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-13</text><rect x="512.2" y="109.4" width="54.6" height="8.2" rx="2" fill="#5b7a99"/><text x="539.4" y="104.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-5</text></svg>
+  <figcaption>稼働率・収支は改善方向だが、介護職員の確保はむしろ悪化しており、経営改善と人手不足解消は連動していない。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-shakai-fukushi-hojin-keiei-doukou-202606-revenue-change-reason">
+  <h4>収益増減の主な理由（2025年度実績）<span class="aul-dr-cunit">単位：%</span></h4>
+  <div class="aul-dr-legend"><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>利用者数要因</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#c98a2d"></span>単価要因</span></div>
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="収益増減の主な理由（2025年度実績）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="214.6" x2="626" y2="214.6" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="218.4" text-anchor="end" font-size="11" fill="#8494a5">20</text><line x1="52" y1="155.1" x2="626" y2="155.1" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="159.0" text-anchor="end" font-size="11" fill="#8494a5">40</text><line x1="52" y1="95.7" x2="626" y2="95.7" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="99.6" text-anchor="end" font-size="11" fill="#8494a5">60</text><line x1="52" y1="36.3" x2="626" y2="36.3" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="40.1" text-anchor="end" font-size="11" fill="#8494a5">80</text><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#d9e2ea" stroke-width="1.4"/><text x="195.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">増加施設（n=70）</text><text x="482.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">減少施設（n=56）</text><rect x="106.5" y="82.9" width="81.9" height="191.1" rx="2" fill="#2f9e8a"/><text x="147.5" y="77.9" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">64.3</text><rect x="393.5" y="14.0" width="81.9" height="260.0" rx="2" fill="#2f9e8a"/><text x="434.5" y="9.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">87.5</text><rect x="195.5" y="201.8" width="81.9" height="72.2" rx="2" fill="#c98a2d"/><text x="236.4" y="196.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">24.3</text><rect x="482.5" y="242.2" width="81.9" height="31.8" rx="2" fill="#c98a2d"/><text x="523.4" y="237.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">10.7</text></svg>
+  <figcaption>収益の増減はどちらも「利用者数」が主因で、特に減少施設の87.5%が利用者数減少を理由に挙げた。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-shakai-fukushi-hojin-keiei-doukou-202606-commission-cost-trend">
+  <h4>定員1人当たり業務委託費の推移（全体）<span class="aul-dr-cunit">単位：千円</span></h4>
+  
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="定員1人当たり業務委託費の推移（全体）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">330</text><line x1="52" y1="222.0" x2="626" y2="222.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="225.8" text-anchor="end" font-size="11" fill="#8494a5">340</text><line x1="52" y1="170.0" x2="626" y2="170.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="173.8" text-anchor="end" font-size="11" fill="#8494a5">350</text><line x1="52" y1="118.0" x2="626" y2="118.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="121.8" text-anchor="end" font-size="11" fill="#8494a5">360</text><line x1="52" y1="66.0" x2="626" y2="66.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="69.8" text-anchor="end" font-size="11" fill="#8494a5">370</text><line x1="52" y1="14.0" x2="626" y2="14.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="17.9" text-anchor="end" font-size="11" fill="#8494a5">380</text><text x="52.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2021</text><text x="195.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2022</text><text x="339.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2023</text><text x="482.5" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2024</text><text x="626.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2025</text><polyline points="52.0,206.4 195.5,216.8 339.0,175.2 482.5,97.2 626.0,45.2" fill="none" stroke="#2f9e8a" stroke-width="2.2"/><circle cx="52.0" cy="206.4" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="52.0" y="199.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">343</text><circle cx="195.5" cy="216.8" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="195.5" y="209.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">341</text><circle cx="339.0" cy="175.2" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="339.0" y="168.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">349</text><circle cx="482.5" cy="97.2" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="482.5" y="90.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">364</text><circle cx="626.0" cy="45.2" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="626.0" y="38.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">374</text></svg>
+  <figcaption>業務委託費は5年で343千円から374千円へ9.0%上昇し、上昇基調が続いている。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）</p>
+</figure></div>
+</section>
+
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">04</span>データから読み取れる論点</h3>
+  <div class="aul-dr-topics"><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 A ／ 人材</p><h4>介護職員の確保が全項目中もっとも深刻</h4><p>介護職員確保DIは△87とさらに悪化し、経営課題調査でも「職員確保難」が71.2%で最多回答となった。他の指標が改善する中でも、この課題だけは悪化方向にある。</p></div><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 B ／ コスト構造</p><h4>収支は小幅改善もコスト圧力は継続</h4><p>サービス活動収支DIは黒字方向へ、稼働率も改善したが、人件費DIの上昇と5年連続の業務委託費上昇（343→374千円）が示すように、構造的なコスト圧力は解消していない。</p></div><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 C ／ 収益構造</p><h4>収益変動は「単価」より「利用者数」が主因</h4><p>収益増加・減少とも、8割前後が利用者数の増減を理由に挙げている。介護報酬改定や加算取得（単価要因）よりも、稼働率・利用者確保の巧拙が収益を左右している。</p></div></div>
+</section>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">05</span>主要DI・経営課題の一覧</h3>
+  <table class="aul-dr-table"><thead><tr><th class="l">指標</th><th class="">2026年3月調査</th><th class="">2026年6月調査</th><th class="">変化幅</th></tr></thead><tbody><tr class="g"><td colspan="4">【特養・経営DI】</td></tr><tr><td class="l">サービス活動収益</td><td class="">△15</td><td class="">△5</td><td class="">+10pt</td></tr><tr><td class="l">サービス活動増減差額</td><td class="">△22</td><td class="">△12</td><td class="">+9pt</td></tr><tr><td class="l">サービス活動収支（黒字・赤字）</td><td class="">0</td><td class="">1</td><td class="">+1pt</td></tr><tr><td class="l">施設全体の従業員数</td><td class="">△57</td><td class="">△54</td><td class="">+3pt</td></tr><tr><td class="l">介護職員の確保</td><td class="">△85</td><td class="">△87</td><td class="">△2pt</td></tr><tr><td class="l">人件費</td><td class="">54</td><td class="">58</td><td class="">+4pt</td></tr><tr><td class="l">稼働率</td><td class="">△13</td><td class="">△5</td><td class="">+8pt</td></tr><tr><td class="l">他施設との競合</td><td class="">△45</td><td class="">△46</td><td class="">△2pt</td></tr><tr><td class="l">待機者</td><td class="">△29</td><td class="">△34</td><td class="">△5pt</td></tr><tr class="g"><td colspan="4">【社会福祉法人全体・経営課題（複数回答、%）】</td></tr><tr><td class="l">職員確保難</td><td class="">66.7%</td><td class="">71.2%</td><td class="">+4.6pt</td></tr><tr><td class="l">人件費の増加</td><td class="">70.1%</td><td class="">65.5%</td><td class="">△4.6pt</td></tr></tbody></table><p class="aul-dr-tnote">△はマイナス（悪化・不足方向）を表す。DIは第1選択肢回答割合－第3選択肢回答割合（人件費のみ算出が逆）</p>
+</section>
+<footer class="aul-dr-dbfoot">
+  <ul><li>本調査は独立行政法人福祉医療機構（WAM）が実施する景況感（DI）調査であり、厚生労働省の介護事業経営概況調査（実額の収支データ）とは別の調査主体・調査方式によるもの。両者を混同しないこと。</li><li>調査対象はWAMに登録しているモニター法人531法人中、有効回答351法人（回答率66.1%）。母集団全体への代表性は別途確認が必要。</li><li>DIは各項目の第1選択肢の回答割合から第3選択肢の回答割合を差し引いて算出（人件費のみ算出が逆）。数値は四捨五入のため合計が一致しない場合がある。</li><li>月次の時系列推移（2023年6月〜）はグラフ画像として掲載されているが、本レポートでは数値表で確定している「2026年3月調査・6月調査・変化幅」のみを使用した。</li></ul>
+  <p>出典：独立行政法人福祉医療機構（WAM）経営サポートセンター「社会福祉法人経営動向調査の概要」（2026年7月3日公表、2026年6月調査）／本ダッシュボードは公開情報等を分析・可視化した二次的著作物であり、数値の正確性は原典に依拠する。作成：AUL（aul-dox.jp）／オフライン動作・外部依存なしの自己完結HTML。</p>
+</footer>
+</div></div>
