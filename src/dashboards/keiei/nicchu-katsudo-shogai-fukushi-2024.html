@@ -1,0 +1,170 @@
+<div class="aul-report aul-dr" style="background:#eef2f6"><style>
+.aul-dr{--ink:#16263a;--ink-soft:#3d5166;--ink-faint:#8494a5;--teal:#2f9e8a;--teal-deep:#1d6f60;
+  --card:#ffffff;--line:#d9e2ea;--clay:#b4544a;--r:14px;--shadow:0 2px 10px rgba(19,33,47,.07);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);
+  line-height:1.7;max-width:980px;margin:0 auto;padding:18px 14px}
+.aul-dr *,.aul-dr *::before,.aul-dr *::after{box-sizing:border-box}
+.aul-dr h1,.aul-dr h2,.aul-dr h3,.aul-dr h4,.aul-dr h5,.aul-dr p,.aul-dr ul,.aul-dr figure{margin:0;padding:0}
+.aul-dr .aul-dr-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-dr .aul-dr-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:var(--teal);vertical-align:middle;margin-right:8px}
+
+/* ── summary部 ── */
+.aul-dr-sum .aul-dr-swhead{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;
+  padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-dr-sum h1{font-size:clamp(19px,2.6vw,25px);font-weight:800;line-height:1.4}
+.aul-dr-sum .aul-dr-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-dr-sum .aul-dr-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-dr-sum .aul-dr-swdoc{background:var(--card);border:1px solid var(--line);border-top:none;
+  border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-dr-sum .aul-dr-subtitle{font-size:15px;font-weight:700;color:var(--teal-deep);margin-bottom:12px}
+.aul-dr-sum h2{font-size:17px;font-weight:800;margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-dr-sum p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-dr-sum ul{margin:10px 0 10px 22px}
+.aul-dr-sum li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-dr .aul-dr-quote{background:#e8f3f0;border-left:4px solid var(--teal);border-radius:0 8px 8px 0;
+  padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-dr .aul-dr-keymsg{font-size:14.5px;font-weight:700}
+.aul-dr-sum .aul-dr-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+
+/* ── 表（summary/dashboard共通） ── */
+.aul-dr table.aul-dr-table{width:100%;border-collapse:collapse;margin:14px 0 4px;font-size:13.5px;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-dr table.aul-dr-table th,.aul-dr table.aul-dr-table td{padding:9px 12px;text-align:right;border-bottom:1px solid #e8eef3}
+.aul-dr table.aul-dr-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-dr table.aul-dr-table th.l,.aul-dr table.aul-dr-table td.l{text-align:left}
+.aul-dr table.aul-dr-table td.l{font-weight:600;color:var(--ink)}
+.aul-dr table.aul-dr-table td.neg{color:var(--clay);font-weight:700}
+.aul-dr table.aul-dr-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-dr table.aul-dr-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-dr .aul-dr-tnote{font-size:11.5px;color:var(--ink-faint);margin:4px 0 0}
+
+/* ── dashboard部 ── */
+.aul-dr-db{margin-top:22px}
+.aul-dr-db .aul-dr-hero{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;
+  padding:32px 32px 28px;border-radius:var(--r)}
+.aul-dr-db .aul-dr-htitle{font-size:clamp(19px,2.8vw,26px);font-weight:800;line-height:1.45}
+.aul-dr-db .aul-dr-hsub{font-size:.72em;font-weight:700;color:#9fd6cb}
+.aul-dr-db .aul-dr-hlead{margin-top:14px;font-size:13.5px;line-height:1.8;color:#cfdae4;
+  background:rgba(255,255,255,.06);border-left:3px solid var(--teal);padding:10px 14px;border-radius:0 8px 8px 0}
+.aul-dr-db .aul-dr-sec{margin-top:26px}
+.aul-dr-db .aul-dr-sec>h3{font-size:16px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.aul-dr-db .aul-dr-secno{font-size:11px;font-weight:800;color:var(--teal);border:1.5px solid var(--teal);
+  border-radius:6px;padding:2px 7px;letter-spacing:.08em}
+.aul-dr-db .aul-dr-kpistrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.aul-dr-db .aul-dr-kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:14px 16px}
+.aul-dr-db .aul-dr-klabel{font-size:11.5px;font-weight:700;color:var(--ink-faint);margin-bottom:6px}
+.aul-dr-db .aul-dr-kval{font-size:26px;font-weight:800;color:var(--ink);line-height:1.1}
+.aul-dr-db .aul-dr-kunit{font-size:13px;font-weight:700;color:var(--ink-soft);margin-left:3px}
+.aul-dr-db .aul-dr-kchg{display:inline-block;font-size:12px;font-weight:700;margin-top:7px;color:var(--ink-soft)}
+.aul-dr-db .aul-dr-kchg.bad{color:var(--clay)}
+.aul-dr-db .aul-dr-kchg.good{color:var(--teal-deep)}
+.aul-dr-db .aul-dr-knote{display:block;font-size:10.5px;color:var(--ink-faint);margin-top:3px}
+.aul-dr-db .aul-dr-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.aul-dr .aul-dr-card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:16px 18px 14px}
+.aul-dr .aul-dr-card h4{font-size:14.5px;font-weight:800;margin-bottom:10px}
+.aul-dr .aul-dr-card h5{font-size:12.5px;font-weight:800;margin-bottom:6px}
+.aul-dr .aul-dr-cunit{font-size:11px;font-weight:600;color:var(--ink-faint);margin-left:8px}
+.aul-dr .aul-dr-card figcaption{font-size:12.5px;color:var(--teal-deep);font-weight:700;margin-top:10px;
+  padding-top:8px;border-top:1px dashed var(--line)}
+.aul-dr .aul-dr-csrc{font-size:10.5px;color:var(--ink-faint);margin-top:4px}
+.aul-dr .aul-dr-legend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:8px}
+.aul-dr .aul-dr-lg{font-size:11.5px;font-weight:700;color:var(--ink-soft);display:inline-flex;align-items:center;gap:5px}
+.aul-dr .aul-dr-lgdot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.aul-dr-db .aul-dr-smgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.aul-dr-db .aul-dr-sm{padding:12px 13px 10px}
+.aul-dr-db .aul-dr-sm figcaption{font-size:11px;margin-top:7px;padding-top:6px}
+.aul-dr-db .aul-dr-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.aul-dr-db .aul-dr-topic{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  box-shadow:var(--shadow);padding:16px 18px}
+.aul-dr-db .aul-dr-ttag{font-size:10.5px;font-weight:800;color:var(--teal);letter-spacing:.1em;margin-bottom:7px}
+.aul-dr-db .aul-dr-topic h4{font-size:14px;font-weight:800;margin-bottom:8px}
+.aul-dr-db .aul-dr-topic p{font-size:12.5px;line-height:1.75;color:var(--ink-soft)}
+.aul-dr-db .aul-dr-dbfoot{margin-top:24px;border-top:1px solid var(--line);padding-top:14px}
+.aul-dr-db .aul-dr-dbfoot ul{margin:0 0 8px 20px}
+.aul-dr-db .aul-dr-dbfoot li,.aul-dr-db .aul-dr-dbfoot p{font-size:11px;line-height:1.7;color:var(--ink-faint)}
+@media(min-width:760px){.aul-dr-db .aul-dr-grid{grid-template-columns:1fr 1fr}
+  .aul-dr-db .aul-dr-grid>figure:first-child{grid-column:1/-1}}
+@media(max-width:600px){
+  .aul-dr-sum .aul-dr-swhead{padding:24px 20px 20px}
+  .aul-dr-sum .aul-dr-swdoc{padding:22px 20px}
+  .aul-dr table.aul-dr-table{display:block;overflow-x:auto}
+  .aul-dr-db .aul-dr-hero{padding:24px 20px}}
+@page{size:A4;margin:12mm}
+@media print{
+  .aul-dr,.aul-dr *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .aul-dr{max-width:none;padding:0}
+  .aul-dr .aul-dr-card,.aul-dr-db .aul-dr-topic,.aul-dr-db .aul-dr-kpi{box-shadow:none;break-inside:avoid}
+  .aul-dr-db .aul-dr-hero,.aul-dr-sum .aul-dr-swhead{break-inside:avoid}
+  .aul-dr table.aul-dr-table tr{break-inside:avoid}
+  .aul-dr-db{break-before:page}}
+</style><div class="aul-dr-sum">
+<div class="aul-dr-swhead">
+  <p class="aul-dr-eyebrow">WAM経営状況分析</p>
+  <h1>2024年度 日中活動系障害福祉サービスの経営状況について</h1>
+  <div class="aul-dr-tags"><span class="aul-dr-tag">就労継続支援A型</span><span class="aul-dr-tag">生活介護</span><span class="aul-dr-tag">就労継続支援B型</span><span class="aul-dr-tag">障害福祉サービス</span><span class="aul-dr-tag">WAM</span></div>
+</div>
+<div class="aul-dr-swdoc">
+  <p class="aul-dr-subtitle">生活介護・就労継続支援A型・B型｜赤字事業所割合の推移と黒字/赤字の分岐要因</p>
+  <div class="aul-dr-quote aul-dr-keymsg">就労継続支援A型は赤字事業所割合が初めて50%を超え、生活介護・就労継続支援B型と明暗が分かれた。黒字/赤字の差はA型で42.7ptと最大で、評価点（スコア制度）130点未満の事業所だけが2024年度に悪化している。</div>
+  <p>本レポートは、独立行政法人福祉医療機構（WAM）が2026年7月に公表した「2024年度 日中活動系障害福祉サービスの経営状況について」（生活介護・就労継続支援A型・就労継続支援B型、融資先の決算報告に基づく分析）の結果を整理したものである。</p>
+  <h2>1. 3サービスで明暗が分かれた2024年度</h2><p>生活介護のサービス活動増減差額比率は2022年度8.3%→2023年度8.2%→2024年度9.8%、就労継続支援B型は2022年度6.4%→2023年度6.2%→2024年度9.2%と、両サービスとも2024年度に改善した。</p><p>一方、就労継続支援A型は2022年度1.8%→2023年度0.5%→2024年度△1.8%と、3か年で初めてマイナスに転落した。赤字事業所割合も2022年度44.4%→2023年度45.1%→2024年度50.7%と、初めて5割を超えた。</p><table class="aul-dr-table"><thead><tr><th class="l">指標</th><th class="">生活介護</th><th class="">就労継続支援A型</th><th class="">就労継続支援B型</th></tr></thead><tbody><tr><td class="l">サービス活動増減差額比率（2024年度）</td><td class="">10.0%</td><td class="">△0.2%</td><td class="">9.1%</td></tr><tr><td class="l">同・前年度比変化幅</td><td class="">+1.7pt</td><td class="">△0.9pt</td><td class="">+3.3pt</td></tr><tr><td class="l">赤字事業所割合（2024年度）</td><td class="">27.3%</td><td class="">48.4%</td><td class="">30.4%</td></tr><tr><td class="l">同・前年度比変化幅</td><td class="">△2.1pt</td><td class="">+2.8pt</td><td class="">△6.0pt</td></tr><tr><td class="l">黒字/赤字の差額比率格差</td><td class="">29.0pt</td><td class="">42.7pt</td><td class="">29.7pt</td></tr></tbody></table><p class="aul-dr-tnote">生活介護・就労継続支援A型はn値の異なる同一事業所2年パネル。就労継続支援B型は平均工賃月額による報酬体系（n=1,807）</p><h2>2. 就労継続支援A型：黒字/赤字の差が3サービス中最大</h2><p>就労継続支援A型の黒字事業所（n=158）のサービス活動増減差額比率は19.0%だったのに対し、赤字事業所（n=152）は△23.7%で、その差は42.7ポイントと3サービス中もっとも大きい。</p><p>赤字事業所は黒字事業所より利用率が8.1ポイント、利用者単価が565円低く、就労移行支援体制加算の算定率も6.4ポイント低かった。</p><div class="aul-dr-quote">就労継続支援A型は「平均するとほぼトントン」ではなく、黒字・赤字がくっきり二極化した状態にある。</div><h2>3. A型の評価点（スコア制度）130点未満だけが悪化</h2><p>就労継続支援A型の基本報酬は、労働時間や生産活動等を総合評価した「評価点」で決まる。2024年度改定は生産性を高く評価する内容だったため、評価点130点未満の事業所だけが取り残された形になった。</p><p>130点未満は2023年度から2024年度にかけて赤字事業所割合が45.2%→56.1%へ悪化し、差額比率も2.3%→△3.0%に転落した唯一の区分。130点以上・150点以上の区分はむしろ改善している。</p><h2>4. 生活介護・就労継続支援B型は利用者単価の上昇が改善要因</h2><p>生活介護は利用者単価が778円上昇（13,717円→14,495円）、2024年度改定で新設された人員配置体制加算(Ⅰ)（1.5対1以上）の算定率が40.4%に達したことが増収要因と考えられる。人件費率は67.4%→65.9%へ低下した。</p><p>就労継続支援B型（平均工賃月額による報酬体系）は利用者1人1月当たり平均工賃が1,654円上昇（21,929円→23,583円）。従業者配置6対1以上の新区分の算定率が89.5%に達し、基本報酬引上げの恩恵を受けた。</p>
+  <h2>経営・実務インプリケーション</h2><ul><li>就労継続支援A型は、評価点130点未満に該当していないか確認し、労働時間・生産活動の評価項目を点検する。</li><li>3サービスとも黒字/赤字の差は「利用率」「利用者単価」「加算算定率」に集約される。まず自事業所がどの加算を算定できていないかを洗い出す。</li><li>生活介護は重度障害者の受入れ体制（重度障害者支援加算の算定率）が黒字/赤字の分岐要因になっている。</li><li>就労継続支援A型170点以上は差額比率こそマイナスだが、就労支援事業増減差額・平均賃金は最高水準。差額比率だけで経営状況を判断しない。</li></ul>
+  <h2>注記・出典</h2><ul><li>本資料は融資先の決算報告に基づく分析であり、設立後1年未満の事業所は対象外。経常増減差額から就労支援事業増減差額を除いた金額が0円未満を赤字とした。</li><li>3か年パネル（p.1グラフ、生活介護n=2,153／A型n=144／B型n=1,507）と2か年パネル（図表1・4・10）はサンプルが異なる。本レポートの主要指標は2か年パネルの数値を基本とし、3か年推移のみp.1データを使用している。</li><li>開設主体のうち社会福祉法人の割合は、生活介護92.4%、就労継続支援A型56.1%、就労継続支援B型79.2%。</li><li>就労継続支援B型「一律評価による報酬体系」はサンプル数が少ない（n=99）ため、本レポートでは「平均工賃月額による報酬体系」（n=1,807）を中心に扱った。</li><li>本資料は情報提供のみを目的とし、借入等の行動を勧誘するものではない。見解に関する部分は原典著者の個人的所見であり、WAMの見解ではない。</li></ul>
+  <ul><li>独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）</li></ul>
+  <p class="aul-dr-foot">作成：AUL（aul-dox.jp）／生成日時: 2026-07-19 08:08</p>
+</div>
+</div><div class="aul-dr-db">
+<header class="aul-dr-hero">
+  <p class="aul-dr-eyebrow">WAM経営状況分析・ダッシュボード</p>
+  <h2 class="aul-dr-htitle">2024年度 日中活動系障害福祉サービスの経営状況について<br><span class="aul-dr-hsub">生活介護・就労継続支援A型・B型｜赤字事業所割合の推移と黒字/赤字の分岐要因</span></h2>
+  <p class="aul-dr-hlead">就労継続支援A型は赤字事業所割合が初めて50%を超え、生活介護・就労継続支援B型と明暗が分かれた。黒字/赤字の差はA型で42.7ptと最大で、評価点（スコア制度）130点未満の事業所だけが2024年度に悪化している。</p>
+</header>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">01</span>主要指標</h3>
+  <div class="aul-dr-kpistrip"><div class="aul-dr-kpi"><p class="aul-dr-klabel">就労継続支援A型 赤字事業所割合</p><p class="aul-dr-kval">48.4<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg bad">▲ +2.8pt</span><span class="aul-dr-knote">2023→2024年度、同一事業所n=213。3か年パネルでは50.7%</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">就労継続支援A型 サービス活動増減差額比率</p><p class="aul-dr-kval">-0.2<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg bad">▼ -0.9pt</span><span class="aul-dr-knote">前年度0.7%からマイナスに転落</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">A型 黒字/赤字の差額比率格差</p><p class="aul-dr-kval">42.7<span class="aul-dr-kunit">pt</span></p><span class="aul-dr-knote">黒字19.0% vs 赤字△23.7%、3サービス中最大</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">生活介護 サービス活動増減差額比率</p><p class="aul-dr-kval">10.0<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg good">▲ +1.7pt</span><span class="aul-dr-knote">利用者単価上昇が主因</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">生活介護 赤字事業所割合</p><p class="aul-dr-kval">27.3<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg good">▼ -2.1pt</span><span class="aul-dr-knote">改善したが依然3割弱</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">B型（平均工賃型）サービス活動増減差額比率</p><p class="aul-dr-kval">9.1<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg good">▲ +3.3pt</span><span class="aul-dr-knote">利用者単価上昇が主因</span></div><div class="aul-dr-kpi"><p class="aul-dr-klabel">B型（平均工賃型）赤字事業所割合</p><p class="aul-dr-kval">30.4<span class="aul-dr-kunit">%</span></p><span class="aul-dr-kchg good">▼ -6.0pt</span><span class="aul-dr-knote">3サービス中もっとも改善幅が大きい</span></div></div>
+</section>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">02</span>主要チャート</h3>
+  <div class="aul-dr-grid"><figure class="aul-dr-card " id="aul-dr-nicchu-katsudo-shogai-fukushi-2024-trend-balance-ratio">
+  <h4>サービス活動増減差額比率の3年推移（同一事業所）<span class="aul-dr-cunit">単位：%</span></h4>
+  <div class="aul-dr-legend"><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>生活介護</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>就労継続支援A型</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#5b7a99"></span>就労継続支援B型</span></div>
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="サービス活動増減差額比率の3年推移（同一事業所）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">-5</text><line x1="52" y1="195.4" x2="626" y2="195.4" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="199.3" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="116.8" x2="626" y2="116.8" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="120.7" text-anchor="end" font-size="11" fill="#8494a5">5</text><line x1="52" y1="38.2" x2="626" y2="38.2" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="42.1" text-anchor="end" font-size="11" fill="#8494a5">10</text><line x1="52" y1="195.4" x2="626" y2="195.4" stroke="#d9e2ea" stroke-width="1.4"/><text x="52.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2022</text><text x="339.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2023</text><text x="626.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2024</text><polyline points="52.0,64.9 339.0,66.5 626.0,41.4" fill="none" stroke="#c98a2d" stroke-width="2.2"/><circle cx="52.0" cy="64.9" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="52.0" y="57.9" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">8.3</text><circle cx="339.0" cy="66.5" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="339.0" y="59.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">8.2</text><circle cx="626.0" cy="41.4" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="626.0" y="34.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">9.8</text><polyline points="52.0,167.1 339.0,187.5 626.0,223.7" fill="none" stroke="#2f9e8a" stroke-width="2.2"/><circle cx="52.0" cy="167.1" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="52.0" y="181.1" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">1.8</text><circle cx="339.0" cy="187.5" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="339.0" y="201.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">0.5</text><circle cx="626.0" cy="223.7" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="626.0" y="237.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">-1.8</text><polyline points="52.0,94.8 339.0,97.9 626.0,50.8" fill="none" stroke="#5b7a99" stroke-width="2.2"/><circle cx="52.0" cy="94.8" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="52.0" y="87.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">6.4</text><circle cx="339.0" cy="97.9" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="339.0" y="90.9" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">6.2</text><circle cx="626.0" cy="50.8" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="626.0" y="43.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">9.2</text></svg>
+  <figcaption>就労継続支援A型だけが2024年度にマイナスへ転落し、生活介護・B型と明暗が分かれた。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-nicchu-katsudo-shogai-fukushi-2024-trend-deficit-ratio">
+  <h4>赤字事業所割合の3年推移（同一事業所）<span class="aul-dr-cunit">単位：%</span></h4>
+  <div class="aul-dr-legend"><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>生活介護</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>就労継続支援A型</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#5b7a99"></span>就労継続支援B型</span></div>
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="赤字事業所割合の3年推移（同一事業所）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">20</text><line x1="52" y1="197.7" x2="626" y2="197.7" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="201.5" text-anchor="end" font-size="11" fill="#8494a5">30</text><line x1="52" y1="121.4" x2="626" y2="121.4" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="125.2" text-anchor="end" font-size="11" fill="#8494a5">40</text><line x1="52" y1="45.1" x2="626" y2="45.1" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="48.9" text-anchor="end" font-size="11" fill="#8494a5">50</text><text x="52.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2022</text><text x="339.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2023</text><text x="626.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">2024</text><polyline points="52.0,193.9 339.0,200.7 626.0,211.4" fill="none" stroke="#c98a2d" stroke-width="2.2"/><circle cx="52.0" cy="193.9" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="52.0" y="186.9" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">30.5</text><circle cx="339.0" cy="200.7" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="339.0" y="193.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">29.6</text><circle cx="626.0" cy="211.4" r="3.4" fill="#fff" stroke="#c98a2d" stroke-width="2"/><text x="626.0" y="204.4" text-anchor="middle" font-size="11.5" font-weight="700" fill="#c98a2d">28.2</text><polyline points="52.0,87.8 339.0,82.5 626.0,39.8" fill="none" stroke="#2f9e8a" stroke-width="2.2"/><circle cx="52.0" cy="87.8" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="52.0" y="101.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">44.4</text><circle cx="339.0" cy="82.5" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="339.0" y="96.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">45.1</text><circle cx="626.0" cy="39.8" r="3.4" fill="#fff" stroke="#2f9e8a" stroke-width="2"/><text x="626.0" y="53.8" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">50.7</text><polyline points="52.0,154.2 339.0,159.5 626.0,210.7" fill="none" stroke="#5b7a99" stroke-width="2.2"/><circle cx="52.0" cy="154.2" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="52.0" y="147.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">35.7</text><circle cx="339.0" cy="159.5" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="339.0" y="152.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">35</text><circle cx="626.0" cy="210.7" r="3.4" fill="#fff" stroke="#5b7a99" stroke-width="2"/><text x="626.0" y="203.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b7a99">28.3</text></svg>
+  <figcaption>就労継続支援A型は2024年度、赤字事業所が初めて5割を超えた。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-nicchu-katsudo-shogai-fukushi-2024-black-red-gap">
+  <h4>黒字・赤字事業所のサービス活動増減差額比率（2024年度）<span class="aul-dr-cunit">単位：%</span></h4>
+  <div class="aul-dr-legend"><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#2f9e8a"></span>黒字事業所</span><span class="aul-dr-lg"><span class="aul-dr-lgdot" style="background:#c98a2d"></span>赤字事業所</span></div>
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="黒字・赤字事業所のサービス活動増減差額比率（2024年度）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">-30</text><line x1="52" y1="222.0" x2="626" y2="222.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="225.8" text-anchor="end" font-size="11" fill="#8494a5">-20</text><line x1="52" y1="170.0" x2="626" y2="170.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="173.8" text-anchor="end" font-size="11" fill="#8494a5">-10</text><line x1="52" y1="118.0" x2="626" y2="118.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="121.8" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="66.0" x2="626" y2="66.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="69.8" text-anchor="end" font-size="11" fill="#8494a5">10</text><line x1="52" y1="14.0" x2="626" y2="14.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="17.9" text-anchor="end" font-size="11" fill="#8494a5">20</text><line x1="52" y1="118.0" x2="626" y2="118.0" stroke="#d9e2ea" stroke-width="1.4"/><text x="147.7" y="289" text-anchor="middle" font-size="11" fill="#8494a5">生活介護</text><text x="339.0" y="289" text-anchor="middle" font-size="11" fill="#8494a5">就労継続支援A型</text><text x="530.3" y="289" text-anchor="middle" font-size="11" fill="#8494a5">就労継続支援B型（平均工賃型）</text><rect x="88.4" y="31.7" width="54.6" height="86.3" rx="2" fill="#2f9e8a"/><text x="115.6" y="26.7" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">16.6</text><rect x="279.7" y="19.2" width="54.6" height="98.8" rx="2" fill="#2f9e8a"/><text x="307.0" y="14.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">19</text><rect x="471.0" y="31.2" width="54.6" height="86.8" rx="2" fill="#2f9e8a"/><text x="498.3" y="26.2" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">16.7</text><rect x="147.7" y="118.0" width="54.6" height="64.5" rx="2" fill="#c98a2d"/><text x="175.0" y="113.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-12.4</text><rect x="339.0" y="118.0" width="54.6" height="123.2" rx="2" fill="#c98a2d"/><text x="366.3" y="113.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-23.7</text><rect x="530.3" y="118.0" width="54.6" height="67.6" rx="2" fill="#c98a2d"/><text x="557.6" y="113.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-13</text></svg>
+  <figcaption>就労継続支援A型は黒字・赤字の差が42.7ptともっとも大きく、二極化が進んでいる。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）</p>
+</figure><figure class="aul-dr-card " id="aul-dr-nicchu-katsudo-shogai-fukushi-2024-a-type-score">
+  <h4>就労継続支援A型：評価点別の経営状況（2024年度）<span class="aul-dr-cunit">単位：%</span></h4>
+  
+  <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="就労継続支援A型：評価点別の経営状況（2024年度）" style="width:100%;height:auto;display:block"><line x1="52" y1="274.0" x2="626" y2="274.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="277.9" text-anchor="end" font-size="11" fill="#8494a5">-3</text><line x1="52" y1="209.0" x2="626" y2="209.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="212.8" text-anchor="end" font-size="11" fill="#8494a5">-2</text><line x1="52" y1="144.0" x2="626" y2="144.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="147.8" text-anchor="end" font-size="11" fill="#8494a5">-1</text><line x1="52" y1="79.0" x2="626" y2="79.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="82.8" text-anchor="end" font-size="11" fill="#8494a5">0</text><line x1="52" y1="14.0" x2="626" y2="14.0" stroke="#e3eaf0" stroke-width="1"/><text x="47" y="17.9" text-anchor="end" font-size="11" fill="#8494a5">1</text><line x1="52" y1="79.0" x2="626" y2="79.0" stroke="#d9e2ea" stroke-width="1.4"/><text x="123.8" y="289" text-anchor="middle" font-size="11" fill="#8494a5">130点未満</text><text x="267.2" y="289" text-anchor="middle" font-size="11" fill="#8494a5">130点以上</text><text x="410.8" y="289" text-anchor="middle" font-size="11" fill="#8494a5">150点以上</text><text x="554.2" y="289" text-anchor="middle" font-size="11" fill="#8494a5">170点以上</text><rect x="79.3" y="79.0" width="81.9" height="195.0" rx="2" fill="#2f9e8a"/><text x="120.2" y="74.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-3</text><rect x="222.8" y="33.5" width="81.9" height="45.5" rx="2" fill="#2f9e8a"/><text x="263.7" y="28.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">0.7</text><rect x="366.3" y="33.5" width="81.9" height="45.5" rx="2" fill="#2f9e8a"/><text x="407.2" y="28.5" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f9e8a">0.7</text><rect x="509.8" y="79.0" width="81.9" height="162.5" rx="2" fill="#2f9e8a"/><text x="550.7" y="74.0" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b4544a">-2.5</text></svg>
+  <figcaption>評価点130点未満の事業所だけが赤字方向に沈んでおり、170点以上は差額比率はマイナスでも事業増減差額・賃金は最高水準。</figcaption>
+  <p class="aul-dr-csrc">出典：独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）</p>
+</figure></div>
+</section>
+
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">04</span>データから読み取れる論点</h3>
+  <div class="aul-dr-topics"><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 A ／ 二極化</p><h4>就労継続支援A型は評価点で経営が二極化</h4><p>評価点130点未満の事業所だけが2024年度に悪化（赤字割合45.2%→56.1%）。130点以上の区分はむしろ改善しており、スコア制度への対応力が経営を左右している。</p></div><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 B ／ 収益構造</p><h4>黒字/赤字を分けるのは利用率・単価・加算算定率</h4><p>3サービスに共通して、赤字事業所は黒字事業所より利用率・利用者単価が低く、加算算定率（重度障害者支援加算、就労移行支援体制加算等）も低い。加算取得の巧拙が収益差に直結している。</p></div><div class="aul-dr-topic"><p class="aul-dr-ttag">論点 C ／ 制度改定の影響</p><h4>2024年度改定は「生産性の高い事業所」を優遇する内容だった</h4><p>A型は労働時間の長い区分、B型は平均工賃が高い区分の報酬が引き上げられた。生活介護も人員配置体制加算(Ⅰ)の新設で手厚い体制の事業所が報われる設計になっている。</p></div></div>
+</section>
+<section class="aul-dr-sec">
+  <h3><span class="aul-dr-secno">05</span>3サービス 主要指標の一覧（2023年度→2024年度）</h3>
+  <table class="aul-dr-table"><thead><tr><th class="l">指標</th><th class="">生活介護</th><th class="">就労継続支援A型</th><th class="">就労継続支援B型</th></tr></thead><tbody><tr><td class="l">サービス活動増減差額比率（2024年度）</td><td class="">10.0%</td><td class="">△0.2%</td><td class="">9.1%</td></tr><tr><td class="l">同・前年度比変化幅</td><td class="">+1.7pt</td><td class="">△0.9pt</td><td class="">+3.3pt</td></tr><tr><td class="l">赤字事業所割合（2024年度）</td><td class="">27.3%</td><td class="">48.4%</td><td class="">30.4%</td></tr><tr><td class="l">同・前年度比変化幅</td><td class="">△2.1pt</td><td class="">+2.8pt</td><td class="">△6.0pt</td></tr><tr><td class="l">黒字/赤字の差額比率格差</td><td class="">29.0pt</td><td class="">42.7pt</td><td class="">29.7pt</td></tr></tbody></table><p class="aul-dr-tnote">生活介護・就労継続支援A型はn値の異なる同一事業所2年パネル。就労継続支援B型は平均工賃月額による報酬体系（n=1,807）</p>
+</section>
+<footer class="aul-dr-dbfoot">
+  <ul><li>本資料は融資先の決算報告に基づく分析であり、設立後1年未満の事業所は対象外。経常増減差額から就労支援事業増減差額を除いた金額が0円未満を赤字とした。</li><li>3か年パネル（p.1グラフ、生活介護n=2,153／A型n=144／B型n=1,507）と2か年パネル（図表1・4・10）はサンプルが異なる。本レポートの主要指標は2か年パネルの数値を基本とし、3か年推移のみp.1データを使用している。</li><li>開設主体のうち社会福祉法人の割合は、生活介護92.4%、就労継続支援A型56.1%、就労継続支援B型79.2%。</li><li>就労継続支援B型「一律評価による報酬体系」はサンプル数が少ない（n=99）ため、本レポートでは「平均工賃月額による報酬体系」（n=1,807）を中心に扱った。</li><li>本資料は情報提供のみを目的とし、借入等の行動を勧誘するものではない。見解に関する部分は原典著者の個人的所見であり、WAMの見解ではない。</li></ul>
+  <p>出典：独立行政法人福祉医療機構（WAM）経営サポートセンター リサーチグループ「2024年度 日中活動系障害福祉サービスの経営状況について」（資料番号2026-001、令和8年7月3日発行）／本ダッシュボードは公開情報等を分析・可視化した二次的著作物であり、数値の正確性は原典に依拠する。作成：AUL（aul-dox.jp）／オフライン動作・外部依存なしの自己完結HTML。</p>
+</footer>
+</div></div>
