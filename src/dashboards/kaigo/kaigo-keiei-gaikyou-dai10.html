@@ -1,0 +1,289 @@
+<div class="aul-report" style="background:#eef2f6"><div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h1{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:.01em}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ul,.aul-summary-web .aul-sum-doc ol{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.neg{color:var(--clay);font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">短期入所生活介護　経営分析サマリー</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">短期入所生活介護</span><span class="aul-sw-tag">第10表</span><span class="aul-sw-tag">令和6年度決算</span></div>
+</div>
+<article class="aul-sum-doc">
+<h1>短期入所生活介護経営分析レポート</h1><h2>令和3年度決算〜令和6年度決算の4か年推移</h2><blockquote class="aul-sum-quote"><strong>出典</strong>：厚生労働省「第10表.xls」</blockquote><blockquote class="aul-sum-quote"><strong>対象</strong>：短期入所生活介護／1施設・事業所当たり</blockquote><blockquote class="aul-sum-quote"><strong>単位</strong>：特記なき数値は <strong>月額（決算額÷12）・円</strong>。比率は％。年額換算は本レポートによる×12の参考値。</blockquote><blockquote class="aul-sum-quote"><strong>有効回答数</strong>：令和3年度決算 341件 / 令和4年度決算 784件 / 令和5年度決算 294件 / 令和6年度決算 294件</blockquote><hr class="aul-sum-hr"><h2>エグゼクティブサマリー</h2><p>本レポートは、厚生労働省「第10表.xls」に基づき、短期入所生活介護1施設当たりの経営指標を令和3年度決算〜令和6年度決算の4か年推移で追跡したものである。読み取れる構造は次の点に集約される。</p><ol><li><strong>支出の伸びが収入の伸びを上回った</strong>。令和5年度決算から令和6年度決算に、収入は0.7%、支出は2.2%増加しました。 費用増が収入増を上回っており、収支圧迫要因の費目別の特定が必要です。</li><li><strong>差引の水準と余裕度</strong>。差引は130,354円／月、収入に対する比率は2.7%です。前年度比では-33.6%減少しました。 小幅な収入減や費用増で赤字化し得る水準として、余力を過大評価しないことが重要です。</li><li><strong>補助金を含む差引は前年度から縮小した</strong>。補助金を含む差引は141,172円／月で、前年度から36.0%減少しました。 本業の差引に対する補助金の規模は約8%にとどまり、比較的自立した収支構造です。恒常収益での安定性は引き続き確認してください。</li></ol><p>費用増が収入増を上回っており、差引比率2.7%はさらなる圧迫を受けるリスクがあります。収入内訳と費用費目を分けて原因を特定し、自施設との比較を優先してください。</p><hr class="aul-sum-hr"><h2>1. 支出の伸びが収入の伸びを上回った</h2><p>令和5年度決算から令和6年度決算に、収入は0.7%、支出は2.2%増加しました。</p><table class="aul-sum-table"><thead><tr><th class="l">科目（月額・円）</th><th>令和3年度決算</th><th>令和4年度決算</th><th>令和5年度決算</th><th>令和6年度決算</th><th>R初→直近変化</th></tr></thead><tbody><tr><td class="l">介護事業収益（小計）</td><td>4,528,746</td><td>4,683,713</td><td>4,759,778</td><td>4,797,128</td><td>+5.9％</td></tr><tr><td class="l">介護事業費用（小計）</td><td>4,317,776</td><td>4,499,033</td><td>4,484,312</td><td>4,580,081</td><td>+6.1％</td></tr><tr><td class="l"><strong>収支差額（差引ウ）</strong></td><td>144,708</td><td>120,840</td><td>196,267</td><td>130,354</td><td class="neg">-9.9％</td></tr><tr><td class="l">収支差率（ウ）</td><td>3.2％</td><td>2.6％</td><td>4.1％</td><td>2.7％</td><td class="neg">-0.5pt</td></tr></tbody></table><p>費用増が収入増を上回っており、収支圧迫要因の費目別の特定が必要です。</p><hr class="aul-sum-hr"><h2>2. 差引の水準と余裕度</h2><p>差引は130,354円／月、収入に対する比率は2.7%です。前年度比では-33.6%減少しました。</p><table class="aul-sum-table"><thead><tr><th class="l">指標（月額・円／％）</th><th>令和3年度決算</th><th>令和4年度決算</th><th>令和5年度決算</th><th>令和6年度決算</th></tr></thead><tbody><tr><td class="l">収支差額（ウ・本業）</td><td>144,708</td><td>120,840</td><td>196,267</td><td>130,354</td></tr><tr><td class="l">イ・ロ補助金計</td><td>6,052</td><td>37,325</td><td>24,334</td><td>10,818</td></tr><tr><td class="l">差引（エ・補助金込み）</td><td>150,760</td><td>158,165</td><td>220,601</td><td>141,172</td></tr><tr><td class="l">収支差率（エ）</td><td>3.3％</td><td>3.3％</td><td>4.6％</td><td>2.9％</td></tr></tbody></table><p>小幅な収入減や費用増で赤字化し得る水準として、余力を過大評価しないことが重要です。</p><p><strong>補助金を含む差引は前年度から縮小した</strong>：補助金を含む差引は141,172円／月で、前年度から36.0%減少しました。</p><p>本業の差引に対する補助金の規模は約8%にとどまり、比較的自立した収支構造です。恒常収益での安定性は引き続き確認してください。</p><hr class="aul-sum-hr"><h2>3. 費用構造 ── 人件費と物価高の圧力</h2><table class="aul-sum-table"><thead><tr><th class="l">費用科目（月額・円）</th><th>令和3年度決算</th><th>令和6年度決算</th><th>変化</th></tr></thead><tbody><tr><td class="l">給与費</td><td>2,889,690</td><td>2,976,071</td><td>+3.0％</td></tr><tr><td class="l">減価償却費</td><td>245,702</td><td>299,455</td><td>+21.9％</td></tr><tr><td class="l">その他費用</td><td>1,243,317</td><td>1,377,551</td><td>+10.8％</td></tr></tbody></table><p>費用構造では、給与費の伸び（+3.0％）とその他費用（委託費・水光熱等）の伸び（+10.8％）が並行して推移した。物価・エネルギー高騰が直接費用に波及した可能性に留意する必要がある。</p><hr class="aul-sum-hr"><h2>4. 給与費が費用構造の中心</h2><p>令和6年度決算の給与費比率は62.0%です。</p><table class="aul-sum-table"><thead><tr><th class="l">常勤・1人当たり給与費（月額・円）</th><th>令和3年度決算</th><th>令和6年度決算</th><th>変化</th></tr></thead><tbody><tr><td class="l">常勤換算職員1人当たり給与費（全体）</td><td>351,666</td><td>367,383</td><td>+4.5％</td></tr><tr><td class="l">介護福祉士（常勤）</td><td>380,533</td><td>388,997</td><td>+2.2％</td></tr><tr><td class="l">介護職員（常勤）</td><td>356,351</td><td>371,895</td><td>+4.4％</td></tr><tr><td class="l">看護師（常勤）</td><td>409,059</td><td>403,727</td><td class="neg">-1.3％</td></tr></tbody></table><table class="aul-sum-table"><thead><tr><th class="l">指標</th><th>令和3年度決算</th><th>令和4年度決算</th><th>令和5年度決算</th><th>令和6年度決算</th></tr></thead><tbody><tr><td class="l">給与費比率</td><td>63.7％</td><td>62.5％</td><td>61.4％</td><td>62.0％</td></tr></tbody></table><p>単純な人件費削減ではなく、配置、稼働、加算取得、職員1人当たり指標を合わせて検討すべきです。</p><blockquote class="aul-sum-quote"><strong>注意</strong>：本結果は回答施設の集計平均であり、個別施設の経営状態を直接示すものではありません。</blockquote><hr class="aul-sum-hr"><h2>5. 規模・生産性 ── 定員・職員数に変化</h2><table class="aul-sum-table"><thead><tr><th class="l">指標</th><th>令和3年度決算</th><th>令和6年度決算</th><th>変化</th></tr></thead><tbody><tr><td class="l">定員（人）</td><td>15.0</td><td>17.8</td><td>+18.7％</td></tr><tr><td class="l">延べ利用者数（人）</td><td>348.2</td><td>356.9</td><td>+2.5％</td></tr><tr><td class="l">常勤換算職員数（人）</td><td>8.3</td><td>8.4</td><td>+1.2％</td></tr></tbody></table><p>短期入所生活介護の令和3年度決算から令和6年度決算にかけて、定員は+18.7％、常勤換算職員数は+1.2％変化した。収支の変動を評価する際は、この施設規模の変化と介護報酬・補助金単価・コスト構造の変化を分けて確認する必要がある。</p><hr class="aul-sum-hr"><h2>主要指標 一覧表（月額・1施設当たり）</h2><table class="aul-sum-table"><thead><tr><th class="l">科目</th><th>令和3年度決算</th><th>令和4年度決算</th><th>令和5年度決算</th><th>令和6年度決算</th></tr></thead><tbody><tr class="g"><td colspan="5">【収支】</td></tr><tr><td class="l">介護事業収益（小計）</td><td>4,528,746</td><td>4,683,713</td><td>4,759,778</td><td>4,797,128</td></tr><tr><td class="l">介護事業費用（小計）</td><td>4,317,776</td><td>4,499,033</td><td>4,484,312</td><td>4,580,081</td></tr><tr><td class="l">収支差額（ウ）</td><td>144,708</td><td>120,840</td><td>196,267</td><td>130,354</td></tr><tr><td class="l">収支差率（ウ）</td><td>3.2％</td><td>2.6％</td><td>4.1％</td><td>2.7％</td></tr><tr><td class="l">差引（エ・補助金込み）</td><td>150,760</td><td>158,165</td><td>220,601</td><td>141,172</td></tr><tr><td class="l">収支差率（エ）</td><td>3.3％</td><td>3.3％</td><td>4.6％</td><td>2.9％</td></tr><tr class="g"><td colspan="5">【費用内訳】</td></tr><tr><td class="l">給与費</td><td>2,889,690</td><td>2,931,090</td><td>2,926,543</td><td>2,976,071</td></tr><tr><td class="l">給与費比率</td><td>63.7％</td><td>62.5％</td><td>61.4％</td><td>62.0％</td></tr><tr><td class="l">減価償却費</td><td>245,702</td><td>284,948</td><td>284,751</td><td>299,455</td></tr><tr><td class="l">その他費用</td><td>1,243,317</td><td>1,355,055</td><td>1,342,723</td><td>1,377,551</td></tr><tr class="g"><td colspan="5">【収益内訳】</td></tr><tr><td class="l">介護料収入</td><td>3,464,917</td><td>3,681,656</td><td>3,595,194</td><td>3,627,037</td></tr><tr><td class="l">利用者等利用料収入</td><td>1,058,518</td><td>961,331</td><td>1,130,171</td><td>1,145,273</td></tr><tr><td class="l">補助金収入（イ・ロ除く）</td><td>7,598</td><td>41,857</td><td>34,501</td><td>24,914</td></tr><tr><td class="l">イ・ロ補助金計</td><td>6,052</td><td>37,325</td><td>24,334</td><td>10,818</td></tr><tr class="g"><td colspan="5">【人件費・処遇】</td></tr><tr><td class="l">常勤換算職員1人当たり給与費</td><td>351,666</td><td>348,587</td><td>367,383</td><td>367,383</td></tr><tr><td class="l">介護福祉士 給与費（常勤）</td><td>380,533</td><td>376,583</td><td>388,997</td><td>388,997</td></tr><tr><td class="l">介護職員 給与費（常勤）</td><td>356,351</td><td>352,400</td><td>371,895</td><td>371,895</td></tr><tr><td class="l">看護師 給与費（常勤）</td><td>409,059</td><td>406,857</td><td>403,727</td><td>403,727</td></tr><tr class="g"><td colspan="5">【規模・運営】</td></tr><tr><td class="l">定員（人）</td><td>15.0</td><td>16.1</td><td>17.8</td><td>17.8</td></tr><tr><td class="l">延べ利用者数（人）</td><td>348.2</td><td>352.6</td><td>356.9</td><td>356.9</td></tr><tr><td class="l">常勤換算職員数（人）</td><td>8.3</td><td>8.7</td><td>8.4</td><td>8.4</td></tr><tr><td class="l">有効回答数</td><td>341</td><td>784</td><td>294</td><td>294</td></tr></tbody></table><hr class="aul-sum-hr"><h2>経営・政策インプリケーション</h2><ul><li>自施設の月額収入・支出・差引比率を同じ定義で算出し、集計平均と比較する。</li><li>収入の増減を介護料、利用料、補助金に分け、恒常収益の伸びを確認する。</li><li>給与費は削減額だけで判断せず、利用者数、職員数、加算取得、1人当たり指標と併記する。</li><li>単年度平均だけで結論を出さず、月次推移と施設類型・規模別比較を追加する。</li></ul><hr class="aul-sum-hr"><h2>注記・出典</h2><ol><li>本結果は回答施設の集計平均であり、個別施設の経営状態を直接示すものではありません。</li><li>各金額は決算額を12で除した月額で、表章単位未満の丸めにより内訳が一致しない場合があります。</li><li>年度間の差は要因の存在を示しますが、制度改定や人員配置などの因果関係までは特定できません。</li><li>最新年度の有効回答数は294件です。母集団への代表性は別途確認が必要です。</li></ol><p><strong>原典</strong>：厚生労働省「第10表.xls」</p><p><strong>作成</strong>：AUL（aul-dox.jp）／本レポートは公的統計を分析・可視化した二次的著作物であり、数値の正確性は原典に依拠する。</p>
+<p class="aul-sw-foot">生成日時: 2026-07-20 17:08</p>
+</article>
+</div><div style="height:22px"></div><div class="aul-tokuyou-db" id="aul-tokuyou-db">
+<style>
+/* ===== AUL特養ダッシュボード v2 — WordPress Safe ===== */
+.aul-tokuyou-db {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#ffffff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50;
+  --clay:#c0573f; --clay-soft:#f4ddd5;
+  --amber:#bf8a2c; --amber-soft:#f3e6c8;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06);
+  --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.65;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased;
+  box-sizing:border-box;
+}
+.aul-tokuyou-db,.aul-tokuyou-db *{box-sizing:border-box}
+.aul-tokuyou-db *{margin:0;padding:0}
+.aul-tokuyou-db .aul-td-num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.aul-tokuyou-db .aul-td-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.aul-tokuyou-db .aul-td-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:38px 0 30px;position:relative;overflow:hidden}
+.aul-tokuyou-db .aul-td-header::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(33,140,123,.28),transparent 70%)}
+.aul-tokuyou-db .aul-td-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:14px}
+.aul-tokuyou-db .aul-td-eyebrow::before{content:"";width:24px;height:2px;background:#36a690;display:inline-block}
+.aul-tokuyou-db .aul-td-header h1{font-size:clamp(23px,3.4vw,34px);font-weight:800;letter-spacing:.01em;line-height:1.32}
+.aul-tokuyou-db .aul-td-header h1 .aul-td-accent{color:#7fd3c3}
+.aul-tokuyou-db .aul-td-sub{margin-top:12px;color:#b9c7d4;font-size:14.5px;max-width:760px}
+.aul-tokuyou-db .aul-td-src-tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-tokuyou-db .aul-td-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-tokuyou-db section{padding:34px 0}
+.aul-tokuyou-db .aul-td-sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.aul-tokuyou-db .aul-td-sec-head .aul-td-no{font-size:13px;font-weight:800;color:var(--teal);letter-spacing:.08em}
+.aul-tokuyou-db .aul-td-sec-head h2{font-size:19px;font-weight:800;letter-spacing:.01em}
+.aul-tokuyou-db .aul-td-sec-head .aul-td-note{font-size:12.5px;color:var(--ink-faint);margin-left:auto}
+.aul-tokuyou-db .aul-td-hero{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:26px 28px;display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:center}
+.aul-tokuyou-db .aul-td-hero .aul-td-lead .aul-td-kicker{font-size:12.5px;font-weight:700;color:var(--teal);letter-spacing:.06em}
+.aul-tokuyou-db .aul-td-hero .aul-td-lead h3{font-size:21px;font-weight:800;margin:8px 0 12px;line-height:1.45}
+.aul-tokuyou-db .aul-td-hero .aul-td-lead p{font-size:14px;color:var(--ink-soft)}
+.aul-tokuyou-db .aul-td-hero .aul-td-lead .aul-td-vline{display:flex;gap:20px;margin-top:20px;flex-wrap:wrap}
+.aul-tokuyou-db .aul-td-vstat .aul-td-v{font-size:30px;font-weight:800;line-height:1}
+.aul-tokuyou-db .aul-td-vstat .aul-td-v.aul-td-neg{color:var(--clay)}
+.aul-tokuyou-db .aul-td-vstat .aul-td-v.aul-td-pos{color:var(--teal)}
+.aul-tokuyou-db .aul-td-vstat .aul-td-l{font-size:11.5px;color:var(--ink-faint);margin-top:6px;font-weight:600}
+.aul-tokuyou-db .aul-td-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.aul-tokuyou-db .aul-td-kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.aul-tokuyou-db .aul-td-kpi .aul-td-cap{font-size:12px;color:var(--ink-soft);font-weight:700;display:flex;align-items:center;gap:6px}
+.aul-tokuyou-db .aul-td-kpi .aul-td-big{font-size:27px;font-weight:800;margin-top:10px;letter-spacing:-.01em}
+.aul-tokuyou-db .aul-td-kpi .aul-td-unit{font-size:13px;font-weight:700;color:var(--ink-faint);margin-left:3px}
+.aul-tokuyou-db .aul-td-kpi .aul-td-delta{font-size:12px;font-weight:700;margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:999px}
+.aul-tokuyou-db .aul-td-delta.aul-td-up{background:var(--teal-soft);color:var(--teal-deep)}
+.aul-tokuyou-db .aul-td-delta.aul-td-down{background:var(--clay-soft);color:var(--clay)}
+.aul-tokuyou-db .aul-td-delta.aul-td-flat{background:var(--line-soft);color:var(--ink-soft)}
+.aul-tokuyou-db .aul-td-kpi .aul-td-rail{position:absolute;left:0;top:0;bottom:0;width:4px}
+.aul-tokuyou-db .aul-td-grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.aul-tokuyou-db .aul-td-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px 20px 14px}
+.aul-tokuyou-db .aul-td-panel h4{font-size:15px;font-weight:800;display:flex;align-items:center;gap:9px}
+.aul-tokuyou-db .aul-td-panel .aul-td-desc{font-size:12.5px;color:var(--ink-faint);margin-top:4px;margin-bottom:6px}
+.aul-tokuyou-db .aul-td-legend{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 2px;font-size:12px;color:var(--ink-soft);font-weight:600}
+.aul-tokuyou-db .aul-td-legend span{display:inline-flex;align-items:center;gap:6px}
+.aul-tokuyou-db .aul-td-swatch{width:13px;height:4px;border-radius:2px;display:inline-block}
+.aul-tokuyou-db .aul-td-swatch.aul-td-dot{width:10px;height:10px;border-radius:50%}
+.aul-tokuyou-db svg{display:block;width:100%;height:auto;overflow:visible;border:0}
+.aul-tokuyou-db .aul-td-axis{stroke:var(--line);stroke-width:1}
+.aul-tokuyou-db .aul-td-grid-l{stroke:var(--line-soft);stroke-width:1}
+.aul-tokuyou-db .aul-td-tickL{fill:var(--ink-faint);font-size:11px;font-variant-numeric:tabular-nums}
+.aul-tokuyou-db .aul-td-axL{fill:var(--ink-soft);font-size:11.5px;font-weight:600}
+.aul-tokuyou-db .aul-td-zeroL{stroke:#b9c4cf;stroke-width:1;stroke-dasharray:3 3}
+.aul-tokuyou-db .aul-td-tablecard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:6px;overflow-x:auto}
+.aul-tokuyou-db table{border-collapse:collapse;width:100%;font-size:13px;min-width:640px;border:0}
+.aul-tokuyou-db thead th{background:#f3f6f9;color:var(--ink);font-weight:800;text-align:right;padding:12px 14px;border-bottom:2px solid var(--line);white-space:nowrap;font-size:12.5px}
+.aul-tokuyou-db thead th:first-child{text-align:left}
+.aul-tokuyou-db tbody td{padding:10px 14px;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.aul-tokuyou-db tbody td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+.aul-tokuyou-db tbody tr:hover{background:#f7fafb}
+.aul-tokuyou-db tbody tr.aul-td-group td{background:#eef4f3;color:var(--teal-deep);font-weight:800;font-size:12px;letter-spacing:.04em}
+.aul-tokuyou-db .aul-td-pos{color:var(--teal-deep);font-weight:700}
+.aul-tokuyou-db .aul-td-neg{color:var(--clay);font-weight:700}
+.aul-tokuyou-db .aul-td-dchip{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;display:inline-block}
+.aul-tokuyou-db .aul-td-dchip.aul-td-u{background:var(--teal-soft);color:var(--teal-deep)}
+.aul-tokuyou-db .aul-td-dchip.aul-td-d{background:var(--clay-soft);color:var(--clay)}
+.aul-tokuyou-db .aul-td-dchip.aul-td-f{background:var(--line-soft);color:var(--ink-soft)}
+.aul-tokuyou-db .aul-td-insights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.aul-tokuyou-db .aul-td-ins{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px;border-top:3px solid var(--teal)}
+.aul-tokuyou-db .aul-td-ins.aul-td-warn{border-top-color:var(--clay)}
+.aul-tokuyou-db .aul-td-ins.aul-td-note{border-top-color:var(--amber)}
+.aul-tokuyou-db .aul-td-ins .aul-td-ico{font-size:13px;font-weight:800;letter-spacing:.05em;color:var(--teal);margin-bottom:8px}
+.aul-tokuyou-db .aul-td-ins.aul-td-warn .aul-td-ico{color:var(--clay)}
+.aul-tokuyou-db .aul-td-ins.aul-td-note .aul-td-ico{color:var(--amber)}
+.aul-tokuyou-db .aul-td-ins h5{font-size:15.5px;font-weight:800;margin-bottom:8px;line-height:1.4}
+.aul-tokuyou-db .aul-td-ins p{font-size:13px;color:var(--ink-soft);line-height:1.7}
+.aul-tokuyou-db .aul-td-ins .aul-td-fig{font-weight:800;color:var(--ink)}
+.aul-td-tt{position:fixed;pointer-events:none;background:#13212f;color:#fff;font-size:12px;padding:8px 11px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;transition:opacity .1s;z-index:99999;white-space:nowrap;font-variant-numeric:tabular-nums}
+.aul-td-tt b{color:#7fd3c3}
+.aul-tokuyou-db .aul-td-hot{cursor:pointer}
+.aul-tokuyou-db .aul-td-footer{background:#13212f;color:#aebccb;padding:30px 0 40px;font-size:12.5px}
+.aul-tokuyou-db .aul-td-footer h6{color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.04em}
+.aul-tokuyou-db .aul-td-footer ol{margin-left:18px;line-height:1.85}
+.aul-tokuyou-db .aul-td-footer .aul-td-disc{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);color:#8395a6;font-size:11.5px}
+.aul-tokuyou-db .aul-td-footer a{color:#7fd3c3}
+.aul-tokuyou-db .aul-td-toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:12px;font-weight:700}
+.aul-tokuyou-db .aul-td-toggle button{border:none;background:var(--card);color:var(--ink-soft);padding:6px 14px;cursor:pointer}
+.aul-tokuyou-db .aul-td-toggle button.on{background:var(--teal);color:#fff}
+@media(max-width:860px){
+  .aul-tokuyou-db .aul-td-hero{grid-template-columns:1fr;gap:18px}
+  .aul-tokuyou-db .aul-td-kpis{grid-template-columns:repeat(2,1fr)}
+  .aul-tokuyou-db .aul-td-grid2{grid-template-columns:1fr}
+  .aul-tokuyou-db .aul-td-insights{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.aul-tokuyou-db *{animation:none!important;transition:none!important}}
+</style>
+
+<div class="aul-td-header">
+  <div class="aul-td-wrap">
+    <div class="aul-td-eyebrow">介護事業経営概況調査・第10表</div>
+    <h1>短期入所生活介護<span class="aul-td-accent">経営概況</span>ダッシュボード<br>令和3年度決算〜令和6年度決算の4か年推移</h1>
+    <p class="aul-td-sub">費用増が収入増を上回っており、差引比率2.7%はさらなる圧迫を受けるリスクがあります。収入内訳と費用費目を分けて原因を特定し、自施設との比較を優先してください。</p>
+    <div class="aul-td-src-tags">
+      <span class="aul-td-tag">出典：厚生労働省 介護事業実態調査（経営概況調査）</span>
+      <span class="aul-td-tag">第10表 短期入所生活介護</span>
+      <span class="aul-td-tag">月額・1施設当たり</span>
+    </div>
+  </div>
+</div>
+
+<div class="aul-td-wrap">
+  <section>
+    <div class="aul-td-hero">
+      <div class="aul-td-chart-host"><svg viewBox="0 0 560 300" role="img" style="width:100%;height:auto"><line x1="46" x2="544" y1="244.1" y2="244.1" class="grid-l"/><text x="38" y="248.1" text-anchor="end" class="aul-td-tickL">-1%</text><line x1="46" x2="544" y1="204.5" y2="204.5" class="zeroL"/><text x="38" y="208.5" text-anchor="end" class="aul-td-tickL">0%</text><line x1="46" x2="544" y1="164.8" y2="164.8" class="grid-l"/><text x="38" y="168.8" text-anchor="end" class="aul-td-tickL">1%</text><line x1="46" x2="544" y1="125.1" y2="125.1" class="grid-l"/><text x="38" y="129.1" text-anchor="end" class="aul-td-tickL">2%</text><line x1="46" x2="544" y1="85.5" y2="85.5" class="grid-l"/><text x="38" y="89.5" text-anchor="end" class="aul-td-tickL">3%</text><line x1="46" x2="544" y1="45.8" y2="45.8" class="grid-l"/><text x="38" y="49.8" text-anchor="end" class="aul-td-tickL">4%</text><text x="46.0" y="286" text-anchor="middle" class="aul-td-axL">R3</text><text x="212.0" y="286" text-anchor="middle" class="aul-td-axL">R4</text><text x="378.0" y="286" text-anchor="middle" class="aul-td-axL">R5</text><text x="544.0" y="286" text-anchor="middle" class="aul-td-axL">R6</text><path d="M46.0 73.6 L212.0 73.6 L378.0 22.0 L544.0 89.4" fill="none" stroke="#bf8a2c" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="46.0" cy="73.6" r="4.5" fill="#fff" stroke="#bf8a2c" stroke-width="2.4"/><text x="46.0" y="60.6" text-anchor="middle" fill="#bf8a2c" font-size="12" font-weight="800">+3.3</text><circle cx="212.0" cy="73.6" r="4.5" fill="#fff" stroke="#bf8a2c" stroke-width="2.4"/><text x="212.0" y="60.6" text-anchor="middle" fill="#bf8a2c" font-size="12" font-weight="800">+3.3</text><circle cx="378.0" cy="22.0" r="4.5" fill="#fff" stroke="#bf8a2c" stroke-width="2.4"/><text x="378.0" y="9.0" text-anchor="middle" fill="#bf8a2c" font-size="12" font-weight="800">+4.6</text><circle cx="544.0" cy="89.4" r="4.5" fill="#fff" stroke="#bf8a2c" stroke-width="2.4"/><text x="544.0" y="76.4" text-anchor="middle" fill="#bf8a2c" font-size="12" font-weight="800">+2.9</text><path d="M46.0 77.5 L212.0 101.3 L378.0 41.8 L544.0 97.4 L544.0 260.0 L46.0 260.0 Z" fill="#15786a" opacity=".07"/><path d="M46.0 77.5 L212.0 101.3 L378.0 41.8 L544.0 97.4" fill="none" stroke="#15786a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="46.0" cy="77.5" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.4"/><text x="46.0" y="95.5" text-anchor="middle" fill="#15786a" font-size="12" font-weight="800">+3.2</text><circle cx="212.0" cy="101.3" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.4"/><text x="212.0" y="119.3" text-anchor="middle" fill="#15786a" font-size="12" font-weight="800">+2.6</text><circle cx="378.0" cy="41.8" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.4"/><text x="378.0" y="59.8" text-anchor="middle" fill="#15786a" font-size="12" font-weight="800">+4.1</text><circle cx="544.0" cy="97.4" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.4"/><text x="544.0" y="115.4" text-anchor="middle" fill="#15786a" font-size="12" font-weight="800">+2.7</text><text x="46" y="16" fill="#15786a" font-size="11.5" font-weight="800">● 本業（ウ）</text><text x="138" y="16" fill="#bf8a2c" font-size="11.5" font-weight="800">● 補助金込み（エ）</text></svg></div>
+      <div class="aul-td-lead">
+        <div class="aul-td-kicker">本ダッシュボードの結論</div>
+        <h3>短期入所生活介護 収支・差引比率2.7%｜令和6年度決算の経営状況　第10表</h3>
+        <p>費用増が収入増を上回っており、差引比率2.7%はさらなる圧迫を受けるリスクがあります。収入内訳と費用費目を分けて原因を特定し、自施設との比較を優先してください。</p>
+        <div class="aul-td-vline">
+          <div class="aul-td-vstat"><div class="aul-td-v aul-td-neg aul-td-num">+3.2<span style="font-size:16px">%</span></div><div class="aul-td-l">初年度 収支差率（本業）</div></div>
+          <div class="aul-td-vstat"><div class="aul-td-v aul-td-pos aul-td-num">+2.7<span style="font-size:16px">%</span></div><div class="aul-td-l">直近 収支差率（本業）</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="aul-td-sec-head"><span class="aul-td-no">01</span><h2>直近の主要指標</h2><span class="aul-td-note">カッコ内＝初年度からの変化</span></div>
+    <div class="aul-td-kpis"><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#15786a"></div><div class="aul-td-cap">収支差率（本業・ウ）</div><div class="aul-td-big aul-td-num">+2.7<span class="aul-td-unit">%</span></div><div class="aul-td-delta aul-td-down"><span>▼</span><span class="aul-td-num">-0.5pt</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#15786a"></div><div class="aul-td-cap">収支差額（月額）</div><div class="aul-td-big aul-td-num">130,354<span class="aul-td-unit">円</span></div><div class="aul-td-delta aul-td-down"><span>▼</span><span class="aul-td-num">−14,354円</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#2c7e8c"></div><div class="aul-td-cap">介護事業収益（月額）</div><div class="aul-td-big aul-td-num">4,797,128<span class="aul-td-unit">円</span></div><div class="aul-td-delta aul-td-up"><span>▲</span><span class="aul-td-num">+268,382円</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#bf8a2c"></div><div class="aul-td-cap">給与費比率</div><div class="aul-td-big aul-td-num">62.0<span class="aul-td-unit">%</span></div><div class="aul-td-delta aul-td-down"><span>▼</span><span class="aul-td-num">-1.7pt</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#c0573f"></div><div class="aul-td-cap">イ・ロ補助金計（月額）</div><div class="aul-td-big aul-td-num">10,818<span class="aul-td-unit">円</span></div><div class="aul-td-delta aul-td-up"><span>▲</span><span class="aul-td-num">+4,766円</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#15786a"></div><div class="aul-td-cap">介護福祉士 給与費（常勤）</div><div class="aul-td-big aul-td-num">388,997<span class="aul-td-unit">円</span></div><div class="aul-td-delta aul-td-up"><span>▲</span><span class="aul-td-num">+8,464円</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#7a93a8"></div><div class="aul-td-cap">延べ利用者数</div><div class="aul-td-big aul-td-num">356.9<span class="aul-td-unit">人</span></div><div class="aul-td-delta aul-td-up"><span>▲</span><span class="aul-td-num">+8.7人</span></div></div><div class="aul-td-kpi"><div class="aul-td-rail" style="background:#7a93a8"></div><div class="aul-td-cap">常勤換算職員数</div><div class="aul-td-big aul-td-num">8.4<span class="aul-td-unit">人</span></div><div class="aul-td-delta aul-td-up"><span>▲</span><span class="aul-td-num">+0.1人</span></div></div></div>
+  </section>
+
+  <section>
+    <div class="aul-td-sec-head"><span class="aul-td-no">02</span><h2>収支の構造と推移</h2>
+      <span class="aul-td-note" style="margin-left:auto">月額・1施設当たり</span>
+    </div>
+    <div class="aul-td-grid2">
+      <div class="aul-td-panel">
+        <h4>収益・費用・収支差額の推移</h4>
+        <div class="aul-td-desc">介護事業収益小計／費用小計と、その差額（収支差）。</div>
+        <div class="aul-td-legend">
+          <span><span class="aul-td-swatch" style="background:#2c7e8c"></span>介護事業収益</span>
+          <span><span class="aul-td-swatch" style="background:#c7d2db"></span>介護事業費用</span>
+          <span><span class="aul-td-swatch aul-td-dot" style="background:var(--teal)"></span>収支差額</span>
+        </div>
+        <div class="aul-td-chart-host"><svg viewBox="0 0 540 290" style="width:100%;height:auto"><line x1="58" x2="522" y1="256.0" y2="256.0" class="aul-td-grid-l"/><text x="50" y="260.0" text-anchor="end" class="aul-td-tickL">0M</text><line x1="58" x2="522" y1="176.7" y2="176.7" class="aul-td-grid-l"/><text x="50" y="180.7" text-anchor="end" class="aul-td-tickL">2M</text><line x1="58" x2="522" y1="97.3" y2="97.3" class="aul-td-grid-l"/><text x="50" y="101.3" text-anchor="end" class="aul-td-tickL">3M</text><line x1="58" x2="522" y1="18.0" y2="18.0" class="aul-td-grid-l"/><text x="50" y="22.0" text-anchor="end" class="aul-td-tickL">5M</text><rect x="77.7" y="48.0" width="34.8" height="208.0" fill="#2c7e8c" rx="3"/><text x="95.1" y="44.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,528,746</text><rect x="119.5" y="57.7" width="34.8" height="198.3" fill="#c7d2db" rx="3"/><text x="136.9" y="53.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,317,776</text><text x="116.0" y="278" text-anchor="middle" class="aul-td-axL">R3</text><rect x="193.7" y="40.8" width="34.8" height="215.2" fill="#2c7e8c" rx="3"/><text x="211.1" y="36.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,683,713</text><rect x="235.5" y="49.3" width="34.8" height="206.7" fill="#c7d2db" rx="3"/><text x="252.9" y="45.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,499,033</text><text x="232.0" y="278" text-anchor="middle" class="aul-td-axL">R4</text><rect x="309.7" y="37.3" width="34.8" height="218.7" fill="#2c7e8c" rx="3"/><text x="327.1" y="33.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,759,778</text><rect x="351.5" y="50.0" width="34.8" height="206.0" fill="#c7d2db" rx="3"/><text x="368.9" y="46.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,484,312</text><text x="348.0" y="278" text-anchor="middle" class="aul-td-axL">R5</text><rect x="425.7" y="35.6" width="34.8" height="220.4" fill="#2c7e8c" rx="3"/><text x="443.1" y="31.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,797,128</text><rect x="467.5" y="45.6" width="34.8" height="210.4" fill="#c7d2db" rx="3"/><text x="484.9" y="41.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#43566b">4,580,081</text><text x="464.0" y="278" text-anchor="middle" class="aul-td-axL">R6</text><path d="M116.0 115.3 L232.0 118.9 L348.0 107.6 L464.0 117.5" fill="none" stroke="#15786a" stroke-width="2.4" stroke-linejoin="round"/><circle cx="116.0" cy="115.3" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.2"/><text x="116.0" y="106.3" text-anchor="middle" fill="#0f5a50" font-size="10.5" font-weight="800">144,708</text><circle cx="232.0" cy="118.9" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.2"/><text x="232.0" y="109.9" text-anchor="middle" fill="#0f5a50" font-size="10.5" font-weight="800">120,840</text><circle cx="348.0" cy="107.6" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.2"/><text x="348.0" y="98.6" text-anchor="middle" fill="#0f5a50" font-size="10.5" font-weight="800">196,267</text><circle cx="464.0" cy="117.5" r="4.5" fill="#fff" stroke="#15786a" stroke-width="2.2"/><text x="464.0" y="108.5" text-anchor="middle" fill="#0f5a50" font-size="10.5" font-weight="800">130,354</text></svg></div>
+      </div>
+      <div class="aul-td-panel">
+        <h4>収支差率：本業 と 補助金込み</h4>
+        <div class="aul-td-desc">差引（ウ）＝本業ベース、差引（エ）＝補助金を含む。</div>
+        <div class="aul-td-legend">
+          <span><span class="aul-td-swatch" style="background:var(--teal)"></span>収支差率（ウ／本業）</span>
+          <span><span class="aul-td-swatch" style="background:var(--amber)"></span>収支差率（エ／補助金込み）</span>
+        </div>
+        <div class="aul-td-chart-host"><svg viewBox="0 0 540 290" style="width:100%;height:auto"><line x1="44" x2="522" y1="240.3" y2="240.3" class="grid-l"/><text x="36" y="244.3" text-anchor="end" class="aul-td-tickL">-1%</text><line x1="44" x2="522" y1="200.9" y2="200.9" class="zeroL"/><text x="36" y="204.9" text-anchor="end" class="aul-td-tickL">0%</text><line x1="44" x2="522" y1="161.6" y2="161.6" class="grid-l"/><text x="36" y="165.6" text-anchor="end" class="aul-td-tickL">1%</text><line x1="44" x2="522" y1="122.3" y2="122.3" class="grid-l"/><text x="36" y="126.3" text-anchor="end" class="aul-td-tickL">2%</text><line x1="44" x2="522" y1="82.9" y2="82.9" class="grid-l"/><text x="36" y="86.9" text-anchor="end" class="aul-td-tickL">3%</text><line x1="44" x2="522" y1="43.6" y2="43.6" class="grid-l"/><text x="36" y="47.6" text-anchor="end" class="aul-td-tickL">4%</text><text x="44.0" y="278" text-anchor="middle" class="aul-td-axL">R3</text><text x="203.3" y="278" text-anchor="middle" class="aul-td-axL">R4</text><text x="362.7" y="278" text-anchor="middle" class="aul-td-axL">R5</text><text x="522.0" y="278" text-anchor="middle" class="aul-td-axL">R6</text><path d="M44.0 71.1 L203.3 71.1 L362.7 20.0 L522.0 86.9" fill="none" stroke="#bf8a2c" stroke-width="2.6" stroke-linejoin="round"/><circle cx="44.0" cy="71.1" r="4.2" fill="#fff" stroke="#bf8a2c" stroke-width="2.3"/><text x="44.0" y="59.1" text-anchor="middle" fill="#bf8a2c" font-size="11" font-weight="800">+3.3</text><circle cx="203.3" cy="71.1" r="4.2" fill="#fff" stroke="#bf8a2c" stroke-width="2.3"/><text x="203.3" y="59.1" text-anchor="middle" fill="#bf8a2c" font-size="11" font-weight="800">+3.3</text><circle cx="362.7" cy="20.0" r="4.2" fill="#fff" stroke="#bf8a2c" stroke-width="2.3"/><text x="362.7" y="8.0" text-anchor="middle" fill="#bf8a2c" font-size="11" font-weight="800">+4.6</text><circle cx="522.0" cy="86.9" r="4.2" fill="#fff" stroke="#bf8a2c" stroke-width="2.3"/><text x="522.0" y="74.9" text-anchor="middle" fill="#bf8a2c" font-size="11" font-weight="800">+2.9</text><path d="M44.0 75.1 L203.3 98.7 L362.7 39.7 L522.0 94.7" fill="none" stroke="#15786a" stroke-width="2.6" stroke-linejoin="round"/><circle cx="44.0" cy="75.1" r="4.2" fill="#fff" stroke="#15786a" stroke-width="2.3"/><text x="44.0" y="93.1" text-anchor="middle" fill="#15786a" font-size="11" font-weight="800">+3.2</text><circle cx="203.3" cy="98.7" r="4.2" fill="#fff" stroke="#15786a" stroke-width="2.3"/><text x="203.3" y="116.7" text-anchor="middle" fill="#15786a" font-size="11" font-weight="800">+2.6</text><circle cx="362.7" cy="39.7" r="4.2" fill="#fff" stroke="#15786a" stroke-width="2.3"/><text x="362.7" y="57.7" text-anchor="middle" fill="#15786a" font-size="11" font-weight="800">+4.1</text><circle cx="522.0" cy="94.7" r="4.2" fill="#fff" stroke="#15786a" stroke-width="2.3"/><text x="522.0" y="112.7" text-anchor="middle" fill="#15786a" font-size="11" font-weight="800">+2.7</text></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:6px">
+    <div class="aul-td-grid2">
+      <div class="aul-td-panel">
+        <h4>補助金収入の推移（イ・ロ補助金計）</h4>
+        <div class="aul-td-desc">コロナ関連（イ）＋物価高騰対策（ロ）の推移。</div>
+        <div class="aul-td-chart-host"><svg viewBox="0 0 540 270" style="width:100%;height:auto"><line x1="58" x2="522" y1="236.0" y2="236.0" class="aul-td-grid-l"/><text x="50" y="240.0" text-anchor="end" class="aul-td-tickL">0k</text><line x1="58" x2="522" y1="129.0" y2="129.0" class="aul-td-grid-l"/><text x="50" y="133.0" text-anchor="end" class="aul-td-tickL">22k</text><line x1="58" x2="522" y1="22.0" y2="22.0" class="aul-td-grid-l"/><text x="50" y="26.0" text-anchor="end" class="aul-td-tickL">44k</text><rect x="91.6" y="206.6" width="48.7" height="29.4" fill="#bf8a2c" rx="4"/><text x="116.0" y="199.6" text-anchor="middle" fill="#16263a" font-size="11" font-weight="800">6,052</text><text x="116.0" y="258" text-anchor="middle" class="aul-td-axL">R3</text><rect x="207.6" y="54.6" width="48.7" height="181.4" fill="#bf8a2c" rx="4"/><text x="232.0" y="47.6" text-anchor="middle" fill="#16263a" font-size="11" font-weight="800">37,325</text><text x="232.0" y="258" text-anchor="middle" class="aul-td-axL">R4</text><rect x="323.6" y="117.8" width="48.7" height="118.2" fill="#bf8a2c" rx="4"/><text x="348.0" y="110.8" text-anchor="middle" fill="#16263a" font-size="11" font-weight="800">24,334</text><text x="348.0" y="258" text-anchor="middle" class="aul-td-axL">R5</text><rect x="439.6" y="183.4" width="48.7" height="52.6" fill="#c0573f" rx="4"/><text x="464.0" y="176.4" text-anchor="middle" fill="#16263a" font-size="11" font-weight="800">10,818</text><text x="464.0" y="258" text-anchor="middle" class="aul-td-axL">R6</text></svg></div>
+      </div>
+      <div class="aul-td-panel">
+        <h4>常勤換算1人当たり給与費（月額・主要職種）</h4>
+        <div class="aul-td-desc">処遇改善の流れで介護職の給与は上昇傾向。</div>
+        <div class="aul-td-legend">
+          <span><span class="aul-td-swatch" style="background:var(--teal)"></span>介護福祉士（常勤）</span>
+          <span><span class="aul-td-swatch" style="background:var(--amber)"></span>介護職員（常勤）</span>
+          <span><span class="aul-td-swatch" style="background:#7a93a8"></span>看護師（常勤）</span>
+        </div>
+        <div class="aul-td-chart-host"><svg viewBox="0 0 540 270" style="width:100%;height:auto"><line x1="54" x2="522" y1="236.0" y2="236.0" class="aul-td-grid-l"/><text x="46" y="240.0" text-anchor="end" class="aul-td-tickL">342k</text><line x1="54" x2="522" y1="164.0" y2="164.0" class="aul-td-grid-l"/><text x="46" y="168.0" text-anchor="end" class="aul-td-tickL">367k</text><line x1="54" x2="522" y1="92.0" y2="92.0" class="aul-td-grid-l"/><text x="46" y="96.0" text-anchor="end" class="aul-td-tickL">392k</text><line x1="54" x2="522" y1="20.0" y2="20.0" class="aul-td-grid-l"/><text x="46" y="24.0" text-anchor="end" class="aul-td-tickL">417k</text><text x="54.0" y="258" text-anchor="middle" class="aul-td-axL">R3</text><text x="210.0" y="258" text-anchor="middle" class="aul-td-axL">R4</text><text x="366.0" y="258" text-anchor="middle" class="aul-td-axL">R5</text><text x="522.0" y="258" text-anchor="middle" class="aul-td-axL">R6</text><path d="M54.0 43.4 L210.0 49.7 L366.0 58.7 L522.0 58.7" fill="none" stroke="#7a93a8" stroke-width="2.4" stroke-linejoin="round"/><circle cx="54.0" cy="43.4" r="4" fill="#fff" stroke="#7a93a8" stroke-width="2.2"/><circle cx="210.0" cy="49.7" r="4" fill="#fff" stroke="#7a93a8" stroke-width="2.2"/><circle cx="366.0" cy="58.7" r="4" fill="#fff" stroke="#7a93a8" stroke-width="2.2"/><circle cx="522.0" cy="58.7" r="4" fill="#fff" stroke="#7a93a8" stroke-width="2.2"/><text x="522.0" y="49.7" text-anchor="middle" fill="#7a93a8" font-size="10" font-weight="800">403,727</text><path d="M54.0 125.1 L210.0 136.5 L366.0 100.9 L522.0 100.9" fill="none" stroke="#15786a" stroke-width="2.4" stroke-linejoin="round"/><circle cx="54.0" cy="125.1" r="4" fill="#fff" stroke="#15786a" stroke-width="2.2"/><circle cx="210.0" cy="136.5" r="4" fill="#fff" stroke="#15786a" stroke-width="2.2"/><circle cx="366.0" cy="100.9" r="4" fill="#fff" stroke="#15786a" stroke-width="2.2"/><circle cx="522.0" cy="100.9" r="4" fill="#fff" stroke="#15786a" stroke-width="2.2"/><text x="522.0" y="91.9" text-anchor="middle" fill="#15786a" font-size="10" font-weight="800">388,997</text><path d="M54.0 194.4 L210.0 205.7 L366.0 149.9 L522.0 149.9" fill="none" stroke="#bf8a2c" stroke-width="2.4" stroke-linejoin="round"/><circle cx="54.0" cy="194.4" r="4" fill="#fff" stroke="#bf8a2c" stroke-width="2.2"/><circle cx="210.0" cy="205.7" r="4" fill="#fff" stroke="#bf8a2c" stroke-width="2.2"/><circle cx="366.0" cy="149.9" r="4" fill="#fff" stroke="#bf8a2c" stroke-width="2.2"/><circle cx="522.0" cy="149.9" r="4" fill="#fff" stroke="#bf8a2c" stroke-width="2.2"/><text x="522.0" y="140.9" text-anchor="middle" fill="#bf8a2c" font-size="10" font-weight="800">371,895</text></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="aul-td-sec-head"><span class="aul-td-no">03</span><h2>データから読み取れる論点</h2></div>
+    <div class="aul-td-insights">
+      <div class="aul-td-ins aul-td-warn">
+        <div class="aul-td-ico">論点 A ／ 脆弱性</div>
+        <h5>支出の伸びが収入の伸びを上回った</h5>
+        <p>令和5年度決算から令和6年度決算に、収入は0.7%、支出は2.2%増加しました。 費用増が収入増を上回っており、収支圧迫要因の費目別の特定が必要です。</p>
+      </div>
+      <div class="aul-td-ins ">
+        <div class="aul-td-ico">論点 B ／ 自立</div>
+        <h5>差引の水準と余裕度</h5>
+        <p>差引は130,354円／月、収入に対する比率は2.7%です。前年度比では-33.6%減少しました。 小幅な収入減や費用増で赤字化し得る水準として、余力を過大評価しないことが重要です。</p>
+      </div>
+      <div class="aul-td-ins aul-td-note">
+        <div class="aul-td-ico">論点 C ／ コスト</div>
+        <h5>補助金を含む差引は前年度から縮小した</h5>
+        <p>補助金を含む差引は141,172円／月で、前年度から36.0%減少しました。 本業の差引に対する補助金の規模は約8%にとどまり、比較的自立した収支構造です。恒常収益での安定性は引き続き確認してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="aul-td-sec-head"><span class="aul-td-no">04</span><h2>主要指標 一覧表（月額・1施設当たり）</h2><span class="aul-td-note">変化＝初年度→直近</span></div>
+    <div class="aul-td-tablecard">
+      <table id="aul-td-dataTable"><thead><tr><th>科目</th><th>令和3年度決算</th><th>令和4年度決算</th><th>令和5年度決算</th><th>令和6年度決算</th><th>変化（初→直近）</th></tr></thead><tbody><tr class="aul-td-group"><td colspan="6">【収支】</td></tr><tr><td>介護事業収益（小計）</td><td class="">4,528,746</td><td class="">4,683,713</td><td class="">4,759,778</td><td class="">4,797,128</td><td><span class="aul-td-dchip aul-td-u">+268,382 (+5.9%)</span></td></tr><tr><td>介護事業費用（小計）</td><td class="">4,317,776</td><td class="">4,499,033</td><td class="">4,484,312</td><td class="">4,580,081</td><td><span class="aul-td-dchip aul-td-u">+262,305 (+6.1%)</span></td></tr><tr><td>収支差額（ウ）</td><td class="aul-td-pos">144,708</td><td class="aul-td-pos">120,840</td><td class="aul-td-pos">196,267</td><td class="aul-td-pos">130,354</td><td><span class="aul-td-dchip aul-td-d">−14,354 (-9.9%)</span></td></tr><tr><td>収支差率（ウ）</td><td class="">3.2%</td><td class="">2.6%</td><td class="">4.1%</td><td class="">2.7%</td><td><span class="aul-td-dchip aul-td-d">-0.5pt</span></td></tr><tr><td>差引（エ／補助金込み）</td><td class="">150,760</td><td class="">158,165</td><td class="">220,601</td><td class="">141,172</td><td><span class="aul-td-dchip aul-td-d">−9,588 (-6.4%)</span></td></tr><tr><td>収支差率（エ）</td><td class="">3.3%</td><td class="">3.3%</td><td class="">4.6%</td><td class="">2.9%</td><td><span class="aul-td-dchip aul-td-d">-0.4pt</span></td></tr><tr class="aul-td-group"><td colspan="6">【費用内訳】</td></tr><tr><td>給与費</td><td class="">2,889,690</td><td class="">2,931,090</td><td class="">2,926,543</td><td class="">2,976,071</td><td><span class="aul-td-dchip aul-td-u">+86,381 (+3.0%)</span></td></tr><tr><td>給与費比率</td><td class="">63.7%</td><td class="">62.5%</td><td class="">61.4%</td><td class="">62.0%</td><td><span class="aul-td-dchip aul-td-d">-1.7pt</span></td></tr><tr><td>減価償却費</td><td class="">245,702</td><td class="">284,948</td><td class="">284,751</td><td class="">299,455</td><td><span class="aul-td-dchip aul-td-u">+53,753 (+21.9%)</span></td></tr><tr><td>その他費用</td><td class="">1,243,317</td><td class="">1,355,055</td><td class="">1,342,723</td><td class="">1,377,551</td><td><span class="aul-td-dchip aul-td-u">+134,234 (+10.8%)</span></td></tr><tr class="aul-td-group"><td colspan="6">【収益内訳】</td></tr><tr><td>介護料収入</td><td class="">3,464,917</td><td class="">3,681,656</td><td class="">3,595,194</td><td class="">3,627,037</td><td><span class="aul-td-dchip aul-td-u">+162,120 (+4.7%)</span></td></tr><tr><td>保険外の利用料収入</td><td class="">1,058,518</td><td class="">961,331</td><td class="">1,130,171</td><td class="">1,145,273</td><td><span class="aul-td-dchip aul-td-u">+86,755 (+8.2%)</span></td></tr><tr><td>補助金収入（物価関連除く）</td><td class="">7,598</td><td class="">41,857</td><td class="">34,501</td><td class="">24,914</td><td><span class="aul-td-dchip aul-td-u">+17,316 (+227.9%)</span></td></tr><tr><td>イ・ロ補助金計</td><td class="">6,052</td><td class="">37,325</td><td class="">24,334</td><td class="">10,818</td><td><span class="aul-td-dchip aul-td-u">+4,766 (+78.8%)</span></td></tr><tr class="aul-td-group"><td colspan="6">【人件費・処遇】</td></tr><tr><td>介護福祉士 給与費（常勤）</td><td class="">380,533</td><td class="">376,583</td><td class="">388,997</td><td class="">388,997</td><td><span class="aul-td-dchip aul-td-u">+8,464 (+2.2%)</span></td></tr><tr><td>介護職員 給与費（常勤）</td><td class="">356,351</td><td class="">352,400</td><td class="">371,895</td><td class="">371,895</td><td><span class="aul-td-dchip aul-td-u">+15,544 (+4.4%)</span></td></tr><tr><td>看護師 給与費（常勤）</td><td class="">409,059</td><td class="">406,857</td><td class="">403,727</td><td class="">403,727</td><td><span class="aul-td-dchip aul-td-d">−5,332 (-1.3%)</span></td></tr><tr><td>常勤換算職員1人当たり給与費</td><td class="">351,666</td><td class="">348,587</td><td class="">367,383</td><td class="">367,383</td><td><span class="aul-td-dchip aul-td-u">+15,717 (+4.5%)</span></td></tr><tr class="aul-td-group"><td colspan="6">【規模・運営】</td></tr><tr><td>定員</td><td class="">15.0</td><td class="">16.1</td><td class="">17.8</td><td class="">17.8</td><td><span class="aul-td-dchip aul-td-u">+2.8</span></td></tr><tr><td>延べ利用者数</td><td class="">348.2</td><td class="">352.6</td><td class="">356.9</td><td class="">356.9</td><td><span class="aul-td-dchip aul-td-u">+8.7</span></td></tr><tr><td>常勤換算職員数</td><td class="">8.3</td><td class="">8.7</td><td class="">8.4</td><td class="">8.4</td><td><span class="aul-td-dchip aul-td-u">+0.1</span></td></tr><tr><td>利用者1人当たり収入</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td><span class="aul-td-dchip aul-td-f">—</span></td></tr><tr><td>利用者1人当たり支出</td><td class="">-</td><td class="">-</td><td class="">-</td><td class="">-</td><td><span class="aul-td-dchip aul-td-f">—</span></td></tr><tr><td>有効回答数</td><td class="">341.0</td><td class="">784.0</td><td class="">294.0</td><td class="">294.0</td><td><span class="aul-td-dchip aul-td-d">−47</span></td></tr></tbody></table>
+    </div>
+  </section>
+</div>
+
+<div class="aul-td-footer">
+  <div class="aul-td-wrap">
+    <h6>出典・注記</h6>
+    <p>厚生労働省「介護事業実態調査（介護事業経営概況調査）」第10表「短期入所生活介護　1施設・事業所当たり収支額，収支等の科目」より作成。</p>
+    <ol>
+      <li>本結果は回答施設の集計平均であり、個別施設の経営状態を直接示すものではありません。</li>
+<li>各金額は決算額を12で除した月額で、表章単位未満の丸めにより内訳が一致しない場合があります。</li>
+<li>年度間の差は要因の存在を示しますが、制度改定や人員配置などの因果関係までは特定できません。</li>
+<li>最新年度の有効回答数は294件です。母集団への代表性は別途確認が必要です。</li>
+
+    </ol>
+    <p class="aul-td-disc">本ダッシュボードは公的統計を分析・可視化した二次的著作物であり、数値の正確性は原典に依拠する。作成：AUL（aul-dox.jp）／オフライン動作・外部依存なしの自己完結HTML。</p>
+  </div>
+</div>
+</div></div>

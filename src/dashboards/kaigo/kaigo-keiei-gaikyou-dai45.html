@@ -1,0 +1,294 @@
+<div class="aul-report" style="background:#eef2f6"><div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h1{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:.01em}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ul,.aul-summary-web .aul-sum-doc ol{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.neg{color:var(--clay);font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">看護小規模多機能型居宅介護　経営分析サマリー</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">看護小規模多機能型居宅介護</span><span class="aul-sw-tag">第45表</span><span class="aul-sw-tag">令和6年度決算</span></div>
+</div>
+<article class="aul-sum-doc">
+<h1>看護小規模多機能型居宅介護経営分析レポート（地域区分別）</h1><h2>令和6年度決算・級地別の収支比較</h2><blockquote class="aul-sum-quote"><strong>出典</strong>：厚生労働省「第45表.xls」</blockquote><blockquote class="aul-sum-quote"><strong>対象</strong>：看護小規模多機能型居宅介護／1施設・事業所当たり・地域区分別</blockquote><blockquote class="aul-sum-quote"><strong>単位</strong>：特記なき金額は <strong>月額（決算額÷12）・円</strong>。比率は％。</blockquote><blockquote class="aul-sum-quote"><strong>有効回答数</strong>：404件</blockquote><hr class="aul-sum-hr"><h2>エグゼクティブサマリー</h2><p>本レポートは、厚生労働省「第45表.xls」（令和6年度決算）に基づき、看護小規模多機能型居宅介護1施設当たりの経営指標を地域区分別に比較したものである。読み取れる構造は次の点に集約される。</p><ol><li><strong>収支差率は地域区分で11.3ポイントの開き</strong>。令和6年度決算の収支差率は、４級地が11.7%で最も高く、１級地が0.4%で最も低く、その差は11.3ポイントです。 同じサービスでも地域区分によって収支構造が異なります。自施設の級地に対応する区分を基準に確認することが重要です。</li><li><strong>事業規模の大きさは収益性に直結していない</strong>。収入が最も大きいのは６級地（8,683,651円／月）ですが、収支差率が最も高いのは４級地（11.7%）で、規模と収益性は一致していません。 規模の大きさだけでは収支の余裕度を判断できません。費用構造を地域区分ごとに確認してください。</li><li><strong>給与費比率は地域区分で11.6ポイントの差</strong>。給与費比率は１級地が73.4%、６級地が61.8%で、11.6ポイントの差があります。 人件費水準の地域差が収支に影響します。給与費比率だけでなく、配置や加算取得と合わせて地域区分ごとに確認してください。</li></ol><p>令和6年度決算の地域区分別データでは、収支差率は４級地の11.7%から１級地の0.4%まで11.3ポイントの幅があります。自施設の級地に対応する区分を基準に、収入・費用・補助金を分けて確認してください。</p><hr class="aul-sum-hr"><h2>1. 収支差率は地域区分で11.3ポイントの開き</h2><p>令和6年度決算の収支差率は、４級地が11.7%で最も高く、１級地が0.4%で最も低く、その差は11.3ポイントです。</p><table class="aul-sum-table"><thead><tr><th class="l">地域区分</th><th>収支差率</th></tr></thead><tbody><tr><td class="l">４級地</td><td>11.7％</td></tr><tr><td class="l">６級地</td><td>8.2％</td></tr><tr><td class="l">３級地</td><td>8.0％</td></tr><tr><td class="l">その他</td><td>7.3％</td></tr><tr><td class="l">7級地</td><td>5.5％</td></tr><tr><td class="l">５級地</td><td>5.3％</td></tr><tr><td class="l">２級地</td><td>3.4％</td></tr><tr><td class="l">１級地</td><td>0.4％</td></tr></tbody></table><p>同じサービスでも地域区分によって収支構造が異なります。自施設の級地に対応する区分を基準に確認することが重要です。</p><hr class="aul-sum-hr"><h2>2. 級地別の収入・支出・差引</h2><table class="aul-sum-table"><thead><tr><th class="l">地域区分</th><th>収入</th><th>支出</th><th>差引</th><th>差引比率</th></tr></thead><tbody><tr><td class="l">１級地</td><td>7,914,285</td><td>7,881,575</td><td>32,710</td><td>0.4％</td></tr><tr><td class="l">２級地</td><td>8,092,557</td><td>7,819,768</td><td>272,789</td><td>3.4％</td></tr><tr><td class="l">３級地</td><td>8,433,531</td><td>7,761,943</td><td>671,588</td><td>8.0％</td></tr><tr><td class="l">４級地</td><td>8,672,618</td><td>7,656,277</td><td>1,016,341</td><td>11.7％</td></tr><tr><td class="l">５級地</td><td>7,818,998</td><td>7,406,352</td><td>412,646</td><td>5.3％</td></tr><tr><td class="l">６級地</td><td>8,683,651</td><td>7,973,071</td><td>710,580</td><td>8.2％</td></tr><tr><td class="l">7級地</td><td>7,524,221</td><td>7,110,884</td><td>413,338</td><td>5.5％</td></tr><tr><td class="l">その他</td><td>7,772,281</td><td>7,207,387</td><td>564,894</td><td>7.3％</td></tr></tbody></table><hr class="aul-sum-hr"><h2>3. 給与費比率の地域差</h2><table class="aul-sum-table"><thead><tr><th class="l">地域区分</th><th>給与費比率</th></tr></thead><tbody><tr><td class="l">１級地</td><td>73.4％</td></tr><tr><td class="l">２級地</td><td>71.7％</td></tr><tr><td class="l">３級地</td><td>68.1％</td></tr><tr><td class="l">４級地</td><td>64.5％</td></tr><tr><td class="l">５級地</td><td>68.0％</td></tr><tr><td class="l">６級地</td><td>61.8％</td></tr><tr><td class="l">7級地</td><td>64.6％</td></tr><tr><td class="l">その他</td><td>67.9％</td></tr></tbody></table><hr class="aul-sum-hr"><h2>注意点</h2><ul><li>本結果は回答施設の集計平均であり、個別施設の経営状態を直接示すものではありません。</li><li>各金額は決算額を12で除した月額で、表章単位未満の丸めにより内訳が一致しない場合があります。</li><li>級地はサービス提供地域の人件費水準等に基づく区分であり、地域間の単純比較には各区分固有の事情の確認が必要です。</li></ul>
+<p class="aul-sw-foot">生成日時: 2026-07-20 17:11</p>
+</article>
+</div><div style="height:22px"></div><div class="aul-regional-db" id="aul-regional-db-b747faae">
+<style>
+.aul-regional-db {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec;
+  --teal:#15786a; --teal-soft:#d6ebe6; --slate:#5b8fa8;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.65; box-sizing:border-box;
+}
+.aul-regional-db,.aul-regional-db *{box-sizing:border-box;margin:0;padding:0}
+.aul-regional-db .aul-rd-num{font-variant-numeric:tabular-nums}
+.aul-regional-db .aul-rd-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.aul-regional-db .aul-rd-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:38px 0 30px}
+.aul-regional-db .aul-rd-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:12px}
+.aul-regional-db .aul-rd-header h1{font-size:clamp(22px,3.2vw,32px);font-weight:800;line-height:1.34}
+.aul-regional-db .aul-rd-header h1 .aul-rd-accent{color:#7fd3c3}
+.aul-regional-db .aul-rd-sub{margin-top:12px;color:#b9c7d4;font-size:14.5px;max-width:780px}
+.aul-regional-db .aul-rd-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-regional-db .aul-rd-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-regional-db section{padding:30px 0}
+.aul-regional-db .aul-rd-sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.aul-regional-db .aul-rd-sec-head .aul-rd-no{font-size:13px;font-weight:800;color:var(--teal);letter-spacing:.08em}
+.aul-regional-db .aul-rd-sec-head h2{font-size:19px;font-weight:800}
+.aul-regional-db .aul-rd-hero{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:24px 26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.aul-regional-db .aul-rd-hero .aul-rd-kicker{font-size:12.5px;font-weight:700;color:var(--teal)}
+.aul-regional-db .aul-rd-hero .aul-rd-leadtext{margin-top:8px;font-size:14px;color:var(--ink-soft)}
+.aul-regional-db .aul-rd-heronums{display:flex;gap:18px}
+.aul-regional-db .aul-rd-heronum{flex:1;background:var(--teal-soft);border-radius:12px;padding:16px}
+.aul-regional-db .aul-rd-heronum .aul-rd-hl{font-size:12px;color:var(--teal);font-weight:700}
+.aul-regional-db .aul-rd-heronum .aul-rd-hv{font-size:26px;font-weight:800;margin-top:4px}
+.aul-regional-db .aul-rd-heronum .aul-rd-hs{font-size:12px;color:var(--ink-faint);margin-top:2px}
+.aul-regional-db .aul-rd-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 24px}
+.aul-regional-db .aul-rd-barrow{display:grid;grid-template-columns:96px 1fr 60px;align-items:center;gap:12px;margin:9px 0}
+.aul-regional-db .aul-rd-barlabel{font-size:13px;font-weight:600;color:var(--ink-soft)}
+.aul-regional-db .aul-rd-bartrack{background:#eef2f6;border-radius:999px;height:20px;overflow:hidden}
+.aul-regional-db .aul-rd-bar{display:block;height:100%;border-radius:999px}
+.aul-regional-db .aul-rd-barval{font-size:13px;font-weight:700;text-align:right}
+.aul-regional-db .aul-rd-insights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.aul-regional-db .aul-rd-ins{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px}
+.aul-regional-db .aul-rd-ins .aul-rd-ico{font-size:11.5px;font-weight:800;color:var(--teal);letter-spacing:.06em;margin-bottom:8px}
+.aul-regional-db .aul-rd-ins h5{font-size:15px;font-weight:800;margin-bottom:6px}
+.aul-regional-db .aul-rd-ins p{font-size:13px;color:var(--ink-soft)}
+.aul-regional-db table{width:100%;border-collapse:collapse;font-size:13.5px}
+.aul-regional-db thead th{background:#f3f7fa;color:var(--ink-soft);font-weight:700;text-align:right;padding:10px 12px;border-bottom:2px solid var(--line)}
+.aul-regional-db thead th:first-child{text-align:left}
+.aul-regional-db tbody td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:right}
+.aul-regional-db tbody td:first-child{text-align:left;font-weight:600}
+.aul-regional-db .aul-rd-caveats{font-size:12.5px;color:var(--ink-faint);padding-left:18px}
+.aul-regional-db .aul-rd-caveats li{margin:4px 0}
+@media(max-width:860px){
+  .aul-regional-db .aul-rd-hero{grid-template-columns:1fr}
+  .aul-regional-db .aul-rd-insights{grid-template-columns:1fr}
+}
+</style>
+<div class="aul-rd-header">
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-eyebrow">地域区分別・収支ダッシュボード</div>
+    <h1>看護小規模多機能型居宅介護 地域区分別の収支比較｜令和6年度決算の経営状況　第45表</h1>
+    <div class="aul-rd-sub">令和6年度決算の地域区分別データでは、収支差率は４級地の11.7%から１級地の0.4%まで11.3ポイントの幅があります。自施設の級地に対応する区分を基準に、収入・費用・補助金を分けて確認してください。</div>
+    <div class="aul-rd-tags">
+      <span class="aul-rd-tag">看護小規模多機能型居宅介護</span>
+      <span class="aul-rd-tag">第45表</span>
+      <span class="aul-rd-tag">令和6年度決算</span>
+      <span class="aul-rd-tag">有効回答 404件</span>
+      
+    </div>
+  </div>
+</div>
+<section>
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-hero">
+      <div>
+        <div class="aul-rd-kicker">最も収支差率が高い地域区分 / 低い地域区分</div>
+        <div class="aul-rd-leadtext">同じ看護小規模多機能型居宅介護でも、級地によって収支差率に11.3ポイントの差があります。</div>
+      </div>
+      <div class="aul-rd-heronums">
+        <div class="aul-rd-heronum"><div class="aul-rd-hl">最高：４級地</div><div class="aul-rd-hv aul-rd-num">11.7%</div><div class="aul-rd-hs">収支差率</div></div>
+        <div class="aul-rd-heronum" style="background:#f4ddd5"><div class="aul-rd-hl" style="color:#c0573f">最低：１級地</div><div class="aul-rd-hv aul-rd-num">0.4%</div><div class="aul-rd-hs">収支差率</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-sec-head"><span class="aul-rd-no">01</span><h2>地域区分別の収支差率</h2></div>
+    <div class="aul-rd-card">
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">４級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:100.0%;background:#15786a"></span></span>
+      <span class="aul-rd-barval aul-rd-num">11.7%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">６級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:70.1%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">8.2%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">３級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:68.4%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">8.0%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">その他</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:62.4%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">7.3%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">7級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:47.0%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">5.5%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">５級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:45.3%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">5.3%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">２級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:29.1%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">3.4%</span>
+    </div>
+    <div class="aul-rd-barrow">
+      <span class="aul-rd-barlabel">１級地</span>
+      <span class="aul-rd-bartrack"><span class="aul-rd-bar" style="width:3.4%;background:#5b8fa8"></span></span>
+      <span class="aul-rd-barval aul-rd-num">0.4%</span>
+    </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-sec-head"><span class="aul-rd-no">02</span><h2>読み取れる論点</h2></div>
+    <div class="aul-rd-insights">
+      <div class="aul-rd-ins">
+        <div class="aul-rd-ico">論点 A ／ 地域差</div>
+        <h5>収支差率は地域区分で11.3ポイントの開き</h5>
+        <p>令和6年度決算の収支差率は、４級地が11.7%で最も高く、１級地が0.4%で最も低く、その差は11.3ポイントです。 同じサービスでも地域区分によって収支構造が異なります。自施設の級地に対応する区分を基準に確認することが重要です。</p>
+      </div>
+      <div class="aul-rd-ins">
+        <div class="aul-rd-ico">論点 B ／ 規模と収益</div>
+        <h5>事業規模の大きさは収益性に直結していない</h5>
+        <p>収入が最も大きいのは６級地（8,683,651円／月）ですが、収支差率が最も高いのは４級地（11.7%）で、規模と収益性は一致していません。 規模の大きさだけでは収支の余裕度を判断できません。費用構造を地域区分ごとに確認してください。</p>
+      </div>
+      <div class="aul-rd-ins">
+        <div class="aul-rd-ico">論点 C ／ 人件費</div>
+        <h5>給与費比率は地域区分で11.6ポイントの差</h5>
+        <p>給与費比率は１級地が73.4%、６級地が61.8%で、11.6ポイントの差があります。 人件費水準の地域差が収支に影響します。給与費比率だけでなく、配置や加算取得と合わせて地域区分ごとに確認してください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-sec-head"><span class="aul-rd-no">03</span><h2>地域区分別の主要指標（月額・1施設当たり）</h2></div>
+    <div class="aul-rd-card">
+      <table>
+        <thead><tr><th>地域区分</th><th>収入</th><th>支出</th><th>差引</th><th>差引比率</th><th>給与費比率</th></tr></thead>
+        <tbody>
+      <tr>
+        <td>１級地</td>
+        <td class="aul-rd-num">7,914,285円</td>
+        <td class="aul-rd-num">7,881,575円</td>
+        <td class="aul-rd-num">32,710円</td>
+        <td class="aul-rd-num">0.4%</td>
+        <td class="aul-rd-num">73.4%</td>
+      </tr>
+      <tr>
+        <td>２級地</td>
+        <td class="aul-rd-num">8,092,557円</td>
+        <td class="aul-rd-num">7,819,768円</td>
+        <td class="aul-rd-num">272,789円</td>
+        <td class="aul-rd-num">3.4%</td>
+        <td class="aul-rd-num">71.7%</td>
+      </tr>
+      <tr>
+        <td>３級地</td>
+        <td class="aul-rd-num">8,433,531円</td>
+        <td class="aul-rd-num">7,761,943円</td>
+        <td class="aul-rd-num">671,588円</td>
+        <td class="aul-rd-num">8.0%</td>
+        <td class="aul-rd-num">68.1%</td>
+      </tr>
+      <tr>
+        <td>４級地</td>
+        <td class="aul-rd-num">8,672,618円</td>
+        <td class="aul-rd-num">7,656,277円</td>
+        <td class="aul-rd-num">1,016,341円</td>
+        <td class="aul-rd-num">11.7%</td>
+        <td class="aul-rd-num">64.5%</td>
+      </tr>
+      <tr>
+        <td>５級地</td>
+        <td class="aul-rd-num">7,818,998円</td>
+        <td class="aul-rd-num">7,406,352円</td>
+        <td class="aul-rd-num">412,646円</td>
+        <td class="aul-rd-num">5.3%</td>
+        <td class="aul-rd-num">68.0%</td>
+      </tr>
+      <tr>
+        <td>６級地</td>
+        <td class="aul-rd-num">8,683,651円</td>
+        <td class="aul-rd-num">7,973,071円</td>
+        <td class="aul-rd-num">710,580円</td>
+        <td class="aul-rd-num">8.2%</td>
+        <td class="aul-rd-num">61.8%</td>
+      </tr>
+      <tr>
+        <td>7級地</td>
+        <td class="aul-rd-num">7,524,221円</td>
+        <td class="aul-rd-num">7,110,884円</td>
+        <td class="aul-rd-num">413,338円</td>
+        <td class="aul-rd-num">5.5%</td>
+        <td class="aul-rd-num">64.6%</td>
+      </tr>
+      <tr>
+        <td>その他</td>
+        <td class="aul-rd-num">7,772,281円</td>
+        <td class="aul-rd-num">7,207,387円</td>
+        <td class="aul-rd-num">564,894円</td>
+        <td class="aul-rd-num">7.3%</td>
+        <td class="aul-rd-num">67.9%</td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="aul-rd-wrap">
+    <div class="aul-rd-sec-head"><span class="aul-rd-no">04</span><h2>注意点</h2></div>
+    <div class="aul-rd-card">
+      <ol class="aul-rd-caveats">
+<li>本結果は回答施設の集計平均であり、個別施設の経営状態を直接示すものではありません。</li>
+<li>各金額は決算額を12で除した月額で、表章単位未満の丸めにより内訳が一致しない場合があります。</li>
+<li>級地はサービス提供地域の人件費水準等に基づく区分であり、地域間の単純比較には各区分固有の事情の確認が必要です。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+</div></div>
