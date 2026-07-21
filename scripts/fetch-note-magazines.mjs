@@ -15,19 +15,11 @@ function decodeXml(buffer) {
   return shiftJis.includes('�') ? utf8 : shiftJis;
 }
 
-function getTagValue(item, tag) {
-  const match = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
-  return match ? match[1].trim() : '';
-}
+const MAX_PAGES = 50;
+const REQUEST_DELAY_MS = 200;
 
-function parseFeedItems(xml) {
-  return [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map((match) => {
-    const item = match[1];
-    return {
-      title: getTagValue(item, 'title'),
-      url: getTagValue(item, 'link'),
-    };
-  }).filter((entry) => entry.title && entry.url);
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function fetchMagazineKeys() {
@@ -46,22 +38,47 @@ async function fetchMagazineKeys() {
   return [...keys];
 }
 
+// note.comの公式API（ページネーション対応）でマガジンの全記事URLを取得する。
+// 旧実装はRSS（/m/{key}/rss）を使っていたが、RSSは直近25件程度しか返さないため、
+// 記事数の多いマガジンで収録記事を取りこぼしていた。
 async function fetchMagazine(key) {
-  const rssUrl = `https://note.com/${NOTE_ID}/m/${key}/rss`;
-  const response = await fetch(rssUrl, { headers: { 'user-agent': USER_AGENT } });
-  if (!response.ok) {
-    throw new Error(`Failed to fetch ${rssUrl}: ${response.status} ${response.statusText}`);
-  }
+  let title = '';
+  const articleUrls = [];
+  const seen = new Set();
 
-  const xml = decodeXml(await response.arrayBuffer());
-  const channelTitle = getTagValue(xml, 'title').replace(/\s+/g, ' ').trim();
-  const items = parseFeedItems(xml);
+  for (let page = 1; page <= MAX_PAGES; page += 1) {
+    const apiUrl = `https://note.com/api/v1/magazines/${key}/notes?page=${page}`;
+    const response = await fetch(apiUrl, { headers: { 'user-agent': USER_AGENT } });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${apiUrl}: ${response.status} ${response.statusText}`);
+    }
+
+    const json = await response.json();
+    const data = json?.data ?? {};
+    if (!title && typeof data.name === 'string') {
+      title = data.name.replace(/\s+/g, ' ').trim();
+    }
+
+    for (const note of data.notes ?? []) {
+      if (note?.status !== 'published') continue;
+      const urlname = note?.user?.urlname;
+      const noteKey = note?.key;
+      if (!urlname || !noteKey) continue;
+      const url = `https://note.com/${urlname}/n/${noteKey}`;
+      if (seen.has(url)) continue;
+      seen.add(url);
+      articleUrls.push(url);
+    }
+
+    if (!data.next_page) break;
+    await sleep(REQUEST_DELAY_MS);
+  }
 
   return {
     key,
-    title: channelTitle,
+    title,
     url: `https://note.com/${NOTE_ID}/m/${key}`,
-    articleUrls: items.map((item) => item.url),
+    articleUrls,
   };
 }
 
