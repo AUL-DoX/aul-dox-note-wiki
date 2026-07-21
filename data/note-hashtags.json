@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-20T08:49:53.690Z",
+  "fetchedAt": "2026-07-21T10:07:54.832Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -985,8 +985,8 @@
     ],
     "https://note.com/chic_wren6567/n/n9e4fa3975bb6": [
       "AI活用",
-      "問題解決",
       "組織論",
+      "問題解決",
       "DX推進",
       "日本企業"
     ],
@@ -999,8 +999,8 @@
     ],
     "https://note.com/chic_wren6567/n/n323567ad3800": [
       "業務改善",
-      "問題解決",
       "組織論",
+      "問題解決",
       "DX推進",
       "日本企業"
     ],
@@ -1395,7 +1395,6 @@
     ],
     "https://note.com/chic_wren6567/n/n6305b151203e": [
       "訪問看護",
-      "特別養護老人ホーム",
       "介護経営",
       "介護老人福祉施設",
       "訪問系サービス",
@@ -1403,7 +1402,6 @@
       "収支分析"
     ],
     "https://note.com/chic_wren6567/n/n523523521cca": [
-      "特別養護老人ホーム",
       "介護経営",
       "訪問入浴",
       "介護老人福祉施設",
@@ -1862,6 +1860,2875 @@
       "経営概況調査",
       "地域区分別",
       "通所系サービス"
+    ],
+    "https://note.com/chic_wren6567/n/n8e140c8d1ba1": [
+      "介護経営",
+      "認知症対応型共同生活介護",
+      "経営概況調査",
+      "施設系サービス",
+      "地域区分別"
+    ],
+    "https://note.com/chic_wren6567/n/nc887d13dad59": [
+      "介護経営",
+      "小規模多機能型居宅介護",
+      "経営概況調査",
+      "地域区分別",
+      "多機能型サービス"
+    ],
+    "https://note.com/chic_wren6567/n/n874a82e240a4": [
+      "マネジメント",
+      "管理職",
+      "職場の人間関係",
+      "モンスター社員",
+      "権利と義務"
+    ],
+    "https://note.com/chic_wren6567/n/nf15ec0b28c73": [
+      "特別養護老人ホーム",
+      "介護経営",
+      "社会福祉法人",
+      "介護人材不足",
+      "WAM調査"
+    ],
+    "https://note.com/chic_wren6567/n/nd0e8c587a293": [
+      "AI活用",
+      "Claude",
+      "データ分析",
+      "Codex",
+      "プラグイン",
+      "現場DX",
+      "スポーツ分析",
+      "Dataanalytics"
+    ],
+    "https://note.com/chic_wren6567/n/nfc5ac5566692": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "生成AI活用",
+      "AI比較"
+    ],
+    "https://note.com/chic_wren6567/n/ncc67423e2d81": [
+      "福祉DX",
+      "国保連請求",
+      "介護事業所DX",
+      "給付費請求書",
+      "AULClaimInsight"
+    ],
+    "https://note.com/chic_wren6567/n/n20901123a112": [
+      "AI活用",
+      "ClaudeCode",
+      "AIで遊ぼう",
+      "Blender",
+      "特別支援教育",
+      "進路支援",
+      "CAD教育"
+    ],
+    "https://note.com/chic_wren6567/n/na937c739f189": [
+      "業務改善",
+      "DX推進",
+      "AI導入",
+      "ゴールデンサークル",
+      "DX失敗"
+    ],
+    "https://note.com/chic_wren6567/n/ne92fa0186c6d": [
+      "福祉DX",
+      "国保連請求",
+      "介護事業所DX",
+      "給付費請求書",
+      "AULClaimInsight"
+    ],
+    "https://note.com/chic_wren6567/n/na0a23bdbc964": [
+      "生成AI",
+      "AI活用",
+      "エンジニア",
+      "業務効率化",
+      "DX失敗"
+    ],
+    "https://note.com/chic_wren6567/n/n804382d1a0a3": [
+      "福祉DX",
+      "国保連請求",
+      "介護事業所DX",
+      "給付費請求書",
+      "AULClaimInsight"
+    ],
+    "https://note.com/chic_wren6567/n/n37892ef4d8be": [
+      "厚労省",
+      "経産省",
+      "福祉DX",
+      "国保連請求",
+      "デジタルガバナンスコード",
+      "給付費請求書",
+      "帳票Excel"
+    ],
+    "https://note.com/chic_wren6567/n/n963d3d93ab12": [
+      "障害福祉",
+      "厚労省",
+      "介護DX",
+      "昭和時代",
+      "介護給付費",
+      "デジタル化の壁",
+      "訓練等給付費等"
+    ],
+    "https://note.com/chic_wren6567/n/n5e9ebd317263": [
+      "診療報酬改定",
+      "介護報酬改定",
+      "障害福祉サービス等報酬改定",
+      "2026年報酬改定",
+      "トリプル改定2026"
+    ],
+    "https://note.com/chic_wren6567/n/nf2d9858ef99c": [
+      "Codex",
+      "Ollama",
+      "開発効率化",
+      "配布前チェック",
+      "PythonCLI"
+    ],
+    "https://note.com/chic_wren6567/n/n99ae936505cb": [
+      "就労継続支援B型",
+      "特別支援学校",
+      "就労継続支援A型",
+      "進路指導",
+      "札幌市障害福祉"
+    ],
+    "https://note.com/chic_wren6567/n/n376dfa77a796": [
+      "就労継続支援",
+      "不正受給",
+      "福祉の現場",
+      "福祉とビジネス",
+      "障害福祉制度"
+    ],
+    "https://note.com/chic_wren6567/n/n78ed69732bdc": [
+      "python",
+      "データ分析",
+      "KPI",
+      "障害福祉サービス",
+      "経営分析",
+      "福祉DX",
+      "運営改善",
+      "国保連請求",
+      "介護事業所DX",
+      "AULClaimInsight"
+    ],
+    "https://note.com/chic_wren6567/n/n23c96603a5b3": [
+      "就労継続支援B型",
+      "高次脳機能障害",
+      "6",
+      "行動障害",
+      "福祉人材"
+    ],
+    "https://note.com/chic_wren6567/n/nabd64dfaab5e": [
+      "就労継続支援B型",
+      "就労支援",
+      "障害福祉サービス",
+      "福祉事業所",
+      "平均工賃"
+    ],
+    "https://note.com/chic_wren6567/n/n9df9564069c1": [
+      "障害者雇用",
+      "障害福祉",
+      "就労継続支援A型",
+      "最低賃金",
+      "福祉と労働"
+    ],
+    "https://note.com/chic_wren6567/n/nbb351baed5eb": [
+      "就労継続支援B型",
+      "就労支援",
+      "障害福祉",
+      "就労継続支援A型",
+      "福祉制度"
+    ],
+    "https://note.com/chic_wren6567/n/nb1669214b97a": [
+      "生活保護",
+      "障害年金",
+      "障がい福祉",
+      "当事者の声",
+      "制度のはざま"
+    ],
+    "https://note.com/chic_wren6567/n/n88f1a7333f0a": [
+      "生活保護",
+      "障がい者",
+      "障害年金",
+      "就労継続支援A型事業所"
+    ],
+    "https://note.com/chic_wren6567/n/n563511487fea": [
+      "障害年金",
+      "就労継続支援A型",
+      "障がい者支援",
+      "働けると働き続けられるは違う",
+      "年金と就労"
+    ],
+    "https://note.com/chic_wren6567/n/n7c66426d1878": [],
+    "https://note.com/chic_wren6567/n/neaf045a9a411": [
+      "生活保護",
+      "社会保障",
+      "就労継続支援A型",
+      "福祉の現場",
+      "障がい者の働き方"
+    ],
+    "https://note.com/chic_wren6567/n/n25b46d90ae2a": [
+      "医療DX",
+      "診療報酬改定",
+      "介護報酬改定",
+      "処遇改善加算",
+      "2026年度報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n4ffeebe9a7aa": [
+      "就労支援",
+      "障がい者雇用",
+      "就労継続支援A型",
+      "A型事業所",
+      "福祉とは何か"
+    ],
+    "https://note.com/chic_wren6567/n/n75e5efb55ecf": [
+      "在宅介護",
+      "介護予防",
+      "地域包括支援センター",
+      "要支援",
+      "総合事業"
+    ],
+    "https://note.com/chic_wren6567/n/ndc3e9e823847": [
+      "特養",
+      "介護費用",
+      "施設入所",
+      "介護老人福祉施設",
+      "補足給付"
+    ],
+    "https://note.com/chic_wren6567/n/n17eaeff08cd7": [
+      "病院経営",
+      "医療法人経営",
+      "医療業界の課題",
+      "病院経営動向調査",
+      "医師不足看護師不足"
+    ],
+    "https://note.com/chic_wren6567/n/n6a5f66db0a91": [
+      "AI活用",
+      "Claude",
+      "業務効率化",
+      "GAS",
+      "GoogleWorkspace",
+      "GoogleAppsScript",
+      "WorkspaceIntelligence"
+    ],
+    "https://note.com/chic_wren6567/n/nc6a39169a1fd": [
+      "診療報酬改定",
+      "介護報酬改定",
+      "ベースアップ評価料",
+      "疑義解釈",
+      "2026年報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n0e80665d237e": [
+      "在宅介護",
+      "デイサービス",
+      "ケアマネジャー",
+      "訪問介護",
+      "グループホーム"
+    ],
+    "https://note.com/chic_wren6567/n/n6d1cfa8aad6e": [
+      "在宅介護",
+      "介護職",
+      "介護予防",
+      "高齢化社会",
+      "要介護認定"
+    ],
+    "https://note.com/chic_wren6567/n/n22dfa77801d7": [
+      "在宅介護",
+      "介護保険",
+      "ケアプラン",
+      "居宅サービス",
+      "支給限度額"
+    ],
+    "https://note.com/chic_wren6567/n/n1d227fe30924": [
+      "就労支援",
+      "障害福祉",
+      "社会保険料",
+      "A型事業所",
+      "2029年問題",
+      "特別高等支援学校",
+      "社会保険改革"
+    ],
+    "https://note.com/chic_wren6567/n/n227f04c989d3": [
+      "生活介護",
+      "就労継続支援",
+      "障害福祉サービス",
+      "報酬改定",
+      "在宅支援",
+      "札幌モデル"
+    ],
+    "https://note.com/chic_wren6567/n/nbbec32b642a6": [
+      "多職種連携",
+      "認知症ケア",
+      "介護老人保健施設",
+      "在宅復帰",
+      "施設ケアマネ"
+    ],
+    "https://note.com/chic_wren6567/n/nd109cb04174b": [
+      "生成AI",
+      "業務改善",
+      "システム開発",
+      "GAS",
+      "AI開発"
+    ],
+    "https://note.com/chic_wren6567/n/n3845985c0943": [
+      "言語聴覚士",
+      "老健",
+      "介護老人保健施設",
+      "在宅復帰",
+      "嚥下リハビリ",
+      "褥瘡管理"
+    ],
+    "https://note.com/chic_wren6567/n/nb6bdb3db746d": [
+      "ケアマネジャー",
+      "多職種連携",
+      "ケアプラン",
+      "居宅介護支援",
+      "特定事業所加算"
+    ],
+    "https://note.com/chic_wren6567/n/n734c06226176": [
+      "Suno",
+      "音楽制作",
+      "jazz",
+      "AI作曲",
+      "blues",
+      "オリジナル楽曲",
+      "gospel",
+      "Latin",
+      "Salsa",
+      "OkStandby"
+    ],
+    "https://note.com/chic_wren6567/n/n4e77828c2be4": [
+      "介護福祉士",
+      "在宅介護",
+      "ケアマネジャー",
+      "福祉用具貸与",
+      "褥瘡予防"
+    ],
+    "https://note.com/chic_wren6567/n/n7a58a63c0b4d": [
+      "ノーコード",
+      "GoogleAppsScript",
+      "中小企業DX",
+      "福祉DX",
+      "介護テック"
+    ],
+    "https://note.com/chic_wren6567/n/n2829e6dd94ce": [
+      "介護保険",
+      "介護DX",
+      "介護報酬改定",
+      "処遇改善加算",
+      "介護職員等処遇改善加算",
+      "介護事業所運営"
+    ],
+    "https://note.com/chic_wren6567/n/nd29367108cca": [
+      "障害福祉",
+      "Obsidian",
+      "Github",
+      "介護DX",
+      "wiki",
+      "nextjs",
+      "vercel"
+    ],
+    "https://note.com/chic_wren6567/n/n2f1f3dbac9ed": [
+      "障害福祉",
+      "就労継続支援A型",
+      "社会保険適用拡大",
+      "生活保護問題",
+      "A型事業所経営"
+    ],
+    "https://note.com/chic_wren6567/n/n0628c97f005f": [
+      "特別養護老人ホーム",
+      "介護経営",
+      "介護人材不足",
+      "福祉業界の課題",
+      "社会福祉法人経営"
+    ],
+    "https://note.com/chic_wren6567/n/n0f35a33c481c": [
+      "就労継続支援B型",
+      "高次脳機能障害",
+      "福祉現場のリアル",
+      "障害福祉制度",
+      "支援体制の限界"
+    ],
+    "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f": [
+      "AI活用",
+      "業務効率化",
+      "Obsidian",
+      "Github",
+      "ナレッジ管理",
+      "ObsidianSkills",
+      "ObosidianSkills"
+    ],
+    "https://note.com/chic_wren6567/n/nc7edf0d9851e": [
+      "介護",
+      "訪問看護",
+      "介護職",
+      "ショートステイ",
+      "通所介護",
+      "通所リハビリ",
+      "短期入所"
+    ],
+    "https://note.com/chic_wren6567/n/n0785ff4db34c": [
+      "理学療法士",
+      "認知症",
+      "作業療法士",
+      "訪問看護",
+      "介護職",
+      "介護予防",
+      "レスパイトケア"
+    ],
+    "https://note.com/chic_wren6567/n/n09caa13441b9": [
+      "医療DX",
+      "診療報酬改定",
+      "介護報酬改定",
+      "処遇改善加算",
+      "2026年報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n26e2f5d5e4aa": [
+      "業務効率化",
+      "GoogleAppsScript",
+      "処遇改善加算",
+      "福祉DX",
+      "福祉介護職員等処遇改善加算"
+    ],
+    "https://note.com/chic_wren6567/n/n0eff08c46a89": [
+      "ClaudeCode",
+      "Obsidian",
+      "介護DX",
+      "ナレッジマネジメント",
+      "wiki",
+      "AIワークフロー"
+    ],
+    "https://note.com/chic_wren6567/n/n107893c9f5a3": [
+      "就労継続支援",
+      "障がい福祉",
+      "福祉経営",
+      "障害者就労",
+      "福祉制度改革"
+    ],
+    "https://note.com/chic_wren6567/n/nfbdbc0ccd1f4": [
+      "介護職",
+      "訪問介護",
+      "行動変容",
+      "ヘルパー",
+      "要介護",
+      "身体介護",
+      "生活援助"
+    ],
+    "https://note.com/chic_wren6567/n/n80608bb43a44": [
+      "障害者雇用",
+      "障害福祉",
+      "就労継続支援",
+      "福祉改革",
+      "たかが300円"
+    ],
+    "https://note.com/chic_wren6567/n/n689fe3fd4684": [
+      "介護",
+      "認知症",
+      "介護職",
+      "デイサービス",
+      "訪問介護",
+      "特養",
+      "要介護"
+    ],
+    "https://note.com/chic_wren6567/n/n87cdd8fadb3d": [
+      "障害福祉",
+      "特別支援学校",
+      "行政DX",
+      "進路問題",
+      "たかが300円シリーズ"
+    ],
+    "https://note.com/chic_wren6567/n/nc717ab4d41e6": [
+      "データ分析",
+      "障害福祉",
+      "就労継続支援",
+      "福祉経営",
+      "構造問題",
+      "福祉ビジネス",
+      "専門記事",
+      "たかが300円",
+      "経営実態",
+      "A型B型"
+    ],
+    "https://note.com/chic_wren6567/n/n626ae7dcb51c": [
+      "社会問題",
+      "障害福祉",
+      "人材不足",
+      "現場の声",
+      "雇用問題",
+      "福祉の未来",
+      "地域問題",
+      "事業所閉鎖",
+      "たかが300円",
+      "福祉崩壊"
+    ],
+    "https://note.com/chic_wren6567/n/n78f9ce29dd9f": [
+      "Claude",
+      "スタートアップ",
+      "AIエージェント",
+      "ゲーム開発",
+      "ローマ帝国",
+      "塩野七生"
+    ],
+    "https://note.com/chic_wren6567/n/nf0175aa44af6": [
+      "障害福祉",
+      "生活支援",
+      "リアルな話",
+      "食と健康",
+      "福祉の現場",
+      "利用者支援",
+      "家族の負担",
+      "福祉の課題",
+      "通所支援",
+      "たかが300円"
+    ],
+    "https://note.com/chic_wren6567/n/n18d97cb80781": [
+      "介護",
+      "デイサービス",
+      "訪問介護",
+      "都道府県",
+      "要介護",
+      "介護費用"
+    ],
+    "https://note.com/chic_wren6567/n/n1105b034b0df": [
+      "障害福祉",
+      "社会保障",
+      "厚労省",
+      "制度改正",
+      "福祉制度",
+      "福祉政策",
+      "福祉の現実",
+      "食事提供体制加算",
+      "福祉問題",
+      "たかが300円"
+    ],
+    "https://note.com/chic_wren6567/n/n3f12c264f0c9": [
+      "社会問題",
+      "障害福祉",
+      "格差社会",
+      "問題提起",
+      "考えさせられる",
+      "制度の矛盾",
+      "福祉とは",
+      "福祉の本質",
+      "たかが300円",
+      "誰のための福祉"
+    ],
+    "https://note.com/chic_wren6567/n/nf0cd01a57af9": [
+      "業務効率化",
+      "オープンソース",
+      "スケジューリング",
+      "数理最適化",
+      "シフト自動作成",
+      "ORTools",
+      "配送ルート最適化"
+    ],
+    "https://note.com/chic_wren6567/n/ndbac82a21ea1": [
+      "就労支援",
+      "障害福祉",
+      "赤字",
+      "知らないと損",
+      "福祉経営",
+      "経営のリアル",
+      "事業所運営",
+      "数字で見る",
+      "福祉の現実",
+      "たかが300円"
+    ],
+    "https://note.com/chic_wren6567/n/n31ade23ee820": [
+      "介護",
+      "介護職",
+      "介護予防",
+      "都道府県",
+      "地域包括ケア"
+    ],
+    "https://note.com/chic_wren6567/n/n8eb0a9794ce2": [
+      "AI活用",
+      "仕事術",
+      "DX",
+      "働き方改革",
+      "介護DX"
+    ],
+    "https://note.com/chic_wren6567/n/n8eb74e348669": [
+      "介護",
+      "介護職",
+      "訪問介護",
+      "訪問リハビリ",
+      "要介護",
+      "重度化防止"
+    ],
+    "https://note.com/chic_wren6567/n/n468c962273f5": [
+      "北海道",
+      "地方創生",
+      "データセンター",
+      "再生可能エネルギー",
+      "AIインフラ"
+    ],
+    "https://note.com/chic_wren6567/n/n158bd6066db1": [
+      "就労継続支援",
+      "障がい福祉",
+      "福祉経営",
+      "報酬改定",
+      "食事提供体制加算"
+    ],
+    "https://note.com/chic_wren6567/n/nb21e07d98c79": [
+      "医療DX",
+      "介護報酬改定",
+      "処遇改善加算",
+      "2026年診療報酬改定",
+      "障害福祉サービス等報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/nf3e969cd5bb0": [
+      "介護職",
+      "介護保険",
+      "介護予防",
+      "ケアプラン",
+      "要支援"
+    ],
+    "https://note.com/chic_wren6567/n/n6f0137cba88c": [
+      "スキルアップ",
+      "ビジネスゲーム",
+      "経営シミュレーション",
+      "ロールプレイゲーム",
+      "VirtualCompanyStudio"
+    ],
+    "https://note.com/chic_wren6567/n/n219808662895": [
+      "高齢者",
+      "介護職",
+      "介護保険",
+      "介護予防",
+      "要介護"
+    ],
+    "https://note.com/chic_wren6567/n/n1dce4e02b21b": [
+      "個人開発",
+      "AIツール",
+      "TypeScript",
+      "GeminiDeepResearch",
+      "Markdown変換"
+    ],
+    "https://note.com/chic_wren6567/n/ne2003c753280": [
+      "在宅介護",
+      "介護保険",
+      "介護経営",
+      "要介護",
+      "重度化防止"
+    ],
+    "https://note.com/chic_wren6567/n/n8e17636873bd": [
+      "AI",
+      "DX",
+      "業務効率化",
+      "意思決定",
+      "経営効率化"
+    ],
+    "https://note.com/chic_wren6567/n/nab05556de4b4": [
+      "介護",
+      "地域",
+      "要支援"
+    ],
+    "https://note.com/chic_wren6567/n/nde47aa24f205": [
+      "訪問介護",
+      "介護離職",
+      "介護DX",
+      "介護経営",
+      "職員エンゲージメント"
+    ],
+    "https://note.com/chic_wren6567/n/n7ccae718aee9": [
+      "医療DX",
+      "賃上げ",
+      "介護報酬改定",
+      "診療報酬改定2026",
+      "障害福祉サービス報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/nee637a13e339": [
+      "介護",
+      "データ",
+      "放課後等デイサービス",
+      "グループホーム",
+      "就労継続支援",
+      "インサイト",
+      "障がい福祉",
+      "eStat"
+    ],
+    "https://note.com/chic_wren6567/n/n8246c092ecff": [
+      "在宅介護",
+      "介護保険",
+      "データサイエンス",
+      "介護予防",
+      "要介護認定",
+      "総合事業",
+      "介護給付費",
+      "医療福祉DX"
+    ],
+    "https://note.com/chic_wren6567/n/n5dc7192c7146": [
+      "介護経営",
+      "地域包括ケア",
+      "介護事業所",
+      "総合事業",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/nd0647271c549": [
+      "介護予防",
+      "処遇改善加算",
+      "介護報酬",
+      "総合事業",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/n1454be7f1054": [
+      "Gemini",
+      "AI開発",
+      "GoogleWorkspace",
+      "拡張機能",
+      "GEM",
+      "Googleカレンダー",
+      "Googleタスク"
+    ],
+    "https://note.com/chic_wren6567/n/n5d6a99fcd418": [
+      "ゴスペル",
+      "gospel",
+      "アレサ・フランクリン",
+      "チャカ・カーン",
+      "AmericanIdol",
+      "TheBrownFour"
+    ],
+    "https://note.com/chic_wren6567/n/n77f1bbea2014": [
+      "介護予防",
+      "地域格差",
+      "総合事業",
+      "都道府県別",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/nc95f9e5bd777": [
+      "在宅介護",
+      "デイサービス",
+      "訪問介護",
+      "地域包括支援センター",
+      "ケアプラン",
+      "介護予防ケアマネジメント",
+      "独自サービス"
+    ],
+    "https://note.com/chic_wren6567/n/nf0d6431ab91f": [
+      "在宅介護",
+      "デイサービス",
+      "訪問介護",
+      "介護予防",
+      "地域包括支援センター",
+      "ケアプラン",
+      "総合事業",
+      "介護予防ケアマネジメント",
+      "通所型サービス",
+      "訪問型サービス"
+    ],
+    "https://note.com/chic_wren6567/n/n512c01ffa325": [
+      "ChatGPT",
+      "Claude",
+      "Google",
+      "審査",
+      "chrome拡張機能",
+      "dom",
+      "chromewebstore"
+    ],
+    "https://note.com/chic_wren6567/n/ne9e34ee4ea32": [
+      "仕事",
+      "思考",
+      "価値",
+      "視点",
+      "AIツール"
+    ],
+    "https://note.com/chic_wren6567/n/n898b9a439168": [
+      "介護",
+      "特養",
+      "老健",
+      "要介護"
+    ],
+    "https://note.com/chic_wren6567/n/n8bfaded24d3d": [
+      "note",
+      "Gemini",
+      "Google",
+      "テキスト",
+      "DeepResearch",
+      "Markdown"
+    ],
+    "https://note.com/chic_wren6567/n/n769e28a048fa": [
+      "介護",
+      "在宅介護",
+      "訪問介護",
+      "福祉用具",
+      "受給者数"
+    ],
+    "https://note.com/chic_wren6567/n/n25fe06ed85aa": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "ClaudeCode",
+      "Codex",
+      "GPTs",
+      "AntiGravity",
+      "GEM",
+      "PROJECT",
+      "AIプロジェクト",
+      "一元管理"
+    ],
+    "https://note.com/chic_wren6567/n/ncd83ee054833": [
+      "Gemini",
+      "高校",
+      "中学校",
+      "キャリア教育",
+      "社会課題",
+      "特別支援学校",
+      "GoogleAppsScript",
+      "STEAM教育",
+      "グループワーク",
+      "学校DX",
+      "社会情緒的学習"
+    ],
+    "https://note.com/chic_wren6567/n/n195593402e73": [
+      "ケアマネ",
+      "在宅医療",
+      "医療的ケア児",
+      "生活介護",
+      "リフィル処方箋",
+      "生産性向上加算",
+      "在宅医療充実体制加算"
+    ],
+    "https://note.com/chic_wren6567/n/necca7d13d3e9": [
+      "訪問看護",
+      "訪問介護",
+      "要介護",
+      "通所介護",
+      "要支援",
+      "居宅サービス"
+    ],
+    "https://note.com/chic_wren6567/n/nec679f690ad4": [
+      "介護",
+      "ケアプラン",
+      "居宅ケアマネ",
+      "施設ケアマネ"
+    ],
+    "https://note.com/chic_wren6567/n/n26c6d5e4c213": [
+      "福祉",
+      "言語聴覚士",
+      "GAS",
+      "失語症",
+      "障がい福祉",
+      "コミュニケーション支援",
+      "AAC",
+      "AULWeavingWords",
+      "AmbientCare",
+      "アンビエントケア"
+    ],
+    "https://note.com/chic_wren6567/n/n3f7685b976ec": [
+      "介護",
+      "医療",
+      "障がい福祉",
+      "ジェノグラム",
+      "フェイスシート"
+    ],
+    "https://note.com/chic_wren6567/n/n6011200929fe": [
+      "介護",
+      "重心",
+      "ケアプラン",
+      "加算",
+      "ケアマネジメント",
+      "居宅"
+    ],
+    "https://note.com/chic_wren6567/n/na7e4350ad21a": [
+      "在宅介護",
+      "重心",
+      "要介護",
+      "要支援",
+      "福祉用具貸与",
+      "特殊寝台",
+      "体位変換器",
+      "移動リフト"
+    ],
+    "https://note.com/chic_wren6567/n/n525839dde3fd": [
+      "介護",
+      "認知症",
+      "認知症対応型通所介護"
+    ],
+    "https://note.com/chic_wren6567/n/nbfab4d6e4e4d": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "AIエージェント",
+      "AIツール",
+      "Codex",
+      "AntiGravity",
+      "ClaudeCowork",
+      "e2e"
+    ],
+    "https://note.com/chic_wren6567/n/ncecb7847a09a": [
+      "介護",
+      "理学療法士",
+      "作業療法士",
+      "訪問看護",
+      "通所介護",
+      "通所リハ",
+      "短期入所生活介護"
+    ],
+    "https://note.com/chic_wren6567/n/nfbb2f8b5ee73": [
+      "Claude",
+      "データ分析",
+      "GAS",
+      "行政DX",
+      "文字化け",
+      "エンコード",
+      "eStat"
+    ],
+    "https://note.com/chic_wren6567/n/n5717ff6f0320": [
+      "理学療法士",
+      "作業療法士",
+      "訪問看護",
+      "訪問介護",
+      "介護予防",
+      "通所介護",
+      "通所リハビリ",
+      "レスパイトケア",
+      "介護予防訪問看護"
+    ],
+    "https://note.com/chic_wren6567/n/nab61bb0d09a5": [
+      "介護",
+      "医療",
+      "障がい福祉",
+      "告示"
+    ],
+    "https://note.com/chic_wren6567/n/nf48cc776f8c1": [
+      "note",
+      "難病",
+      "視覚障害",
+      "バリアフリー",
+      "アクセシビリティ",
+      "身体障害",
+      "Gemini活用",
+      "オストメイト",
+      "移動支援",
+      "福祉DX"
+    ],
+    "https://note.com/chic_wren6567/n/neefc92155b98": [
+      "AI",
+      "ベストプラクティス",
+      "コンテキストウィンドウ",
+      "ClaudeSkills"
+    ],
+    "https://note.com/chic_wren6567/n/n8f7987039862": [
+      "Claude",
+      "プロンプト",
+      "テキスト",
+      "変換",
+      "Markdown",
+      "PROJECT"
+    ],
+    "https://note.com/chic_wren6567/n/nbf35975952f0": [
+      "AI",
+      "完結",
+      "開発日誌",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/n1e86783b0f50": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "ツール",
+      "クラウド",
+      "ローカル",
+      "ClaudeCowork",
+      "ARM",
+      "x64"
+    ],
+    "https://note.com/chic_wren6567/n/n10b4da3d92be": [
+      "介護",
+      "データ分析",
+      "費用",
+      "都道府県別",
+      "介護給付費等実態統計月報"
+    ],
+    "https://note.com/chic_wren6567/n/n336e157e3e57": [
+      "AI",
+      "記憶",
+      "エージェント",
+      "開発日誌",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/nd63a50c3b389": [
+      "ケアマネ",
+      "障害福祉",
+      "介護保険",
+      "札幌市",
+      "発達障がい",
+      "相談支援専門員",
+      "精神障がい",
+      "知的障がい",
+      "65歳の壁",
+      "重複受給",
+      "新高額障害福祉サービス等給付費",
+      "さわやか収集"
+    ],
+    "https://note.com/chic_wren6567/n/nfeffaa67291f": [
+      "AI",
+      "ゲーム",
+      "レベルアップ",
+      "開発日誌",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/n6deb3382467f": [
+      "AI",
+      "AIエージェント",
+      "開発日誌",
+      "採点",
+      "claudeapi",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/nd9ee4333c783": [
+      "費用",
+      "介護予防",
+      "要支援",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/n87e2c9798a58": [
+      "整理",
+      "ツール",
+      "notebookLM"
+    ],
+    "https://note.com/chic_wren6567/n/n98baec08fb7d": [
+      "介護",
+      "医療",
+      "生産性向上",
+      "就労継続支援B型",
+      "生活習慣病",
+      "障がい福祉",
+      "科学的介護",
+      "ケアプランデータ連携システム"
+    ],
+    "https://note.com/chic_wren6567/n/n2f648e899a11": [
+      "介護",
+      "データ分析",
+      "介護保険",
+      "介護予防",
+      "要介護",
+      "介護給付費",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/n7b2d5604880a": [
+      "データ分析",
+      "要介護",
+      "介護サービス",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/nda250f00d97b": [
+      "データ分析",
+      "介護予防",
+      "要支援",
+      "介護給付費等実態統計",
+      "受給者数"
+    ],
+    "https://note.com/chic_wren6567/n/n346c3e3fc59a": [
+      "コスト",
+      "消費税",
+      "給与",
+      "社会保険料"
+    ],
+    "https://note.com/chic_wren6567/n/n024d4c928666": [
+      "AI",
+      "開発日誌",
+      "claudeapi",
+      "HumanInTheLoop",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/n6734996fa661": [
+      "AI",
+      "ロシア語",
+      "開発日誌",
+      "claudeapi",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/nd05689e59d69": [
+      "AI",
+      "教育",
+      "プログラミング",
+      "小学生",
+      "steam",
+      "リベラルアーツ",
+      "STEM"
+    ],
+    "https://note.com/chic_wren6567/n/ne7ab4b93fd4e": [
+      "AI",
+      "スタートアップ",
+      "Github",
+      "開発日誌",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/n924e7dfd6fb4": [
+      "プログラミング",
+      "AIエージェント",
+      "責任",
+      "法律",
+      "AntiGravity"
+    ],
+    "https://note.com/chic_wren6567/n/n78fa1ba46406": [
+      "AI",
+      "スタートアップ",
+      "AIエージェント",
+      "未来に向けた挑戦",
+      "開発日誌",
+      "claudeapi",
+      "VCS",
+      "AIに会社を経営させてみたくなった"
+    ],
+    "https://note.com/chic_wren6567/n/n8335169eeb3c": [
+      "notebookLM",
+      "就労継続支援B型",
+      "資料作成",
+      "就労継続支援A型",
+      "カンファレンス",
+      "就労選択支援",
+      "支援記録"
+    ],
+    "https://note.com/chic_wren6567/n/n34572dcde906": [
+      "サッカー",
+      "データ分析",
+      "プレミアリーグ",
+      "Opta",
+      "xG分析"
+    ],
+    "https://note.com/chic_wren6567/n/nd78969d44629": [
+      "介護",
+      "医療",
+      "アール・ブリュット",
+      "障がい福祉",
+      "遺伝子治療薬",
+      "夜勤のワンオペ"
+    ],
+    "https://note.com/chic_wren6567/n/n1aa449804edf": [
+      "サッカー",
+      "プレミアリーグ",
+      "勝率",
+      "マンチェスターシティ",
+      "クリスタル・パレス"
+    ],
+    "https://note.com/chic_wren6567/n/n8488aa22485b": [
+      "介護",
+      "医療",
+      "行動変容",
+      "障がい福祉"
+    ],
+    "https://note.com/chic_wren6567/n/n15bba22a5543": [
+      "未来に向けた挑戦",
+      "就労継続支援B型",
+      "牛乳",
+      "就労継続支援A型",
+      "ランチェスター戦略",
+      "カゼイン",
+      "バイオ・ペーパー",
+      "廃棄牛乳"
+    ],
+    "https://note.com/chic_wren6567/n/n3553a3c2647d": [
+      "プロンプト",
+      "エージェント",
+      "Anthropic",
+      "オーケストレーション",
+      "ベストプラクティス"
+    ],
+    "https://note.com/chic_wren6567/n/n1b270e9af8e1": [
+      "DX",
+      "AIエージェント"
+    ],
+    "https://note.com/chic_wren6567/n/nda3d5c7572bb": [
+      "AIエージェント",
+      "Anthropic",
+      "ベストプラクティス"
+    ],
+    "https://note.com/chic_wren6567/n/n697ead3f3df9": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "質問力"
+    ],
+    "https://note.com/chic_wren6567/n/nc60eb0fb62af": [
+      "AI",
+      "自作ツール"
+    ],
+    "https://note.com/chic_wren6567/n/nae12e07af845": [
+      "介護",
+      "医療",
+      "賃上",
+      "障がい福祉",
+      "加算"
+    ],
+    "https://note.com/chic_wren6567/n/n75d41e7cfa2c": [
+      "AI",
+      "60代",
+      "非エンジニア",
+      "ツール開発"
+    ],
+    "https://note.com/chic_wren6567/n/nb636f2839f57": [
+      "北海道",
+      "ご当地グルメ",
+      "道の駅",
+      "柚木麻子",
+      "butter",
+      "バター醤油ごはん"
+    ],
+    "https://note.com/chic_wren6567/n/n6131815a3164": [
+      "感情",
+      "サッカー",
+      "アーセナル",
+      "トロサール",
+      "ミルナー"
+    ],
+    "https://note.com/chic_wren6567/n/n962a504486d7": [
+      "意思決定",
+      "年齢",
+      "いい働き方ってなんだろう",
+      "性別"
+    ],
+    "https://note.com/chic_wren6567/n/n6e923765cd3e": [
+      "DX",
+      "AX",
+      "システム導入"
+    ],
+    "https://note.com/chic_wren6567/n/n60aa67e74ccf": [
+      "未来に向けた挑戦",
+      "スプレッドシート",
+      "PDF",
+      "ドキュメント",
+      "Googleドライブ整理ツール"
+    ],
+    "https://note.com/chic_wren6567/n/n1a0f91c4a542": [
+      "python",
+      "未来に向けた挑戦",
+      "PDF",
+      "一括印刷"
+    ],
+    "https://note.com/chic_wren6567/n/nf76252413556": [
+      "介護",
+      "医療",
+      "障がい福祉"
+    ],
+    "https://note.com/chic_wren6567/n/nd4cfb0dc4648": [
+      "AI",
+      "DX",
+      "技術",
+      "50代以上"
+    ],
+    "https://note.com/chic_wren6567/n/n74fc3377cdc3": [
+      "スプレッドシート",
+      "Googleドライブ整理ツール"
+    ],
+    "https://note.com/chic_wren6567/n/n351df0941b39": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "開発",
+      "ClaudeCode",
+      "プロジェクト",
+      "notebookLM",
+      "Codex",
+      "webアプリ開発",
+      "一元管理"
+    ],
+    "https://note.com/chic_wren6567/n/n3040d7ae6dc8": [
+      "改善",
+      "正解",
+      "運用",
+      "施策"
+    ],
+    "https://note.com/chic_wren6567/n/n6b21aa66a9e2": [],
+    "https://note.com/chic_wren6567/n/nd4b4bc58c0e5": [
+      "経営",
+      "DX",
+      "意思決定",
+      "startwithwhy"
+    ],
+    "https://note.com/chic_wren6567/n/n9f2648eb48da": [
+      "介護",
+      "医療",
+      "福祉",
+      "管理",
+      "コスト",
+      "書類整理"
+    ],
+    "https://note.com/chic_wren6567/n/nf8bd16aa11a5": [
+      "教育",
+      "パート",
+      "派遣",
+      "正社員",
+      "社会保険料",
+      "アウトソーシング"
+    ],
+    "https://note.com/chic_wren6567/n/n73aa1030cb40": [
+      "人手不足",
+      "スプレッドシート",
+      "Googleフォーム",
+      "相談受付",
+      "AULIntakeFlow"
+    ],
+    "https://note.com/chic_wren6567/n/n6b4995397f4e": [
+      "Gemini",
+      "拡張機能",
+      "プロジェクト機能",
+      "GeminiPromptNote",
+      "ChromWebStore"
+    ],
+    "https://note.com/chic_wren6567/n/n16fefbcc1ed3": [
+      "評価",
+      "観測",
+      "週刊DoX入門"
+    ],
+    "https://note.com/chic_wren6567/n/nb9a4afe5c2f0": [
+      "介護",
+      "医療",
+      "就労継続支援B型",
+      "ヤングケアラー",
+      "障がい福祉",
+      "ケアプランデータ連携システム",
+      "生産性向上推進体制加算",
+      "急性期病院一般入院基本料",
+      "歯科外来物価対応料",
+      "365日提供体制",
+      "工賃基準の適正化"
+    ],
+    "https://note.com/chic_wren6567/n/n69211e896e29": [
+      "セキュリティ",
+      "Microsoft",
+      "GoogleWorkspace",
+      "GoogleWorkspaceforEducation"
+    ],
+    "https://note.com/chic_wren6567/n/n3541be0a3906": [
+      "仕事",
+      "DX",
+      "会議",
+      "無駄",
+      "スライド",
+      "自動作成"
+    ],
+    "https://note.com/chic_wren6567/n/ne1d2ef9d445b": [
+      "成果",
+      "観測"
+    ],
+    "https://note.com/chic_wren6567/n/n25cbf3cee85f": [
+      "AI",
+      "介護",
+      "Gemini",
+      "医療",
+      "社会福祉士",
+      "ケアマネ",
+      "精神保健福祉士",
+      "ソーシャルワーカー",
+      "障がい福祉",
+      "サービス管理責任者",
+      "サービス提供責任者",
+      "ロジャーズのカウンセリング技法"
+    ],
+    "https://note.com/chic_wren6567/n/n20b9bb36ae71": [
+      "AI",
+      "教育",
+      "学校",
+      "プログラミング",
+      "教員",
+      "ジェンダー",
+      "インフラ",
+      "アウトソーシング",
+      "GIGAスクール構想",
+      "レガシー教育"
+    ],
+    "https://note.com/chic_wren6567/n/n896cfc45c228": [
+      "カウンセリング",
+      "キャリアコンサルタント",
+      "アドバイス",
+      "1on1",
+      "Ambient",
+      "ロジャーズのカウンセリング技法"
+    ],
+    "https://note.com/chic_wren6567/n/n2b66e6603857": [
+      "介護",
+      "医療",
+      "就労継続支援B型",
+      "賃上",
+      "ビジネスケアラー",
+      "障がい福祉",
+      "報酬引き下げ",
+      "算定厳格化"
+    ],
+    "https://note.com/chic_wren6567/n/na2eaa77e1ab5": [
+      "経営",
+      "情報",
+      "データ",
+      "DX",
+      "組織",
+      "管理職",
+      "業務改善",
+      "リスキリング",
+      "意思決定",
+      "ホワイトカラー"
+    ],
+    "https://note.com/chic_wren6567/n/n4f065c14a064": [
+      "経営",
+      "リスク",
+      "業務改善",
+      "API",
+      "GoogleAIStudio"
+    ],
+    "https://note.com/chic_wren6567/n/n01a50591b6a2": [
+      "経営者",
+      "中小企業",
+      "人手不足",
+      "孤立",
+      "介護離職",
+      "育児疲れ",
+      "アウトソーシング"
+    ],
+    "https://note.com/chic_wren6567/n/n76391523e9fb": [
+      "仕事",
+      "データ",
+      "DX",
+      "業務"
+    ],
+    "https://note.com/chic_wren6567/n/n96017c5dea97": [
+      "DX",
+      "職場",
+      "現場",
+      "管理職"
+    ],
+    "https://note.com/chic_wren6567/n/n8d257a5420ef": [
+      "データ",
+      "DX",
+      "職場",
+      "思考停止",
+      "社内"
+    ],
+    "https://note.com/chic_wren6567/n/n41d7ff97f15e": [
+      "仕事",
+      "ルール",
+      "観測",
+      "週刊DoX"
+    ],
+    "https://note.com/chic_wren6567/n/n4a7fd10e27de": [
+      "Google",
+      "タスク管理",
+      "スプレッドシート",
+      "ドキュメント",
+      "情報共有",
+      "Googleカレンダー",
+      "Googleドライブ",
+      "校務DX",
+      "学校DX",
+      "classroom",
+      "GoogleMeets"
+    ],
+    "https://note.com/chic_wren6567/n/n78386774e969": [
+      "AI",
+      "英語",
+      "英会話",
+      "理解",
+      "テスト",
+      "生徒",
+      "英文"
+    ],
+    "https://note.com/chic_wren6567/n/ned6e175bd1cb": [
+      "AI",
+      "教育",
+      "ICT教育",
+      "札幌市",
+      "教育委員会",
+      "教育DX",
+      "GIGAスクール構想",
+      "ICT支援員",
+      "校務DX",
+      "学校DX"
+    ],
+    "https://note.com/chic_wren6567/n/n20359b98aabb": [
+      "AI",
+      "読解力",
+      "手書き",
+      "クローズアップ現代",
+      "人間大丈夫ですか"
+    ],
+    "https://note.com/chic_wren6567/n/n091cc172e066": [
+      "AI",
+      "Gemini",
+      "スプレッドシート",
+      "GoogleWorkspace",
+      "教育DX",
+      "GEM",
+      "校務DX",
+      "学校DX",
+      "校務支援",
+      "次世代型校務支援ツール",
+      "AulEducationSystem",
+      "所見案"
+    ],
+    "https://note.com/chic_wren6567/n/ne492b5d2c62d": [
+      "AI",
+      "介護",
+      "教員",
+      "教育DX",
+      "学校DX",
+      "所見",
+      "校務支援"
+    ],
+    "https://note.com/chic_wren6567/n/n20bbf52cf74d": [
+      "ChatGPT",
+      "Gemini",
+      "Claude",
+      "セカンドオピニオン",
+      "知能",
+      "学問的"
+    ],
+    "https://note.com/chic_wren6567/n/n205d7b85a44b": [
+      "DX",
+      "会議",
+      "資料",
+      "観測",
+      "dox"
+    ],
+    "https://note.com/chic_wren6567/n/n0d7d92f68d82": [
+      "チャット",
+      "GoogleWorkspace",
+      "Googleドライブ",
+      "Googlechat"
+    ],
+    "https://note.com/chic_wren6567/n/n53b5070ffeea": [
+      "介護",
+      "医療",
+      "倒産",
+      "賃上",
+      "マイナ保険証",
+      "カスタマーハラスメント",
+      "障がい福祉",
+      "医師の働き方改革",
+      "就労選択支援",
+      "訪問介護事業所",
+      "虐待防止措置",
+      "アウトカム評価厳格化",
+      "GH総量規制"
+    ],
+    "https://note.com/chic_wren6567/n/n23e580f80ff6": [
+      "仕事",
+      "資料",
+      "AIワークフロー",
+      "AIに仕事を奪われる",
+      "自動作成",
+      "考えない人"
+    ],
+    "https://note.com/chic_wren6567/n/n4dca2794fda4": [
+      "プロンプト",
+      "Google",
+      "教育DX",
+      "推論",
+      "ポータルサイト",
+      "学校DX"
+    ],
+    "https://note.com/chic_wren6567/n/nb38a8ac7e5f1": [
+      "気づき",
+      "PDCA",
+      "可視化",
+      "GoogleWorkspace",
+      "OODA",
+      "観測エージェント"
+    ],
+    "https://note.com/chic_wren6567/n/n1a556004e263": [
+      "仕事",
+      "モチベーション",
+      "スキル",
+      "ポイント",
+      "福利厚生",
+      "スプレッドシート",
+      "GoogleWorkspace",
+      "Googleフォーム",
+      "Googlechat",
+      "Guild"
+    ],
+    "https://note.com/chic_wren6567/n/n7cadcd5a0c5c": [
+      "介護",
+      "医療",
+      "福祉",
+      "幼稚園",
+      "居酒屋",
+      "保育",
+      "スーパー",
+      "レストラン",
+      "アルゴリズム",
+      "コールセンター",
+      "労働基準法",
+      "障がい福祉",
+      "シフト作成",
+      "人員配置基準",
+      "常勤換算"
+    ],
+    "https://note.com/chic_wren6567/n/nae41c9879464": [
+      "仕事",
+      "組織",
+      "コスト",
+      "承認",
+      "念のため",
+      "週刊DoX入門"
+    ],
+    "https://note.com/chic_wren6567/n/n61106fa165c4": [
+      "aiバブル",
+      "ITバブル",
+      "半導体バブル"
+    ],
+    "https://note.com/chic_wren6567/n/n133f2354743e": [
+      "note",
+      "AIエージェント"
+    ],
+    "https://note.com/chic_wren6567/n/n414a4203f050": [
+      "行政",
+      "監査",
+      "就労継続支援B型事業所",
+      "加算",
+      "工賃",
+      "実地指導",
+      "公費"
+    ],
+    "https://note.com/chic_wren6567/n/n4efc96ce6502": [
+      "プロンプト",
+      "ツール",
+      "法律",
+      "コード",
+      "著作権",
+      "まじん式プロンプト"
+    ],
+    "https://note.com/chic_wren6567/n/n81ce7d8cb87f": [
+      "リスク",
+      "API",
+      "GoogleAIStudio",
+      "APIモデル"
+    ],
+    "https://note.com/chic_wren6567/n/nd2a5f8265ef2": [
+      "経営",
+      "看護師",
+      "保育士",
+      "介護士",
+      "札幌市",
+      "人員配置基準",
+      "一斉退職"
+    ],
+    "https://note.com/chic_wren6567/n/n71965c3de116": [
+      "DX",
+      "違和感",
+      "AX",
+      "観測点",
+      "週刊DoX"
+    ],
+    "https://note.com/chic_wren6567/n/nd2217f385a7f": [
+      "学校",
+      "先生",
+      "家庭",
+      "共働き",
+      "学校DX",
+      "GoogleSites",
+      "GoogleWorkspaceforEducation"
+    ],
+    "https://note.com/chic_wren6567/n/n06bb88ea8e75": [
+      "介護",
+      "医療",
+      "マイナ保険証",
+      "カスタマーハラスメント",
+      "障がい福祉",
+      "放課後デイサービス",
+      "強度行動障害",
+      "就労選択支援",
+      "認知症サポーター",
+      "AI問診"
+    ],
+    "https://note.com/chic_wren6567/n/nb50b5b1f2e2b": [
+      "北海道",
+      "有期雇用",
+      "無期雇用",
+      "特別高等支援学校",
+      "卒業後進路"
+    ],
+    "https://note.com/chic_wren6567/n/na354e9fe87cf": [
+      "言葉",
+      "コミュニケーション",
+      "職場",
+      "札幌",
+      "改善",
+      "障がい者支援",
+      "キャリコンサルタント",
+      "特別高等支援学校"
+    ],
+    "https://note.com/chic_wren6567/n/n3c7db5dcf194": [
+      "AI",
+      "カレンダー",
+      "タスク管理",
+      "TODO",
+      "日本人らしさ"
+    ],
+    "https://note.com/chic_wren6567/n/nfe8db8d25c92": [
+      "福祉",
+      "支援",
+      "専門職",
+      "障がい福祉",
+      "無資格"
+    ],
+    "https://note.com/chic_wren6567/n/nf5aedb03f432": [
+      "介護",
+      "プロンプト",
+      "医療",
+      "障がい福祉",
+      "定型文職人"
+    ],
+    "https://note.com/chic_wren6567/n/ndcf27107d8db": [
+      "介護",
+      "デイサービス",
+      "就労継続支援B型",
+      "児童発達支援",
+      "グループホーム",
+      "特養",
+      "老健",
+      "サ高住",
+      "障がい福祉",
+      "放課後デイサービス",
+      "医療法人",
+      "児童デイサービス"
+    ],
+    "https://note.com/chic_wren6567/n/nd1a6dacc2fc1": [
+      "AI",
+      "プロンプト",
+      "イメージ",
+      "ハルシネーション",
+      "命令",
+      "質問型"
+    ],
+    "https://note.com/chic_wren6567/n/n30cbad1f61e0": [
+      "AIエージェント",
+      "エンゲージメントサーベイ",
+      "観測エージェント",
+      "AmbieCareDesign",
+      "KkakanaiProject",
+      "社内トランザクション診断チェックシート",
+      "職員エンゲージメント分析ツール"
+    ],
+    "https://note.com/chic_wren6567/n/n453ff53f1952": [
+      "DX",
+      "管理職",
+      "未来の当たり前にしたいこと",
+      "AX",
+      "経営層",
+      "トランザクション",
+      "dox",
+      "FBI特別捜査官"
+    ],
+    "https://note.com/chic_wren6567/n/n69eda094d8ae": [
+      "思考",
+      "AIエージェント",
+      "成果"
+    ],
+    "https://note.com/chic_wren6567/n/nbd352d67f515": [
+      "介護",
+      "医療",
+      "訪問介護",
+      "関節リウマチ",
+      "脂肪肝",
+      "障がい福祉",
+      "介護報酬改定",
+      "重度訪問介護",
+      "肝臓がん",
+      "障害者スポーツ",
+      "肝炎",
+      "身体拘束ゼロ",
+      "介護職員の賃上げ"
+    ],
+    "https://note.com/chic_wren6567/n/n2deb3875b5d9": [
+      "介護",
+      "DX",
+      "医療",
+      "予測",
+      "未来の当たり前にしたいこと",
+      "障がい福祉",
+      "AX",
+      "申し送り",
+      "dox",
+      "KakakaniProject"
+    ],
+    "https://note.com/chic_wren6567/n/n3e7d6c4d96e7": [
+      "AI",
+      "北海道",
+      "DX",
+      "札幌",
+      "AIエージェント",
+      "リスキリング",
+      "シニア",
+      "データサイエンス",
+      "GoogleGemini",
+      "AIと振り返ってみた",
+      "GoogleWorkspace",
+      "ゆく年くる年",
+      "dox",
+      "アンビエントインテリジェンス"
+    ],
+    "https://note.com/chic_wren6567/n/nd7a2bf3a65f6": [
+      "仕事",
+      "DX",
+      "分析",
+      "観察",
+      "AX",
+      "週刊DoX",
+      "DigitalOfExperience"
+    ],
+    "https://note.com/chic_wren6567/n/n1d0e1c1e6e4c": [
+      "Gemini",
+      "WorkSpaceStudio",
+      "WorkspaceFlows"
+    ],
+    "https://note.com/chic_wren6567/n/n0df9819b2100": [
+      "AI",
+      "DX",
+      "自動化",
+      "効率化",
+      "タスク",
+      "スライド",
+      "議事録"
+    ],
+    "https://note.com/chic_wren6567/n/n070a84d779ab": [
+      "介護",
+      "DX",
+      "医療",
+      "求人",
+      "派遣",
+      "タイミー",
+      "ICT",
+      "AX"
+    ],
+    "https://note.com/chic_wren6567/n/n520987b0c257": [
+      "DX",
+      "Googleカレンダー",
+      "GoogleKeep",
+      "個別支援計画書",
+      "GoogleToDoリスト",
+      "介護計画書"
+    ],
+    "https://note.com/chic_wren6567/n/n33e7709647c3": [
+      "gemini3"
+    ],
+    "https://note.com/chic_wren6567/n/n187b8a60c259": [
+      "看護師",
+      "介護施設",
+      "緩和ケア",
+      "カスタマーハラスメント",
+      "心理的",
+      "100分で名著",
+      "死ぬ瞬間",
+      "終末期患者"
+    ],
+    "https://note.com/chic_wren6567/n/n9740ea163dfa": [
+      "医療",
+      "看護師の離職",
+      "精神科病院の身体拘束",
+      "人員基準緩和",
+      "処遇改善加算の一本化",
+      "一般病院の約7割が赤字経営",
+      "アルツハイマー病新治療薬",
+      "従来型特養の約5割が赤字"
+    ],
+    "https://note.com/chic_wren6567/n/n0749bc2c0456": [
+      "DX",
+      "組織",
+      "dox"
+    ],
+    "https://note.com/chic_wren6567/n/n128cedc40abb": [
+      "データ",
+      "分析",
+      "データサイエンス",
+      "統計学",
+      "スプレッドシート",
+      "R"
+    ],
+    "https://note.com/chic_wren6567/n/nca58c648afeb": [
+      "介護",
+      "コンビニ",
+      "介護施設",
+      "ドラッグストア",
+      "地域包括ケアシステム",
+      "サツドラ",
+      "ツルハ"
+    ],
+    "https://note.com/chic_wren6567/n/n4cb0ed5ce229": [
+      "カレー",
+      "ソース",
+      "ケチャップ",
+      "油そば",
+      "焼きそば弁当"
+    ],
+    "https://note.com/chic_wren6567/n/nb5902703605d": [
+      "介護",
+      "医療",
+      "生産性向上",
+      "障害者雇用",
+      "マイナ保険証",
+      "障がい福祉",
+      "診療所報酬の適正化"
+    ],
+    "https://note.com/chic_wren6567/n/nb602a09fe13d": [
+      "AIとつくってみた",
+      "スプレッドシート",
+      "Googleフォーム",
+      "社内DX",
+      "トランザクション",
+      "DX推進部"
+    ],
+    "https://note.com/chic_wren6567/n/n5ea6ba97a5ff": [
+      "AI",
+      "StevieWonder"
+    ],
+    "https://note.com/chic_wren6567/n/na6b07b5cb3dd": [
+      "DX",
+      "解き方",
+      "図形",
+      "俯瞰力",
+      "近視眼的"
+    ],
+    "https://note.com/chic_wren6567/n/n0696f87013e4": [
+      "社内DX",
+      "DX推進部",
+      "AmbientCareDesign",
+      "簡易診断webツール"
+    ],
+    "https://note.com/chic_wren6567/n/n762a101c02a0": [
+      "ケアマネ",
+      "GoogleWorkspace",
+      "相談員",
+      "モニタリング",
+      "PSW",
+      "GoogleKeep",
+      "GoogleToDoリスト"
+    ],
+    "https://note.com/chic_wren6567/n/ne5fae54e9f86": [
+      "介護",
+      "医療",
+      "タスク管理",
+      "GoogleWorkspace",
+      "GoogleKeep",
+      "申し送り",
+      "GoogleToDoリスト"
+    ],
+    "https://note.com/chic_wren6567/n/na9f7ca9beaec": [
+      "AI",
+      "DX",
+      "業務",
+      "GAS",
+      "API",
+      "GoogleWorkspace",
+      "flows"
+    ],
+    "https://note.com/chic_wren6567/n/ncc0a8130802f": [
+      "AI",
+      "DX",
+      "業務改善",
+      "ネットワーク",
+      "ルーター",
+      "AX"
+    ],
+    "https://note.com/chic_wren6567/n/n6d78a958e556": [
+      "AI",
+      "言葉",
+      "DX",
+      "業務改善",
+      "AX",
+      "SPOF"
+    ],
+    "https://note.com/chic_wren6567/n/nc5a20fe0b309": [
+      "札幌",
+      "AI講座",
+      "ミドル・シニア"
+    ],
+    "https://note.com/chic_wren6567/n/n4c2f34cdc14c": [
+      "AI",
+      "ブログ",
+      "youtube",
+      "スライド",
+      "資料作成"
+    ],
+    "https://note.com/chic_wren6567/n/nfe55ebed11d0": [
+      "AI",
+      "介護",
+      "DX",
+      "医療",
+      "障がい福祉",
+      "就労選択支援",
+      "パーソナルヘルスレコード",
+      "遠隔患者モニタリング",
+      "ケアプランAI支援"
+    ],
+    "https://note.com/chic_wren6567/n/n49c1d44c72d3": [
+      "時代",
+      "感動",
+      "デジタル",
+      "アナログ",
+      "ブルース",
+      "音楽AI",
+      "AIDJ"
+    ],
+    "https://note.com/chic_wren6567/n/nc7f4604a91d6": [
+      "仕事",
+      "AI",
+      "高校生",
+      "小学生",
+      "中学生",
+      "web制作",
+      "清掃",
+      "軽作業",
+      "学習ツール",
+      "特別高等支援学校"
+    ],
+    "https://note.com/chic_wren6567/n/n8755d96bfaf9": [
+      "wordpress",
+      "医療福祉",
+      "テーマジェネレーター"
+    ],
+    "https://note.com/chic_wren6567/n/nab36860a47eb": [
+      "人手不足",
+      "倒産",
+      "就業規則",
+      "医療福祉",
+      "労働基準法改正"
+    ],
+    "https://note.com/chic_wren6567/n/na1d929876beb": [
+      "ChatGPT",
+      "Claude",
+      "コンテキスト",
+      "Gemini3Pro"
+    ],
+    "https://note.com/chic_wren6567/n/n8747139b864a": [
+      "AI",
+      "DX",
+      "業務改善",
+      "AX",
+      "QOS"
+    ],
+    "https://note.com/chic_wren6567/n/nf660909aa569": [
+      "ChatGPT",
+      "生成AI",
+      "Gemini",
+      "Claude",
+      "企業向",
+      "週次上限"
+    ],
+    "https://note.com/chic_wren6567/n/nab942d0fcbbd": [
+      "AI",
+      "DX",
+      "業務改善",
+      "業務",
+      "人手不足",
+      "AX",
+      "輻輳",
+      "帯域不足"
+    ],
+    "https://note.com/chic_wren6567/n/n3cbb09a37faf": [
+      "仕事",
+      "DX",
+      "ネットワーク",
+      "AX",
+      "パケット",
+      "ルーティングテーブル"
+    ],
+    "https://note.com/chic_wren6567/n/n5a9eab55fd41": [
+      "Google",
+      "Github",
+      "canvas",
+      "colab",
+      "Gemini3Pro"
+    ],
+    "https://note.com/chic_wren6567/n/nefdc71c3d9c2": [
+      "Gemini",
+      "プロンプト",
+      "コード",
+      "Gemini3Pro",
+      "爆上"
+    ],
+    "https://note.com/chic_wren6567/n/n41d0a4c2d00e": [
+      "AI",
+      "情報",
+      "DX",
+      "職場",
+      "業務",
+      "ネットワーク",
+      "AX",
+      "トランザクション",
+      "トラフィック",
+      "パケット"
+    ],
+    "https://note.com/chic_wren6567/n/n4cc8f11b48af": [
+      "介護",
+      "データサイエンス",
+      "マザーテレサ",
+      "障がい福祉",
+      "ガンジー",
+      "保険外"
+    ],
+    "https://note.com/chic_wren6567/n/nee7e6be08caf": [
+      "決算",
+      "データサイエンス",
+      "障がい福祉",
+      "福祉は儲からない"
+    ],
+    "https://note.com/chic_wren6567/n/n275917cfca4d": [
+      "決算",
+      "データサイエンス",
+      "人件費",
+      "介護事業",
+      "給与費",
+      "福祉は儲からない"
+    ],
+    "https://note.com/chic_wren6567/n/ncbbbb1301b3e": [
+      "ピアサポート",
+      "社会参画",
+      "アビリンピック",
+      "手話リンク",
+      "望まないセルフプラン",
+      "障害者技能競技大会",
+      "GHの規制強化"
+    ],
+    "https://note.com/chic_wren6567/n/n87ad66d7e616": [
+      "介護職",
+      "訪問介護",
+      "夜間対応型訪問介護",
+      "定額報酬",
+      "介護経営の圧迫"
+    ],
+    "https://note.com/chic_wren6567/n/n8b951cab6ebc": [
+      "医療現場",
+      "処遇改善",
+      "公定価格の引き上げ"
+    ],
+    "https://note.com/chic_wren6567/n/na3325577011d": [
+      "介護",
+      "DX",
+      "スプレッドシート",
+      "GoogleWorkspace",
+      "todoリスト",
+      "Googleカレンダー",
+      "申し送り",
+      "GoogleSites",
+      "dox",
+      "KakanaiProject"
+    ],
+    "https://note.com/chic_wren6567/n/nbd12d40047a6": [
+      "Gemini",
+      "Claude",
+      "週次上限"
+    ],
+    "https://note.com/chic_wren6567/n/naafd8129f346": [
+      "医療",
+      "AIとつくってみた",
+      "スプレッドシート",
+      "医療DX",
+      "GoogleWorkspace",
+      "医療事務",
+      "マイナ保険証",
+      "Googleフォーム",
+      "問診票",
+      "医療情報取得加算",
+      "KakanaiProject"
+    ],
+    "https://note.com/chic_wren6567/n/n46bb3e684b46": [
+      "DX",
+      "見える化",
+      "dox",
+      "当たり前化",
+      "ケアの再人間化",
+      "AmbientCareDesign",
+      "アンビエントケアデザイン"
+    ],
+    "https://note.com/chic_wren6567/n/n61ba0f4a555b": [
+      "医療",
+      "医療費",
+      "医療DX",
+      "加算",
+      "おくすり手帳",
+      "医療DX推進体制整備加算"
+    ],
+    "https://note.com/chic_wren6567/n/n21b8eeebcc7f": [
+      "副業",
+      "DX",
+      "医療福祉",
+      "デジタライゼーション",
+      "雇用のあり方"
+    ],
+    "https://note.com/chic_wren6567/n/n5fd791c7ec53": [
+      "介護",
+      "デジタル",
+      "介護DX",
+      "KakanaiProject",
+      "ケアの再人間化"
+    ],
+    "https://note.com/chic_wren6567/n/nec9b7b756a72": [
+      "介護",
+      "監査",
+      "障がい福祉",
+      "就労継続支援事業所",
+      "加算",
+      "不正受給"
+    ],
+    "https://note.com/chic_wren6567/n/n3ca85864ebc5": [
+      "障害者法定雇用率",
+      "障害者の高齢化",
+      "障害者の重度化"
+    ],
+    "https://note.com/chic_wren6567/n/nd295591a04b6": [
+      "階層別研修",
+      "介護職員の賃上げ",
+      "要介護リスク低減"
+    ],
+    "https://note.com/chic_wren6567/n/nff69fa2dace1": [
+      "コロナ",
+      "インフルエンザ",
+      "診療報酬",
+      "薬価",
+      "医療従事者の賃上げ"
+    ],
+    "https://note.com/chic_wren6567/n/n0e6b71a094ad": [
+      "介護",
+      "記録",
+      "医療",
+      "会議",
+      "スプレッドシート",
+      "GoogleWorkspace",
+      "申し送り",
+      "KakanaiProject"
+    ],
+    "https://note.com/chic_wren6567/n/na9be774afac0": [
+      "家族",
+      "介護",
+      "記録",
+      "ケアマネ",
+      "利用者",
+      "カスハラ",
+      "要求"
+    ],
+    "https://note.com/chic_wren6567/n/nd2255f59b533": [
+      "Google",
+      "レポート",
+      "Googleスプレッドシート",
+      "リマインダー",
+      "LookerStudio",
+      "GoogleKeep",
+      "Keep",
+      "Tasks",
+      "GoogleToDoリスト"
+    ],
+    "https://note.com/chic_wren6567/n/ndceb7381a9a0": [
+      "介護",
+      "GoogleWorkspace",
+      "TODO",
+      "Trello",
+      "KakanaiProject",
+      "同じことを書かない"
+    ],
+    "https://note.com/chic_wren6567/n/nd43b7f7a5075": [
+      "AI活用",
+      "Gemini",
+      "業務効率化",
+      "DX推進",
+      "コスト削減",
+      "厚労省",
+      "介護DX",
+      "国保連請求",
+      "障害福祉DX"
+    ],
+    "https://note.com/chic_wren6567/n/n32ed5503a82e": [
+      "合理的配慮",
+      "障がい福祉",
+      "障がい者差別"
+    ],
+    "https://note.com/chic_wren6567/n/nefa66d7a5445": [
+      "介護",
+      "感染症",
+      "カスハラ"
+    ],
+    "https://note.com/chic_wren6567/n/n0fdc98b829bd": [
+      "医療",
+      "在宅医療",
+      "2026年度診療報酬改定",
+      "かかりつけ医機能"
+    ],
+    "https://note.com/chic_wren6567/n/n691eaa4479db": [
+      "web制作",
+      "特別支援教育",
+      "キャリア教育",
+      "生成AI活用",
+      "AIと学び",
+      "プログラミング教育",
+      "AI学習",
+      "STEAM教育",
+      "教育DX",
+      "インクルーシブ教育",
+      "一般就労支援"
+    ],
+    "https://note.com/chic_wren6567/n/n1674c8ed543e": [
+      "ノーコード",
+      "kintone",
+      "GoogleWorkspace",
+      "福祉サービス",
+      "組織DX",
+      "旭川市役所"
+    ],
+    "https://note.com/chic_wren6567/n/n3720a577159a": [
+      "ケアテックイノベーションコンテスト"
+    ],
+    "https://note.com/chic_wren6567/n/n3cb43ecccf30": [
+      "ChatGPT",
+      "GoogleWorkspace",
+      "CompanyKnowledge"
+    ],
+    "https://note.com/chic_wren6567/n/n87ceaf87cc5a": [
+      "介護",
+      "データサイエンス"
+    ],
+    "https://note.com/chic_wren6567/n/n9558d0847a65": [
+      "障がい者雇用",
+      "就労選択支援"
+    ],
+    "https://note.com/chic_wren6567/n/n7a07342d088e": [
+      "介護DX",
+      "介護ロボット",
+      "ケアプランデータ連携システム"
+    ],
+    "https://note.com/chic_wren6567/n/n6a024059d548": [
+      "電子カルテ",
+      "2026年度診療報酬改定",
+      "医療DX推進体制整備加算"
+    ],
+    "https://note.com/chic_wren6567/n/n1a6a4ed1107c": [
+      "python",
+      "Excel",
+      "福祉サービス"
+    ],
+    "https://note.com/chic_wren6567/n/n7642f689e7ee": [
+      "AI",
+      "ChatGPT",
+      "介護",
+      "Gemini",
+      "医療",
+      "働き方を変えるツール",
+      "監査",
+      "障がい福祉",
+      "カスタムGPT",
+      "実地指導",
+      "カスタムGem"
+    ],
+    "https://note.com/chic_wren6567/n/n667e5aba8da8": [
+      "GAS",
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "Googleドライブ",
+      "フォルダとファイルの整理"
+    ],
+    "https://note.com/chic_wren6567/n/n385d6e1a5d37": [
+      "Gemini3Pro"
+    ],
+    "https://note.com/chic_wren6567/n/nf731264de82f": [
+      "AIと学び",
+      "質問力",
+      "社会情緒的コンピテンシー"
+    ],
+    "https://note.com/chic_wren6567/n/n32947eab46e4": [
+      "AI",
+      "データサイエンス",
+      "AX"
+    ],
+    "https://note.com/chic_wren6567/n/n4bbad1f30c3d": [
+      "障害基礎年金",
+      "就労選択支援",
+      "障害者法定雇用率"
+    ],
+    "https://note.com/chic_wren6567/n/n1c94f7fc30ff": [
+      "介護DX",
+      "ケアプラン",
+      "外国人介護人材"
+    ],
+    "https://note.com/chic_wren6567/n/ncd9d25cb27b1": [
+      "インフルエンザ",
+      "マイナ保険証",
+      "医療DX推進体制整備加算"
+    ],
+    "https://note.com/chic_wren6567/n/n6f44b5c03687": [
+      "介護",
+      "ケアマネ",
+      "働き方を変えるツール",
+      "相談員",
+      "障がい福祉",
+      "サービス担当者会議",
+      "日程調整ツール"
+    ],
+    "https://note.com/chic_wren6567/n/nfcd2382ff415": [
+      "AI",
+      "介護",
+      "python",
+      "データサイエンス",
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "経営分析",
+      "相関分析"
+    ],
+    "https://note.com/chic_wren6567/n/nedb4707c1177": [
+      "Google",
+      "データサイエンス",
+      "GAS",
+      "エンゲージメント",
+      "スプレッドシート",
+      "離職",
+      "働き方を変えるツール",
+      "Googleフォーム",
+      "LookerStudio",
+      "相関分析"
+    ],
+    "https://note.com/chic_wren6567/n/na11a9a7d92ed": [
+      "介護",
+      "離職",
+      "マイルール",
+      "障がい福祉",
+      "福祉業界",
+      "コミュニケーション不足",
+      "仕事理解不足"
+    ],
+    "https://note.com/chic_wren6567/n/ne8d47896b4c1": [
+      "介護",
+      "障がい者支援",
+      "モニタリング",
+      "障がい福祉",
+      "介護支援"
+    ],
+    "https://note.com/chic_wren6567/n/n9c06f29dcbd1": [
+      "ケアマネ",
+      "働き方を変えるツール",
+      "介護職員",
+      "ami",
+      "アンビエントインテリジェンス"
+    ],
+    "https://note.com/chic_wren6567/n/nfe055918825a": [
+      "AI",
+      "ChatGPT",
+      "Gemini",
+      "夫婦関係"
+    ],
+    "https://note.com/chic_wren6567/n/n5dc8e1acfebc": [
+      "障がい福祉",
+      "就労選択支援",
+      "アバターロボット"
+    ],
+    "https://note.com/chic_wren6567/n/nc74af274880d": [
+      "介護",
+      "ケアプラン点検へのAI活用"
+    ],
+    "https://note.com/chic_wren6567/n/n715155da35bf": [
+      "医療",
+      "インフルエンザワクチン",
+      "医療DX推進体制整備加算"
+    ],
+    "https://note.com/chic_wren6567/n/ncfc907ac1975": [
+      "介護",
+      "GAS",
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "ACP",
+      "Googleフォーム",
+      "ターミナルケア",
+      "LookerStudio",
+      "アドバンスケアプランニング"
+    ],
+    "https://note.com/chic_wren6567/n/n63c954524dec": [
+      "マイナンバー",
+      "年末調整",
+      "年末調整面倒くさい"
+    ],
+    "https://note.com/chic_wren6567/n/nd9a76bcd85dc": [
+      "AI",
+      "福祉",
+      "生産性向上",
+      "就労支援",
+      "特別支援学校",
+      "自立支援"
+    ],
+    "https://note.com/chic_wren6567/n/n917261f526af": [
+      "生活保護",
+      "就労継続支援A型事業所",
+      "最低賃金"
+    ],
+    "https://note.com/chic_wren6567/n/n787883883599": [
+      "介護",
+      "テクノロジー",
+      "インサイト"
+    ],
+    "https://note.com/chic_wren6567/n/n8fc1b23a24da": [
+      "看取り",
+      "認知症ケア",
+      "専門特化型ケアモデル"
+    ],
+    "https://note.com/chic_wren6567/n/n773478eaa7c2": [
+      "介護",
+      "DX",
+      "業務効率化",
+      "ICT",
+      "直接的ケア支援",
+      "予防予測的ケア支援"
+    ],
+    "https://note.com/chic_wren6567/n/na02cbc0eeb76": [
+      "介護",
+      "人手不足",
+      "人材不足"
+    ],
+    "https://note.com/chic_wren6567/n/nf2c2b933ca66": [
+      "介護",
+      "医療",
+      "スマートウォッチ",
+      "マイナ保険証",
+      "パーソナルヘルスレコード",
+      "ウェラブルデバイス"
+    ],
+    "https://note.com/chic_wren6567/n/nd91c27ed6325": [
+      "業務改善",
+      "生産性向上",
+      "人手不足",
+      "人材不足",
+      "経営参画"
+    ],
+    "https://note.com/chic_wren6567/n/n758a13c50179": [
+      "就労選択支援",
+      "ケアシステム",
+      "障害者支援施設のあり方"
+    ],
+    "https://note.com/chic_wren6567/n/nfef9cab3d07d": [
+      "介護",
+      "外国人材",
+      "地域包括ケアシステムの深化"
+    ],
+    "https://note.com/chic_wren6567/n/n6a52c66756cf": [
+      "医療",
+      "地域医療構想",
+      "医療DX推進体制整備加算"
+    ],
+    "https://note.com/chic_wren6567/n/ne636092e427d": [
+      "訪問看護"
+    ],
+    "https://note.com/chic_wren6567/n/n44d24e9d09aa": [
+      "サッカー",
+      "チーム",
+      "人手不足",
+      "ポジション",
+      "北海道コンサドーレ札幌",
+      "アーセナル",
+      "人材不足",
+      "リバプール",
+      "マンチェスターシティ",
+      "ブライトン",
+      "三笘薫",
+      "FCバルセロナ",
+      "社会情緒的コンピテンシー",
+      "ジェームズミルナー"
+    ],
+    "https://note.com/chic_wren6567/n/nc979dc53495a": [
+      "人手不足",
+      "介護保険",
+      "介護予防",
+      "人材不足",
+      "後期高齢者"
+    ],
+    "https://note.com/chic_wren6567/n/nb79f205a60d3": [
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "見える化",
+      "介護事業所",
+      "Googleフォーム",
+      "経営分析",
+      "業務別管理利益表"
+    ],
+    "https://note.com/chic_wren6567/n/n04756da37b50": [
+      "API",
+      "azure",
+      "GoogleCloud",
+      "さくらインターネット",
+      "さくらのAIEngine"
+    ],
+    "https://note.com/chic_wren6567/n/n7ebb1384b944": [
+      "介護",
+      "DX",
+      "医療",
+      "AppSheet"
+    ],
+    "https://note.com/chic_wren6567/n/n44617c90f3b2": [
+      "利益",
+      "意思決定",
+      "意味づけ",
+      "時間当",
+      "採算表"
+    ],
+    "https://note.com/chic_wren6567/n/n7adadb10c818": [
+      "医療",
+      "連携"
+    ],
+    "https://note.com/chic_wren6567/n/n11b5e6856065": [
+      "介護",
+      "ヤングケアラー",
+      "支援体制"
+    ],
+    "https://note.com/chic_wren6567/n/n3681295218a5": [
+      "精神障害",
+      "インクルーシブ",
+      "多様"
+    ],
+    "https://note.com/chic_wren6567/n/n9b27b466c7dc": [
+      "生産性向上",
+      "見える化",
+      "損益計算書"
+    ],
+    "https://note.com/chic_wren6567/n/n2a62a15e8739": [
+      "Gemini",
+      "金融",
+      "弁護士",
+      "社労士",
+      "FP",
+      "Android",
+      "士業",
+      "音声入力",
+      "GEMS",
+      "アンビエント・インテリジェンス"
+    ],
+    "https://note.com/chic_wren6567/n/n75845ee72daa": [
+      "GoogleWorkspace",
+      "福祉業界"
+    ],
+    "https://note.com/chic_wren6567/n/n19e5a5a437c8": [
+      "介護",
+      "就労継続支援B型",
+      "障害福祉",
+      "厚生労働省",
+      "高齢化",
+      "福祉職員",
+      "介護未経験",
+      "制度の課題"
+    ],
+    "https://note.com/chic_wren6567/n/nc64564bd063f": [
+      "Google",
+      "GAS",
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "GoogleWorkspace",
+      "障がい福祉",
+      "就労選択支援チェックリストツール"
+    ],
+    "https://note.com/chic_wren6567/n/n06b1d52aad28": [
+      "医療DX",
+      "2026年度診療報酬改定",
+      "かかりつけ医機能の強化"
+    ],
+    "https://note.com/chic_wren6567/n/n0506099cb638": [
+      "介護DX",
+      "利用者負担割合の見直し",
+      "2007年度介護報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n2d8df48f8522": [
+      "2027年度障害福祉サービス等報酬改定",
+      "精神障がい者支援の強化",
+      "障がい者雇用の促進と多様化"
+    ],
+    "https://note.com/chic_wren6567/n/n25d8bcfb3cc6": [
+      "障がい福祉",
+      "就労選択支援"
+    ],
+    "https://note.com/chic_wren6567/n/n84618f641a56": [
+      "ChatGPT",
+      "Gemini",
+      "Google",
+      "Copilot",
+      "Codex",
+      "Github",
+      "GoogleCordAssist"
+    ],
+    "https://note.com/chic_wren6567/n/n6c5ddce90f2b": [
+      "Gemini",
+      "Google",
+      "働き方を変えるツール",
+      "GEM",
+      "人事考課"
+    ],
+    "https://note.com/chic_wren6567/n/n1a3eba343e0d": [
+      "Gemini",
+      "プロンプト",
+      "Google"
+    ],
+    "https://note.com/chic_wren6567/n/nc8b15946a803": [
+      "azure",
+      "GoogleCloud"
+    ],
+    "https://note.com/chic_wren6567/n/nfc939421595c": [
+      "AI",
+      "介護",
+      "DX",
+      "ICT",
+      "ジェーン・スー",
+      "生きるとか死ぬとか父親とか"
+    ],
+    "https://note.com/chic_wren6567/n/nc85beb902472": [
+      "AI",
+      "介護",
+      "未来のためにできること",
+      "ケアプラン"
+    ],
+    "https://note.com/chic_wren6567/n/n9a30e58f7ca5": [
+      "未来のためにできること",
+      "人手不足",
+      "社会保険料",
+      "最低賃金",
+      "契約社員",
+      "勤務時間",
+      "扶養控除",
+      "パートタイマー"
+    ],
+    "https://note.com/chic_wren6567/n/n3f792144c160": [
+      "Gemini",
+      "未来のためにできること",
+      "働き方を変えるツール",
+      "azure",
+      "GoogleCloud",
+      "介護ソフト"
+    ],
+    "https://note.com/chic_wren6567/n/nc68d9d6827f7": [
+      "キャリア支援",
+      "障がい者雇用",
+      "障がい福祉",
+      "障がい者自立支援"
+    ],
+    "https://note.com/chic_wren6567/n/n605fb451aee0": [
+      "介護",
+      "地域包括ケアシステム",
+      "介護テクノロジー"
+    ],
+    "https://note.com/chic_wren6567/n/n48d51ad7d139": [
+      "医療",
+      "感染症対策",
+      "医薬品安全性",
+      "創薬力向上"
+    ],
+    "https://note.com/chic_wren6567/n/n11a0a4169b85": [
+      "ChatGPT",
+      "Gemini",
+      "組織",
+      "OpenAI",
+      "Copilot",
+      "Microsoft",
+      "GoogleWorkspace",
+      "エコシステム"
+    ],
+    "https://note.com/chic_wren6567/n/nca40e2b7e48b": [
+      "ChatGPT",
+      "Gemini",
+      "プロンプト",
+      "Webデザイン",
+      "readdyai"
+    ],
+    "https://note.com/chic_wren6567/n/na9296170289c": [
+      "未来のためにできること",
+      "Webデザイン",
+      "wordpress",
+      "Wix",
+      "readdyai"
+    ],
+    "https://note.com/chic_wren6567/n/n8d538f3dd026": [
+      "医療",
+      "福祉",
+      "業務改善",
+      "労働基準法",
+      "シフト作成",
+      "人員配置",
+      "常勤換算"
+    ],
+    "https://note.com/chic_wren6567/n/n695b91f0d88c": [
+      "Excel",
+      "整理整頓",
+      "スプレッドシート",
+      "Word",
+      "ドキュメント",
+      "GoogleDrive",
+      "GoogleSites"
+    ],
+    "https://note.com/chic_wren6567/n/n946e0327a823": [
+      "未来のためにできること",
+      "Google",
+      "訪問介護",
+      "スプレッドシート",
+      "働き方を変えるツール",
+      "AppSheet",
+      "定期巡回・随時対応型訪問介護看護",
+      "訪問記録"
+    ],
+    "https://note.com/chic_wren6567/n/n7e4c13d13c87": [
+      "医療",
+      "福祉",
+      "ハラスメント",
+      "音声入力",
+      "業務の質の向上",
+      "アンビエント・インテリジェンス"
+    ],
+    "https://note.com/chic_wren6567/n/nb962e66c163a": [
+      "介護",
+      "Gemini",
+      "未来のためにできること",
+      "ケアマネ",
+      "音声入力",
+      "ケアプラン",
+      "アンビエントインテリジェンス"
+    ],
+    "https://note.com/chic_wren6567/n/n5512d2f1e1e1": [
+      "未来のためにできること",
+      "介護保険",
+      "ケアマネジャー",
+      "ケーススタディ",
+      "障がい福祉",
+      "就労継続支援事業所",
+      "特定疾患"
+    ],
+    "https://note.com/chic_wren6567/n/ndf42db520a3a": [
+      "介護",
+      "Gemini",
+      "未来のためにできること",
+      "ケアマネ",
+      "音声入力",
+      "働き方を変えるツール",
+      "アンビエント",
+      "訪問記録"
+    ],
+    "https://note.com/chic_wren6567/n/n0c5483d06539": [
+      "AI",
+      "思考",
+      "音声入力"
+    ],
+    "https://note.com/chic_wren6567/n/n8d0490bd0482": [
+      "ChatGPT",
+      "Gemini",
+      "訪問看護",
+      "アンビエント"
+    ],
+    "https://note.com/chic_wren6567/n/nbf499c398f0d": [
+      "Gemini",
+      "無料",
+      "未来のためにできること",
+      "Google",
+      "訪問看護",
+      "Android",
+      "個人情報",
+      "音声入力",
+      "働き方を変えるツール",
+      "アンビエント",
+      "SOAP形式"
+    ],
+    "https://note.com/chic_wren6567/n/n5918b322dc50": [
+      "介護",
+      "未来のためにできること",
+      "福祉",
+      "マイナンバーカード",
+      "障がい福祉"
+    ],
+    "https://note.com/chic_wren6567/n/nbb54824c333f": [
+      "地域生活支援",
+      "障がい者虐待",
+      "精神障がい者支援",
+      "発達障がい者支援"
     ]
   }
 }

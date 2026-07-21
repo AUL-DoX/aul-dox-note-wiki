@@ -1,8 +1,19 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const NOTE_ID = 'chic_wren6567';
-const FEED_URL = `https://note.com/${NOTE_ID}/rss`;
+// note.comの公式API（ページネーション対応）。旧実装はRSS（/rss）を使っていたが、
+// RSSは直近25件程度しか返さないため、古い記事を大量に取りこぼしていた。
+const API_BASE = `https://note.com/api/v2/creators/${NOTE_ID}/contents?kind=note`;
+const SOURCE_LABEL = 'https://note.com/api/v2/creators/contents';
 const OUTPUT_PATH = new URL('../data/note-links.json', import.meta.url);
+const USER_AGENT = 'AUL DoX note-wiki link collector';
+const MAX_PAGES = 300;
+const REQUEST_DELAY_MS = 120;
+const DESCRIPTION_MAX = 140;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 function decodeEntities(value) {
   return value
@@ -13,64 +24,54 @@ function decodeEntities(value) {
     .replaceAll('&#39;', "'");
 }
 
-function stripCdata(value) {
-  return value.replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, '');
+// note本文（body）またはdescriptionから、検索・カード表示用の短い説明文を作る。
+function buildDescription(note) {
+  const raw = note.description || note.body || '';
+  const text = decodeEntities(String(raw).replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+  if (text.length <= DESCRIPTION_MAX) return text;
+  return `${text.slice(0, DESCRIPTION_MAX)}…`;
 }
 
-function getTagValue(item, tag) {
-  const match = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i'));
-  return match ? decodeEntities(stripCdata(match[1].trim())) : '';
-}
+async function fetchAllNotes() {
+  const items = [];
+  for (let page = 1; page <= MAX_PAGES; page += 1) {
+    const url = `${API_BASE}&page=${page}`;
+    const response = await fetch(url, { headers: { 'user-agent': USER_AGENT } });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+    }
 
-function parseItems(xml) {
-  return [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)]
-    .map((match) => {
-      const item = match[1];
-      const title = getTagValue(item, 'title');
-      const url = getTagValue(item, 'link');
-      const published = getTagValue(item, 'pubDate');
-      const description = getTagValue(item, 'description').replace(/<[^>]+>/g, '').trim();
+    const data = (await response.json())?.data ?? {};
+    for (const note of data.contents ?? []) {
+      if (note?.status !== 'published') continue;
+      const urlname = note?.user?.urlname;
+      const noteKey = note?.key;
+      if (!urlname || !noteKey) continue;
+      items.push({
+        title: (note.name ?? '').trim(),
+        url: `https://note.com/${urlname}/n/${noteKey}`,
+        published: note.publishAt ?? '',
+        description: buildDescription(note),
+        source: 'rss',
+      });
+    }
 
-      return {
-        title,
-        url,
-        published,
-        description,
-      };
-    })
-    .filter((item) => item.title && item.url);
-}
-
-function decodeXml(buffer) {
-  const utf8 = new TextDecoder('utf-8').decode(buffer);
-  if (!utf8.includes('\uFFFD')) {
-    return utf8;
+    if (data.isLastPage) break;
+    await sleep(REQUEST_DELAY_MS);
   }
-
-  const shiftJis = new TextDecoder('shift_jis').decode(buffer);
-  return shiftJis.includes('\uFFFD') ? utf8 : shiftJis;
+  return items.filter((item) => item.title && item.url);
 }
 
-const response = await fetch(FEED_URL, {
-  headers: {
-    'user-agent': 'AUL DoX note-wiki link collector',
-  },
-});
+const apiItems = await fetchAllNotes();
 
-if (!response.ok) {
-  throw new Error(`Failed to fetch ${FEED_URL}: ${response.status} ${response.statusText}`);
-}
-
-const xml = decodeXml(await response.arrayBuffer());
-const rssItems = parseItems(xml).map((item) => ({ ...item, source: 'rss' }));
 let existing = {
-  source: FEED_URL,
+  source: SOURCE_LABEL,
   sources: [],
   items: [],
 };
 
 try {
-  existing = JSON.parse((await readFile(OUTPUT_PATH, 'utf-8')).replace(/^\uFEFF/, ''));
+  existing = JSON.parse((await readFile(OUTPUT_PATH, 'utf-8')).replace(/^﻿/, ''));
 } catch (error) {
   if (error.code !== 'ENOENT') {
     throw error;
@@ -81,7 +82,7 @@ const byUrl = new Map((existing.items ?? []).map((item) => [item.url, item]));
 let added = 0;
 let updated = 0;
 
-for (const item of rssItems) {
+for (const item of apiItems) {
   const current = byUrl.get(item.url);
   if (!current) {
     byUrl.set(item.url, item);
@@ -92,6 +93,8 @@ for (const item of rssItems) {
   byUrl.set(item.url, {
     ...current,
     ...item,
+    // 既存のdescriptionがあり、今回空なら既存を温存する。
+    description: item.description || current.description || '',
     source: current.source === 'google' ? 'rss+google' : 'rss',
   });
   updated += 1;
@@ -105,8 +108,8 @@ await writeFile(
   `${JSON.stringify(
     {
       ...existing,
-      source: FEED_URL,
-      sources: [...new Set([...(existing.sources ?? []), FEED_URL].filter(Boolean))],
+      source: SOURCE_LABEL,
+      sources: [...new Set([...(existing.sources ?? []), SOURCE_LABEL].filter(Boolean))],
       fetchedAt: new Date().toISOString(),
       count: items.length,
       items,
@@ -116,4 +119,4 @@ await writeFile(
   )}\n`,
 );
 
-console.log(`Fetched ${rssItems.length} RSS links. Added=${added} Updated=${updated} Total=${items.length}`);
+console.log(`Fetched ${apiItems.length} API links. Added=${added} Updated=${updated} Total=${items.length}`);
