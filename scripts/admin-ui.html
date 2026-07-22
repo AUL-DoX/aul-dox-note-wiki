@@ -74,7 +74,9 @@
 
   <div class="card">
     <h2>既存タイトルの編集</h2>
+    <p class="hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。</p>
     <div id="items"></div>
+    <button id="save-all-btn" disabled>変更をまとめて保存（<span id="dirty-count">0</span>件）</button>
     <div class="msg" id="items-msg"></div>
   </div>
 </div>
@@ -82,6 +84,7 @@
 <script>
 const $ = (id) => document.getElementById(id);
 let CATEGORIES = {};
+const rowInputs = new Map(); // key -> input要素
 
 function currentMonth() {
   const d = new Date();
@@ -165,6 +168,7 @@ async function loadItems() {
   }
   const container = $('items');
   container.innerHTML = '';
+  rowInputs.clear();
   const groups = { dashboard: 'ダッシュボード', 'deep-research': 'Deep Research' };
   for (const [type, label] of Object.entries(groups)) {
     const rows = data.items.filter((i) => i.type === type);
@@ -178,26 +182,44 @@ async function loadItems() {
       const tag = document.createElement('span');
       tag.className = 'tag'; tag.textContent = item.categoryLabel;
       const input = document.createElement('input');
-      input.type = 'text'; input.value = item.title;
-      const btn = document.createElement('button');
-      btn.className = 'small'; btn.textContent = '保存';
-      btn.addEventListener('click', () => saveTitle(item.key, input.value.trim(), btn));
-      row.append(tag, input, btn);
+      input.type = 'text'; input.value = item.title; input.dataset.original = item.title;
+      input.addEventListener('input', updateDirtyState);
+      row.append(tag, input);
       container.appendChild(row);
+      rowInputs.set(item.key, input);
     }
   }
+  updateDirtyState();
 }
 
-async function saveTitle(key, title, btn) {
-  if (!title) return showMsg($('items-msg'), false, 'タイトルを入力してください。');
-  if (!confirm(`このタイトルで公開します。\n\n${title}`)) return;
-  btn.disabled = true;
-  showMsg($('items-msg'), true, '保存中…');
+function getDirtyChanges() {
+  const changes = [];
+  for (const [key, input] of rowInputs) {
+    const title = input.value.trim();
+    if (title && title !== input.dataset.original) changes.push({ key, title });
+  }
+  return changes;
+}
+
+function updateDirtyState() {
+  const n = getDirtyChanges().length;
+  $('dirty-count').textContent = n;
+  $('save-all-btn').disabled = n === 0;
+}
+
+$('save-all-btn').addEventListener('click', async () => {
+  const changes = getDirtyChanges();
+  if (!changes.length) return;
+  const preview = changes.map((c) => `・${c.title}`).join('\n');
+  if (!confirm(`${changes.length}件のタイトルをまとめて公開します。\n\n${preview}`)) return;
+
+  $('save-all-btn').disabled = true;
+  showMsg($('items-msg'), true, '保存中…（1回のpushにまとめています）');
   try {
-    const r = await fetch('/api/title', {
+    const r = await fetch('/api/titles', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ key, title }),
+      body: JSON.stringify({ changes }),
     });
     const data = await r.json();
     if (!r.ok) throw new Error(data.error || '不明なエラー');
@@ -205,10 +227,9 @@ async function saveTitle(key, title, btn) {
     loadItems();
   } catch (e) {
     showMsg($('items-msg'), false, e.message);
-  } finally {
-    btn.disabled = false;
+    updateDirtyState();
   }
-}
+});
 
 syncTypeUI();
 $('ym').value = currentMonth();

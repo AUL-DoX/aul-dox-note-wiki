@@ -144,19 +144,29 @@ async function handleUpload(req, res) {
   }
 }
 
-async function handleTitle(req, res) {
+// 複数件のタイトル変更をまとめて1回のcommit/pushにする。
+// body.changes: [{ key, title }, ...]
+async function handleTitles(req, res) {
   const body = JSON.parse(await readBody(req));
-  const { key, title } = body;
-  if (!key || typeof key !== 'string') return json(res, 400, { error: 'キーが不正です。' });
-  if (!title?.trim()) return json(res, 400, { error: 'タイトルを入力してください。' });
+  const changes = Array.isArray(body.changes) ? body.changes : [];
+  if (!changes.length) return json(res, 400, { error: '変更がありません。' });
 
   const titles = loadTitles();
-  titles[key] = title.trim();
+  for (const c of changes) {
+    if (!c?.key || typeof c.key !== 'string') return json(res, 400, { error: 'キーが不正です。' });
+    if (!c.title?.trim()) return json(res, 400, { error: `タイトルが空です: ${c.key}` });
+    titles[c.key] = c.title.trim();
+  }
   saveTitles(titles);
 
   try {
-    const result = runGit(['src/data-titles.json'], `Update title for ${key} via admin`);
-    return json(res, 200, { ok: true, message: 'タイトルを更新しました。', log: result.log });
+    const result = runGit(
+      ['src/data-titles.json'],
+      changes.length === 1
+        ? `Update title for ${changes[0].key} via admin`
+        : `Update ${changes.length} titles via admin`,
+    );
+    return json(res, 200, { ok: true, message: `${changes.length}件のタイトルを更新しました。`, log: result.log });
   } catch (e) {
     return json(res, 500, { error: `保存はしましたが git 操作に失敗しました: ${e.message}` });
   }
@@ -173,7 +183,7 @@ const server = createServer(async (req, res) => {
       return json(res, 200, { categories: CATEGORIES, items: listItems() });
     }
     if (req.method === 'POST' && req.url === '/api/upload') return await handleUpload(req, res);
-    if (req.method === 'POST' && req.url === '/api/title') return await handleTitle(req, res);
+    if (req.method === 'POST' && req.url === '/api/titles') return await handleTitles(req, res);
     json(res, 404, { error: 'not found' });
   } catch (e) {
     json(res, 500, { error: e.message });
