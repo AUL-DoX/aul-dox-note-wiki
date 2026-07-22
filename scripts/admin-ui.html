@@ -50,15 +50,14 @@
   <div class="card">
     <h2>新規アップロード</h2>
 
-    <label>種類</label>
-    <div class="radio-row" id="type-row">
-      <label class="on"><input type="radio" name="type" value="dashboard" checked> ダッシュボード</label>
-      <label><input type="radio" name="type" value="deep-research"> Deep Research</label>
-    </div>
-    <p class="hint">ダッシュボード＝7Pips等のスコープ付きHTML（&lt;div class="aul-..."&gt;から始まる）／Deep Research＝Codex等の完結1ページHTML（&lt;!doctype html&gt;から始まる）</p>
+    <label>掲載先（本サイトのタブと同じ）</label>
+    <div class="radio-row" id="dest-row"></div>
+    <p class="hint">介護分野・障がい分野・経営の見える化＝7Pips等のスコープ付きHTML／Deep Research＝Codex等の完結1ページHTML</p>
 
-    <label>分野</label>
-    <select id="category"></select>
+    <div id="dr-category-field" class="hidden">
+      <label>分野（Deep Research内の分類）</label>
+      <select id="category"></select>
+    </div>
 
     <div id="ym-field" class="hidden">
       <label>年月（YYYY-MM）</label>
@@ -102,18 +101,42 @@ function currentMonth() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
 }
 
-function selectedType() {
-  return document.querySelector('input[name=type]:checked').value;
+// 掲載先の選択：介護分野・障がい分野・経営の見える化＝ダッシュボード（分野固定）、
+// Deep Research＝完結1ページHTML（この場合だけ分野をもう一度選ぶ＋年月が必要）。
+function buildDestRow() {
+  const row = $('dest-row');
+  row.innerHTML = '';
+  const options = [
+    ...Object.entries(CATEGORIES).map(([slug, label]) => ({ value: `dashboard:${slug}`, label })),
+    { value: 'deep-research', label: 'Deep Research' },
+  ];
+  options.forEach((opt, i) => {
+    const label = document.createElement('label');
+    if (i === 0) label.classList.add('on');
+    const input = document.createElement('input');
+    input.type = 'radio'; input.name = 'dest'; input.value = opt.value;
+    if (i === 0) input.checked = true;
+    input.addEventListener('change', syncDestUI);
+    label.append(input, document.createTextNode(' ' + opt.label));
+    row.appendChild(label);
+  });
 }
 
-function syncTypeUI() {
-  document.querySelectorAll('#type-row label').forEach((l) => {
+function selectedDest() {
+  const value = document.querySelector('input[name=dest]:checked').value;
+  if (value === 'deep-research') return { type: 'deep-research', category: $('category').value };
+  const [, category] = value.split(':');
+  return { type: 'dashboard', category };
+}
+
+function syncDestUI() {
+  document.querySelectorAll('#dest-row label').forEach((l) => {
     l.classList.toggle('on', l.querySelector('input').checked);
   });
-  $('ym-field').classList.toggle('hidden', selectedType() !== 'deep-research');
+  const isDeepResearch = document.querySelector('input[name=dest]:checked').value === 'deep-research';
+  $('dr-category-field').classList.toggle('hidden', !isDeepResearch);
+  $('ym-field').classList.toggle('hidden', !isDeepResearch);
 }
-
-document.querySelectorAll('input[name=type]').forEach((r) => r.addEventListener('change', syncTypeUI));
 
 $('sync-note-btn').addEventListener('click', async () => {
   if (!confirm('note.comの新着記事を取得して公開します。2〜3分かかります。よろしいですか？')) return;
@@ -144,8 +167,7 @@ function showMsg(el, ok, text) {
 }
 
 $('upload-btn').addEventListener('click', async () => {
-  const type = selectedType();
-  const category = $('category').value;
+  const { type, category } = selectedDest();
   const ym = $('ym').value.trim();
   const slug = $('slug').value.trim();
   const title = $('title').value.trim();
@@ -185,7 +207,11 @@ async function loadItems() {
   const r = await fetch('/api/items');
   const data = await r.json();
   CATEGORIES = data.categories;
-  // カテゴリ select を（初回だけ）構築（新規アップロード欄・絞り込み欄の両方）
+  // 掲載先ボタン・カテゴリ select を（初回だけ）構築
+  if (!$('dest-row').children.length) {
+    buildDestRow();
+    syncDestUI();
+  }
   if (!$('category').options.length) {
     for (const [slug, label] of Object.entries(CATEGORIES)) {
       const o = document.createElement('option');
@@ -291,7 +317,6 @@ $('save-all-btn').addEventListener('click', async () => {
   }
 });
 
-syncTypeUI();
 $('ym').value = currentMonth();
 loadItems();
 </script>
