@@ -80,11 +80,7 @@
 
   <div class="card">
     <h2>既存タイトルの編集</h2>
-    <p class="hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。</p>
-    <label>カテゴリで絞り込み</label>
-    <select id="filter-category">
-      <option value="">すべて</option>
-    </select>
+    <p class="hint" id="items-scope-hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。上の「掲載先」の選択に応じて、ここに出る一覧も自動で絞り込まれます。</p>
     <div id="items"></div>
     <button id="save-all-btn" disabled>変更をまとめて保存（<span id="dirty-count">0</span>件）</button>
     <div class="msg" id="items-msg"></div>
@@ -136,7 +132,10 @@ function syncDestUI() {
   const isDeepResearch = document.querySelector('input[name=dest]:checked').value === 'deep-research';
   $('dr-category-field').classList.toggle('hidden', !isDeepResearch);
   $('ym-field').classList.toggle('hidden', !isDeepResearch);
+  applyDestFilter();
 }
+
+$('category').addEventListener('change', applyDestFilter);
 
 $('sync-note-btn').addEventListener('click', async () => {
   if (!confirm('note.comの新着記事を取得して公開します。2〜3分かかります。よろしいですか？')) return;
@@ -210,7 +209,6 @@ async function loadItems() {
   // 掲載先ボタン・カテゴリ select を（初回だけ）構築
   if (!$('dest-row').children.length) {
     buildDestRow();
-    syncDestUI();
   }
   if (!$('category').options.length) {
     for (const [slug, label] of Object.entries(CATEGORIES)) {
@@ -219,61 +217,41 @@ async function loadItems() {
       $('category').appendChild(o);
     }
   }
-  if ($('filter-category').options.length <= 1) {
-    for (const [slug, label] of Object.entries(CATEGORIES)) {
-      const o = document.createElement('option');
-      o.value = slug; o.textContent = label;
-      $('filter-category').appendChild(o);
-    }
-  }
 
   const container = $('items');
   container.innerHTML = '';
   rowInputs.clear();
-  const groups = { dashboard: 'ダッシュボード', 'deep-research': 'Deep Research' };
-  for (const [type, label] of Object.entries(groups)) {
-    const rows = data.items.filter((i) => i.type === type);
-    if (!rows.length) continue;
-    const h = document.createElement('div');
-    h.className = 'group-title'; h.textContent = label;
-    h.dataset.groupTitle = '1';
-    container.appendChild(h);
-    for (const item of rows) {
-      const row = document.createElement('div');
-      row.className = 'item';
-      row.dataset.category = item.category;
-      const tag = document.createElement('span');
-      tag.className = 'tag'; tag.textContent = item.categoryLabel;
-      const input = document.createElement('input');
-      input.type = 'text'; input.value = item.title; input.dataset.original = item.title;
-      input.addEventListener('input', updateDirtyState);
-      row.append(tag, input);
-      container.appendChild(row);
-      rowInputs.set(item.key, input);
-    }
+  for (const item of data.items) {
+    const row = document.createElement('div');
+    row.className = 'item';
+    row.dataset.type = item.type;
+    row.dataset.category = item.category;
+    const tag = document.createElement('span');
+    tag.className = 'tag'; tag.textContent = item.categoryLabel;
+    const input = document.createElement('input');
+    input.type = 'text'; input.value = item.title; input.dataset.original = item.title;
+    input.addEventListener('input', updateDirtyState);
+    row.append(tag, input);
+    container.appendChild(row);
+    rowInputs.set(item.key, input);
   }
   updateDirtyState();
-  applyCategoryFilter();
+  syncDestUI();
 }
 
-// カテゴリで絞り込み。見出しは、その下に表示中の行が1件も無ければ一緒に隠す。
-function applyCategoryFilter() {
-  const wanted = $('filter-category').value;
-  const container = $('items');
-  let lastGroup = null;
-  let lastGroupHasVisible = false;
-  for (const el of container.children) {
-    if (el.dataset.groupTitle) {
-      if (lastGroup) lastGroup.hidden = !lastGroupHasVisible;
-      lastGroup = el;
-      lastGroupHasVisible = false;
-      continue;
-    }
-    const show = !wanted || el.dataset.category === wanted;
-    el.hidden = !show;
-    if (show) lastGroupHasVisible = true;
+// 「既存タイトルの編集」欄は、上の「掲載先」の選択（＝これからアップロードする先）と
+// 完全に同じ条件（種類＋分野）でフィルタする。掲載先を選べば、そこに実際にあるファイルだけが並ぶ。
+function applyDestFilter() {
+  const { type, category } = selectedDest();
+  let visibleCount = 0;
+  for (const row of $('items').children) {
+    const show = row.dataset.type === type && row.dataset.category === category;
+    row.hidden = !show;
+    if (show) visibleCount += 1;
   }
-  if (lastGroup) lastGroup.hidden = !lastGroupHasVisible;
+  $('items-scope-hint').textContent = visibleCount
+    ? `この掲載先には現在 ${visibleCount} 件あります。複数編集してから、最後に1回まとめて保存できます。`
+    : 'この掲載先にはまだファイルがありません。';
 }
 
 $('filter-category').addEventListener('change', applyCategoryFilter);
