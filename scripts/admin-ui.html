@@ -82,6 +82,10 @@
   <div class="card">
     <h2>既存タイトルの編集</h2>
     <p class="hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。</p>
+    <label>カテゴリで絞り込み</label>
+    <select id="filter-category">
+      <option value="">すべて</option>
+    </select>
     <div id="items"></div>
     <button id="save-all-btn" disabled>変更をまとめて保存（<span id="dirty-count">0</span>件）</button>
     <div class="msg" id="items-msg"></div>
@@ -181,7 +185,7 @@ async function loadItems() {
   const r = await fetch('/api/items');
   const data = await r.json();
   CATEGORIES = data.categories;
-  // カテゴリ select を（初回だけ）構築
+  // カテゴリ select を（初回だけ）構築（新規アップロード欄・絞り込み欄の両方）
   if (!$('category').options.length) {
     for (const [slug, label] of Object.entries(CATEGORIES)) {
       const o = document.createElement('option');
@@ -189,6 +193,14 @@ async function loadItems() {
       $('category').appendChild(o);
     }
   }
+  if ($('filter-category').options.length <= 1) {
+    for (const [slug, label] of Object.entries(CATEGORIES)) {
+      const o = document.createElement('option');
+      o.value = slug; o.textContent = label;
+      $('filter-category').appendChild(o);
+    }
+  }
+
   const container = $('items');
   container.innerHTML = '';
   rowInputs.clear();
@@ -198,10 +210,12 @@ async function loadItems() {
     if (!rows.length) continue;
     const h = document.createElement('div');
     h.className = 'group-title'; h.textContent = label;
+    h.dataset.groupTitle = '1';
     container.appendChild(h);
     for (const item of rows) {
       const row = document.createElement('div');
       row.className = 'item';
+      row.dataset.category = item.category;
       const tag = document.createElement('span');
       tag.className = 'tag'; tag.textContent = item.categoryLabel;
       const input = document.createElement('input');
@@ -213,7 +227,30 @@ async function loadItems() {
     }
   }
   updateDirtyState();
+  applyCategoryFilter();
 }
+
+// カテゴリで絞り込み。見出しは、その下に表示中の行が1件も無ければ一緒に隠す。
+function applyCategoryFilter() {
+  const wanted = $('filter-category').value;
+  const container = $('items');
+  let lastGroup = null;
+  let lastGroupHasVisible = false;
+  for (const el of container.children) {
+    if (el.dataset.groupTitle) {
+      if (lastGroup) lastGroup.hidden = !lastGroupHasVisible;
+      lastGroup = el;
+      lastGroupHasVisible = false;
+      continue;
+    }
+    const show = !wanted || el.dataset.category === wanted;
+    el.hidden = !show;
+    if (show) lastGroupHasVisible = true;
+  }
+  if (lastGroup) lastGroup.hidden = !lastGroupHasVisible;
+}
+
+$('filter-category').addEventListener('change', applyCategoryFilter);
 
 function getDirtyChanges() {
   const changes = [];

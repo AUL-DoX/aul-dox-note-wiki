@@ -101,10 +101,12 @@ function runGit(paths, message) {
 async function handleSyncNote(req, res) {
   let syncOutput = '';
   try {
+    // Windowsでは npm.cmd（バッチファイル）を shell 経由でないと起動できない（EINVAL）ため shell:true が必須。
     syncOutput = execFileSync('npm.cmd', ['run', 'sync:note'], {
       cwd: REPO_ROOT,
       encoding: 'utf-8',
       maxBuffer: 1024 * 1024 * 20,
+      shell: true,
     });
   } catch (e) {
     return json(res, 500, { error: `sync:note が失敗しました: ${e.message}`, log: e.stdout || '' });
