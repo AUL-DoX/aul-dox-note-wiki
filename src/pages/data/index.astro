@@ -1,6 +1,7 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import { dataCategories, deepResearchTags, formatYearMonth } from '../../data-categories';
+import titleOverrides from '../../data-titles.json';
 
 const dashboardModules = import.meta.glob('../../dashboards/**/*.html', {
   query: '?raw',
@@ -14,10 +15,17 @@ const deepResearchModules = import.meta.glob('../../Deep-Research/**/*.html', {
   eager: true,
 }) as Record<string, string>;
 
+const overrides = titleOverrides as Record<string, string>;
+
 function extractTitle(html: string, fallback: string) {
   const match = html.match(/<h1>([\s\S]*?)<\/h1>/);
   if (!match) return fallback;
   return match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+// 管理画面で編集したタイトル（data-titles.json）があれば優先。無ければHTMLの<h1>から抽出。
+function titleFor(key: string, html: string, fallback: string) {
+  return overrides[key]?.trim() || extractTitle(html, fallback);
 }
 
 function getTagLabel(slug: string) {
@@ -28,7 +36,7 @@ function getTagLabel(slug: string) {
 const dashboardItems = Object.entries(dashboardModules).map(([path, html]) => {
   const rel = path.replace('../../dashboards/', '').replace(/\.html$/, '');
   const category = rel.split('/')[0] ?? '';
-  return { category, title: extractTitle(html, rel), href: `/data/${rel}/` };
+  return { category, title: titleFor(`dashboards/${rel}`, html, rel), href: `/data/${rel}/` };
 });
 
 // dashboards側の3タブ（介護分野・障がい分野・経営の見える化）。
@@ -43,7 +51,7 @@ const deepResearchItems = Object.entries(deepResearchModules).map(([path, html])
   const segments = rel.split('/');
   const tag = segments[0] ?? '';
   const month = /^\d{4}-\d{2}$/.test(segments[1] ?? '') ? segments[1] : '';
-  return { tag, month, title: extractTitle(html, rel), href: `/reports/${rel}/` };
+  return { tag, month, title: titleFor(`Deep-Research/${rel}`, html, rel), href: `/reports/${rel}/` };
 }).sort((a, b) => b.month.localeCompare(a.month) || a.title.localeCompare(b.title, 'ja'));
 
 const deepResearchMonths = [...new Set(deepResearchItems.map((i) => i.month).filter(Boolean))].sort().reverse();

@@ -3,6 +3,9 @@
 // src/dashboards/<カテゴリ>/<ファイル>.html を /data/<カテゴリ>/<ファイル>/ として配信する。
 
 import WikiLayout from '../../layouts/WikiLayout.astro';
+import titleOverrides from '../../data-titles.json';
+
+const overrides = titleOverrides as Record<string, string>;
 
 const htmlModules = import.meta.glob('../../dashboards/**/*.html', {
   query: '?raw',
@@ -28,8 +31,9 @@ const entry = Object.entries(htmlModules).find(
   ([path]) => path === `../../dashboards/${slug}.html`,
 );
 const dashboardHtml = entry?.[1] ?? '';
+const pageTitle = overrides[`dashboards/${slug}`]?.trim() || slug;
 ---
 
-<WikiLayout wide title={`${slug} | データ分析 | AUL DoX Reference`}>
+<WikiLayout wide title={`${pageTitle} | データ分析 | AUL DoX Reference`}>
   <Fragment set:html={dashboardHtml} />
 </WikiLayout>

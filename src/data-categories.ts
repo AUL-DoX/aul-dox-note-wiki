@@ -18,6 +18,7 @@ export const dataCategories: DataCategory[] = [
 export const deepResearchTags: DataCategory[] = [
   { slug: 'kaigo', label: '介護' },
   { slug: 'shogai', label: '障がい' },
+  { slug: 'keiei', label: '経営' },
 ];
 
 export function getCategoryLabel(slug: string): string {
