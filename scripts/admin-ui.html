@@ -41,6 +41,13 @@
   <p class="sub">データ分析HTMLのアップロードとタイトル編集。「保存」を押すと git commit → push まで実行し、ref.aul-dox.jp に反映されます（数分後）。</p>
 
   <div class="card">
+    <h2>note記事の更新</h2>
+    <p class="hint">note.comの新着記事を取得してサイトに反映します。記事数が多いため2〜3分かかります。</p>
+    <button id="sync-note-btn">note記事を同期して公開</button>
+    <div class="msg" id="sync-note-msg"></div>
+  </div>
+
+  <div class="card">
     <h2>新規アップロード</h2>
 
     <label>種類</label>
@@ -103,6 +110,22 @@ function syncTypeUI() {
 }
 
 document.querySelectorAll('input[name=type]').forEach((r) => r.addEventListener('change', syncTypeUI));
+
+$('sync-note-btn').addEventListener('click', async () => {
+  if (!confirm('note.comの新着記事を取得して公開します。2〜3分かかります。よろしいですか？')) return;
+  $('sync-note-btn').disabled = true;
+  showMsg($('sync-note-msg'), true, '記事を取得中…（2〜3分かかります。閉じずにお待ちください）');
+  try {
+    const r = await fetch('/api/sync-note', { method: 'POST' });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || '不明なエラー');
+    showMsg($('sync-note-msg'), true, `${data.message}\n数分後に反映されます。`);
+  } catch (e) {
+    showMsg($('sync-note-msg'), false, e.message);
+  } finally {
+    $('sync-note-btn').disabled = false;
+  }
+});
 
 $('file').addEventListener('change', () => {
   const f = $('file').files[0];

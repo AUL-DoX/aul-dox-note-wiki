@@ -12,10 +12,14 @@ import { dirname, resolve, join } from 'node:path';
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(SCRIPT_DIR, '..');
 const TITLES_PATH = join(REPO_ROOT, 'src', 'data-titles.json');
+const CATEGORIES_PATH = join(REPO_ROOT, 'src', 'data-categories.json');
 const UI_PATH = join(SCRIPT_DIR, 'admin-ui.html');
 const PORT = 4455;
 
-const CATEGORIES = { kaigo: '介護分野', shogai: '障がい分野', keiei: '経営の見える化' };
+// カテゴリの唯一の情報源は src/data-categories.json（サイト側の data-categories.ts も同じファイルを読む）。
+// ここで別のリストを持たない＝サイトと管理画面のカテゴリが食い違うことがなくなる。
+const categoriesData = JSON.parse(readFileSync(CATEGORIES_PATH, 'utf-8').replace(/^﻿/, ''));
+const CATEGORIES = Object.fromEntries(categoriesData.dataCategories.map((c) => [c.slug, c.label]));
 const SLUG_RE = /^[a-zA-Z0-9._-]+$/;
 const YM_RE = /^\d{4}-\d{2}$/;
 
@@ -90,6 +94,35 @@ function runGit(paths, message) {
   run(['commit', '-m', message]);
   run(['push']);
   return { ok: true, changed: true, log: log.join('\n\n') };
+}
+
+// note.comから新着記事を収集して commit/push する（PUBLISHING.mdの手動手順と同じ内容）。
+// npm run sync:note は記事数が多いと数分かかるため、レスポンスを長めに待つ想定。
+async function handleSyncNote(req, res) {
+  let syncOutput = '';
+  try {
+    syncOutput = execFileSync('npm.cmd', ['run', 'sync:note'], {
+      cwd: REPO_ROOT,
+      encoding: 'utf-8',
+      maxBuffer: 1024 * 1024 * 20,
+    });
+  } catch (e) {
+    return json(res, 500, { error: `sync:note が失敗しました: ${e.message}`, log: e.stdout || '' });
+  }
+
+  try {
+    const result = runGit(
+      ['data/note-links.json', 'data/note-magazines.json', 'data/note-hashtags.json'],
+      'Update note links',
+    );
+    return json(res, 200, {
+      ok: true,
+      message: result.changed ? '新着記事を公開しました。' : '新着記事はありませんでした。',
+      log: `${syncOutput}\n\n${result.log}`,
+    });
+  } catch (e) {
+    return json(res, 500, { error: `記事は取得しましたが git 操作に失敗しました: ${e.message}`, log: syncOutput });
+  }
 }
 
 function json(res, status, body) {
@@ -184,6 +217,7 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === 'POST' && req.url === '/api/upload') return await handleUpload(req, res);
     if (req.method === 'POST' && req.url === '/api/titles') return await handleTitles(req, res);
+    if (req.method === 'POST' && req.url === '/api/sync-note') return await handleSyncNote(req, res);
     json(res, 404, { error: 'not found' });
   } catch (e) {
     json(res, 500, { error: e.message });

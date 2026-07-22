@@ -1,0 +1,12 @@
+{
+  "dataCategories": [
+    { "slug": "kaigo", "label": "介護分野" },
+    { "slug": "shogai", "label": "障がい分野" },
+    { "slug": "keiei", "label": "経営の見える化" }
+  ],
+  "deepResearchTags": [
+    { "slug": "kaigo", "label": "介護" },
+    { "slug": "shogai", "label": "障がい" },
+    { "slug": "keiei", "label": "経営" }
+  ]
+}
