@@ -23,6 +23,9 @@
   button { border:none; border-radius:8px; background:var(--accent); color:#fff; font:inherit; font-weight:800; padding:10px 20px; cursor:pointer; margin-top:18px; }
   button:hover { background:var(--accent-deep); }
   button.small { padding:7px 14px; margin:0; font-size:13px; }
+  .cat-btn { margin:0; padding:8px 14px; border-radius:999px; background:#fff; color:var(--ink); border:1px solid var(--line); font-weight:700; }
+  .cat-btn.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .cat-btn:hover { border-color:var(--accent); }
   .hint { color:var(--muted); font-size:12px; margin-top:5px; }
   .msg { margin-top:16px; padding:12px 14px; border-radius:8px; font-size:13px; white-space:pre-wrap; display:none; }
   .msg.ok { background:#d6ebe6; color:var(--accent-deep); display:block; }
@@ -80,7 +83,13 @@
 
   <div class="card">
     <h2>既存タイトルの編集</h2>
-    <p class="hint" id="items-scope-hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。上の「掲載先」の選択に応じて、ここに出る一覧も自動で絞り込まれます。</p>
+    <div class="radio-row" id="cat-filter-row">
+      <button type="button" class="cat-btn on" data-ftype="dashboard" data-fcat="kaigo">介護分野</button>
+      <button type="button" class="cat-btn" data-ftype="dashboard" data-fcat="shogai">障がい分野</button>
+      <button type="button" class="cat-btn" data-ftype="dashboard" data-fcat="keiei">経営の見える化</button>
+      <button type="button" class="cat-btn" data-ftype="deep-research" data-fcat="">Deep Research</button>
+    </div>
+    <p class="hint" id="items-scope-hint">複数編集してから、最後に1回まとめて保存できます（変更した分だけ1回のpushにまとまります）。</p>
     <div id="items"></div>
     <button id="save-all-btn" disabled>変更をまとめて保存（<span id="dirty-count">0</span>件）</button>
     <div class="msg" id="items-msg"></div>
@@ -132,10 +141,30 @@ function syncDestUI() {
   const isDeepResearch = document.querySelector('input[name=dest]:checked').value === 'deep-research';
   $('dr-category-field').classList.toggle('hidden', !isDeepResearch);
   $('ym-field').classList.toggle('hidden', !isDeepResearch);
-  applyDestFilter();
 }
 
-$('category').addEventListener('change', applyDestFilter);
+// 「既存タイトルの編集」欄のカテゴリボタン。アップロード先の選択とは完全に独立している。
+// Deep Researchボタンは分野を問わず（介護＋障がい）全件をまとめて表示する。
+let currentFilter = { ftype: 'dashboard', fcat: 'kaigo' };
+
+function applyCatFilter() {
+  const { ftype, fcat } = currentFilter;
+  let visibleCount = 0;
+  for (const row of $('items').children) {
+    const show = row.dataset.type === ftype && (fcat === '' || row.dataset.category === fcat);
+    row.hidden = !show;
+    if (show) visibleCount += 1;
+  }
+  $('items-scope-hint').textContent = `${visibleCount}件表示中。複数編集してから、最後に1回まとめて保存できます。`;
+}
+
+document.querySelectorAll('.cat-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat-btn').forEach((b) => b.classList.toggle('on', b === btn));
+    currentFilter = { ftype: btn.dataset.ftype, fcat: btn.dataset.fcat };
+    applyCatFilter();
+  });
+});
 
 $('sync-note-btn').addEventListener('click', async () => {
   if (!confirm('note.comの新着記事を取得して公開します。2〜3分かかります。よろしいですか？')) return;
@@ -236,25 +265,8 @@ async function loadItems() {
     rowInputs.set(item.key, input);
   }
   updateDirtyState();
-  syncDestUI();
+  applyCatFilter();
 }
-
-// 「既存タイトルの編集」欄は、上の「掲載先」の選択（＝これからアップロードする先）と
-// 完全に同じ条件（種類＋分野）でフィルタする。掲載先を選べば、そこに実際にあるファイルだけが並ぶ。
-function applyDestFilter() {
-  const { type, category } = selectedDest();
-  let visibleCount = 0;
-  for (const row of $('items').children) {
-    const show = row.dataset.type === type && row.dataset.category === category;
-    row.hidden = !show;
-    if (show) visibleCount += 1;
-  }
-  $('items-scope-hint').textContent = visibleCount
-    ? `この掲載先には現在 ${visibleCount} 件あります。複数編集してから、最後に1回まとめて保存できます。`
-    : 'この掲載先にはまだファイルがありません。';
-}
-
-$('filter-category').addEventListener('change', applyCategoryFilter);
 
 function getDirtyChanges() {
   const changes = [];
