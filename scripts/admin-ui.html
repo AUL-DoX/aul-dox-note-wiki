@@ -31,6 +31,8 @@
   .msg.ok { background:#d6ebe6; color:var(--accent-deep); display:block; }
   .msg.err { background:#f4ddd5; color:var(--danger); display:block; }
   .item { display:flex; gap:10px; align-items:center; padding:10px 0; border-bottom:1px solid var(--line); }
+  /* hidden属性は .item{display:flex} に負けて効かないので、明示的に打ち消す（絞り込みの肝）。 */
+  .item[hidden] { display:none; }
   .item:last-child { border-bottom:none; }
   .item .tag { font-size:11px; font-weight:800; color:var(--accent); background:#d6ebe6; border-radius:999px; padding:2px 9px; white-space:nowrap; }
   .item input { flex:1; }
@@ -40,7 +42,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>AUL DoX 管理画面 <span style="font-size:12px;font-weight:700;color:#fff;background:#c0573f;border-radius:6px;padding:2px 8px;vertical-align:middle;">版: 2026-07-23-A</span></h1>
+  <h1>AUL DoX 管理画面 <span style="font-size:12px;font-weight:700;color:#fff;background:#c0573f;border-radius:6px;padding:2px 8px;vertical-align:middle;">版: 2026-07-23-B</span></h1>
   <p class="sub">データ分析HTMLのアップロードとタイトル編集。「保存」を押すと git commit → push まで実行し、ref.aul-dox.jp に反映されます（数分後）。</p>
 
   <div class="card">
