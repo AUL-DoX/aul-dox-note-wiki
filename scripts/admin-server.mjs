@@ -129,7 +129,11 @@ async function handleSyncNote(req, res) {
 
 function json(res, status, body) {
   const payload = JSON.stringify(body);
-  res.writeHead(status, { 'content-type': 'application/json; charset=utf-8', 'content-length': Buffer.byteLength(payload) });
+  res.writeHead(status, {
+    'content-type': 'application/json; charset=utf-8',
+    'content-length': Buffer.byteLength(payload),
+    'cache-control': 'no-store',
+  });
   res.end(payload);
 }
 
@@ -211,7 +215,8 @@ const server = createServer(async (req, res) => {
   try {
     if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
       const html = readFileSync(UI_PATH);
-      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+      // no-store必須：このHTMLはローカルで頻繁に書き換わるため、ブラウザに古い版をキャッシュさせない。
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
       return res.end(html);
     }
     if (req.method === 'GET' && req.url === '/api/items') {
