@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-26T07:54:28.259Z",
+  "fetchedAt": "2026-08-02T05:15:49.589Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -173,8 +173,8 @@
       "Obsidian",
       "Github",
       "プラグイン",
-      "ナレッジベース",
       "文書管理",
+      "ナレッジベース",
       "AULDocshelfPlus"
     ],
     "https://note.com/chic_wren6567/n/n20b7c91c136a": [
@@ -2703,8 +2703,8 @@
       "障がい福祉",
       "コミュニケーション支援",
       "AAC",
-      "AULWeavingWords",
       "AmbientCare",
+      "AULWeavingWords",
       "アンビエントケア"
     ],
     "https://note.com/chic_wren6567/n/n3f7685b976ec": [
@@ -3116,8 +3116,8 @@
       "ChatGPT",
       "Gemini",
       "Claude",
-      "開発",
       "ClaudeCode",
+      "開発",
       "プロジェクト",
       "notebookLM",
       "Codex",
@@ -3390,8 +3390,8 @@
       "医療",
       "倒産",
       "賃上",
-      "マイナ保険証",
       "カスタマーハラスメント",
+      "マイナ保険証",
       "障がい福祉",
       "医師の働き方改革",
       "就労選択支援",
@@ -3521,8 +3521,8 @@
     "https://note.com/chic_wren6567/n/n06bb88ea8e75": [
       "介護",
       "医療",
-      "マイナ保険証",
       "カスタマーハラスメント",
+      "マイナ保険証",
       "障がい福祉",
       "放課後デイサービス",
       "強度行動障害",
@@ -3798,8 +3798,8 @@
       "医療",
       "タスク管理",
       "GoogleWorkspace",
-      "GoogleKeep",
       "申し送り",
+      "GoogleKeep",
       "GoogleToDoリスト"
     ],
     "https://note.com/chic_wren6567/n/na9f7ca9beaec": [
@@ -3933,8 +3933,8 @@
       "Gemini",
       "プロンプト",
       "コード",
-      "Gemini3Pro",
-      "爆上"
+      "爆上",
+      "Gemini3Pro"
     ],
     "https://note.com/chic_wren6567/n/n41d0a4c2d00e": [
       "AI",
@@ -4026,8 +4026,8 @@
       "見える化",
       "dox",
       "当たり前化",
-      "ケアの再人間化",
       "AmbientCareDesign",
+      "ケアの再人間化",
       "アンビエントケアデザイン"
     ],
     "https://note.com/chic_wren6567/n/n61ba0f4a555b": [
@@ -4826,6 +4826,126 @@
       "黒字倒産",
       "経営概況調査",
       "収支分析"
+    ],
+    "https://note.com/chic_wren6567/n/n022f1a9a8546": [
+      "介護",
+      "Claude",
+      "python",
+      "Blender",
+      "統計",
+      "思考実験",
+      "データ可視化"
+    ],
+    "https://note.com/chic_wren6567/n/ne511ab8827bd": [
+      "Claude",
+      "python",
+      "Blender",
+      "介護経営",
+      "データ可視化",
+      "統計分析",
+      "AI実験"
+    ],
+    "https://note.com/chic_wren6567/n/nd7687390baef": [
+      "障害福祉",
+      "介護保険",
+      "医療制度",
+      "ポリファーマシー",
+      "介護情報基盤",
+      "ケアプランデータ連携",
+      "障害福祉報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/ncab18576d1c5": [
+      "Claude",
+      "python",
+      "Blender",
+      "介護経営",
+      "データ可視化",
+      "AI実験",
+      "クラスタリング",
+      "FAMD"
+    ],
+    "https://note.com/chic_wren6567/n/na0d559306fe8": [
+      "ClaudeCode",
+      "プロンプト設計",
+      "skills",
+      "AIワークフロー",
+      "解釈確認",
+      "InterpretationCheck"
+    ],
+    "https://note.com/chic_wren6567/n/nd02004f6bdba": [
+      "Claude",
+      "python",
+      "介護経営",
+      "データ可視化",
+      "AI実験",
+      "PCA",
+      "クラスタリング"
+    ],
+    "https://note.com/chic_wren6567/n/na61e41b56a68": [
+      "生成AI",
+      "リーダーシップ",
+      "意思決定",
+      "AI経営",
+      "AI社員"
+    ],
+    "https://note.com/chic_wren6567/n/n5e48222feade": [
+      "Claude",
+      "福祉",
+      "Blender",
+      "Obsidian",
+      "データ可視化",
+      "AI実験",
+      "行政監視"
+    ],
+    "https://note.com/chic_wren6567/n/n3b65ce0bec55": [
+      "Claude",
+      "Blender",
+      "Obsidian",
+      "可視化",
+      "AI実験"
+    ],
+    "https://note.com/chic_wren6567/n/nff7fcf26fc26": [
+      "就労継続支援B型",
+      "グループホーム",
+      "札幌市",
+      "障害福祉サービス",
+      "行政DX",
+      "不正受給",
+      "福祉行政",
+      "国保連"
+    ],
+    "https://note.com/chic_wren6567/n/ne06e55d83506": [
+      "マネジメント",
+      "Claude",
+      "python",
+      "Blender",
+      "1on1",
+      "可視化",
+      "AI実験",
+      "人事考課"
+    ],
+    "https://note.com/chic_wren6567/n/n5ef68c30fcdf": [
+      "マネジメント",
+      "Claude",
+      "python",
+      "Blender",
+      "1on1",
+      "可視化",
+      "AI実験"
+    ],
+    "https://note.com/chic_wren6567/n/n876f78e52a5e": [
+      "生成AI",
+      "AI活用",
+      "業務効率化",
+      "医療介護DX",
+      "AmbientCare"
+    ],
+    "https://note.com/chic_wren6567/n/ncc528df5a5ef": [
+      "障害福祉",
+      "介護DX",
+      "医療AI",
+      "AmbientCareDesign",
+      "ケアテクノロジー"
     ]
   }
 }

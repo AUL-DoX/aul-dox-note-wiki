@@ -1,6 +1,18 @@
 {
-  "fetchedAt": "2026-07-26T07:50:52.346Z",
+  "fetchedAt": "2026-08-02T05:12:08.033Z",
   "magazines": [
+    {
+      "key": "m3cc1eaee425c",
+      "title": "Claude×Blender×Obsidian多次元化の実験",
+      "url": "https://note.com/chic_wren6567/m/m3cc1eaee425c",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/ncab18576d1c5",
+        "https://note.com/chic_wren6567/n/n5e48222feade",
+        "https://note.com/chic_wren6567/n/n3b65ce0bec55",
+        "https://note.com/chic_wren6567/n/ne06e55d83506",
+        "https://note.com/chic_wren6567/n/n5ef68c30fcdf"
+      ]
+    },
     {
       "key": "m905f40a26057",
       "title": "令和７年度介護事業経営概況調査",
@@ -230,14 +242,6 @@
         "https://note.com/chic_wren6567/n/n71965c3de116",
         "https://note.com/chic_wren6567/n/nd7a2bf3a65f6",
         "https://note.com/chic_wren6567/n/n0749bc2c0456"
-      ]
-    },
-    {
-      "key": "m35337f02fde2",
-      "title": "Google Workspaceの使い方メモ",
-      "url": "https://note.com/chic_wren6567/m/m35337f02fde2",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/n0d7d92f68d82"
       ]
     }
   ]
