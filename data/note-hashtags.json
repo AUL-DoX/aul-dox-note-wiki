@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-02T05:15:49.589Z",
+  "fetchedAt": "2026-08-08T23:23:18.009Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -441,8 +441,8 @@
     ],
     "https://note.com/chic_wren6567/n/n3b3304e86810": [
       "業務改善",
-      "デジタルトランスフォーメーション",
       "キャリア戦略",
+      "デジタルトランスフォーメーション",
       "DX人材",
       "転職とキャリア"
     ],
@@ -1374,8 +1374,8 @@
       "python",
       "介護DX",
       "数理最適化",
-      "シフト自動作成",
       "勤務形態一覧表",
+      "シフト自動作成",
       "ORTools"
     ],
     "https://note.com/chic_wren6567/n/nb75df98f8945": [
@@ -1562,8 +1562,8 @@
       "介護老人福祉施設",
       "訪問系サービス",
       "経営概況調査",
-      "収支分析",
-      "定期巡回随時対応型訪問介護看護"
+      "定期巡回随時対応型訪問介護看護",
+      "収支分析"
     ],
     "https://note.com/chic_wren6567/n/nf550563ba2bc": [
       "介護報酬改定",
@@ -1992,8 +1992,8 @@
       "障害福祉制度"
     ],
     "https://note.com/chic_wren6567/n/n78ed69732bdc": [
-      "python",
       "データ分析",
+      "python",
       "KPI",
       "障害福祉サービス",
       "経営分析",
@@ -2285,8 +2285,8 @@
     "https://note.com/chic_wren6567/n/n0eff08c46a89": [
       "ClaudeCode",
       "Obsidian",
-      "介護DX",
       "ナレッジマネジメント",
+      "介護DX",
       "wiki",
       "AIワークフロー"
     ],
@@ -2991,8 +2991,8 @@
     "https://note.com/chic_wren6567/n/nd78969d44629": [
       "介護",
       "医療",
-      "アール・ブリュット",
       "障がい福祉",
+      "アール・ブリュット",
       "遺伝子治療薬",
       "夜勤のワンオペ"
     ],
@@ -3250,8 +3250,8 @@
     "https://note.com/chic_wren6567/n/na2eaa77e1ab5": [
       "経営",
       "情報",
-      "データ",
       "DX",
+      "データ",
       "組織",
       "業務改善",
       "管理職",
@@ -3277,8 +3277,8 @@
     ],
     "https://note.com/chic_wren6567/n/n76391523e9fb": [
       "仕事",
-      "データ",
       "DX",
+      "データ",
       "業務"
     ],
     "https://note.com/chic_wren6567/n/n96017c5dea97": [
@@ -3288,8 +3288,8 @@
       "管理職"
     ],
     "https://note.com/chic_wren6567/n/n8d257a5420ef": [
-      "データ",
       "DX",
+      "データ",
       "職場",
       "思考停止",
       "社内"
@@ -4946,6 +4946,86 @@
       "医療AI",
       "AmbientCareDesign",
       "ケアテクノロジー"
+    ],
+    "https://note.com/chic_wren6567/n/ndc2eab5b3004": [
+      "AI",
+      "生成AI",
+      "Google",
+      "OpenAI",
+      "AIエージェント",
+      "Microsoft",
+      "Cursor",
+      "mcp",
+      "vercel",
+      "AgentPlugins"
+    ],
+    "https://note.com/chic_wren6567/n/n6d4aaafbf374": [
+      "障害福祉",
+      "介護保険",
+      "医療DX",
+      "障害福祉報酬改定",
+      "ヘルスケアAX"
+    ],
+    "https://note.com/chic_wren6567/n/n7c0de499bbac": [
+      "個人開発",
+      "Obsidian",
+      "Github",
+      "nextjs",
+      "vercel",
+      "claudeapi",
+      "Nouspark"
+    ],
+    "https://note.com/chic_wren6567/n/n3ee078ad352e": [
+      "北海道",
+      "生活保護",
+      "障害福祉",
+      "障害年金",
+      "就労継続支援A型",
+      "最低賃金"
+    ],
+    "https://note.com/chic_wren6567/n/n91431da2f9c9": [
+      "業務効率化",
+      "生成AI活用",
+      "情報セキュリティ",
+      "非エンジニア",
+      "AIガバナンス",
+      "E2Eテスト"
+    ],
+    "https://note.com/chic_wren6567/n/n640dbeab420f": [
+      "DX推進",
+      "リスクマネジメント",
+      "情報セキュリティ",
+      "サイバー攻撃",
+      "BCP対策",
+      "賠償責任"
+    ],
+    "https://note.com/chic_wren6567/n/n2935c94baaed": [
+      "生成AI",
+      "DX推進",
+      "ミドルシニア",
+      "人材戦略",
+      "AI人員削減"
+    ],
+    "https://note.com/chic_wren6567/n/nd35990186fe7": [
+      "DX推進",
+      "組織改革",
+      "AI人材",
+      "生成AI導入",
+      "経営責任"
+    ],
+    "https://note.com/chic_wren6567/n/n8067c72dd2ee": [
+      "業務効率化",
+      "DX推進",
+      "生成AI活用",
+      "AI導入",
+      "AI人材"
+    ],
+    "https://note.com/chic_wren6567/n/ncf97fe73b2c2": [
+      "生成AI",
+      "AIエージェント",
+      "mcp",
+      "TypeScript",
+      "vercel"
     ]
   }
 }
