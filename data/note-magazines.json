@@ -1,6 +1,22 @@
 {
-  "fetchedAt": "2026-08-08T23:19:39.907Z",
+  "fetchedAt": "2026-08-15T00:08:25.540Z",
   "magazines": [
+    {
+      "key": "m8b2f904b90d5",
+      "title": "Vercelの未来",
+      "url": "https://note.com/chic_wren6567/m/m8b2f904b90d5",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/n289b86bfe8fa",
+        "https://note.com/chic_wren6567/n/ne9021b5b612d",
+        "https://note.com/chic_wren6567/n/ncf97fe73b2c2",
+        "https://note.com/chic_wren6567/n/n7c0de499bbac",
+        "https://note.com/chic_wren6567/n/ndc2eab5b3004",
+        "https://note.com/chic_wren6567/n/n074e0c77718d",
+        "https://note.com/chic_wren6567/n/n514f40cd74e4",
+        "https://note.com/chic_wren6567/n/n0a52c3c6aaef",
+        "https://note.com/chic_wren6567/n/n9314215bed24"
+      ]
+    },
     {
       "key": "m3cc1eaee425c",
       "title": "Claude×Blender×Obsidian多次元化の実験",
@@ -232,18 +248,6 @@
         "https://note.com/chic_wren6567/n/n6734996fa661",
         "https://note.com/chic_wren6567/n/ne7ab4b93fd4e",
         "https://note.com/chic_wren6567/n/n78fa1ba46406"
-      ]
-    },
-    {
-      "key": "m8182e76687ca",
-      "title": "週刊DoX入門",
-      "url": "https://note.com/chic_wren6567/m/m8182e76687ca",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/n205d7b85a44b",
-        "https://note.com/chic_wren6567/n/nae41c9879464",
-        "https://note.com/chic_wren6567/n/n71965c3de116",
-        "https://note.com/chic_wren6567/n/nd7a2bf3a65f6",
-        "https://note.com/chic_wren6567/n/n0749bc2c0456"
       ]
     }
   ]

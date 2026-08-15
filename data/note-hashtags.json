@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-08T23:23:18.009Z",
+  "fetchedAt": "2026-08-15T00:12:06.568Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -128,8 +128,8 @@
       "小学生AI学習"
     ],
     "https://note.com/chic_wren6567/n/n7e9fddf36a15": [
-      "就労支援",
       "障害福祉",
+      "就労支援",
       "社会福祉法人",
       "処遇改善加算",
       "福祉経営"
@@ -910,8 +910,8 @@
       "クリニック",
       "Obsidian",
       "GoogleAppsScript",
-      "障害福祉サービス",
       "介護離職",
+      "障害福祉サービス",
       "介護DX",
       "訪問看護ステーション",
       "介護施設マネジメント",
@@ -1030,8 +1030,8 @@
       "業務効率化",
       "python",
       "介護DX",
-      "数理最適化",
       "シフト作成",
+      "数理最適化",
       "ORTools"
     ],
     "https://note.com/chic_wren6567/n/nad753cd65e58": [
@@ -1484,8 +1484,8 @@
     "https://note.com/chic_wren6567/n/nf17843c3b02b": [
       "ChatGPT",
       "Claude",
-      "OpenAI",
       "AIエージェント",
+      "OpenAI",
       "ClaudeCode",
       "Anthropic",
       "Codex",
@@ -1494,8 +1494,8 @@
     ],
     "https://note.com/chic_wren6567/n/n809c512bb1ab": [
       "生成AI",
-      "OpenAI",
       "AIエージェント",
+      "OpenAI",
       "Codex",
       "仕事の未来"
     ],
@@ -1657,8 +1657,8 @@
     "https://note.com/chic_wren6567/n/n115dbb6eb938": [
       "ChatGPT",
       "生成AI",
-      "OpenAI",
       "AIエージェント",
+      "OpenAI",
       "GPT56"
     ],
     "https://note.com/chic_wren6567/n/nc7a7ee8da8f9": [
@@ -2026,8 +2026,8 @@
     ],
     "https://note.com/chic_wren6567/n/nbb351baed5eb": [
       "就労継続支援B型",
-      "就労支援",
       "障害福祉",
+      "就労支援",
       "就労継続支援A型",
       "福祉制度"
     ],
@@ -2132,8 +2132,8 @@
       "支給限度額"
     ],
     "https://note.com/chic_wren6567/n/n1d227fe30924": [
-      "就労支援",
       "障害福祉",
+      "就労支援",
       "社会保険料",
       "A型事業所",
       "2029年問題",
@@ -2415,8 +2415,8 @@
       "配送ルート最適化"
     ],
     "https://note.com/chic_wren6567/n/ndbac82a21ea1": [
-      "就労支援",
       "障害福祉",
+      "就労支援",
       "赤字",
       "知らないと損",
       "福祉経営",
@@ -3304,8 +3304,8 @@
       "Google",
       "タスク管理",
       "スプレッドシート",
-      "ドキュメント",
       "情報共有",
+      "ドキュメント",
       "Googleカレンダー",
       "Googleドライブ",
       "校務DX",
@@ -4951,8 +4951,8 @@
       "AI",
       "生成AI",
       "Google",
-      "OpenAI",
       "AIエージェント",
+      "OpenAI",
       "Microsoft",
       "Cursor",
       "mcp",
@@ -5026,6 +5026,71 @@
       "mcp",
       "TypeScript",
       "vercel"
+    ],
+    "https://note.com/chic_wren6567/n/n289b86bfe8fa": [
+      "生成AI",
+      "Google",
+      "AIエージェント",
+      "クラウド",
+      "AI開発",
+      "レゴ",
+      "vercel"
+    ],
+    "https://note.com/chic_wren6567/n/n5a7119822ca8": [
+      "ChatGPT",
+      "ClaudeCode",
+      "Codex",
+      "AgentSkills",
+      "OODALoop"
+    ],
+    "https://note.com/chic_wren6567/n/n9e85fa917cf9": [
+      "生成AI",
+      "Gemini",
+      "AIエージェント",
+      "AI開発",
+      "GoogleAIStudio"
+    ],
+    "https://note.com/chic_wren6567/n/nd6e1441069c6": [
+      "生成AI",
+      "AIエージェント",
+      "AI開発",
+      "mcp",
+      "skills",
+      "AgentPlugins"
+    ],
+    "https://note.com/chic_wren6567/n/na2a5e31d9f24": [
+      "言葉",
+      "哺乳類"
+    ],
+    "https://note.com/chic_wren6567/n/n9314215bed24": [
+      "介護DX",
+      "福祉AI",
+      "障がい福祉DX",
+      "AmbientCareDesign",
+      "Aetheron"
+    ],
+    "https://note.com/chic_wren6567/n/n514f40cd74e4": [
+      "生成AI",
+      "AIエージェント",
+      "vercel",
+      "HermesAgent",
+      "VercelSandbox"
+    ],
+    "https://note.com/chic_wren6567/n/n9160c2ff6c95": [
+      "生成AI",
+      "ゲーム制作",
+      "特別支援教育",
+      "GoogleAppsScript",
+      "ローマ帝国",
+      "rubicon",
+      "combos"
+    ],
+    "https://note.com/chic_wren6567/n/n074e0c77718d": [
+      "AIエージェント",
+      "Codex",
+      "介護DX",
+      "vercel",
+      "AgentPlugins"
     ]
   }
 }

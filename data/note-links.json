@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/api/v2/creators/contents",
-  "fetchedAt": "2026-08-08T23:19:36.535Z",
-  "count": 650,
+  "fetchedAt": "2026-08-15T00:08:21.572Z",
+  "count": 659,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -4551,6 +4551,69 @@
       "url": "https://note.com/chic_wren6567/n/ncf97fe73b2c2",
       "published": "2026-08-02T19:34:51+09:00",
       "description": "Vercelでコネクタ接続（Vercel Connect）のβ版が公開されました。 Vercelの動向を追い続けてきた私にとっては、とても嬉しいニュースです。 ここ2か月ほど、VercelはAI SDKやAI Gateway、Sandbox、Workflow、MCPなど、AIエー…",
+      "source": "rss"
+    },
+    {
+      "title": "VercelはAI時代の「レゴの土台」になるのか――全部作らず、全部つなぐという戦い方",
+      "url": "https://note.com/chic_wren6567/n/n289b86bfe8fa",
+      "published": "2026-08-15T07:04:15+09:00",
+      "description": "Vercelの進化を見ていると、最近は「新機能が増えた」というより、会社として狙っている場所そのものが変わってきたように見える。 以前のVercelは、Next.jsを中心としたWeb開発とデプロイの基盤という印象が強かった。ところが現在は、AI Gateway、AI SDK、H…",
+      "source": "rss"
+    },
+    {
+      "title": "Codexにも「解釈確認ツール」を入れた――プロンプトチェーンではなく、実はOODA Loopだった",
+      "url": "https://note.com/chic_wren6567/n/n5a7119822ca8",
+      "published": "2026-08-14T17:58:35+09:00",
+      "description": "ChatGPTやCodexを使って開発していると、「AIの性能が足りない」というより、「こちらの意図とは違う方向に、AIが正しく実装してしまう」ことの方が厄介だと感じることがあります。コードそのものは間違っていない。しかし、そもそもの解釈が違う。結果として大量の修正が必要になる。…",
+      "source": "rss"
+    },
+    {
+      "title": "「Google AI Studioすげー」を聞かなくなった――AI開発の主役が「モデル」から「Agent・Skills・Runtime」へ移ったからか",
+      "url": "https://note.com/chic_wren6567/n/n9e85fa917cf9",
+      "published": "2026-08-14T04:53:48+09:00",
+      "description": "半年ほど前までは、「Google AI Studioすげー」という声をSNSやブログでよく見かけた気がする。Geminiの新しいモデルが公開されるたびに、「AI Studioで試した」「長いコンテキストを扱える」「動画まで読み込める」といった話題が飛び交っていた。 ところが最近、…",
+      "source": "rss"
+    },
+    {
+      "title": "カスタムGPTsやGemsはレガシーになったのか――プロンプト中心からAgent・Skills中心へ",
+      "url": "https://note.com/chic_wren6567/n/nd6e1441069c6",
+      "published": "2026-08-13T04:54:58+09:00",
+      "description": "生成AIの使い方は、この半年でかなり変わった。少し前までは、AIをどう動かすかを決める主役はプロンプトだった。長い指示文を書き、参照ファイルを与え、特定の役割を持たせる。その延長線上にあったのが、ChatGPTのカスタムGPTsやGeminiのGemsだった。 カスタムGPTsや…",
+      "source": "rss"
+    },
+    {
+      "title": "声、という切実さの装置",
+      "url": "https://note.com/chic_wren6567/n/na2a5e31d9f24",
+      "published": "2026-08-12T18:07:29+09:00",
+      "description": "夜、暗闇の中で子どもが泣く。姿は見えなくても、その声だけで「何かが起きている」ことが伝わる。 哺乳類はなぜ、声を持ったのだろう。 声は、視覚の代わりではない群れで生きる哺乳類にとって、姿が見えない状況は珍しくない。茂みの向こう、暗闇の中、離れた場所。そんなとき視覚は役に立たない。…",
+      "source": "rss"
+    },
+    {
+      "title": "Aetheron Project始動――障がい福祉・介護のための「Ambient Care Design」を始める",
+      "url": "https://note.com/chic_wren6567/n/n9314215bed24",
+      "published": "2026-08-12T05:14:36+09:00",
+      "description": "Aetheron Projectを正式に始動する。このプロジェクトで目指すのは、単なる「AIを使った介護記録ツール」でも、「障がい福祉向けチャットAI」でもない。テーマは、Ambient Care Design。人がAIを操作することを前提にするのではなく、日常の会話、行動、記録…",
+      "source": "rss"
+    },
+    {
+      "title": "Hermes AgentがVercel Sandboxに対応――AIエージェントの「実行環境」がクラウドへ移る意味は？",
+      "url": "https://note.com/chic_wren6567/n/n514f40cd74e4",
+      "published": "2026-08-11T04:42:39+09:00",
+      "description": "2026年8月7日、VercelはHermes Agentが「Vercel AI Gateway」と「Vercel Sandbox」に対応したと発表しました。 一見すると、コーディングエージェントの対応サービスが増えただけにも見えます。 しかし今回のアップデートで注目したいのは、…",
+      "source": "rss"
+    },
+    {
+      "title": "【Codex × Combos】GASで作った古代ローマ統治ゲーム「RUBICON」は、チャットで移植できるのか",
+      "url": "https://note.com/chic_wren6567/n/n9160c2ff6c95",
+      "published": "2026-08-10T19:25:24+09:00",
+      "description": "※この記事はCombosチームからの依頼を受け、Creator Creditsの提供を受けて制作したPR記事です。評価や感想は、実際に使った体験に基づいて率直に書いています。 Google Apps Script（GAS）で作ったゲームを、コードを書かずに別のゲーム制作環境へ移植…",
+      "source": "rss"
+    },
+    {
+      "title": "Agent Plugins v1.0を実装してみた。介護施設向け「運営指導・監査準備Plugin」をCodexで作る",
+      "url": "https://note.com/chic_wren6567/n/n074e0c77718d",
+      "published": "2026-08-10T04:53:55+09:00",
+      "description": "AIエージェント周辺の動きが、かなり面白くなってきた。 先日、AIエージェント向けの共通仕様「Agent Plugins v1.0」が公開された。 Agent Pluginsは、Agent SkillsやMCPサーバーなどを共通の形式でパッケージ化し、対応するAIエージェントから…",
       "source": "rss"
     }
   ],
