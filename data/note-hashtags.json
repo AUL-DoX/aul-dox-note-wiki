@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-15T00:12:06.568Z",
+  "fetchedAt": "2026-08-22T05:50:42.806Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -290,8 +290,8 @@
     ],
     "https://note.com/chic_wren6567/n/n9b08c2cefcef": [
       "就労支援",
-      "A型事業所",
       "福祉経営",
+      "A型事業所",
       "障がい福祉サービス",
       "スコア表"
     ],
@@ -387,8 +387,8 @@
       "AI活用",
       "Claude",
       "DX",
-      "生産性向上",
       "個人開発",
+      "生産性向上",
       "プロンプトエンジニアリング",
       "トークン",
       "コンテキスト",
@@ -911,8 +911,8 @@
       "Obsidian",
       "GoogleAppsScript",
       "介護離職",
-      "障害福祉サービス",
       "介護DX",
+      "障害福祉サービス",
       "訪問看護ステーション",
       "介護施設マネジメント",
       "病院の病棟単位"
@@ -1503,8 +1503,8 @@
       "Anthropic",
       "生成AI活用",
       "介護現場",
-      "cowork",
       "Claude活用",
+      "cowork",
       "AIと働き方",
       "AI経済指数"
     ],
@@ -2137,8 +2137,8 @@
       "社会保険料",
       "A型事業所",
       "2029年問題",
-      "特別高等支援学校",
-      "社会保険改革"
+      "社会保険改革",
+      "特別高等支援学校"
     ],
     "https://note.com/chic_wren6567/n/n227f04c989d3": [
       "生活介護",
@@ -2569,8 +2569,8 @@
       "AI開発",
       "GoogleWorkspace",
       "拡張機能",
-      "GEM",
       "Googleカレンダー",
+      "GEM",
       "Googleタスク"
     ],
     "https://note.com/chic_wren6567/n/n5d6a99fcd418": [
@@ -2925,8 +2925,8 @@
     "https://note.com/chic_wren6567/n/n024d4c928666": [
       "AI",
       "開発日誌",
-      "claudeapi",
       "HumanInTheLoop",
+      "claudeapi",
       "VCS",
       "AIに会社を経営させてみたくなった"
     ],
@@ -3645,8 +3645,8 @@
       "AI",
       "北海道",
       "DX",
-      "札幌",
       "AIエージェント",
+      "札幌",
       "リスキリング",
       "シニア",
       "データサイエンス",
@@ -4885,8 +4885,8 @@
       "生成AI",
       "リーダーシップ",
       "意思決定",
-      "AI経営",
-      "AI社員"
+      "AI社員",
+      "AI経営"
     ],
     "https://note.com/chic_wren6567/n/n5e48222feade": [
       "Claude",
@@ -5091,6 +5091,85 @@
       "介護DX",
       "vercel",
       "AgentPlugins"
+    ],
+    "https://note.com/chic_wren6567/n/nc9a0a8922dfe": [
+      "障害福祉",
+      "介護保険",
+      "医療的ケア児",
+      "アルツハイマー",
+      "医療政策",
+      "介護情報基盤"
+    ],
+    "https://note.com/chic_wren6567/n/n3e5b175574a4": [
+      "AI",
+      "DX",
+      "業務改善",
+      "行政書士",
+      "社労士",
+      "税理士",
+      "士業",
+      "クラウド化"
+    ],
+    "https://note.com/chic_wren6567/n/n04a0e689e7e5": [
+      "介護保険",
+      "障がい福祉",
+      "福祉DX",
+      "エラーメッセージ",
+      "国保連請求",
+      "返戻対応",
+      "エラー一覧"
+    ],
+    "https://note.com/chic_wren6567/n/n313da784bbd4": [
+      "生成AI",
+      "FX",
+      "AI開発",
+      "vercel",
+      "AIagent"
+    ],
+    "https://note.com/chic_wren6567/n/n1178b999a88e": [
+      "生成AI",
+      "AIエージェント",
+      "AIモデル",
+      "オープンモデル",
+      "Ornith"
+    ],
+    "https://note.com/chic_wren6567/n/n96260c0dbbbc": [
+      "生成AI",
+      "Claude",
+      "AIエージェント",
+      "vercel",
+      "AIGateway"
+    ],
+    "https://note.com/chic_wren6567/n/n6a646fb45be7": [
+      "生成AI",
+      "AIエージェント",
+      "フィジカルAI",
+      "AIリテラシー",
+      "仕事の未来",
+      "AIオーケストレーション"
+    ],
+    "https://note.com/chic_wren6567/n/nf11b8769df12": [
+      "AIエージェント",
+      "GoogleWorkspace",
+      "レゴ",
+      "Microsoft365",
+      "vercel",
+      "VercelConnect"
+    ],
+    "https://note.com/chic_wren6567/n/n7f7c815b26db": [
+      "生成AI",
+      "経営",
+      "DX",
+      "AIエージェント",
+      "業務改善",
+      "意思決定"
+    ],
+    "https://note.com/chic_wren6567/n/n0fd3c92161c1": [
+      "障害福祉",
+      "介護保険",
+      "再生医療",
+      "医療政策",
+      "医療機器安全"
     ]
   }
 }
