@@ -19,6 +19,7 @@
     "admin": "node scripts/admin-server.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "astro": "^6.3.7"
   }
 }
