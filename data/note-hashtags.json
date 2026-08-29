@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-22T05:50:42.806Z",
+  "fetchedAt": "2026-08-29T22:50:53.151Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -696,8 +696,8 @@
       "サービス提供責任者"
     ],
     "https://note.com/chic_wren6567/n/n6d5bf3b19a8b": [
-      "ChatGPT",
       "生成AI",
+      "ChatGPT",
       "Gemini",
       "ケアマネ",
       "介護ITインストラクター",
@@ -843,8 +843,8 @@
     "https://note.com/chic_wren6567/n/n6386f4863f27": [
       "訪問介護",
       "要介護",
-      "身体介護",
-      "生活援助"
+      "生活援助",
+      "身体介護"
     ],
     "https://note.com/chic_wren6567/n/n803671899347": [
       "戦略",
@@ -859,8 +859,8 @@
     ],
     "https://note.com/chic_wren6567/n/n947c9f3482c5": [
       "AI",
-      "ChatGPT",
       "生成AI",
+      "ChatGPT",
       "Gemini",
       "介護ITインストラクター",
       "訪問看護支援ツール"
@@ -925,8 +925,8 @@
       "API高額請求対策"
     ],
     "https://note.com/chic_wren6567/n/n3f65402fa886": [
-      "python",
       "AIエージェント",
+      "python",
       "個人開発",
       "プロンプトインジェクション",
       "LLMセキュリティ",
@@ -1087,8 +1087,8 @@
       "福祉DX",
       "国保連請求",
       "介護事業所DX",
-      "給付費請求書",
-      "AULClaimInsight"
+      "AULClaimInsight",
+      "給付費請求書"
     ],
     "https://note.com/chic_wren6567/n/nc50ac2680f7f": [
       "生産性向上",
@@ -1108,8 +1108,8 @@
       "福祉DX",
       "国保連請求",
       "介護事業所DX",
-      "給付費請求書",
-      "AULClaimInsight"
+      "AULClaimInsight",
+      "給付費請求書"
     ],
     "https://note.com/chic_wren6567/n/n2f7bac14513f": [
       "介護保険",
@@ -1485,8 +1485,8 @@
       "ChatGPT",
       "Claude",
       "AIエージェント",
-      "OpenAI",
       "ClaudeCode",
+      "OpenAI",
       "Anthropic",
       "Codex",
       "人的資本",
@@ -1655,8 +1655,8 @@
       "AULDoX"
     ],
     "https://note.com/chic_wren6567/n/n115dbb6eb938": [
-      "ChatGPT",
       "生成AI",
+      "ChatGPT",
       "AIエージェント",
       "OpenAI",
       "GPT56"
@@ -1845,8 +1845,8 @@
       "障害者雇用",
       "働き方を考える",
       "合理的配慮",
-      "ダイバーシティ推進",
-      "障害者雇用枠"
+      "障害者雇用枠",
+      "ダイバーシティ推進"
     ],
     "https://note.com/chic_wren6567/n/n5daf9d3e4814": [
       "介護経営",
@@ -1904,8 +1904,8 @@
       "福祉DX",
       "国保連請求",
       "介護事業所DX",
-      "給付費請求書",
-      "AULClaimInsight"
+      "AULClaimInsight",
+      "給付費請求書"
     ],
     "https://note.com/chic_wren6567/n/n20901123a112": [
       "AI活用",
@@ -1928,8 +1928,8 @@
       "福祉DX",
       "国保連請求",
       "介護事業所DX",
-      "給付費請求書",
-      "AULClaimInsight"
+      "AULClaimInsight",
+      "給付費請求書"
     ],
     "https://note.com/chic_wren6567/n/na0a23bdbc964": [
       "生成AI",
@@ -1942,8 +1942,8 @@
       "福祉DX",
       "国保連請求",
       "介護事業所DX",
-      "給付費請求書",
-      "AULClaimInsight"
+      "AULClaimInsight",
+      "給付費請求書"
     ],
     "https://note.com/chic_wren6567/n/n37892ef4d8be": [
       "厚労省",
@@ -2303,8 +2303,8 @@
       "行動変容",
       "ヘルパー",
       "要介護",
-      "身体介護",
-      "生活援助"
+      "生活援助",
+      "身体介護"
     ],
     "https://note.com/chic_wren6567/n/n80608bb43a44": [
       "障害者雇用",
@@ -3389,8 +3389,8 @@
       "介護",
       "医療",
       "倒産",
-      "賃上",
       "カスタマーハラスメント",
+      "賃上",
       "マイナ保険証",
       "障がい福祉",
       "医師の働き方改革",
@@ -3897,8 +3897,8 @@
       "QOS"
     ],
     "https://note.com/chic_wren6567/n/nf660909aa569": [
-      "ChatGPT",
       "生成AI",
+      "ChatGPT",
       "Gemini",
       "Claude",
       "企業向",
@@ -4986,8 +4986,8 @@
     "https://note.com/chic_wren6567/n/n91431da2f9c9": [
       "業務効率化",
       "生成AI活用",
-      "情報セキュリティ",
       "非エンジニア",
+      "情報セキュリティ",
       "AIガバナンス",
       "E2Eテスト"
     ],
@@ -5170,6 +5170,86 @@
       "再生医療",
       "医療政策",
       "医療機器安全"
+    ],
+    "https://note.com/chic_wren6567/n/nac9af2b8b6dd": [
+      "介護保険",
+      "介護サービス",
+      "eStat",
+      "介護給付費",
+      "第１号被保険者",
+      "介護統計"
+    ],
+    "https://note.com/chic_wren6567/n/nafd70340ff91": [
+      "医療DX",
+      "介護報酬改定",
+      "OTC類似薬",
+      "介護職員処遇改善",
+      "障害福祉報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/ne584f795223b": [
+      "DX",
+      "AIエージェント",
+      "業務改善",
+      "vercel",
+      "VercelConnect"
+    ],
+    "https://note.com/chic_wren6567/n/n55181b92ba94": [
+      "生成AI",
+      "障害福祉",
+      "LLMO",
+      "介護DX",
+      "介護福祉",
+      "介護と障害福祉サービスの通知文Wiki"
+    ],
+    "https://note.com/chic_wren6567/n/n1a0604a582bd": [
+      "医療DX",
+      "介護DX",
+      "acx",
+      "ambientai",
+      "HealthcareTransformation",
+      "HCX",
+      "CareTransformation",
+      "AmbientCareTransformation"
+    ],
+    "https://note.com/chic_wren6567/n/nef87895d09de": [
+      "生成AI",
+      "Claude",
+      "個人開発",
+      "Blender",
+      "AI開発",
+      "札幌DX",
+      "札幌プロダクト横丁",
+      "札幌4丁目プレイス",
+      "特別高等支援"
+    ],
+    "https://note.com/chic_wren6567/n/naea0836685c0": [
+      "生成AI",
+      "AI活用",
+      "言語化",
+      "業務改善",
+      "AIリテラシー"
+    ],
+    "https://note.com/chic_wren6567/n/n564060a0163d": [
+      "生成AI",
+      "AI活用",
+      "プロンプト",
+      "業務改善",
+      "AIリテラシー"
+    ],
+    "https://note.com/chic_wren6567/n/ncdba27030431": [
+      "AIエージェント",
+      "vercel",
+      "HumanInTheLoop",
+      "AIパイプライン",
+      "HermetheaPips",
+      "パイプラインジェネレーター"
+    ],
+    "https://note.com/chic_wren6567/n/n923c152ab958": [
+      "生成AI",
+      "AI活用",
+      "DX",
+      "業務改善",
+      "AIライティング"
     ]
   }
 }
