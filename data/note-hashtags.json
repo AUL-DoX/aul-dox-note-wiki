@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-30T05:11:10.382Z",
+  "fetchedAt": "2026-09-01T20:15:18.914Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -2040,8 +2040,8 @@
     ],
     "https://note.com/chic_wren6567/n/n88f1a7333f0a": [
       "生活保護",
-      "障がい者",
       "障害年金",
+      "障がい者",
       "就労継続支援A型事業所"
     ],
     "https://note.com/chic_wren6567/n/n563511487fea": [
@@ -5171,14 +5171,6 @@
       "医療政策",
       "医療機器安全"
     ],
-    "https://note.com/chic_wren6567/n/nac9af2b8b6dd": [
-      "介護保険",
-      "介護サービス",
-      "eStat",
-      "介護給付費",
-      "第１号被保険者",
-      "介護統計"
-    ],
     "https://note.com/chic_wren6567/n/nafd70340ff91": [
       "医療DX",
       "介護報酬改定",
@@ -5261,6 +5253,24 @@
       "正社員",
       "Microsoft365",
       "ITガバナンス"
+    ],
+    "https://note.com/chic_wren6567/n/n2a03896cc546": [
+      "AI",
+      "生成AI",
+      "カウンセリング",
+      "キャリアコンサルタント",
+      "業務改善",
+      "1on1",
+      "FDE",
+      "プロファイル",
+      "HermetheaPips"
+    ],
+    "https://note.com/chic_wren6567/n/n88838eca8aa7": [
+      "生成AI",
+      "AI活用",
+      "仕事術",
+      "マネジメント",
+      "AIエージェント"
     ]
   }
 }
