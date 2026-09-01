@@ -1,0 +1,129 @@
+<div class="aul-report" style="background:#eef2f6"><div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h1{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:.01em}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ul,.aul-summary-web .aul-sum-doc ol{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.neg{color:var(--clay);font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">介護サービス　経営分析サマリー</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">介護サービス</span><span class="aul-sw-tag">介護保険事業状況報告（全国計）</span></div>
+</div>
+<article class="aul-sum-doc">
+<h1>エグゼクティブサマリー</h1><h2>介護サービス利用状況データを読む　第１７表　所得段階別第１号被保険者数（当年度末現在）</h2><blockquote class="aul-sum-quote"><strong>出典</strong>：令和６年度介護保険事業状況報告（年報）第１７表　所得段階別第１号被保険者数.xlsx　介護保険事業状況報告（全国計）</blockquote><blockquote class="aul-sum-quote"><strong>生成日時</strong>：2026-09-01 18:23</blockquote><hr class="aul-sum-hr"><h2>概要</h2><p>本サマリーは、令和６年度介護保険事業状況報告（年報）第１７表　所得段階別第１号被保険者数.xlsx（介護保険事業状況報告（全国計））をもとにした分析である。</p><p>「十分の四・五五」を筆頭に利用が集中するサービスを確認し、要介護区分間の差が大きい項目は重度化対応の計画に活用してください。</p><hr class="aul-sum-hr"><h2>主要ポイント</h2><h3>1. 利用規模の上位サービス（年度末現在_x000D_</h3><p>被保険者数）</p><ul><li><strong>データ</strong>：上位3項目は「十分の四・五五」、「十分の十三」、「十分の十」です。</li><li><strong>示唆</strong>：利用が集中するサービスは地域ニーズの中心であり、供給量・質の確保が特に重要です。</li></ul><h3>2. データ品質</h3><ul><li><strong>データ</strong>：全56行を解析しました。欠損セル数は0件です。</li><li><strong>示唆</strong>：欠損は限定的でデータ品質は良好です。</li></ul><hr class="aul-sum-hr"><h2>注記</h2><ul><li>本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。</li><li>解析行数: 56行（明細: 0行）</li><li>ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</li></ul>
+<p class="aul-sw-foot">生成日時: 2026-09-01 18:23</p>
+</article>
+</div><div style="height:22px"></div><!-- AUL e-Stat Pipeline / 介護サービス利用状況データを読む　第１７表　所得段階別第１号被保険者数（当年度末現在） -->
+<div class="aul-estat-block" id="aul-bfaea610">
+<style>
+#aul-bfaea610{font-family:'Noto Sans JP','Helvetica Neue',sans-serif;max-width:900px;margin:0 auto;padding:0 12px;color:#1e293b}
+#aul-bfaea610 h3{font-size:1.05rem;font-weight:700;border-left:4px solid #2563eb;padding-left:10px;margin:28px 0 12px;color:#1e3a5f}
+.aul-summary{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px 18px;margin-bottom:6px;line-height:1.85;font-size:.9rem;color:#1e3a5f}
+.aul-kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 26px}
+@media(max-width:640px){.aul-kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.aul-kpi-card{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 10px;text-align:center}
+.aul-kpi-label{font-size:.72rem;color:#64748b;margin-bottom:5px}
+.aul-kpi-value{font-size:1.3rem;font-weight:800;color:#1d4ed8;line-height:1.1}
+.aul-kpi-unit{font-size:.68rem;color:#94a3b8;margin-top:3px}
+.aul-card-wide{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:10px 0}
+.aul-insights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+@media(max-width:640px){.aul-insights{grid-template-columns:1fr}}
+.aul-insight-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:13px 15px}
+.aul-insight-title{font-weight:700;color:#1e3a5f;font-size:.88rem;margin-bottom:5px}
+.aul-insight-body{font-size:.83rem;color:#374151;line-height:1.75}
+.aul-tbl{width:100%;border-collapse:collapse;font-size:.76rem;margin:6px 0}
+.aul-tbl th{background:#1e3a5f;color:#fff;padding:7px 9px;text-align:center;white-space:nowrap}
+.aul-tbl td{padding:5px 9px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
+.aul-tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+.aul-tbl tr:nth-child(even) td{background:#f8faff}
+.aul-src{font-size:.73rem;color:#94a3b8;margin-top:22px;border-top:1px solid #e2e8f0;padding-top:9px}
+</style>
+
+<div class="aul-summary"><strong>介護サービス利用状況データを読む　第１７表　所得段階別第１号被保険者数（当年度末現在）</strong><br>「十分の四・五五」を筆頭に利用が集中するサービスを確認し、要介護区分間の差が大きい項目は重度化対応の計画に活用してください。</div>
+
+<h3>主要指標（年度末現在_x000D_
+被保険者数上位3項目）</h3>
+<div class="aul-kpi-grid">
+<div class="aul-kpi-card"><div class="aul-kpi-label">十分の四・五五</div><div class="aul-kpi-value">5,768,601</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">十分の十三</div><div class="aul-kpi-value">5,316,639</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">十分の十</div><div class="aul-kpi-value">4,848,646</div><div class="aul-kpi-unit">人</div></div>
+</div>
+
+<h3>上位サービス利用規模（年度末現在_x000D_
+被保険者数・人）</h3>
+<div class="aul-card-wide"><canvas id="aulbfaea610_c1"></canvas></div>
+
+<h3>上位3項目の区分別比較</h3>
+<div class="aul-card-wide"><canvas id="aulbfaea610_c2"></canvas></div>
+
+<h3>分析インサイト</h3>
+<div class="aul-insights">
+<div class="aul-insight-card"><div class="aul-insight-title">利用規模の上位サービス（年度末現在_x000D_
+被保険者数）</div><div class="aul-insight-body">上位3項目は「十分の四・五五」、「十分の十三」、「十分の十」です。　利用が集中するサービスは地域ニーズの中心であり、供給量・質の確保が特に重要です。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">データ品質</div><div class="aul-insight-body">全56行を解析しました。欠損セル数は0件です。　欠損は限定的でデータ品質は良好です。</div></div>
+</div>
+
+<h3>上位10項目（年度末現在_x000D_
+被保険者数順）</h3><div style="overflow-x:auto"><table class="aul-tbl"><thead><tr><th>項目</th><th>年度末現在_x000D_
+被保険者数<br><small>人</small></th></tr></thead><tbody>
+<tr><td>第１段階 / 十分の四・五五</td><td class="num">5,768,601</td></tr>
+<tr><td>第７段階 / 十分の十三</td><td class="num">5,316,639</td></tr>
+<tr><td>第５段階 / 十分の十</td><td class="num">4,848,646</td></tr>
+<tr><td>第６段階 / 十分の十二</td><td class="num">4,632,076</td></tr>
+<tr><td>第６段階</td><td class="num">4,367,314</td></tr>
+<tr><td>第７段階</td><td class="num">4,041,324</td></tr>
+<tr><td>第４段階 / 十分の九</td><td class="num">3,658,828</td></tr>
+<tr><td>第２段階 / 十分の六・八五</td><td class="num">3,298,280</td></tr>
+<tr><td>第３段階 / 十分の六・九</td><td class="num">2,872,746</td></tr>
+<tr><td>第８段階 / 十分の十五</td><td class="num">2,611,799</td></tr>
+</tbody></table></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  new Chart(document.getElementById('aulbfaea610_c1'),{type:'bar',data:{labels:["十分の四・五五", "十分の十三", "十分の十", "十分の十二", "第６段階", "第７段階", "十分の九", "十分の六・八五"],datasets:[{label:'年度末現在_x000D_
+被保険者数',data:[5768601.0, 5316639.0, 4848646.0, 4632076.0, 4367314.0, 4041324.0, 3658828.0, 3298280.0],backgroundColor:'#2563eb'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  new Chart(document.getElementById('aulbfaea610_c2'),{type:'bar',data:{labels:["十分の四・五五", "十分の十三", "十分の十"],datasets:[]},options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true}}}});
+})();
+</script>
+
+<p class="aul-src">出典: 介護保険事業状況報告（全国計）　原表: 令和６年度介護保険事業状況報告（年報）第１７表　所得段階別第１号被保険者数.xlsx<br>※本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。<br>※解析行数: 56行（明細: 0行）<br>※ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</p>
+</div></div>
