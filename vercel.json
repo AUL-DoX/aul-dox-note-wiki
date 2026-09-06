@@ -15,6 +15,51 @@
       "destination": "/data/kaigo/kaigo-keiei-gaikyou-dai38/",
       "permanent": true,
       "source": "/:section(%[Ee]7%[Bb]5%8[Cc]%[Ee]5%96%[Bb]6%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee]3%81%[Aa]7%[Ee]8%[Aa]6%8[Bb]%[Ee]3%81%88%[Ee]3%82%8[Bb]%[Ee]5%8[Cc]%96)/:article(%[Ee]5%[Aa]4%9[Cc]%[Ee]9%96%93%[Ee]5%[Aa][Ff]%[Bb][Ee]%[Ee]5%[Bb][Ff]%9[Cc]%[Ee]5%9[Ee]%8[Bb]%[Ee]8%[Aa]8%[Aa][Aa]%[Ee]5%95%8[Ff]%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]7-%[Ee]5%9[Cc]%[Bb]0%[Ee]5%9[Ff]%9[Ff]%[Ee]5%8[Cc]%[Bb][Aa]%[Ee]5%88%86%[Ee]5%88%[Aa]5%[Ee]3%81%[Aa][Ee]%[Ee]5%8[Ff]%8[Ee]%[Ee]6%94%[Aa][Ff]%[Ee]6%[Aa][Ff]%94%[Ee]8%[Bb][Cc]%83%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]4%[Bb][Bb]%[Aa]4%[Ee]5%92%8[Cc]6)/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-service-use-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%92%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]%[Ee]3%81%[Aa][Ee]%[Ee]5%88%[Aa]9%[Ee]7%94%[Aa]8%[Ee]5%[Aa][Ee]%9[Ff]%[Ee]6%85%8[Bb]%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]9%80%9[Aa]%[Ee]6%89%80%[Ee]5%9[Ee]%8[Bb]%[Ee]3%81%8[Cc]7%[Ee]5%89%[Bb]2%[Ee]3%83%[Bb][Bb])/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-business-efficiency-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%97%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]%[Ee]3%81%[Aa][Ee]%[Ee]7%[Bb]5%8[Cc]%[Ee]5%96%[Bb]6%[Ee]5%8[Aa]%[Bb]9%[Ee]7%8[Ee]%87%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]9%80%9[Aa]%[Ee]6%89%80%[Ee]5%9[Ee]%8[Bb]vs%[Ee]8%[Aa]8%[Aa][Aa])/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-unit-efficiency-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%96%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]%[Ee]3%81%[Aa][Ee]%[Ee]5%8[Dd]%98%[Ee]4%[Bb][Dd]%8[Dd]%[Ee]5%8[Aa]%[Bb]9%[Ee]7%8[Ee]%87%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]9%80%9[Aa]%[Ee]6%89%80%[Ee]5%9[Ee]%8[Bb]%[Ee]9%9[Bb]%86)/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-prefecture-cost-gap-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%95%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]%[Ee]8%[Bb]2%[Bb][Bb]%[Ee]7%94%[Aa]8%[Ee]9%[Aa]1%8[Dd]%[Ee]3%81%[Aa][Ee]%[Ee]9%83%[Bb][Dd]%[Ee]9%81%93%[Ee]5%[Bb][Aa]%9[Cc]%[Ee]7%9[Cc]%8[Cc]%[Ee]6%[Aa]0%[Bb][Cc]%[Ee]5%[Bb]7%[Aa][Ee]1-4%[Ee]5%80%8[Dd])/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-cost-per-user-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%94%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]1%[Ee]4%[Bb][Aa]%[Bb][Aa]%[Ee]5%[Bb][Dd]%93%[Ee]3%81%9[Ff]%[Ee]3%82%8[Aa]%[Ee]8%[Bb]2%[Bb][Bb]%[Ee]7%94%[Aa]8%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]9%80%9[Aa]%[Ee]6%89%80%[Ee]5%9[Ee]%8[Bb])/"
+    },
+    {
+      "destination": "/data/kaigo/sogo-jigyo-beneficiaries-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%93%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]7%[Bb]7%8[Ff]%[Ee]5%90%88%[Ee]4%[Bb][Aa]%8[Bb]%[Ee]6%[Aa]5%[Aa][Dd]%[Ee]5%8[Ff]%97%[Ee]7%[Bb]5%[Aa]6%[Ee]8%80%8595%[Ee]4%[Bb]8%87%[Ee]4%[Bb][Aa]%[Bb][Aa]%[Ee]3%80%8185%[Ee]6%[Aa][Dd]%[Bb]3%[Ee]4%[Bb][Bb]%[Aa]5%[Ee]4%[Bb]8%8[Aa]%[Ee]3%81%8[Cc]5%[Ee]5%89%[Bb]2)/"
+    },
+    {
+      "destination": "/data/kaigo/care-costs-by-service-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]2%91%[Bb]32026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]7%[Ee]8%[Bb]2%[Bb][Bb]%[Ee]7%94%[Aa]81%[Ee]5%85%86%[Ee]5%86%86%[Ee]7%[Aa][Aa]%81%[Ee]7%[Aa]0%[Bb]4%[Ee]3%80%81%[Ee]6%96%[Bb][Dd]%[Ee]8%[Aa]8%[Aa][Dd]%[Ee]7%[Bb]3%[Bb][Bb]32%[Ee]3%83%[Bb][Bb]%[Ee]8%[Aa]8%[Aa][Aa]%[Ee]5%95%8[Ff]%[Ee]9%80%9[Aa]%[Ee]6%89%80%[Ee]3%81%8[Cc])/"
+    },
+    {
+      "destination": "/data/kaigo/care-certification-demographics-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]2%91%[Bb]2%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]7%[Ee]8%[Aa][Aa]%8[Dd]%[Ee]5%[Aa][Ee]%9[Aa]761%[Ee]4%[Bb]8%87%[Ee]4%[Bb][Aa]%[Bb][Aa]%[Ee]3%80%902026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%80%91%[Ee]5%[Aa]5%[Bb]3%[Ee]6%80%[Aa]767%[Ee]3%83%[Bb][Bb]85%[Ee]6%[Aa][Dd]%[Bb]3%[Ee]3%83%94%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Aa][Ff]%[Ee]3%83%[Bb][Bb]%[Ee]9%87%8[Dd])/"
+    },
+    {
+      "destination": "/data/kaigo/home-care-limit-utilization-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]2%91%[Bb]12026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%83%[Bb][Bb]%[Ee]8%[Aa]6%81%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]75%[Ee]3%81%[Aa][Ee]%[Ee]5%88%[Aa]9%[Ee]7%94%[Aa]8%[Ee]7%8[Ee]%8767-5%[Ee]3%80%81%[Ee]5%[Bb]1%85%[Ee]5%[Aa][Ee]%85%[Ee]3%82%[Bb]5%[Ee]3%83%[Bb][Cc]%[Ee]3%83%93%[Ee]3%82%[Bb]9%[Ee]9%99%90%[Ee]5%[Bb][Aa]%[Aa]6%[Ee]9%[Aa]1%8[Dd])/"
     }
   ]
 }

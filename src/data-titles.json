@@ -1,4 +1,13 @@
 {
+  "dashboards/kaigo/sogo-jigyo-service-use-2026-02": "【2026年2月】総合事業の利用実態｜通所型が7割・生活支援は未活用",
+  "dashboards/kaigo/sogo-jigyo-business-efficiency-2026-02": "【2026年2月】総合事業の経営効率分析｜通所型vs訪問型の収益格差2倍",
+  "dashboards/kaigo/sogo-jigyo-unit-efficiency-2026-02": "【2026年2月】総合事業の単位効率分析｜通所型集中と報酬格差の実態",
+  "dashboards/kaigo/sogo-jigyo-prefecture-cost-gap-2026-02": "【2026年2月】総合事業費用額の都道府県格差1.4倍、経営戦略への影響分析",
+  "dashboards/kaigo/sogo-jigyo-cost-per-user-2026-02": "【2026年2月】総合事業1人当たり費用分析｜通所型と要支援2が収益の鍵",
+  "dashboards/kaigo/sogo-jigyo-beneficiaries-2026-02": "【2026年2月】総合事業受給者95万人、85歳以上が5割超の実態",
+  "dashboards/kaigo/care-costs-by-service-2026-02": "2026年2月介護費用1兆円突破、施設系32%・訪問通所が同規模で拮抗",
+  "dashboards/kaigo/care-certification-demographics-2026-02": "介護認定761万人【2026年2月】女性67%・85歳ピーク・重度258万人の実態分析",
+  "dashboards/kaigo/home-care-limit-utilization-2026-02": "2026年2月・要介護5の利用率67.5%、居宅サービス限度額充足の実態と課題",
   "dashboards/kaigo/r6-kaigo-zenkokukei-dai1": "第１表　第１号被保険者のいる世帯数（介護保険事業状況報告・全国計）",
   "dashboards/kaigo/r6-kaigo-zenkokukei-dai10": "第10表　高額医療合算介護（介護予防）サービス費（介護保険事業状況報告・全国計）",
   "dashboards/kaigo/r6-kaigo-zenkokukei-dai11-1": "第11-1表　特定入所者介護サービス費（総数）（介護保険事業状況報告・全国計）",
