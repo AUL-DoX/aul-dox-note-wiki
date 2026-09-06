@@ -24,10 +24,88 @@ const contact = contacts[Astro.props.kind];
   <p class="eyebrow">Contact desk</p>
   <h1 id="contact-route-heading">{contact.title}</h1>
   <p class="lead">{contact.description}</p>
-  <div class="contact-form-status">
-    <h2>現在のご連絡方法</h2>
-    <p>お問い合わせフォームは準備中です。受付開始までしばらくお待ちください。</p>
-  </div>
+  <form class="contact-form" action="/api/contact" method="post" data-contact-form>
+    <input type="hidden" name="type" value={Astro.props.kind} />
+
+    <div class="contact-field">
+      <label for="contact-name">お名前 <span aria-hidden="true">必須</span></label>
+      <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-email">メールアドレス <span aria-hidden="true">必須</span></label>
+      <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-organization">所属・事業所名 <small>任意</small></label>
+      <input id="contact-organization" name="organization" type="text" autocomplete="organization" maxlength="200" />
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-subject">件名 <span aria-hidden="true">必須</span></label>
+      <input id="contact-subject" name="subject" type="text" maxlength="200" required />
+    </div>
+
+    <div class="contact-field">
+      <label for="contact-message">お問い合わせ内容 <span aria-hidden="true">必須</span></label>
+      <textarea id="contact-message" name="message" rows="9" maxlength="5000" required></textarea>
+    </div>
+
+    <div class="contact-honeypot" aria-hidden="true">
+      <label for="contact-website">Webサイト</label>
+      <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <label class="contact-consent" for="contact-privacy">
+      <input id="contact-privacy" name="privacy" type="checkbox" required />
+      <span><a href="https://aul-dox.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意します（必須）</span>
+    </label>
+
+    <button class="contact-submit" type="submit">送信する</button>
+    <p class="contact-result" data-contact-result role="status" aria-live="polite" hidden></p>
+  </form>
   <p><a href="/お問い合わせ/">お問い合わせ窓口の一覧へ戻る</a></p>
 </section>
-<!-- TODO: 送信サービス決定後、送信処理と入力フォームをこの共通コンポーネントへ実装する。 -->
+
+<script>
+  const form = document.querySelector('[data-contact-form]');
+
+  if (form instanceof HTMLFormElement) {
+    const result = form.querySelector('[data-contact-result]');
+    const submit = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!(result instanceof HTMLElement) || !(submit instanceof HTMLButtonElement)) return;
+
+      result.hidden = false;
+      result.dataset.state = 'pending';
+      result.textContent = '送信しています…';
+      submit.disabled = true;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.privacy = data.privacy === 'on';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const payload = await response.json();
+
+        if (!response.ok || !payload.ok) throw new Error(payload.message || '送信に失敗しました。');
+
+        result.dataset.state = 'success';
+        result.textContent = payload.message;
+        form.reset();
+      } catch (error) {
+        result.dataset.state = 'error';
+        result.textContent = error instanceof Error ? error.message : '送信に失敗しました。時間をおいて再度お試しください。';
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  }
+</script>
