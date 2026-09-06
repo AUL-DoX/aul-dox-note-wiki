@@ -917,9 +917,11 @@ h3 {
 }
 
 /* AUL DoX shared monochrome identity */
-:root { --bg: #fafafa; --text: #202020; --muted: #595959; --border: #d8d8d8; --accent: #333; --accent-dark: #111; --soft: #eee; --green: #555; }
-a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
-a:hover { text-decoration-thickness: 2px; }
+:root { --bg: #fafafa; --text: #111111; --muted: #333333; --border: #d8d8d8; --accent: #24523a; --accent-dark: #173827; --soft: #eee; --green: #24523a; }
+body { color: var(--text); font-size: 17px; line-height: 1.7; }
+a { color: #24523a; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: #173827; text-decoration-thickness: 2px; }
+.wiki-card a, .wiki-index-item a, .note-item h2 a, .sidebar-list a, .sidebar-tags a, .footer-links a { color: #24523a; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #222; outline-offset: 4px; }
 .site-header { position: static; background: #fff; backdrop-filter: none; }
 .header-inner { min-height: 128px; padding-block: 24px; flex-direction: row; align-items: center; }
@@ -928,7 +930,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .ai-button { display: grid; place-items: center; flex: 0 0 54px; height: 54px; border: 1px solid #222; border-radius: 50%; background: #222; color: #fff; font-weight: 700; }
 .owl-hero { max-width: 1600px; margin-inline: auto; background: #eee; }
 .owl-hero img { display: block; width: 100%; height: auto; object-fit: cover; filter: grayscale(1); }
-.primary-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 40px; padding-block: 22px; font-weight: 700; }
+.primary-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 40px; padding-block: 22px; color: #111; font-size: 1.125rem; font-weight: 700; }
+.primary-nav a { color: #24523a; }
 .primary-nav a[aria-current="page"] { text-decoration-thickness: 2px; }
 .home-intro { text-align: center; padding-block: 32px; }
 .home-intro p { margin: 0; font-size: clamp(1rem, 2vw, 1.3rem); line-height: 2; }
@@ -942,13 +945,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .area-number { font-size: .8rem; color: var(--muted); }
 .suite-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .availability-note { padding: 18px 22px; border-left: 3px solid #444; background: #eee; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: .85rem; }
+.contact-page { max-width: 960px; margin-inline: auto; }
+.contact-page > section { margin-top: 48px; }
+.contact-page h2 { margin-bottom: 16px; }
+.contact-page h3 { margin-top: 24px; }
+.contact-page p, .contact-page li, .contact-form-panel p { color: #1f1f1f; }
+.contact-page li + li { margin-top: 7px; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+.contact-card { padding: 24px; border: 1px solid var(--border); background: #fff; }
+.contact-card h3 { margin-top: 0; font-size: 1.25rem; }
+.contact-card p { margin-bottom: 0; }
+.contact-card p + p { margin-top: 14px; }
+.contact-email { font-size: 1.05rem; font-weight: 700; overflow-wrap: anywhere; }
+.contact-guidance, .contact-form-status { margin-top: 28px; padding: 22px 24px; border-left: 4px solid #24523a; background: #eee; }
+.contact-form-panel { padding-block: 24px; }
+.contact-form-status h2 { margin-bottom: 10px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 1rem; }
 .site-footer { background: #f0f0f0; }
 .wiki-search { top: 0; }
 @media (max-width: 640px) {
   .header-inner { gap: 12px; min-height: 112px; }
   .brand-tagline { max-width: 29em; font-size: .75rem; }
-  .primary-nav { gap: 12px 22px; font-size: .9rem; }
+  .primary-nav { gap: 12px 22px; font-size: 1rem; }
+  .contact-grid { grid-template-columns: 1fr; }
   .area-grid { grid-template-columns: 1fr; }
   .area-card { padding: 24px; }
   .desktop-break { display: none; }

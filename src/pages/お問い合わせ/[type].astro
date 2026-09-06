@@ -1,0 +1,17 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { type: 'general' }, props: { type: 'general', title: '総合窓口', description: 'その他のお問い合わせ、相談先が分からない場合の窓口です。' } },
+    { params: { type: 'welfare' }, props: { type: 'welfare', title: '福祉・DX伴走支援', description: '医療・介護・障がい福祉のDX、業務改善、Google Workspace・AI活用に関する窓口です。' } },
+    { params: { type: 'lab' }, props: { type: 'lab', title: 'ツール開発・データ分析', description: 'AI・GAS・Webツール開発、業務ツール、データ分析に関する窓口です。' } },
+  ];
+}
+
+const { type, title, description } = Astro.props as { type: 'general' | 'welfare' | 'lab'; title: string; description: string };
+---
+<WikiLayout title={`${title} | お問い合わせ | AUL DoX`} description={description}>
+  <ContactForm kind={type} />
+</WikiLayout>

@@ -1,0 +1,60 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+const contacts = [
+  { title: '総合窓口', description: 'その他のお問い合わせ、相談先が分からない場合', email: 'info@aul-dox.jp', href: '/お問い合わせ/general/' },
+  { title: '福祉・DX伴走支援', description: '医療・介護・障がい福祉のDX、業務改善、Google Workspace活用、AI活用、伴走支援など', email: 'welfare@aul-dox.jp', href: '/お問い合わせ/welfare/' },
+  { title: 'ツール開発・データ分析', description: 'AI・GAS・Webツール開発、業務ツール、データ分析・データアナリティクスなど', email: 'lab@aul-dox.jp', href: '/お問い合わせ/lab/' },
+];
+---
+<WikiLayout wide title="お問い合わせ | AUL DoX" description="介護・障がい福祉のDX、Google Workspaceによる業務改善、AI・ツール開発、データ分析についてAUL DoXへ相談できる窓口です。">
+  <article class="contact-page">
+    <header class="page-header">
+      <p class="eyebrow">Contact</p>
+      <h1>お問い合わせ</h1>
+      <p class="lead">AUL DoXでは、介護施設・介護事業所向けに、業務効率化、DX、AI活用、Google Workspaceを使った業務改善のご相談を受け付けています。</p>
+    </header>
+
+    <section aria-labelledby="support-heading">
+      <h2 id="support-heading">介護現場の実務に沿ったDX支援</h2>
+      <p>介護現場のDXは、ツールを入れるだけではうまくいきません。</p>
+      <p>記録、申し送り、情報共有、シフト、集計、書類整理、加算準備など、日々の業務の流れを整理したうえで、現場で続けられる仕組みにすることが重要です。</p>
+      <p>AUL DoXでは、訪問介護、定期巡回・随時対応型訪問介護看護における管理者およびサービス提供責任者の経験をもとに、介護現場の実務に沿ったサポートを行います。</p>
+      <h3>主なご相談内容</h3>
+      <ul>
+        <li>Google Workspaceを使った業務改善</li>
+        <li>Googleフォーム、スプレッドシート、ドライブの活用</li>
+        <li>紙やExcelで行っている業務の整理</li>
+        <li>記録、申し送り、情報共有の見直し</li>
+        <li>管理者、リーダー層の業務負担軽減</li>
+        <li>生産性向上推進体制加算を見据えた準備</li>
+        <li>AI活用、DX化に関する相談</li>
+        <li>現場で使いやすい簡易ツール作成</li>
+      </ul>
+      <p>「何から始めればよいか分からない」という段階でも問題ありません。現在の業務内容を確認しながら、どこから整理すると効果が出やすいかを一緒に考えます。</p>
+    </section>
+
+    <section aria-labelledby="service-area-heading">
+      <h2 id="service-area-heading">対応地域・支援方法</h2>
+      <p><strong>札幌市内は、一部訪問対応が可能です。札幌市外の場合も、フルリモートで対応できます。</strong></p>
+      <p>フルリモートの場合は、1日2時間を目安に、オンラインで業務整理、Google Workspaceの設定、資料作成、運用相談などを行います。</p>
+      <p>なお、生産性向上推進体制加算については、加算取得を保証するものではありません。サービス種別、体制、届出内容、自治体・保険者の確認によって判断されるため、AUL DoXでは、加算取得を見据えた業務改善、記録整理、集計の仕組みづくり、運用体制の整備をサポートします。</p>
+    </section>
+
+    <section aria-labelledby="desks-heading">
+      <h2 id="desks-heading">ご相談内容に近い窓口をお選びください</h2>
+      <p>相談先が分からない場合は、総合窓口へお問い合わせください。</p>
+      <div class="contact-grid">
+        {contacts.map((contact) => (
+          <section class="contact-card">
+            <h3><a href={contact.href}>{contact.title}</a></h3>
+            <p>{contact.description}</p>
+            <p class="contact-email"><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+            <p><a href={contact.href}>この窓口の案内を見る</a></p>
+          </section>
+        ))}
+      </div>
+      <p class="contact-guidance">「業務改善を始めたいけれど、何から手をつければよいか分からない」という段階でも、お気軽にご相談ください。内容を確認したうえで、対応できる範囲や進め方をご案内します。</p>
+    </section>
+  </article>
+</WikiLayout>
