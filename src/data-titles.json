@@ -1,5 +1,4 @@
 {
-  "dashboards/kaigo/20260906-7_report": "要介護（要支援）認定者数　男女計　65〜70歳（令和６年度・都道府県別）",
   "dashboards/kaigo/care-certification-demographics-2026-02": "介護認定761万人【2026年2月】女性67%・85歳ピーク・重度258万人の実態分析",
   "dashboards/kaigo/care-costs-by-service-2026-02": "2026年2月介護費用1兆円突破、施設系32%・訪問通所が同規模で拮抗",
   "dashboards/kaigo/home-care-limit-utilization-2026-02": "2026年2月・要介護5の利用率67.5%、居宅サービス限度額充足の実態と課題",
@@ -53,5 +52,6 @@
   "dashboards/kaigo/sogo-jigyo-prefecture-cost-gap-2026-02": "【2026年2月】総合事業費用額の都道府県格差1.4倍、経営戦略への影響分析",
   "dashboards/kaigo/sogo-jigyo-service-use-2026-02": "【2026年2月】総合事業の利用実態｜通所型が7割・生活支援は未活用",
   "dashboards/kaigo/sogo-jigyo-unit-efficiency-2026-02": "【2026年2月】総合事業の単位効率分析｜通所型集中と報酬格差の実態",
-  "dashboards/kaigo/supplementary-benefits-2026-02": "2026年2月・特養が補足給付の67%占有、184億円の食費・滞在費補助の実態"
+  "dashboards/kaigo/supplementary-benefits-2026-02": "2026年2月・特養が補足給付の67%占有、184億円の食費・滞在費補助の実態",
+  "dashboards/keiei/20260906-7_report": "要介護（要支援）認定者数　男女計　65〜70歳（令和６年度・都道府県別）"
 }
