@@ -60,6 +60,11 @@
       "destination": "/data/kaigo/home-care-limit-utilization-2026-02/",
       "permanent": true,
       "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]2%91%[Bb]12026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%83%[Bb][Bb]%[Ee]8%[Aa]6%81%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]75%[Ee]3%81%[Aa][Ee]%[Ee]5%88%[Aa]9%[Ee]7%94%[Aa]8%[Ee]7%8[Ee]%8767-5%[Ee]3%80%81%[Ee]5%[Bb]1%85%[Ee]5%[Aa][Ee]%85%[Ee]3%82%[Bb]5%[Ee]3%83%[Bb][Cc]%[Ee]3%83%93%[Ee]3%82%[Bb]9%[Ee]9%99%90%[Ee]5%[Bb][Aa]%[Aa]6%[Ee]9%[Aa]1%8[Dd])/"
+    },
+    {
+      "destination": "/data/kaigo/supplementary-benefits-2026-02/",
+      "permanent": true,
+      "source": "/:section(%[Ee]5%8[Cc]%[Bb][Bb]%[Ee]7%99%82%[Ee]7%[Aa]6%8[Ff]%[Ee]7%[Aa]5%89%[Ee]3%81%[Aa][Ee]%[Ee]3%83%87%[Ee]3%83%[Bb][Cc]%[Ee]3%82%[Bb][Ff]%[Ee]3%82%[Bb]5%[Ee]3%82%[Aa]4%[Ee]3%82%[Aa]8%[Ee]3%83%[Bb]3%[Ee]3%82%[Bb]9-2)/:article(%[Ee]3%89%912026%[Ee]5%[Bb]9%[Bb]42%[Ee]6%9[Cc]%88%[Ee]3%83%[Bb][Bb]%[Ee]7%89%[Bb]9%[Ee]9%[Aa]4%8[Aa]%[Ee]3%81%8[Cc]%[Ee]8%[Aa]3%9[Cc]%[Ee]8%[Bb]6%[Bb]3%[Ee]7%[Bb]5%[Aa]6%[Ee]4%[Bb][Bb]%98%[Ee]3%81%[Aa][Ee]67%[Ee]5%8[Dd]%[Aa]0%[Ee]6%9[Cc]%89%[Ee]3%80%81184%[Ee]5%84%84%[Ee]5%86%86%[Ee]3%81%[Aa][Ee]%[Ee]9%[Aa]3%9[Ff]%[Ee]8%[Bb]2%[Bb][Bb]%[Ee]3%83%[Bb][Bb])/"
     }
   ]
 }
