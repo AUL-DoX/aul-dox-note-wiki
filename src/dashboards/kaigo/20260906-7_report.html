@@ -1,0 +1,126 @@
+<div class="aul-report" style="background:#eef2f6"><div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h1{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:.01em}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ul,.aul-summary-web .aul-sum-doc ol{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.neg{color:var(--clay);font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）　（その１）</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">総数</span></div>
+</div>
+<article class="aul-sum-doc">
+<h1>エグゼクティブサマリー</h1><h2>介護サービス利用状況データを読む　総数</h2><blockquote class="aul-sum-quote"><strong>出典</strong>：04-1-1t_総数.xlsx　第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）　（その１）</blockquote><blockquote class="aul-sum-quote"><strong>生成日時</strong>：2026-09-06 15:26</blockquote><hr class="aul-sum-hr"><h2>概要</h2><p>本サマリーは、04-1-1t_総数.xlsx（第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）　（その１））をもとにした分析である。</p><p>実数では「東京都」が最多ですが、比較すべきは人口を揃えた比率です。自地域が全国平均のどちら側にあるかを確認し、全国平均ではなく水準の近い地域を計画の参照先にしてください。</p><hr class="aul-sum-hr"><h2>主要ポイント</h2><h3>1. 実数が多い地域（総数 / 要支援１）</h3><ul><li><strong>データ</strong>：上位3項目は「東京都」、「大阪府」、「北海道」です。</li><li><strong>示唆</strong>：ただし実数の多さは人口規模の大きさを映している面が大きく、これだけでは地域の実態を比べたことになりません。人口を揃えた比率で見る必要があります。</li></ul><h3>2. 実数と人口比で評価が変わる地域</h3><ul><li><strong>データ</strong>：「埼玉県」は実数では4位ですが、第１号被保険者1,000人あたりに直すと39位です。人口規模を揃えると、実数の順位より低く位置づけられます。</li><li><strong>示唆</strong>：実数のランキングは人口規模の大きさを映しているだけの場合があります。自地域と他地域を比べるときは、人口を揃えた比率で見ないと実態を読み違えます。</li></ul><h3>3. 人口比で見た上位・下位（第１号被保険者1,000人あたり）</h3><ul><li><strong>データ</strong>：第１号被保険者1,000人あたりで最も多いのは「大阪府」の247.3（全国平均の1.23倍）、最も少ないのは「宮崎県」の166.1です。</li><li><strong>示唆</strong>：同じ人口規模あたりで見ても地域によって差があります。自地域が上位側か下位側かによって、必要なサービス量や整備の優先度の見立ては変わります。</li></ul><h3>4. 地域差の大きさ</h3><ul><li><strong>データ</strong>：第１号被保険者1,000人あたりの最大（大阪府）と最小（宮崎県）の差は1.49倍です。</li><li><strong>示唆</strong>：全国平均をそのまま自地域の目安に使うと、この差の分だけ実態からずれます。計画値の根拠には、全国平均ではなく近い水準の地域の数字を参照する方が妥当です。</li></ul><h3>5. データ品質</h3><ul><li><strong>データ</strong>：全48行を解析しました。欠損セル数は0件です。</li><li><strong>示唆</strong>：欠損は限定的でデータ品質は良好です。</li></ul><hr class="aul-sum-hr"><h2>注記</h2><ul><li>本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。</li><li>解析行数: 48行（明細: 0行）</li><li>ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</li></ul>
+<p class="aul-sw-foot">生成日時: 2026-09-06 15:26</p>
+</article>
+</div><div style="height:22px"></div><!-- AUL e-Stat Pipeline / 介護サービス利用状況データを読む　総数 -->
+<div class="aul-estat-block" id="aul-bd75d2b1">
+<style>
+#aul-bd75d2b1{font-family:'Noto Sans JP','Helvetica Neue',sans-serif;max-width:900px;margin:0 auto;padding:0 12px;color:#1e293b}
+#aul-bd75d2b1 h3{font-size:1.05rem;font-weight:700;border-left:4px solid #2563eb;padding-left:10px;margin:28px 0 12px;color:#1e3a5f}
+.aul-summary{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px 18px;margin-bottom:6px;line-height:1.85;font-size:.9rem;color:#1e3a5f}
+.aul-kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 26px}
+@media(max-width:640px){.aul-kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.aul-kpi-card{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 10px;text-align:center}
+.aul-kpi-label{font-size:.72rem;color:#64748b;margin-bottom:5px}
+.aul-kpi-value{font-size:1.3rem;font-weight:800;color:#1d4ed8;line-height:1.1}
+.aul-kpi-unit{font-size:.68rem;color:#94a3b8;margin-top:3px}
+.aul-card-wide{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:10px 0}
+.aul-insights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+@media(max-width:640px){.aul-insights{grid-template-columns:1fr}}
+.aul-insight-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:13px 15px}
+.aul-insight-title{font-weight:700;color:#1e3a5f;font-size:.88rem;margin-bottom:5px}
+.aul-insight-body{font-size:.83rem;color:#374151;line-height:1.75}
+.aul-tbl{width:100%;border-collapse:collapse;font-size:.76rem;margin:6px 0}
+.aul-tbl th{background:#1e3a5f;color:#fff;padding:7px 9px;text-align:center;white-space:nowrap}
+.aul-tbl td{padding:5px 9px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
+.aul-tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+.aul-tbl tr:nth-child(even) td{background:#f8faff}
+.aul-src{font-size:.73rem;color:#94a3b8;margin-top:22px;border-top:1px solid #e2e8f0;padding-top:9px}
+</style>
+
+<div class="aul-summary"><strong>介護サービス利用状況データを読む　総数</strong><br>実数では「東京都」が最多ですが、比較すべきは人口を揃えた比率です。自地域が全国平均のどちら側にあるかを確認し、全国平均ではなく水準の近い地域を計画の参照先にしてください。</div>
+
+<h3>主要指標（総数 / 要支援１上位3項目）</h3>
+<div class="aul-kpi-grid">
+<div class="aul-kpi-card"><div class="aul-kpi-label">東京都</div><div class="aul-kpi-value">106,043</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">大阪府</div><div class="aul-kpi-value">105,580</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">北海道</div><div class="aul-kpi-value">70,714</div><div class="aul-kpi-unit">人</div></div>
+</div>
+
+<h3>上位サービス利用規模（総数 / 要支援１・人）</h3>
+<div class="aul-card-wide"><canvas id="aulbd75d2b1_c1"></canvas></div>
+
+<h3>上位3項目の区分別比較</h3>
+<div class="aul-card-wide"><canvas id="aulbd75d2b1_c2"></canvas></div>
+
+<h3>分析インサイト</h3>
+<div class="aul-insights">
+<div class="aul-insight-card"><div class="aul-insight-title">実数が多い地域（総数 / 要支援１）</div><div class="aul-insight-body">上位3項目は「東京都」、「大阪府」、「北海道」です。　ただし実数の多さは人口規模の大きさを映している面が大きく、これだけでは地域の実態を比べたことになりません。人口を揃えた比率で見る必要があります。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">実数と人口比で評価が変わる地域</div><div class="aul-insight-body">「埼玉県」は実数では4位ですが、第１号被保険者1,000人あたりに直すと39位です。人口規模を揃えると、実数の順位より低く位置づけられます。　実数のランキングは人口規模の大きさを映しているだけの場合があります。自地域と他地域を比べるときは、人口を揃えた比率で見ないと実態を読み違えます。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">人口比で見た上位・下位（第１号被保険者1,000人あたり）</div><div class="aul-insight-body">第１号被保険者1,000人あたりで最も多いのは「大阪府」の247.3（全国平均の1.23倍）、最も少ないのは「宮崎県」の166.1です。　同じ人口規模あたりで見ても地域によって差があります。自地域が上位側か下位側かによって、必要なサービス量や整備の優先度の見立ては変わります。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">地域差の大きさ</div><div class="aul-insight-body">第１号被保険者1,000人あたりの最大（大阪府）と最小（宮崎県）の差は1.49倍です。　全国平均をそのまま自地域の目安に使うと、この差の分だけ実態からずれます。計画値の根拠には、全国平均ではなく近い水準の地域の数字を参照する方が妥当です。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">データ品質</div><div class="aul-insight-body">全48行を解析しました。欠損セル数は0件です。　欠損は限定的でデータ品質は良好です。</div></div>
+</div>
+
+<h3>上位10項目（総数 / 要支援１順）</h3><div style="overflow-x:auto"><table class="aul-tbl"><thead><tr><th>項目</th><th>総数 / 要支援１<br><small>人</small></th><th>総数 / 要支援２<br><small>人</small></th><th>総数 / 要介護１<br><small>人</small></th><th>総数 / 要介護２<br><small>人</small></th><th>総数 / 要介護３<br><small>人</small></th><th>総数 / 要介護４<br><small>人</small></th><th>総数 / 要介護５<br><small>人</small></th><th>総数 / 合計<br><small>人</small></th></tr></thead><tbody>
+<tr><td>東京都</td><td class="num">106,043</td><td class="num">90,746</td><td class="num">138,489</td><td class="num">115,698</td><td class="num">86,115</td><td class="num">83,628</td><td class="num">58,081</td><td class="num">678,800</td></tr>
+<tr><td>大阪府</td><td class="num">105,580</td><td class="num">79,772</td><td class="num">97,847</td><td class="num">99,290</td><td class="num">72,460</td><td class="num">72,972</td><td class="num">52,697</td><td class="num">580,618</td></tr>
+<tr><td>北海道</td><td class="num">70,714</td><td class="num">53,212</td><td class="num">83,446</td><td class="num">55,759</td><td class="num">36,951</td><td class="num">35,937</td><td class="num">24,423</td><td class="num">360,442</td></tr>
+<tr><td>兵庫県</td><td class="num">70,117</td><td class="num">61,490</td><td class="num">65,082</td><td class="num">48,061</td><td class="num">39,424</td><td class="num">39,013</td><td class="num">24,593</td><td class="num">347,780</td></tr>
+<tr><td>神奈川県</td><td class="num">63,667</td><td class="num">72,734</td><td class="num">92,336</td><td class="num">91,014</td><td class="num">63,314</td><td class="num">58,433</td><td class="num">36,762</td><td class="num">478,260</td></tr>
+<tr><td>愛知県</td><td class="num">52,504</td><td class="num">63,856</td><td class="num">64,502</td><td class="num">58,572</td><td class="num">45,800</td><td class="num">43,125</td><td class="num">26,375</td><td class="num">354,734</td></tr>
+<tr><td>埼玉県</td><td class="num">47,151</td><td class="num">45,450</td><td class="num">84,332</td><td class="num">62,935</td><td class="num">50,630</td><td class="num">44,773</td><td class="num">28,001</td><td class="num">363,272</td></tr>
+<tr><td>千葉県</td><td class="num">45,279</td><td class="num">42,653</td><td class="num">71,645</td><td class="num">55,857</td><td class="num">44,713</td><td class="num">41,541</td><td class="num">25,984</td><td class="num">327,672</td></tr>
+<tr><td>福岡県</td><td class="num">43,483</td><td class="num">42,998</td><td class="num">62,201</td><td class="num">46,030</td><td class="num">36,062</td><td class="num">35,107</td><td class="num">20,638</td><td class="num">286,519</td></tr>
+<tr><td>広島県</td><td class="num">30,442</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">13,272</td><td class="num">-</td></tr>
+</tbody></table></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  new Chart(document.getElementById('aulbd75d2b1_c1'),{type:'bar',data:{labels:["東京都", "大阪府", "北海道", "兵庫県", "神奈川県", "愛知県", "埼玉県", "千葉県"],datasets:[{label:'総数 / 要支援１',data:[106043.0, 105580.0, 70714.0, 70117.0, 63667.0, 52504.0, 47151.0, 45279.0],backgroundColor:'#2563eb'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  new Chart(document.getElementById('aulbd75d2b1_c2'),{type:'bar',data:{labels:["東京都", "大阪府", "北海道"],datasets:[{"label": "総数 / 要支援２", "data": [90746.0, 79772.0, 53212.0], "backgroundColor": "#2563eb"}, {"label": "総数 / 要介護１", "data": [138489.0, 97847.0, 83446.0], "backgroundColor": "#10b981"}, {"label": "総数 / 要介護２", "data": [115698.0, 99290.0, 55759.0], "backgroundColor": "#f59e0b"}, {"label": "総数 / 要介護３", "data": [86115.0, 72460.0, 36951.0], "backgroundColor": "#8b5cf6"}]},options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true}}}});
+})();
+</script>
+
+<p class="aul-src">出典: 第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）　（その１）　原表: 04-1-1t_総数.xlsx<br>※本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。<br>※解析行数: 48行（明細: 0行）<br>※ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</p>
+</div></div>
