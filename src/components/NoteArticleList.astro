@@ -3,7 +3,7 @@ const { items, currentPage, totalPages, totalItems, basePath = '/' } = Astro.pro
 
 function pageHref(page: number) {
   if (basePath === '/') {
-    return page === 1 ? '/' : `/page/${page}/`;
+    return page === 1 ? '/reference/' : `/page/${page}/`;
   }
 
   return page === 1 ? basePath : `${basePath}page/${page}/`;

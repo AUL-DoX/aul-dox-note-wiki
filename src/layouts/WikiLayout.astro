@@ -10,6 +10,7 @@ const {
   description = '福祉DX、介護DX、就労継続支援、Obsidian活用、GASツール、AI制作メモを整理した公開wiki',
   noteUrl,
   wide = false,
+  home = false,
 } = Astro.props;
 ---
 
@@ -25,7 +26,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <Header home={home} />
     <main class:list={['main', wide && 'main--wide']}>
       <slot />
       {noteUrl && <div class="note-action"><NoteLinkButton href={noteUrl} /></div>}

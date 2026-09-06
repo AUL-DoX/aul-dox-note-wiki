@@ -29,11 +29,12 @@ const entry = Object.entries(htmlModules).find(
 );
 const rawHtml = entry?.[1] ?? '<!doctype html><html><body>Not found</body></html>';
 
-const backBar = `<div style="position:sticky;top:0;z-index:999;background:#13212f;color:#fff;font:14px/1.6 -apple-system,'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">` +
-  `<a href="/" style="color:#fff;text-decoration:none;font-weight:700">← AUL DoX Reference</a>` +
-  `<a href="/data/" style="color:#9fd6cb;text-decoration:none">データ分析一覧</a>` +
+const backBar = `<div style="position:sticky;top:0;z-index:999;background:#222;color:#fff;font:14px/1.6 -apple-system,'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">` +
+  `<a href="/reference/" style="color:#fff;font-weight:700">← AUL DoX Reference</a>` +
+  `<a href="/data/" style="color:#fff;">データ分析一覧</a>` +
   `</div>`;
 
-const html = rawHtml.replace(/<body([^>]*)>/, (_match: string, attrs: string) => `<body${attrs}>${backBar}`);
+const linkedHtml = rawHtml.replace(/<\/head>/i, '<style>a { color: inherit; text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 0.18em; } a:hover { text-decoration-thickness: 2px; }</style></head>');
+const html = linkedHtml.replace(/<body([^>]*)>/, (_match: string, attrs: string) => `<body${attrs}>${backBar}`);
 ---
 <Fragment set:html={html} />

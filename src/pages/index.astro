@@ -1,51 +1,21 @@
 ---
 import WikiLayout from '../layouts/WikiLayout.astro';
-import NoteArticleList from '../components/NoteArticleList.astro';
-import WikiSidebar from '../components/WikiSidebar.astro';
-import { getNoteIndexData, getNotePageItems, getTotalNotePages } from '../content/noteIndex';
-
-const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
-const currentPage = 1;
-const totalPages = getTotalNotePages(allItems);
-const pageItems = getNotePageItems(allItems, currentPage);
+const areas = [
+  { name: 'Reference', href: '/reference/', description: '記事・知識・開発記録を調べる' },
+  { name: 'Data', href: '/data/', description: '医療・介護・障がい福祉などのデータ分析を見る' },
+  { name: 'Suite', href: '/suite/', description: 'AUL DoXが開発したツールやプロトタイプを見る' },
+];
 ---
-
-<WikiLayout wide title="AUL DoX Reference">
-  <section class="wiki-home-header">
-    <div>
-      <p class="eyebrow">Note Index</p>
-      <h1>AUL DoX Reference</h1>
-      <p>福祉DX、介護DX、就労継続支援、Obsidian活用、GASツール、AI制作メモを調べる入口です。note本文へ移動できる記事一覧を新しい順に整理しています。</p>
+<WikiLayout wide home title="AUL DoX | 医療・介護・障がい福祉のデータ分析・AI・業務ツール" description="AUL DoXは、医療・介護・障がい福祉を中心に、データ分析やAI・業務ツールを設計・開発するAIアーキテクトです。Reference・Data・Suiteから知識、分析、開発実績をご覧いただけます。">
+  <section class="home-directory" aria-labelledby="home-title">
+    <p class="eyebrow">Analyze U Lab / Digital of eXperience</p>
+    <h1 id="home-title">AUL DoX</h1>
+    <div class="area-grid">
+      {areas.map((area, i) => <a class="area-card" href={area.href}>
+        <span class="area-number">0{i + 1}</span>
+        <h2>{area.name}<span aria-hidden="true"> ↗</span></h2>
+        <p>{area.description}</p>
+      </a>)}
     </div>
   </section>
-
-  <section class="wiki-search" aria-label="記事検索">
-    <div class="wiki-search-row">
-      <div class="wiki-search-field">
-        <label for="wiki-search-input">記事を検索</label>
-        <input id="wiki-search-input" type="search" placeholder="note記事タイトル、説明文で検索" autocomplete="off" />
-      </div>
-      <nav class="wiki-search-nav" aria-label="サイト内セクション">
-        <a href="/data/">データ分析</a>
-      </nav>
-    </div>
-  </section>
-
-  <div class="wiki-shell">
-    <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
-    <NoteArticleList items={pageItems} currentPage={currentPage} totalPages={totalPages} totalItems={allItems.length} />
-  </div>
-
-  <script is:inline>
-    (() => {
-      const input = document.querySelector('#wiki-search-input');
-      const items = [...document.querySelectorAll('.note-item')];
-      input?.addEventListener('input', () => {
-        const query = input.value.trim().toLowerCase();
-        for (const item of items) {
-          item.hidden = !item.textContent.toLowerCase().includes(query);
-        }
-      });
-    })();
-  </script>
 </WikiLayout>

@@ -1,10 +1,23 @@
+---
+const { home = false } = Astro.props;
+const links = [
+  ['Reference', '/reference/'], ['Data', '/data/'], ['Suite', '/suite/'],
+  ['note', 'https://note.com/chic_wren6567'], ['お問い合わせ', 'https://aul-dox.jp/お問い合わせ/'],
+];
+---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">AUL DoX Reference</a>
-    <nav class="header-actions" aria-label="External links">
-      <a class="btn-auldox" href="https://aul-dox.jp" target="_blank" rel="noopener noreferrer">AUL DoX</a>
-      <a class="btn-note" href="https://note.com/chic_wren6567" target="_blank" rel="noopener noreferrer">note</a>
-      <a class="btn-contact" href="https://aul-dox.jp/お問い合わせ/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
-    </nav>
+    <div>
+      <a class="brand" href="/">AUL | Analyze U Lab</a>
+      <p class="brand-tagline">Digital of eXperience | 体験の見える化から、組織は変わる。</p>
+    </div>
+    <a class="ai-button" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="AI — ChatGPTを開く（別タブ）">AI</a>
   </div>
+  <div class="owl-hero">
+    <img src="/images/aul-owl-hero.jpg" width="1600" height="600" alt="静かにこちらを見つめるフクロウ" fetchpriority="high" />
+  </div>
+  {home && <div class="container home-intro"><p>AUL DoXは、医療・介護・障がい福祉を中心に、<br class="desktop-break" />データ分析やAI・業務ツールを設計・開発する<br class="desktop-break" />AIアーキテクトです。</p></div>}
+  <nav class="container primary-nav" aria-label="主要ナビゲーション">
+    {links.map(([label, href]) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+  </nav>
 </header>

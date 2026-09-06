@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/data-science/",
+      "destination": "/data/",
+      "permanent": true
+    },
+    {
+      "destination": "/data/kaigo/kaigo-keiei-gaikyou-dai04/",
+      "permanent": true,
+      "source": "/:section(%[Ee]7%[Bb]5%8[Cc]%[Ee]5%96%[Bb]6%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee]3%81%[Aa]7%[Ee]8%[Aa]6%8[Bb]%[Ee]3%81%88%[Ee]3%82%8[Bb]%[Ee]5%8[Cc]%96)/:article(%[Ee]8%[Aa]8%[Aa][Aa]%[Ee]5%95%8[Ff]%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]7-%[Ee]5%8[Ff]%8[Ee]%[Ee]6%94%[Aa][Ff]%[Ee]3%83%[Bb][Bb]%[Ee]5%[Bb]7%[Aa][Ee]%[Ee]5%[Bb][Cc]%95%[Ee]6%[Aa][Ff]%94%[Ee]7%8[Ee]%879-6%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]4%[Bb][Bb]%[Aa]4%[Ee]5%92%8[Cc]6%[Ee]5%[Bb]9%[Bb]4%[Ee]5%[Bb][Aa]%[Aa]6%[Ee]6%[Bb]1%[Bb][Aa]%[Ee]7%[Aa][Ee]%97%[Ee]3%81%[Aa][Ee]%[Ee]7%[Bb]5%8[Cc]%[Ee]5%96%[Bb]6)/"
+    },
+    {
+      "destination": "/data/kaigo/kaigo-keiei-gaikyou-dai38/",
+      "permanent": true,
+      "source": "/:section(%[Ee]7%[Bb]5%8[Cc]%[Ee]5%96%[Bb]6%[Ee]5%88%86%[Ee]6%9[Ee]%90%[Ee]3%81%[Aa]7%[Ee]8%[Aa]6%8[Bb]%[Ee]3%81%88%[Ee]3%82%8[Bb]%[Ee]5%8[Cc]%96)/:article(%[Ee]5%[Aa]4%9[Cc]%[Ee]9%96%93%[Ee]5%[Aa][Ff]%[Bb][Ee]%[Ee]5%[Bb][Ff]%9[Cc]%[Ee]5%9[Ee]%8[Bb]%[Ee]8%[Aa]8%[Aa][Aa]%[Ee]5%95%8[Ff]%[Ee]4%[Bb][Bb]%8[Bb]%[Ee]8%[Aa][Dd]%[Bb]7-%[Ee]5%9[Cc]%[Bb]0%[Ee]5%9[Ff]%9[Ff]%[Ee]5%8[Cc]%[Bb][Aa]%[Ee]5%88%86%[Ee]5%88%[Aa]5%[Ee]3%81%[Aa][Ee]%[Ee]5%8[Ff]%8[Ee]%[Ee]6%94%[Aa][Ff]%[Ee]6%[Aa][Ff]%94%[Ee]8%[Bb][Cc]%83%[Ee][Ff]%[Bb][Dd]%9[Cc]%[Ee]4%[Bb][Bb]%[Aa]4%[Ee]5%92%8[Cc]6)/"
+    }
+  ]
+}

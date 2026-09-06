@@ -1,10 +1,13 @@
-# AUL DoX note-wiki
+# AUL DoX
 
 > 福祉DX・介護DX・就労継続支援・Obsidian活用・GASツール・AI活用について、AUL DoXがnote.comに書いた記事へのリンク集と、関連情報を整理した公開wikiです。記事本文はnote.comに掲載されており、このサイトはタイトル・要約・カテゴリ・タグを付けた索引として機能します。
 
 ## 主要ページ
 
-- [トップページ](/): 全記事の一覧・検索・カテゴリ/タグ別件数
+- [トップページ](/): AUL DoXの概要とReference・Data・Suiteへの入口
+- [Reference](/reference/): 記事・知識・開発記録の一覧と検索
+- [Data](/data/): データ分析ダッシュボードとレポート
+- [Suite](/suite/): 開発ツールとプロトタイプのポートフォリオ（一般配布していないものを含む）
 - [最新更新](/latest): 最近更新されたwikiページ一覧
 - [note記事一覧](/notes): note記事URLの取得状況（RSS/Google由来、wiki紐づけ状況）
 
