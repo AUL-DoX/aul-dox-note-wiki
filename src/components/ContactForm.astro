@@ -6,17 +6,14 @@ interface Props {
 const contacts = {
   general: {
     title: '総合窓口',
-    email: 'info@aul-dox.jp',
     description: 'その他のお問い合わせ、相談先が分からない場合',
   },
   welfare: {
     title: '福祉・DX伴走支援',
-    email: 'welfare@aul-dox.jp',
     description: '医療・介護・障がい福祉のDX、業務改善、Google Workspace活用、AI活用、伴走支援など',
   },
   lab: {
     title: 'ツール開発・データ分析',
-    email: 'lab@aul-dox.jp',
     description: 'AI・GAS・Webツール開発、業務ツール、データ分析・データアナリティクスなど',
   },
 } as const;
@@ -29,8 +26,7 @@ const contact = contacts[Astro.props.kind];
   <p class="lead">{contact.description}</p>
   <div class="contact-form-status">
     <h2>現在のご連絡方法</h2>
-    <p>オンラインフォームは準備中です。現在はメールでお問い合わせください。</p>
-    <p><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+    <p>お問い合わせフォームは準備中です。受付開始までしばらくお待ちください。</p>
   </div>
   <p><a href="/お問い合わせ/">お問い合わせ窓口の一覧へ戻る</a></p>
 </section>

@@ -2,9 +2,9 @@
 import WikiLayout from '../../layouts/WikiLayout.astro';
 
 const contacts = [
-  { title: '総合窓口', description: 'その他のお問い合わせ、相談先が分からない場合', email: 'info@aul-dox.jp', href: '/お問い合わせ/general/' },
-  { title: '福祉・DX伴走支援', description: '医療・介護・障がい福祉のDX、業務改善、Google Workspace活用、AI活用、伴走支援など', email: 'welfare@aul-dox.jp', href: '/お問い合わせ/welfare/' },
-  { title: 'ツール開発・データ分析', description: 'AI・GAS・Webツール開発、業務ツール、データ分析・データアナリティクスなど', email: 'lab@aul-dox.jp', href: '/お問い合わせ/lab/' },
+  { title: '総合窓口', description: 'その他のお問い合わせ、相談先が分からない場合', href: '/お問い合わせ/general/' },
+  { title: '福祉・DX伴走支援', description: '医療・介護・障がい福祉のDX、業務改善、Google Workspace活用、AI活用、伴走支援など', href: '/お問い合わせ/welfare/' },
+  { title: 'ツール開発・データ分析', description: 'AI・GAS・Webツール開発、業務ツール、データ分析・データアナリティクスなど', href: '/お問い合わせ/lab/' },
 ];
 ---
 <WikiLayout wide title="お問い合わせ | AUL DoX" description="介護・障がい福祉のDX、Google Workspaceによる業務改善、AI・ツール開発、データ分析についてAUL DoXへ相談できる窓口です。">
@@ -49,8 +49,7 @@ const contacts = [
           <section class="contact-card">
             <h3><a href={contact.href}>{contact.title}</a></h3>
             <p>{contact.description}</p>
-            <p class="contact-email"><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
-            <p><a href={contact.href}>この窓口の案内を見る</a></p>
+            <p><a href={contact.href}>お問い合わせフォームへ</a></p>
           </section>
         ))}
       </div>
