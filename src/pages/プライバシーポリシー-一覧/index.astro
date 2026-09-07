@@ -1,0 +1,26 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+const policies = [
+  { href: 'https://aul-dox.jp/privacy-policy/', label: 'サイト-プライバシーポリシー' },
+  { href: 'https://aul-dox.jp/ツールに関する共通プライバシーポリシー/', label: 'ツールに関する共通プライバシーポリシー' },
+  { href: 'https://aul-dox.jp/aulブランドにおけるapiツール開発の方向性（基本方針）/', label: 'AULブランドにおけるAPIツール開発の方向性（基本方針）' },
+  { href: 'https://aul-dox.jp/gemini-context-manager-プライバシーポリシー/', label: 'Gemini Prompt & Notes – プライバシーポリシー' },
+  { href: 'https://aul-dox.jp/why-what-how-prompt-builder-プライバシーポリシー/', label: 'Why / What / How Prompt Builder – プライバシーポリシー' },
+  { href: 'https://aul-dox.jp/安全性について/', label: '安全性について' },
+];
+---
+
+<WikiLayout title="プライバシーポリシー一覧 | AUL DoX" description="AUL DoXのサイトおよび各ツールに関する方針・プライバシーポリシーの一覧です。">
+  <article class="static-page">
+    <header class="page-header">
+      <p class="eyebrow">Policies</p>
+      <h1>プライバシーポリシー一覧</h1>
+      <p class="lead">サイトおよび各ツールに適用される方針を掲載しています。</p>
+    </header>
+
+    <ul class="policy-list">
+      {policies.map((policy) => <li><a href={policy.href}>{policy.label}</a></li>)}
+    </ul>
+  </article>
+</WikiLayout>
