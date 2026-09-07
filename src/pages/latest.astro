@@ -3,9 +3,13 @@ import { getCollection } from 'astro:content';
 import WikiLayout from '../layouts/WikiLayout.astro';
 import WikiCard from '../components/WikiCard.astro';
 import { isPublicEntry, sortByUpdatedDesc } from '../content/wiki';
+import { getNoteIndexData } from '../content/noteIndex';
 
 const allEntries = await getCollection('wiki');
 const entries = sortByUpdatedDesc(allEntries.filter(isPublicEntry));
+const { categories, sortedTags } = await getNoteIndexData();
+const availableCategorySlugs = categories.map((category) => category.slug);
+const availableTags = sortedTags.map(([tag]) => tag);
 ---
 
 <WikiLayout wide title="最新更新 | AUL DoX Reference" description="AUL DoX Referenceで最近更新されたページ一覧">
@@ -15,6 +19,6 @@ const entries = sortByUpdatedDesc(allEntries.filter(isPublicEntry));
     <p>更新日順にページを並べています。各カードの更新メモで、何を追加・整理したページか確認できます。</p>
   </section>
   <div class="wiki-grid">
-    {entries.map((entry, index) => <WikiCard entry={entry} rank={index + 1} />)}
+    {entries.map((entry, index) => <WikiCard entry={entry} rank={index + 1} availableCategorySlugs={availableCategorySlugs} availableTags={availableTags} />)}
   </div>
 </WikiLayout>

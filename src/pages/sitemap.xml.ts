@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import { getNoteCategories, getNoteIndexData, getNoteTags, getTotalNotePages } from '../content/noteIndex';
 import { getEntryUpdatedTime, getWikiPath, isPublicEntry } from '../content/wiki';
 
-const SITE_URL = 'https://aul-dox-note-wiki.vercel.app';
+const SITE_URL = import.meta.env.SITE ?? 'https://aul-dox.jp';
 
 function toAbsoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
@@ -46,6 +46,21 @@ export async function GET() {
   addUrl('/', today, '1.0');
   addUrl('/latest/', today, '0.6');
   addUrl('/notes/', today, '0.5');
+  addUrl('/reference/', today, '0.8');
+  addUrl('/data/', today, '0.8');
+  addUrl('/suite/', today, '0.7');
+  addUrl('/お問い合わせ/', today, '0.7');
+  addUrl('/お問い合わせ/general/', today, '0.6');
+  addUrl('/お問い合わせ/welfare/', today, '0.6');
+  addUrl('/お問い合わせ/lab/', today, '0.6');
+  addUrl('/運営者/', today, '0.5');
+  addUrl('/privacy-policy/', today, '0.5');
+  addUrl('/ツールに関する共通プライバシーポリシー/', today, '0.5');
+  addUrl('/プライバシーポリシー-一覧/', today, '0.5');
+  addUrl('/aulブランドにおけるapiツール開発の方向性（基本方針）/', today, '0.4');
+  addUrl('/gemini-context-manager-プライバシーポリシー/', today, '0.4');
+  addUrl('/why-what-how-prompt-builder-プライバシーポリシー/', today, '0.4');
+  addUrl('/安全性について/', today, '0.4');
 
   for (let page = 2; page <= totalNotePages; page += 1) {
     addUrl(`/page/${page}/`, today, '0.8');

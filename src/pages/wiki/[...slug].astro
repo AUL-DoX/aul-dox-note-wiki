@@ -3,20 +3,23 @@ import { getCollection, render } from 'astro:content';
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import { formatDate, getEntryUpdatedTime, isPublicEntry } from '../../content/wiki';
 import { getCategoryBySlug, getCategorySlug } from '../../content/categories';
+import { getNoteIndexData } from '../../content/noteIndex';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('wiki')).filter(isPublicEntry);
+  const { sortedTags } = await getNoteIndexData();
+  const availableTags = sortedTags.map(([tag]) => tag);
 
   return entries.map((entry) => {
     const slug = entry.id.replace(/\.mdx?$/, '').replace(/\/index$/, '');
     return {
       params: { slug },
-      props: { entry },
+      props: { entry, availableTags },
     };
   });
 }
 
-const { entry } = Astro.props;
+const { entry, availableTags } = Astro.props;
 const { Content } = await render(entry);
 const categorySlug = getCategorySlug(entry.data.category, entry.data.categorySlug);
 const categoryExists = Boolean(getCategoryBySlug(categorySlug));
@@ -32,7 +35,7 @@ const categoryExists = Boolean(getCategoryBySlug(categorySlug));
     <h1>{entry.data.title}</h1>
     <p class="article-description">{entry.data.description}</p>
     <div class="tag-list article-tags">
-      {entry.data.tags.map((tag) => <a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a>)}
+      {entry.data.tags.map((tag) => availableTags.includes(tag) ? <a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a> : <span>#{tag}</span>)}
     </div>
     <section class="update-panel" aria-labelledby="update-panel-heading">
       <h2 id="update-panel-heading">このページの更新情報</h2>

@@ -12,6 +12,7 @@ const {
   wide = false,
   home = false,
 } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://aul-dox.jp');
 ---
 
 <!doctype html>
@@ -22,6 +23,7 @@ const {
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
