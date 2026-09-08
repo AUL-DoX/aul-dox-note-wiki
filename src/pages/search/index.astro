@@ -1,0 +1,102 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import { getSearchIndex } from '../../content/searchIndex';
+
+const searchItems = await getSearchIndex();
+const serializedItems = JSON.stringify(searchItems).replace(/</g, '\\u003c');
+---
+
+<WikiLayout wide title="サイト内検索 | AUL DoX" description="AUL DoXのReference、Data、Deep Research、Suiteを横断して検索できます。">
+  <section class="page-header search-page-header">
+    <p class="eyebrow">Site Search</p>
+    <h1>サイト内検索</h1>
+    <p class="lead">Reference、Data、Deep Research、Suiteをまとめて検索できます。</p>
+  </section>
+
+  <nav class="search-filters" aria-label="検索対象の絞り込み">
+    <button class="search-filter is-active" type="button" data-section="all">すべて</button>
+    <button class="search-filter" type="button" data-section="reference">Reference</button>
+    <button class="search-filter" type="button" data-section="data">Data</button>
+    <button class="search-filter" type="button" data-section="deep-research">Deep Research</button>
+    <button class="search-filter" type="button" data-section="suite">Suite</button>
+  </nav>
+
+  <p id="search-summary" class="search-summary" aria-live="polite"></p>
+  <ul id="search-results" class="search-results"></ul>
+  <p id="search-empty" class="search-empty" hidden>該当するコンテンツはありません。</p>
+
+  <script id="search-index" type="application/json" set:html={serializedItems}></script>
+  <script is:inline>
+    (() => {
+      const indexElement = document.querySelector('#search-index');
+      const resultsElement = document.querySelector('#search-results');
+      const summaryElement = document.querySelector('#search-summary');
+      const emptyElement = document.querySelector('#search-empty');
+      const filters = [...document.querySelectorAll('.search-filter')];
+      const headerInput = document.querySelector('#site-search-input');
+      const items = JSON.parse(indexElement?.textContent || '[]');
+      const params = new URLSearchParams(window.location.search);
+      const query = (params.get('q') || '').trim();
+      let activeSection = 'all';
+
+      if (headerInput) headerInput.value = query;
+
+      const normalize = (value) => value.toLocaleLowerCase('ja').normalize('NFKC');
+      const terms = normalize(query).split(/\s+/).filter(Boolean);
+
+      const render = () => {
+        const matches = query === '' ? [] : items.filter((item) => {
+          if (activeSection !== 'all' && item.section !== activeSection) return false;
+          const haystack = normalize(item.searchText);
+          return terms.every((term) => haystack.includes(term));
+        });
+
+        resultsElement.replaceChildren(...matches.slice(0, 100).map((item) => {
+          const li = document.createElement('li');
+          li.className = 'search-result';
+          const meta = document.createElement('span');
+          meta.className = 'search-result-section';
+          meta.textContent = item.sectionLabel;
+          const link = document.createElement('a');
+          link.href = item.href;
+          link.textContent = item.title;
+          const description = document.createElement('p');
+          description.textContent = item.description;
+          li.append(meta, link);
+          if (item.description) li.append(description);
+          return li;
+        }));
+
+        summaryElement.textContent = query === ''
+          ? '上の検索窓にキーワードを入力してください。'
+          : `「${query}」の検索結果：${matches.length}件${matches.length > 100 ? '（先頭100件を表示）' : ''}`;
+        emptyElement.hidden = query === '' || matches.length > 0;
+      };
+
+      filters.forEach((filter) => {
+        filter.addEventListener('click', () => {
+          activeSection = filter.dataset.section;
+          filters.forEach((button) => button.classList.toggle('is-active', button === filter));
+          render();
+        });
+      });
+
+      render();
+    })();
+  </script>
+
+  <style>
+    .search-page-header { padding-bottom: 20px; }
+    .search-filters { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 16px; }
+    .search-filter { flex: 0 0 auto; border: 1px solid var(--border); border-radius: 999px; background: var(--card); color: var(--muted); font: inherit; font-weight: 800; padding: 8px 16px; cursor: pointer; }
+    .search-filter.is-active, .search-filter:hover { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .search-summary { color: var(--muted); font-weight: 700; margin: 8px 0 18px; }
+    .search-results { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+    .search-result { display: grid; gap: 7px; padding: 18px 4px; border-bottom: 1px solid var(--border); }
+    .search-result a { color: var(--text); font-size: 1.05rem; font-weight: 800; }
+    .search-result a:hover { color: var(--accent); }
+    .search-result p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .search-result-section { width: fit-content; border-radius: 999px; background: var(--soft); color: var(--accent); font-size: 0.75rem; font-weight: 800; padding: 3px 9px; }
+    .search-empty { color: var(--muted); }
+  </style>
+</WikiLayout>
