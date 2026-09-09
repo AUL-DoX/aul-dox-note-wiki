@@ -1,0 +1,126 @@
+<div class="aul-report" style="background:#eef2f6"><div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h1{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px;letter-spacing:.01em}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ul,.aul-summary-web .aul-sum-doc ol{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.neg{color:var(--clay);font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tr.g td{background:#eef4f3;font-weight:700;color:var(--teal-deep);text-align:left}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">第１号被保険者　－75歳以上80歳未満－</span></div>
+</div>
+<article class="aul-sum-doc">
+<h1>エグゼクティブサマリー</h1><h2>介護サービス利用状況データを読む　第１号被保険者　－75歳以上80歳未満－</h2><blockquote class="aul-sum-quote"><strong>出典</strong>：04-1-1t_75歳以上80歳未満.xlsx　第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）</blockquote><blockquote class="aul-sum-quote"><strong>生成日時</strong>：2026-09-09 17:56</blockquote><hr class="aul-sum-hr"><h2>概要</h2><p>本サマリーは、04-1-1t_75歳以上80歳未満.xlsx（第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在））をもとにした分析である。</p><p>実数では「大阪府」が最多ですが、比較すべきは人口を揃えた比率です。自地域が全国平均のどちら側にあるかを確認し、全国平均ではなく水準の近い地域を計画の参照先にしてください。</p><hr class="aul-sum-hr"><h2>主要ポイント</h2><h3>1. 実数が多い地域（第１号被保険者　－75歳以上80歳未満－ / 要支援１）</h3><ul><li><strong>データ</strong>：上位3項目は「大阪府」、「東京都」、「北海道」です。</li><li><strong>示唆</strong>：ただし実数の多さは人口規模の大きさを映している面が大きく、これだけでは地域の実態を比べたことになりません。人口を揃えた比率で見る必要があります。</li></ul><h3>2. 実数と人口比で評価が変わる地域</h3><ul><li><strong>データ</strong>：「静岡県」は実数では11位ですが、第１号被保険者1,000人あたりに直すと38位です。人口規模を揃えると、実数の順位より低く位置づけられます。</li><li><strong>示唆</strong>：実数のランキングは人口規模の大きさを映しているだけの場合があります。自地域と他地域を比べるときは、人口を揃えた比率で見ないと実態を読み違えます。</li></ul><h3>3. 人口比で見た上位・下位（第１号被保険者1,000人あたり）</h3><ul><li><strong>データ</strong>：第１号被保険者1,000人あたりで最も多いのは「大阪府」の36.4（全国平均の1.44倍）、最も少ないのは「山梨県」の17.2です。</li><li><strong>示唆</strong>：同じ人口規模あたりで見ても地域によって差があります。自地域が上位側か下位側かによって、必要なサービス量や整備の優先度の見立ては変わります。</li></ul><h3>4. 地域差の大きさ</h3><ul><li><strong>データ</strong>：第１号被保険者1,000人あたりの最大（大阪府）と最小（山梨県）の差は2.11倍です。</li><li><strong>示唆</strong>：全国平均をそのまま自地域の目安に使うと、この差の分だけ実態からずれます。計画値の根拠には、全国平均ではなく近い水準の地域の数字を参照する方が妥当です。</li></ul><h3>5. データ品質</h3><ul><li><strong>データ</strong>：全48行を解析しました。欠損セル数は0件です。</li><li><strong>示唆</strong>：欠損は限定的でデータ品質は良好です。</li></ul><hr class="aul-sum-hr"><h2>注記</h2><ul><li>本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。</li><li>解析行数: 48行（明細: 0行）</li><li>ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</li></ul><hr class="aul-sum-hr"><h2>実数11位の静岡県は、人口で揃えると38位｜要介護（要支援）認定者数 男女計（第１号被保険者 75歳以上80歳未満）を都道府県で比べる</h2><h2>はじめに</h2><p>「うちの県は、全国と比べて多いのか少ないのか」</p><p>介護のデータを見ていると、この問いに行き当たります。ところが都道府県別の統計をそのまま眺めても、上位に並ぶのは決まって東京・大阪・神奈川といった大きな都府県です。</p><p>当然です。人口が多ければ、人数も多くなります。<strong>この並び順は「人口の多さ」を見ているだけで、地域の実態を比べたことにはなっていません。</strong></p><p>そこで今回は、第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）のデータを、<strong>人口（第１号被保険者数）で揃えて</strong>比べ直しました。</p><hr class="aul-sum-hr"><h2>まず、実数で並べるとこうなる</h2><table class="aul-sum-table"><thead><tr><th class="l">都道府県</th><th>第１号被保険者　－75歳以上80歳未満－ / 合計（人）</th></tr></thead><tbody><tr><td class="l">東京都</td><td>85,621</td></tr><tr><td class="l">大阪府</td><td>85,583</td></tr><tr><td class="l">神奈川県</td><td>61,871</td></tr><tr><td class="l">埼玉県</td><td>50,259</td></tr><tr><td class="l">北海道</td><td>47,993</td></tr></tbody></table><p>見慣れた顔ぶれです。ですが、ここから読み取れるのは「人口の多い地域は人数も多い」という、ほぼ当たり前の事実だけです。</p><hr class="aul-sum-hr"><h2>人口で揃えると、順位が入れ替わる</h2><p>たとえば<strong>静岡県</strong>。実数では11位ですが、第１号被保険者1,000人あたりに直すと<strong>38位</strong>まで下がります（21.0／全国平均25.4）。</p><p>人口が多いぶん人数も多かっただけで、<strong>人口あたりで見ると全国の中では控えめ</strong>、というケースです。逆に、人数は少なくても人口比では上位に来る県もあります。</p><p>第１号被保険者1,000人あたりで並べ直すと、上位はこうなります。</p><table class="aul-sum-table"><thead><tr><th class="l">都道府県</th><th>第１号被保険者1,000人あたり</th><th>実数（人）</th><th>実数での順位</th></tr></thead><tbody><tr><td class="l">大阪府</td><td>36.4</td><td>85,583</td><td>2位</td></tr><tr><td class="l">京都府</td><td>33.1</td><td>24,271</td><td>10位</td></tr><tr><td class="l">兵庫県</td><td>29.2</td><td>46,152</td><td>6位</td></tr><tr><td class="l">北海道</td><td>28.9</td><td>47,993</td><td>5位</td></tr><tr><td class="l">岡山県</td><td>27.5</td><td>15,508</td><td>14位</td></tr></tbody></table><p>全国平均は25.4です。</p><p>一方、少ない側は次のとおりです。</p><table class="aul-sum-table"><thead><tr><th class="l">都道府県</th><th>第１号被保険者1,000人あたり</th><th>実数（人）</th></tr></thead><tbody><tr><td class="l">山梨県</td><td>17.2</td><td>4,369</td></tr><tr><td class="l">長野県</td><td>17.5</td><td>11,420</td></tr><tr><td class="l">山形県</td><td>17.9</td><td>6,407</td></tr><tr><td class="l">宮崎県</td><td>18.1</td><td>6,367</td></tr><tr><td class="l">鹿児島県</td><td>19.9</td><td>10,417</td></tr></tbody></table><hr class="aul-sum-hr"><h2>地域差は、思っているより大きい</h2><p>最も多い<strong>大阪府（36.4）</strong>と、最も少ない<strong>山梨県（17.2）</strong>の差は、<strong>2.11倍</strong>です。</p><p>同じ人口規模で比べても、地域によってこれだけ違います。つまり、<strong>全国平均をそのまま自分の地域の目安に使うと、その分だけ実態からずれます。</strong></p><hr class="aul-sum-hr"><h2>都道府県別ランキング（全47都道府県）</h2><p>上位・下位だけでなく、すべての都道府県の位置づけを載せます。<strong>自分の地域を探して、何位かを確かめてください。</strong></p><table class="aul-sum-table"><thead><tr><th class="l">第１号被保険者1,000人あたり順位</th><th>都道府県</th><th>第１号被保険者1,000人あたり</th><th>実数（人）</th><th>実数の順位</th></tr></thead><tbody><tr><td class="l">1位</td><td>大阪府</td><td>36.4</td><td>85,583</td><td>2位</td></tr><tr><td class="l">2位</td><td>京都府</td><td>33.1</td><td>24,271</td><td>10位</td></tr><tr><td class="l">3位</td><td>兵庫県</td><td>29.2</td><td>46,152</td><td>6位</td></tr><tr><td class="l">4位</td><td>北海道</td><td>28.9</td><td>47,993</td><td>5位</td></tr><tr><td class="l">5位</td><td>岡山県</td><td>27.5</td><td>15,508</td><td>14位</td></tr><tr><td class="l">6位</td><td>和歌山県</td><td>27.5</td><td>8,355</td><td>33位</td></tr><tr><td class="l">7位</td><td>東京都</td><td>27.1</td><td>85,621</td><td>1位</td></tr><tr><td class="l">8位</td><td>奈良県</td><td>26.5</td><td>11,192</td><td>25位</td></tr><tr><td class="l">9位</td><td>神奈川県</td><td>26.2</td><td>61,871</td><td>3位</td></tr><tr><td class="l">10位</td><td>愛媛県</td><td>26.1</td><td>11,429</td><td>23位</td></tr><tr><td class="l">11位</td><td>福岡県</td><td>25.7</td><td>36,716</td><td>9位</td></tr><tr><td class="l">12位</td><td>富山県</td><td>25.6</td><td>8,450</td><td>32位</td></tr><tr><td class="l">13位</td><td>埼玉県</td><td>25.4</td><td>50,259</td><td>4位</td></tr><tr><td class="l">14位</td><td>香川県</td><td>25.3</td><td>7,606</td><td>37位</td></tr><tr><td class="l">15位</td><td>徳島県</td><td>25.2</td><td>6,102</td><td>41位</td></tr><tr><td class="l">16位</td><td>千葉県</td><td>25.2</td><td>43,785</td><td>8位</td></tr><tr><td class="l">17位</td><td>広島県</td><td>25.1</td><td>20,557</td><td>12位</td></tr><tr><td class="l">18位</td><td>滋賀県</td><td>24.5</td><td>9,323</td><td>30位</td></tr><tr><td class="l">19位</td><td>愛知県</td><td>24.2</td><td>45,952</td><td>7位</td></tr><tr><td class="l">20位</td><td>三重県</td><td>23.6</td><td>12,459</td><td>21位</td></tr><tr><td class="l">21位</td><td>宮城県</td><td>23.6</td><td>15,487</td><td>15位</td></tr><tr><td class="l">22位</td><td>群馬県</td><td>23.3</td><td>13,521</td><td>17位</td></tr><tr><td class="l">23位</td><td>石川県</td><td>23.3</td><td>7,790</td><td>35位</td></tr><tr><td class="l">24位</td><td>高知県</td><td>23.2</td><td>5,559</td><td>42位</td></tr><tr><td class="l">25位</td><td>山口県</td><td>23.0</td><td>10,410</td><td>27位</td></tr><tr><td class="l">26位</td><td>長崎県</td><td>22.7</td><td>9,933</td><td>28位</td></tr><tr><td class="l">27位</td><td>福島県</td><td>22.5</td><td>13,221</td><td>19位</td></tr><tr><td class="l">28位</td><td>青森県</td><td>22.4</td><td>9,382</td><td>29位</td></tr><tr><td class="l">29位</td><td>島根県</td><td>22.4</td><td>5,035</td><td>43位</td></tr><tr><td class="l">30位</td><td>鳥取県</td><td>22.2</td><td>3,951</td><td>47位</td></tr><tr><td class="l">31位</td><td>大分県</td><td>22.2</td><td>8,274</td><td>34位</td></tr><tr><td class="l">32位</td><td>岐阜県</td><td>22.0</td><td>13,245</td><td>18位</td></tr><tr><td class="l">33位</td><td>秋田県</td><td>21.9</td><td>7,753</td><td>36位</td></tr><tr><td class="l">34位</td><td>栃木県</td><td>21.8</td><td>12,518</td><td>20位</td></tr><tr><td class="l">35位</td><td>新潟県</td><td>21.6</td><td>15,448</td><td>16位</td></tr><tr><td class="l">36位</td><td>岩手県</td><td>21.6</td><td>8,717</td><td>31位</td></tr><tr><td class="l">37位</td><td>茨城県</td><td>21.4</td><td>18,442</td><td>13位</td></tr><tr><td class="l">38位</td><td>静岡県</td><td>21.0</td><td>23,059</td><td>11位</td></tr><tr><td class="l">39位</td><td>熊本県</td><td>21.0</td><td>11,583</td><td>22位</td></tr><tr><td class="l">40位</td><td>沖縄県</td><td>20.8</td><td>7,384</td><td>38位</td></tr><tr><td class="l">41位</td><td>佐賀県</td><td>20.1</td><td>5,027</td><td>44位</td></tr><tr><td class="l">42位</td><td>福井県</td><td>20.1</td><td>4,666</td><td>45位</td></tr><tr><td class="l">43位</td><td>鹿児島県</td><td>19.9</td><td>10,417</td><td>26位</td></tr><tr><td class="l">44位</td><td>宮崎県</td><td>18.1</td><td>6,367</td><td>40位</td></tr><tr><td class="l">45位</td><td>山形県</td><td>17.9</td><td>6,407</td><td>39位</td></tr><tr><td class="l">46位</td><td>長野県</td><td>17.5</td><td>11,420</td><td>24位</td></tr><tr><td class="l">47位</td><td>山梨県</td><td>17.2</td><td>4,369</td><td>46位</td></tr></tbody></table><hr class="aul-sum-hr"><h2>この数字を、どう使うか</h2><h3>自治体・保険者の担当者の方へ</h3><p>まず、自分の地域の値を人口で割って、この表のどのあたりに位置するかを確かめてください。全国平均より高いのか低いのか、そしてどれくらい離れているのか。</p><p>そのうえで、<strong>近い水準の地域を数県ピックアップして、サービス整備の状況や高齢化率と突き合わせる</strong>と、差がどこから来ているのかが見えてきます。全国平均との比較だけでは、「多い／少ない」で止まってしまい、次の一手につながりません。</p><h3>ケアマネジャー・事業者の方へ</h3><p>この数字は、地域ごとの「支援を必要とする人の密度」の目安になります。人口比で高い地域は、限られた資源に対して需要が集中しやすいことを意味します。</p><p><strong>自分の地域が上位側なら、事業所間の連携や優先順位づけがより重要になります。</strong>下位側なら、まだ掘り起こされていないニーズがある可能性も含めて見ておく価値があります。</p><hr class="aul-sum-hr"><h2>まとめ</h2><ul><li>実数の上位は人口規模を映したもので、それだけでは地域の比較になりません</li><li>人口で揃えると、第１号被保険者1,000人あたりの最多は<strong>大阪府（36.4）</strong>、全国平均は25.4</li><li><strong>静岡県</strong>のように、実数11位・人口比38位と評価が変わる地域があります</li><li>最大と最小の開きは<strong>2.11倍</strong>。全国平均を目安にする際は、この幅を織り込む必要があります</li></ul><p>数字そのものより、<strong>「自分の地域はどちら側なのか」を確かめること</strong>が出発点になります。</p><hr class="aul-sum-hr">
+<p class="aul-sw-foot">生成日時: 2026-09-09 17:56</p>
+</article>
+</div><div style="height:22px"></div><!-- AUL e-Stat Pipeline / 介護サービス利用状況データを読む　第１号被保険者　－75歳以上80歳未満－ -->
+<div class="aul-estat-block" id="aul-b245e9ca">
+<style>
+#aul-b245e9ca{font-family:'Noto Sans JP','Helvetica Neue',sans-serif;max-width:900px;margin:0 auto;padding:0 12px;color:#1e293b}
+#aul-b245e9ca h3{font-size:1.05rem;font-weight:700;border-left:4px solid #2563eb;padding-left:10px;margin:28px 0 12px;color:#1e3a5f}
+.aul-summary{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px 18px;margin-bottom:6px;line-height:1.85;font-size:.9rem;color:#1e3a5f}
+.aul-kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 26px}
+@media(max-width:640px){.aul-kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.aul-kpi-card{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 10px;text-align:center}
+.aul-kpi-label{font-size:.72rem;color:#64748b;margin-bottom:5px}
+.aul-kpi-value{font-size:1.3rem;font-weight:800;color:#1d4ed8;line-height:1.1}
+.aul-kpi-unit{font-size:.68rem;color:#94a3b8;margin-top:3px}
+.aul-card-wide{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin:10px 0}
+.aul-insights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+@media(max-width:640px){.aul-insights{grid-template-columns:1fr}}
+.aul-insight-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:13px 15px}
+.aul-insight-title{font-weight:700;color:#1e3a5f;font-size:.88rem;margin-bottom:5px}
+.aul-insight-body{font-size:.83rem;color:#374151;line-height:1.75}
+.aul-tbl{width:100%;border-collapse:collapse;font-size:.76rem;margin:6px 0}
+.aul-tbl th{background:#1e3a5f;color:#fff;padding:7px 9px;text-align:center;white-space:nowrap}
+.aul-tbl td{padding:5px 9px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
+.aul-tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+.aul-tbl tr:nth-child(even) td{background:#f8faff}
+.aul-src{font-size:.73rem;color:#94a3b8;margin-top:22px;border-top:1px solid #e2e8f0;padding-top:9px}
+</style>
+
+<div class="aul-summary"><strong>介護サービス利用状況データを読む　第１号被保険者　－75歳以上80歳未満－</strong><br>実数では「大阪府」が最多ですが、比較すべきは人口を揃えた比率です。自地域が全国平均のどちら側にあるかを確認し、全国平均ではなく水準の近い地域を計画の参照先にしてください。</div>
+
+<h3>主要指標（第１号被保険者　－75歳以上80歳未満－ / 要支援１上位3項目）</h3>
+<div class="aul-kpi-grid">
+<div class="aul-kpi-card"><div class="aul-kpi-label">大阪府</div><div class="aul-kpi-value">18,619</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">東京都</div><div class="aul-kpi-value">15,971</div><div class="aul-kpi-unit">人</div></div>
+<div class="aul-kpi-card"><div class="aul-kpi-label">北海道</div><div class="aul-kpi-value">11,334</div><div class="aul-kpi-unit">人</div></div>
+</div>
+
+<h3>上位サービス利用規模（第１号被保険者　－75歳以上80歳未満－ / 要支援１・人）</h3>
+<div class="aul-card-wide"><canvas id="aulb245e9ca_c1"></canvas></div>
+
+<h3>上位3項目の区分別比較</h3>
+<div class="aul-card-wide"><canvas id="aulb245e9ca_c2"></canvas></div>
+
+<h3>分析インサイト</h3>
+<div class="aul-insights">
+<div class="aul-insight-card"><div class="aul-insight-title">実数が多い地域（第１号被保険者　－75歳以上80歳未満－ / 要支援１）</div><div class="aul-insight-body">上位3項目は「大阪府」、「東京都」、「北海道」です。　ただし実数の多さは人口規模の大きさを映している面が大きく、これだけでは地域の実態を比べたことになりません。人口を揃えた比率で見る必要があります。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">実数と人口比で評価が変わる地域</div><div class="aul-insight-body">「静岡県」は実数では11位ですが、第１号被保険者1,000人あたりに直すと38位です。人口規模を揃えると、実数の順位より低く位置づけられます。　実数のランキングは人口規模の大きさを映しているだけの場合があります。自地域と他地域を比べるときは、人口を揃えた比率で見ないと実態を読み違えます。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">人口比で見た上位・下位（第１号被保険者1,000人あたり）</div><div class="aul-insight-body">第１号被保険者1,000人あたりで最も多いのは「大阪府」の36.4（全国平均の1.44倍）、最も少ないのは「山梨県」の17.2です。　同じ人口規模あたりで見ても地域によって差があります。自地域が上位側か下位側かによって、必要なサービス量や整備の優先度の見立ては変わります。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">地域差の大きさ</div><div class="aul-insight-body">第１号被保険者1,000人あたりの最大（大阪府）と最小（山梨県）の差は2.11倍です。　全国平均をそのまま自地域の目安に使うと、この差の分だけ実態からずれます。計画値の根拠には、全国平均ではなく近い水準の地域の数字を参照する方が妥当です。</div></div>
+<div class="aul-insight-card"><div class="aul-insight-title">データ品質</div><div class="aul-insight-body">全48行を解析しました。欠損セル数は0件です。　欠損は限定的でデータ品質は良好です。</div></div>
+</div>
+
+<h3>上位10項目（第１号被保険者　－75歳以上80歳未満－ / 要支援１順）</h3><div style="overflow-x:auto"><table class="aul-tbl"><thead><tr><th>項目</th><th>第１号被保険者　－75歳以上80歳未満－ / 要支援１<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要支援２<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要介護１<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要介護２<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要介護３<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要介護４<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 要介護５<br><small>人</small></th><th>第１号被保険者　－75歳以上80歳未満－ / 合計<br><small>人</small></th></tr></thead><tbody>
+<tr><td>大阪府</td><td class="num">18,619</td><td class="num">13,779</td><td class="num">13,628</td><td class="num">14,317</td><td class="num">9,419</td><td class="num">8,838</td><td class="num">6,983</td><td class="num">85,583</td></tr>
+<tr><td>東京都</td><td class="num">15,971</td><td class="num">13,260</td><td class="num">16,948</td><td class="num">14,283</td><td class="num">9,531</td><td class="num">8,819</td><td class="num">6,809</td><td class="num">85,621</td></tr>
+<tr><td>北海道</td><td class="num">11,334</td><td class="num">8,122</td><td class="num">10,841</td><td class="num">7,064</td><td class="num">3,944</td><td class="num">3,823</td><td class="num">2,865</td><td class="num">47,993</td></tr>
+<tr><td>兵庫県</td><td class="num">11,250</td><td class="num">9,539</td><td class="num">8,046</td><td class="num">5,884</td><td class="num">4,271</td><td class="num">4,170</td><td class="num">2,992</td><td class="num">46,152</td></tr>
+<tr><td>神奈川県</td><td class="num">9,648</td><td class="num">10,817</td><td class="num">11,682</td><td class="num">11,411</td><td class="num">7,128</td><td class="num">6,572</td><td class="num">4,613</td><td class="num">61,871</td></tr>
+<tr><td>愛知県</td><td class="num">7,869</td><td class="num">9,525</td><td class="num">7,551</td><td class="num">7,176</td><td class="num">5,340</td><td class="num">5,064</td><td class="num">3,427</td><td class="num">45,952</td></tr>
+<tr><td>埼玉県</td><td class="num">7,618</td><td class="num">6,982</td><td class="num">11,922</td><td class="num">8,523</td><td class="num">6,162</td><td class="num">5,313</td><td class="num">3,739</td><td class="num">50,259</td></tr>
+<tr><td>千葉県</td><td class="num">7,200</td><td class="num">6,456</td><td class="num">9,410</td><td class="num">7,300</td><td class="num">5,348</td><td class="num">4,644</td><td class="num">3,427</td><td class="num">43,785</td></tr>
+<tr><td>福岡県</td><td class="num">6,800</td><td class="num">6,449</td><td class="num">7,734</td><td class="num">5,556</td><td class="num">4,123</td><td class="num">3,605</td><td class="num">2,449</td><td class="num">36,716</td></tr>
+<tr><td>広島県</td><td class="num">4,412</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td></tr>
+</tbody></table></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  new Chart(document.getElementById('aulb245e9ca_c1'),{type:'bar',data:{labels:["大阪府", "東京都", "北海道", "兵庫県", "神奈川県", "愛知県", "埼玉県", "千葉県"],datasets:[{label:'第１号被保険者　－75歳以上80歳未満－ / 要支援１',data:[18619.0, 15971.0, 11334.0, 11250.0, 9648.0, 7869.0, 7618.0, 7200.0],backgroundColor:'#2563eb'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}});
+  new Chart(document.getElementById('aulb245e9ca_c2'),{type:'bar',data:{labels:["大阪府", "東京都", "北海道"],datasets:[{"label": "第１号被保険者　－75歳以上80歳未満－ / 要支援２", "data": [13779.0, 13260.0, 8122.0], "backgroundColor": "#2563eb"}, {"label": "第１号被保険者　－75歳以上80歳未満－ / 要介護１", "data": [13628.0, 16948.0, 10841.0], "backgroundColor": "#10b981"}, {"label": "第１号被保険者　－75歳以上80歳未満－ / 要介護２", "data": [14317.0, 14283.0, 7064.0], "backgroundColor": "#f59e0b"}, {"label": "第１号被保険者　－75歳以上80歳未満－ / 要介護３", "data": [9419.0, 9531.0, 3944.0], "backgroundColor": "#8b5cf6"}]},options:{responsive:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true}}}});
+})();
+</script>
+
+<p class="aul-src">出典: 第４－１－１表　都道府県別　要介護（要支援）認定者数　男女計　－総数－　（年度末現在）　原表: 04-1-1t_75歳以上80歳未満.xlsx<br>※本結果は集計値であり、個別施設・地域の状況を直接示すものではありません。<br>※解析行数: 48行（明細: 0行）<br>※ランキングは数値の単純比較であり、統計的有意性の検定は行っていません。</p>
+</div></div>

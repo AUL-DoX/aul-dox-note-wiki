@@ -54,5 +54,12 @@
   "dashboards/kaigo/sogo-jigyo-unit-efficiency-2026-02": "【2026年2月】総合事業の単位効率分析｜通所型集中と報酬格差の実態",
   "dashboards/kaigo/supplementary-benefits-2026-02": "2026年2月・特養が補足給付の67%占有、184億円の食費・滞在費補助の実態",
   "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age65to70": "要介護（要支援）認定者数　男女計　65〜70歳（令和６年度・都道府県別）",
-  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age70to75": "要介護（要支援）認定者数　男女計　70〜75歳（令和６年度・都道府県別）"
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age70to75": "要介護（要支援）認定者数　男女計　70〜75歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age75to80": "要介護（要支援）認定者数　男女計　75〜80歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age80to85": "要介護（要支援）認定者数　男女計　80〜85歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age85to90": "要介護（要支援）認定者数　男女計　85〜90歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-age90plus": "要介護（要支援）認定者数　男女計　90歳以上（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-hihokensha1": "要介護（要支援）認定者数　男女計　第１号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-hihokensha2": "要介護（要支援）認定者数　男女計　第２号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-1-total": "要介護（要支援）認定者数　男女計　総数（令和６年度・都道府県別）"
 }
