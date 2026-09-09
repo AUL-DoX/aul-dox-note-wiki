@@ -1,11 +1,12 @@
 {
-  "fetchedAt": "2026-09-01T20:11:31.446Z",
+  "fetchedAt": "2026-09-09T19:44:54.673Z",
   "magazines": [
     {
       "key": "m8b2f904b90d5",
       "title": "Vercelの未来",
       "url": "https://note.com/chic_wren6567/m/m8b2f904b90d5",
       "articleUrls": [
+        "https://note.com/chic_wren6567/n/ne442d5898174",
         "https://note.com/chic_wren6567/n/ne584f795223b",
         "https://note.com/chic_wren6567/n/n313da784bbd4",
         "https://note.com/chic_wren6567/n/n96260c0dbbbc",
@@ -19,6 +20,21 @@
         "https://note.com/chic_wren6567/n/n514f40cd74e4",
         "https://note.com/chic_wren6567/n/n0a52c3c6aaef",
         "https://note.com/chic_wren6567/n/n9314215bed24"
+      ]
+    },
+    {
+      "key": "m72791e9e4563",
+      "title": "Obsidian 全員集合！",
+      "url": "https://note.com/chic_wren6567/m/m72791e9e4563",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/nda48348fcf18",
+        "https://note.com/chic_wren6567/n/nbcc895701f22",
+        "https://note.com/chic_wren6567/n/n0eff08c46a89",
+        "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f",
+        "https://note.com/chic_wren6567/n/n07911f2a8f95",
+        "https://note.com/chic_wren6567/n/nce5457debbae",
+        "https://note.com/chic_wren6567/n/nf21f8599877c",
+        "https://note.com/chic_wren6567/n/n46a014a785a6"
       ]
     },
     {
@@ -138,20 +154,6 @@
         "https://note.com/chic_wren6567/n/ne904b6982773",
         "https://note.com/chic_wren6567/n/n8c7dc82f0d63",
         "https://note.com/chic_wren6567/n/nba1f66fc4791"
-      ]
-    },
-    {
-      "key": "m72791e9e4563",
-      "title": "Obsidian 全員集合！",
-      "url": "https://note.com/chic_wren6567/m/m72791e9e4563",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/nbcc895701f22",
-        "https://note.com/chic_wren6567/n/n0eff08c46a89",
-        "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f",
-        "https://note.com/chic_wren6567/n/n07911f2a8f95",
-        "https://note.com/chic_wren6567/n/nce5457debbae",
-        "https://note.com/chic_wren6567/n/nf21f8599877c",
-        "https://note.com/chic_wren6567/n/n46a014a785a6"
       ]
     },
     {
