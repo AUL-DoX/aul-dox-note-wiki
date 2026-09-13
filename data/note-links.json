@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/api/v2/creators/contents",
-  "fetchedAt": "2026-09-09T19:44:51.192Z",
-  "count": 694,
+  "fetchedAt": "2026-09-13T10:10:06.280Z",
+  "count": 701,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -4859,6 +4859,55 @@
       "url": "https://note.com/chic_wren6567/n/n3404e6606150",
       "published": "2026-09-02T06:38:55+09:00",
       "description": "Hermethea Pipsを作りながら、最近になって「このツールの一番のストロングポイントは何なのか」が少しずつ見えてきました。パイプラインをAIと一緒に設計することでも、AIエージェントを動かすことでもありません。 私がいま一番面白いと思っているのは、AIカウンセリングによっ…",
+      "source": "rss"
+    },
+    {
+      "title": "最低賃金が上がる今、就労継続支援は「経営」なのか「福祉」なのか――厚労省の中間とりまとめから考える",
+      "url": "https://note.com/chic_wren6567/n/ne2badb2e788d",
+      "published": "2026-09-13T17:56:53+09:00",
+      "description": "2026年9月10日、厚生労働省は「雇用と福祉の果たすべき機能・役割と連携の基本的考え方（中間とりまとめ）」を公表した。一般企業の障害者雇用が拡大し、働き方も多様化する中で、就労継続支援A型・B型を今後どう位置付けるのか。その方向性を考える上で、かなり重要な資料だと思う。(厚生労…",
+      "source": "rss"
+    },
+    {
+      "title": "Vercelの拡張でHermetheaがさらに進化しそうだ――AIエージェントを動かす基盤が揃ってきた",
+      "url": "https://note.com/chic_wren6567/n/n678de24ec225",
+      "published": "2026-09-13T04:49:19+09:00",
+      "description": "またVercelが拡張機能を更新し、Hermetheaがさらに一段進化できそうな感覚がある。 きっかけは、VercelがOpenAI Agents APIとSandboxを組み合わせた構成を公式に示したことだ。 OpenAI側がAgent LoopやSession Stateを持…",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年9月第2週】医療・介護・障がい福祉の制度改正・最新動向｜OTC類似薬、介護報酬改定、障害者就労",
+      "url": "https://note.com/chic_wren6567/n/n8151ba609039",
+      "published": "2026-09-12T16:27:46+09:00",
+      "description": "2026年9月7日（月）から9月11日（金）までに、厚生労働省などが公開・更新した一次情報を確認しました。 今週は、医療分野ではOTC類似薬の保険給付見直しとヘルスケアAX・医療DX、介護分野では2027年度介護報酬改定に向けた関係団体との意見交換、障がい福祉分野では「雇用と福祉…",
+      "source": "rss"
+    },
+    {
+      "title": "山中伸弥先生の「VW」から考えるAI活用――業務改善から「現場を変える」Hermetheaへ",
+      "url": "https://note.com/chic_wren6567/n/n48cf12a74d83",
+      "published": "2026-09-12T08:12:28+09:00",
+      "description": "Audibleで『夢中が未来をつくる』山中伸弥著を読んでいて（聴いていて）、特に印象に残ったのが「VW」という言葉だった。 VWといっても自動車の話ではない。山中伸弥先生が米国留学時代、恩師であるマーレー先生から教えられた考え方である。 Vは「Vision」、Wは「Work ha…",
+      "source": "rss"
+    },
+    {
+      "title": "GENIAC PRIZE「AIで業務改善」と「AIを使った業務改善」は雲泥の差――人手不足という広すぎる課題を、このコンペティションでどう評価するのか",
+      "url": "https://note.com/chic_wren6567/n/nfe0c0d605aea",
+      "published": "2026-09-11T18:07:29+09:00",
+      "description": "GENIAC PRIZEの「エッセンシャルワーカーの人手不足解消に資するAIを活用した業務プロセス改革」を見ていて、非常に面白いテーマだと思う一方で、一つ大きく引っかかったことがある。 それが、「AIで業務改善する」のか、それとも「AIを使って業務改善する」のか、という違いだ。 …",
+      "source": "rss"
+    },
+    {
+      "title": "Codex SitesでLLMO対策を実験――AI検索やクローラーに効果は出るのか",
+      "url": "https://note.com/chic_wren6567/n/n7f947e2493fa",
+      "published": "2026-09-11T04:51:37+09:00",
+      "description": "Codex Sitesで「介護と障害福祉サービスの通知文Wiki 更新情報」を公開しました。 今回の目的は、Codex Sitesそのものを試すことではありません。介護・障害福祉の更新情報を別ページとして公開し、LLMOやGEOの観点でどんな変化が出るのかを確認する実験です。 更…",
+      "source": "rss"
+    },
+    {
+      "title": "GEARの申請が通ったので『エージェントプラットフォームにおけるGeminiによるグラウンディング入門』を始めてみた",
+      "url": "https://note.com/chic_wren6567/n/n05d71eda32ca",
+      "published": "2026-09-10T18:57:11+09:00",
+      "description": "GEAR（Google Executive AI Readiness）の申請が通ったので、さっそく講座をスタートしました。 今回取り組み始めたのは、「エージェントプラットフォームにおけるGeminiによるグラウンディング入門」です。 名前だけを見ると、Geminiを使ったAIエー…",
       "source": "rss"
     }
   ],

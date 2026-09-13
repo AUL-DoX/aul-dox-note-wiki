@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T19:48:46.616Z",
+  "fetchedAt": "2026-09-13T10:14:11.214Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -193,8 +193,8 @@
       "介護",
       "Gemini",
       "GoogleWorkspace",
-      "要介護",
       "認知症ケア",
+      "要介護",
       "ケアプラン",
       "長期記憶",
       "短期記憶"
@@ -1602,8 +1602,8 @@
       "介護経営",
       "短期入所",
       "介護老人福祉施設",
-      "経営概況調査",
       "短期入所生活介護",
+      "経営概況調査",
       "収支分析",
       "短期入所サービス"
     ],
@@ -1836,8 +1836,8 @@
     ],
     "https://note.com/chic_wren6567/n/n07a034e37d9a": [
       "介護経営",
-      "経営概況調査",
       "短期入所生活介護",
+      "経営概況調査",
       "地域区分別",
       "短期入所サービス"
     ],
@@ -2159,8 +2159,8 @@
       "生成AI",
       "業務改善",
       "システム開発",
-      "GAS",
-      "AI開発"
+      "AI開発",
+      "GAS"
     ],
     "https://note.com/chic_wren6567/n/n3845985c0943": [
       "言語聴覚士",
@@ -5371,6 +5371,55 @@
       "FDE",
       "差分分析",
       "HermetheaPips"
+    ],
+    "https://note.com/chic_wren6567/n/ne2badb2e788d": [
+      "就労継続支援B型",
+      "障害福祉",
+      "最低賃金",
+      "就労継続支援A型",
+      "就労継続支援"
+    ],
+    "https://note.com/chic_wren6567/n/n678de24ec225": [
+      "AIエージェント",
+      "業務設計",
+      "vercel",
+      "FDE",
+      "Hermethea"
+    ],
+    "https://note.com/chic_wren6567/n/n8151ba609039": [
+      "障害福祉",
+      "医療制度",
+      "介護報酬改定",
+      "障害者就労",
+      "OTC類似薬"
+    ],
+    "https://note.com/chic_wren6567/n/n48cf12a74d83": [
+      "AI",
+      "生成AI",
+      "医療DX",
+      "福祉DX",
+      "Hermethea"
+    ],
+    "https://note.com/chic_wren6567/n/nfe0c0d605aea": [
+      "生成AI",
+      "AI活用",
+      "業務改善",
+      "人手不足",
+      "GENIACPRIZE"
+    ],
+    "https://note.com/chic_wren6567/n/n7f947e2493fa": [
+      "障害福祉",
+      "GEO",
+      "LLMO",
+      "介護DX",
+      "CodexSites"
+    ],
+    "https://note.com/chic_wren6567/n/n05d71eda32ca": [
+      "生成AI",
+      "Gemini",
+      "AIエージェント",
+      "GoogleCloud",
+      "Gear"
     ]
   }
 }
