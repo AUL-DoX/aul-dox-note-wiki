@@ -79,5 +79,12 @@
   "dashboards/keiei/r6-kaigo-todofuken-dai4-1-3-age90plus": "要介護（要支援）認定者数　女　90歳以上（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai4-1-3-hihokensha1": "要介護（要支援）認定者数　女　第１号被保険者（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai4-1-3-hihokensha2": "要介護（要支援）認定者数　女　第２号被保険者（令和６年度・都道府県別）",
-  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-3-total": "要介護（要支援）認定者数　女　総数（令和６年度・都道府県別）"
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-1-3-total": "要介護（要支援）認定者数　女　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age65to70": "要介護（要支援）認定者数　男女計（２割負担対象者分）　65〜70歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age70to75": "要介護（要支援）認定者数　男女計（２割負担対象者分）　70〜75歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age75to80": "要介護（要支援）認定者数　男女計（２割負担対象者分）　75〜80歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age80to85": "要介護（要支援）認定者数　男女計（２割負担対象者分）　80〜85歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age85to90": "要介護（要支援）認定者数　男女計（２割負担対象者分）　85〜90歳（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-age90plus": "要介護（要支援）認定者数　男女計（２割負担対象者分）　90歳以上（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-2-1-total": "要介護（要支援）認定者数　男女計（２割負担対象者分）　総数（令和６年度・都道府県別）"
 }
