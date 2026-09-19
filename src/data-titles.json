@@ -121,5 +121,14 @@
   "dashboards/keiei/r6-kaigo-todofuken-dai4-3-3-age80to85": "要介護（要支援）認定者数　女（３割負担対象者分）　80〜85歳（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai4-3-3-age85to90": "要介護（要支援）認定者数　女（３割負担対象者分）　85〜90歳（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai4-3-3-age90plus": "要介護（要支援）認定者数　女（３割負担対象者分）　90歳以上（令和６年度・都道府県別）",
-  "dashboards/keiei/r6-kaigo-todofuken-dai4-3-3-total": "要介護（要支援）認定者数　女（３割負担対象者分）　総数（令和６年度・都道府県別）"
+  "dashboards/keiei/r6-kaigo-todofuken-dai4-3-3-total": "要介護（要支援）認定者数　女（３割負担対象者分）　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-1-hihokensha1": "居宅介護(介護予防)サービス受給者数　第１号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-1-hihokensha2": "居宅介護(介護予防)サービス受給者数　第２号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-1-total": "居宅介護(介護予防)サービス受給者数　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-2-20pct": "居宅介護(介護予防)サービス別受給者数　２割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-2-30pct": "居宅介護(介護予防)サービス別受給者数　３割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-2-total": "居宅介護(介護予防)サービス別受給者数　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-3-20pct": "居宅介護(介護予防)サービス別利用回（日）数　２割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-3-30pct": "居宅介護(介護予防)サービス別利用回（日）数　３割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-3-total": "居宅介護(介護予防)サービス別利用回（日）数　総数（令和６年度・都道府県別）"
 }
