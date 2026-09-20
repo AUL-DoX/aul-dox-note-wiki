@@ -130,5 +130,14 @@
   "dashboards/keiei/r6-kaigo-todofuken-dai5-2-total": "居宅介護(介護予防)サービス別受給者数　総数（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai5-3-20pct": "居宅介護(介護予防)サービス別利用回（日）数　２割負担対象者分（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai5-3-30pct": "居宅介護(介護予防)サービス別利用回（日）数　３割負担対象者分（令和６年度・都道府県別）",
-  "dashboards/keiei/r6-kaigo-todofuken-dai5-3-total": "居宅介護(介護予防)サービス別利用回（日）数　総数（令和６年度・都道府県別）"
+  "dashboards/keiei/r6-kaigo-todofuken-dai5-3-total": "居宅介護(介護予防)サービス別利用回（日）数　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-1-hihokensha1": "地域密着型（介護予防）サービス受給者数　第１号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-1-hihokensha2": "地域密着型（介護予防）サービス受給者数　第２号被保険者（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-1-total": "地域密着型（介護予防）サービス受給者数　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-2-20pct": "地域密着型サービス別受給者数　２割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-2-30pct": "地域密着型サービス別受給者数　３割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-2-total": "地域密着型サービス別受給者数　総数（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-3-20pct": "地域密着型サービス利用回数　２割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-3-30pct": "地域密着型サービス利用回数　３割負担対象者分（令和６年度・都道府県別）",
+  "dashboards/keiei/r6-kaigo-todofuken-dai6-3-total": "地域密着型サービス利用回数　総数（令和６年度・都道府県別）"
 }
