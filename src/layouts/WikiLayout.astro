@@ -26,6 +26,12 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://aul-dox.
     <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script
+      is:inline
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5257393735098403"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <Header home={home} />
