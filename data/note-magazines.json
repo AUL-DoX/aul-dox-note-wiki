@@ -1,6 +1,22 @@
 {
-  "fetchedAt": "2026-09-13T10:10:13.057Z",
+  "fetchedAt": "2026-09-22T09:53:50.596Z",
   "magazines": [
+    {
+      "key": "m72791e9e4563",
+      "title": "Obsidian 全員集合！",
+      "url": "https://note.com/chic_wren6567/m/m72791e9e4563",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/n84ac10b520de",
+        "https://note.com/chic_wren6567/n/nda48348fcf18",
+        "https://note.com/chic_wren6567/n/nbcc895701f22",
+        "https://note.com/chic_wren6567/n/n0eff08c46a89",
+        "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f",
+        "https://note.com/chic_wren6567/n/n07911f2a8f95",
+        "https://note.com/chic_wren6567/n/nce5457debbae",
+        "https://note.com/chic_wren6567/n/nf21f8599877c",
+        "https://note.com/chic_wren6567/n/n46a014a785a6"
+      ]
+    },
     {
       "key": "m8b2f904b90d5",
       "title": "Vercelの未来",
@@ -20,21 +36,6 @@
         "https://note.com/chic_wren6567/n/n514f40cd74e4",
         "https://note.com/chic_wren6567/n/n0a52c3c6aaef",
         "https://note.com/chic_wren6567/n/n9314215bed24"
-      ]
-    },
-    {
-      "key": "m72791e9e4563",
-      "title": "Obsidian 全員集合！",
-      "url": "https://note.com/chic_wren6567/m/m72791e9e4563",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/nda48348fcf18",
-        "https://note.com/chic_wren6567/n/nbcc895701f22",
-        "https://note.com/chic_wren6567/n/n0eff08c46a89",
-        "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f",
-        "https://note.com/chic_wren6567/n/n07911f2a8f95",
-        "https://note.com/chic_wren6567/n/nce5457debbae",
-        "https://note.com/chic_wren6567/n/nf21f8599877c",
-        "https://note.com/chic_wren6567/n/n46a014a785a6"
       ]
     },
     {
