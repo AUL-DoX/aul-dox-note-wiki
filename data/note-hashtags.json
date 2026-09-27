@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-22T09:57:52.762Z",
+  "fetchedAt": "2026-09-27T00:05:13.964Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -638,8 +638,8 @@
     ],
     "https://note.com/chic_wren6567/n/nf7636fd92b0a": [
       "麻雀",
-      "eスポーツ",
       "就労継続支援B型",
+      "eスポーツ",
       "高額療養費制度",
       "不適切",
       "OTC類似薬",
@@ -2158,8 +2158,8 @@
     "https://note.com/chic_wren6567/n/nd109cb04174b": [
       "生成AI",
       "業務改善",
-      "システム開発",
       "AI開発",
+      "システム開発",
       "GAS"
     ],
     "https://note.com/chic_wren6567/n/n3845985c0943": [
@@ -4263,8 +4263,8 @@
     ],
     "https://note.com/chic_wren6567/n/nedb4707c1177": [
       "Google",
-      "データサイエンス",
       "GAS",
+      "データサイエンス",
       "エンゲージメント",
       "スプレッドシート",
       "離職",
@@ -4328,8 +4328,8 @@
       "アドバンスケアプランニング"
     ],
     "https://note.com/chic_wren6567/n/n63c954524dec": [
-      "マイナンバー",
       "年末調整",
+      "マイナンバー",
       "年末調整面倒くさい"
     ],
     "https://note.com/chic_wren6567/n/nd9a76bcd85dc": [
@@ -5533,6 +5533,43 @@
       "GoogleCloud",
       "Gear",
       "AgentPlatform"
-    ]
+    ],
+    "https://note.com/chic_wren6567/n/n2427bda488b1": [
+      "AI開発",
+      "FDE",
+      "OODA",
+      "AULDoX",
+      "Hermethea"
+    ],
+    "https://note.com/chic_wren6567/n/n412a71802b76": [
+      "障害福祉",
+      "介護保険",
+      "医療制度",
+      "かかりつけ医機能",
+      "障害福祉報酬改定",
+      "ナビイ"
+    ],
+    "https://note.com/chic_wren6567/n/nf9bb0d11fe52": [
+      "生成AI",
+      "AI開発",
+      "GoogleCloud",
+      "BigQuery",
+      "GoogleGEAR"
+    ],
+    "https://note.com/chic_wren6567/n/n68b9064c256b": [
+      "AI開発",
+      "FDE",
+      "OODA",
+      "AULDoX",
+      "Hermethea"
+    ],
+    "https://note.com/chic_wren6567/n/na4a48744145c": [
+      "介護",
+      "ショートステイ",
+      "温泉宿",
+      "介護保険外サービス",
+      "レスパイトケア"
+    ],
+    "https://note.com/chic_wren6567/n/nfdabfd30b8bc": []
   }
 }
