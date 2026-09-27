@@ -5,7 +5,7 @@
 
 import { createServer } from 'node:http';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, unlinkSync, renameSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, join } from 'node:path';
 
@@ -92,6 +92,7 @@ function runGit(paths, message) {
     // 差分あり（exit code 1）
   }
   run(['commit', '-m', message]);
+    run(['pull', '--rebase', '--autostash']);
   run(['push']);
   return { ok: true, changed: true, log: log.join('\n\n') };
 }
@@ -211,6 +212,89 @@ async function handleTitles(req, res) {
   }
 }
 
+// keyから実ファイルの絶対パスを求める（例: "dashboards/kaigo/20260906-7_report" -> src/dashboards/kaigo/20260906-7_report.html）。
+// ROOTSに存在しないrootや、リポジトリ外に出ようとする "../" は拒否する。
+function resolveItemPath(key) {
+  if (typeof key !== 'string' || !key) return null;
+  const parts = key.split('/');
+  const root = parts[0];
+  if (!Object.values(ROOTS).includes(root)) return null;
+  if (parts.some((p) => p === '' || p === '.' || p === '..')) return null;
+  const relPath = join('src', root, ...parts.slice(1)) + '.html';
+  const absPath = join(REPO_ROOT, relPath);
+  if (!absPath.startsWith(join(REPO_ROOT, 'src'))) return null;
+  return { relPath, absPath };
+}
+
+// 公開済みファイルの削除。ファイル本体をgit rmし、data-titles.jsonからもキーを外す。
+async function handleDelete(req, res) {
+  const body = JSON.parse(await readBody(req));
+  const { key } = body;
+  const resolved = resolveItemPath(key);
+  if (!resolved) return json(res, 400, { error: 'キーが不正です。' });
+  const { relPath, absPath } = resolved;
+  if (!existsSync(absPath)) return json(res, 404, { error: `ファイルが見つかりません: ${relPath.replace(/\\/g, '/')}` });
+
+  const titles = loadTitles();
+  const hadTitle = key in titles;
+  delete titles[key];
+  if (hadTitle) saveTitles(titles);
+
+  try {
+    unlinkSync(absPath);
+    const paths = [relPath.replace(/\\/g, '/')];
+    if (hadTitle) paths.push('src/data-titles.json');
+    const result = runGit(paths, `Delete ${key} via admin`);
+    return json(res, 200, { ok: true, message: `削除しました: ${key}`, log: result.log });
+  } catch (e) {
+    return json(res, 500, { error: `削除処理に失敗しました: ${e.message}` });
+  }
+}
+
+// 掲載先（カテゴリ）の変更。ダッシュボードのみ対応（Deep Researchは年月も絡むため対象外）。
+// ファイルをgit mvし、data-titles.jsonのキーも新しいパスに付け替える。
+async function handleMove(req, res) {
+  const body = JSON.parse(await readBody(req));
+  const { key, category: newCategory } = body;
+  const resolved = resolveItemPath(key);
+  if (!resolved) return json(res, 400, { error: 'キーが不正です。' });
+  if (!CATEGORIES[newCategory]) return json(res, 400, { error: '分野が不正です。' });
+
+  const parts = key.split('/');
+  const root = parts[0];
+  if (root !== ROOTS.dashboard) return json(res, 400, { error: 'この種類の移動には対応していません。' });
+  const slugParts = parts.slice(2); // [category, ...] の先頭categoryを除いた残り（通常はslugのみ）
+  const oldCategory = parts[1];
+  if (oldCategory === newCategory) return json(res, 400, { error: '現在と同じ分野です。' });
+
+  const { relPath: oldRel, absPath: oldAbs } = resolved;
+  if (!existsSync(oldAbs)) return json(res, 404, { error: `ファイルが見つかりません: ${oldRel.replace(/\\/g, '/')}` });
+
+  const newKey = [root, newCategory, ...slugParts].join('/');
+  const newRel = join('src', root, newCategory, ...slugParts) + '.html';
+  const newAbs = join(REPO_ROOT, newRel);
+  if (existsSync(newAbs)) return json(res, 409, { error: `移動先に同名ファイルが既に存在します: ${newRel.replace(/\\/g, '/')}` });
+
+  const titles = loadTitles();
+  const hadTitle = key in titles;
+  if (hadTitle) {
+    titles[newKey] = titles[key];
+    delete titles[key];
+    saveTitles(titles);
+  }
+
+  try {
+    mkdirSync(dirname(newAbs), { recursive: true });
+    renameSync(oldAbs, newAbs);
+    const paths = [oldRel.replace(/\\/g, '/'), newRel.replace(/\\/g, '/')];
+    if (hadTitle) paths.push('src/data-titles.json');
+    const result = runGit(paths, `Move ${key} -> ${newKey} via admin`);
+    return json(res, 200, { ok: true, message: `分野を変更しました: ${CATEGORIES[newCategory]}`, log: result.log });
+  } catch (e) {
+    return json(res, 500, { error: `移動処理に失敗しました: ${e.message}` });
+  }
+}
+
 const server = createServer(async (req, res) => {
   try {
     if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
@@ -224,6 +308,8 @@ const server = createServer(async (req, res) => {
     }
     if (req.method === 'POST' && req.url === '/api/upload') return await handleUpload(req, res);
     if (req.method === 'POST' && req.url === '/api/titles') return await handleTitles(req, res);
+    if (req.method === 'POST' && req.url === '/api/delete') return await handleDelete(req, res);
+    if (req.method === 'POST' && req.url === '/api/move') return await handleMove(req, res);
     if (req.method === 'POST' && req.url === '/api/sync-note') return await handleSyncNote(req, res);
     json(res, 404, { error: 'not found' });
   } catch (e) {

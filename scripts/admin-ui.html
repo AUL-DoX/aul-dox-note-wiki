@@ -23,6 +23,9 @@
   button { border:none; border-radius:8px; background:var(--accent); color:#fff; font:inherit; font-weight:800; padding:10px 20px; cursor:pointer; margin-top:18px; }
   button:hover { background:var(--accent-deep); }
   button.small { padding:7px 14px; margin:0; font-size:13px; }
+  button.danger { background:var(--danger); }
+  button.danger:hover { background:#9c4230; }
+  .item select { flex:0 0 auto; width:auto; padding:6px 8px; font-size:12px; }
   .cat-btn { margin:0; padding:8px 14px; border-radius:999px; background:#fff; color:var(--ink); border:1px solid var(--line); font-weight:700; }
   .cat-btn.on { background:var(--accent); color:#fff; border-color:var(--accent); }
   .cat-btn:hover { border-color:var(--accent); }
@@ -42,7 +45,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>AUL DoX 管理画面 <span style="font-size:12px;font-weight:700;color:#fff;background:#c0573f;border-radius:6px;padding:2px 8px;vertical-align:middle;">v1.0.9</span></h1>
+  <h1>AUL DoX 管理画面 <span style="font-size:12px;font-weight:700;color:#fff;background:#c0573f;border-radius:6px;padding:2px 8px;vertical-align:middle;">v1.1.0</span></h1>
   <p class="sub">データ分析HTMLのアップロードとタイトル編集。「保存」を押すと git commit → push まで実行し、ref.aul-dox.jp に反映されます（数分後）。</p>
 
   <div class="card">
@@ -263,6 +266,27 @@ async function loadItems() {
     input.type = 'text'; input.value = item.title; input.dataset.original = item.title;
     input.addEventListener('input', updateDirtyState);
     row.append(tag, input);
+
+    if (item.type === 'dashboard') {
+      const moveSelect = document.createElement('select');
+      const placeholder = document.createElement('option');
+      placeholder.value = ''; placeholder.textContent = '分野を変更…';
+      moveSelect.appendChild(placeholder);
+      for (const [slug, label] of Object.entries(CATEGORIES)) {
+        if (slug === item.category) continue;
+        const o = document.createElement('option');
+        o.value = slug; o.textContent = label;
+        moveSelect.appendChild(o);
+      }
+      moveSelect.addEventListener('change', () => moveItem(item.key, moveSelect.value, moveSelect));
+      row.appendChild(moveSelect);
+    }
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button'; delBtn.className = 'small danger'; delBtn.textContent = '削除';
+    delBtn.addEventListener('click', () => deleteItem(item.key, item.title));
+    row.appendChild(delBtn);
+
     container.appendChild(row);
     rowInputs.set(item.key, input);
   }
@@ -308,6 +332,47 @@ $('save-all-btn').addEventListener('click', async () => {
     updateDirtyState();
   }
 });
+
+async function deleteItem(key, title) {
+  if (!confirm(`本当に削除しますか？元に戻せません。\n\n${title}\n(${key})`)) return;
+  showMsg($('items-msg'), true, '削除中…');
+  try {
+    const r = await fetch('/api/delete', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ key }),
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || '不明なエラー');
+    showMsg($('items-msg'), true, `${data.message}\n数分後に反映されます。`);
+    loadItems();
+  } catch (e) {
+    showMsg($('items-msg'), false, e.message);
+  }
+}
+
+async function moveItem(key, category, selectEl) {
+  if (!category) return;
+  if (!confirm(`分野を「${CATEGORIES[category]}」に変更します。よろしいですか？\n\n${key}`)) {
+    selectEl.value = '';
+    return;
+  }
+  showMsg($('items-msg'), true, '移動中…');
+  try {
+    const r = await fetch('/api/move', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ key, category }),
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || '不明なエラー');
+    showMsg($('items-msg'), true, `${data.message}\n数分後に反映されます。`);
+    loadItems();
+  } catch (e) {
+    showMsg($('items-msg'), false, e.message);
+    selectEl.value = '';
+  }
+}
 
 $('ym').value = currentMonth();
 loadItems();
