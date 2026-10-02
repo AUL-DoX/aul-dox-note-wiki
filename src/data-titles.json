@@ -165,5 +165,6 @@
   "dashboards/keiei/r7-kyufu-todofuken-dai6": "年間実受給者数　介護サービス（令和７年度・都道府県別）",
   "dashboards/keiei/r7-kyufu-todofuken-dai69": "請求事業所数（令和８年４月審査分・都道府県別）",
   "dashboards/keiei/r7-kyufu-todofuken-dai74": "年間実受給者数　総合事業サービス（令和７年度・都道府県別）",
-  "dashboards/keiei/r7-kyufu-todofuken-dai94": "総合事業サービス請求事業所数（令和８年４月審査分・都道府県別）"
+  "dashboards/keiei/r7-kyufu-todofuken-dai94": "総合事業サービス請求事業所数（令和８年４月審査分・都道府県別）",
+  "dashboards/keiei/wam-survey-di-trend": "社会福祉法人経営動向調査　景況感（DI）の推移（2025年9月〜2026年9月・福祉医療機構）"
 }
