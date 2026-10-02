@@ -1,0 +1,95 @@
+<div class="aul-report" data-slug="r7-kyufu-todofuken-dai5">
+<div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ol,.aul-summary-web .aul-sum-doc ul{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-bar{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+.aul-summary-web .aul-bar .nm{flex:0 0 5.5em;color:var(--ink);font-weight:600}
+.aul-summary-web .aul-bar .tr{flex:1;background:var(--line-soft);border-radius:4px;height:16px}
+.aul-summary-web .aul-bar .fl{display:block;height:16px;border-radius:4px;background:var(--teal)}
+.aul-summary-web .aul-bar .fl.lo{background:var(--clay)}
+.aul-summary-web .aul-bar .vl{flex:0 0 4.5em;text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">統計表第５表 年間実受給者数，都道府県・介護予防サービス種類別</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">令和7（2025）年5月審査分～令和8（2026）年4月審査分</span><span class="aul-sw-tag">統計表第5表</span><span class="aul-sw-tag">都道府県別</span></div>
+</div>
+<article class="aul-sum-doc">
+<h2>概要</h2>
+<blockquote class="aul-sum-quote">令和7（2025）年5月審査分～令和8（2026）年4月審査分の介護予防サービスの年間実受給者数は、全国で1,361.2千人（約136.1万人）です。第１号被保険者数（令和8年3月末現在（令和7年度末））で人口規模を揃えると、全国平均は第１号被保険者1,000人あたり38.0人です。最も高いのは兵庫県（第１号被保険者1,000人あたり57.6人）、最も低いのは青森県（第１号被保険者1,000人あたり18.0人）で、差は3.20倍です。</blockquote>
+<h2>主要ポイント</h2>
+<ol><li><strong>実数が多い都道府県：</strong>介護予防サービスの年間実受給者数（総数）の実数が多いのは「東京都」、「大阪府」、「兵庫県」の順です。人口の多い都道府県ほど実数も多くなるため、この順位だけでは地域の違いを比べたことになりません。</li><li><strong>実数と人口比で順位が変わる都道府県：</strong>「埼玉県」は実数では8位ですが、第１号被保険者1,000人あたりに直すと43位です。人口規模を揃えると、実数の順位より低く位置づけられます。</li><li><strong>人口比の上位・下位：</strong>最も高いのは兵庫県で第１号被保険者1,000人あたり57.6人（全国平均の1.52倍）、最も低いのは青森県で第１号被保険者1,000人あたり18.0人（全国平均の0.47倍）です。</li><li><strong>地域差の大きさ：</strong>最大（兵庫県）と最小（青森県）の差は3.20倍です。全国平均をそのまま自地域の目安に使うと、この差の分だけ実態からずれます。</li><li><strong>データの確かさ：</strong>全47都道府県を集計しました。6列は人口比で比較でき、16列は「千人単位の丸めに対して値が小さい」または「表章記号（－など）があり全都道府県を比べられない」ため、人口比の順位付けをしていません。</li></ol>
+<hr class="aul-sum-hr">
+
+<h2>この表は何を表しているか</h2>
+<p>「統計表第５表 年間実受給者数，都道府県・介護予防サービス種類別」は、厚生労働省「介護給付費等実態統計」（令和7（2025）年5月審査分～令和8（2026）年4月審査分）の統計表です。
+都道府県ごとの介護予防サービスの年間実受給者数を、サービスの種類別に示しています。単位は千人です。</p>
+<ul><li>注：令和7（2025）年4月から令和8（2026）年3月の各サービス提供月の介護予防サービス受給者について名寄せを行ったものであり、当該期間中に被保険者番号の変更があった場合には、別受給者として計上している。</li></ul>
+<h2>実数で並べると</h2>
+<p>介護予防サービスの年間実受給者数（総数）を実数（千人）で並べた上位10都道府県です。上位には人口の多い都道府県が並びます。</p>
+<table class="aul-sum-table"><thead><tr><th class="l">実数順位</th><th class="l">都道府県</th><th>年間実受給者数（千人）</th></tr></thead><tbody><tr><td class="l">1</td><td class="l">東京都</td><td>113.4</td></tr><tr><td class="l">2</td><td class="l">大阪府</td><td>109.1</td></tr><tr><td class="l">3</td><td class="l">兵庫県</td><td>91.1</td></tr><tr><td class="l">4</td><td class="l">愛知県</td><td>85.8</td></tr><tr><td class="l">5</td><td class="l">神奈川県</td><td>79.8</td></tr><tr><td class="l">6</td><td class="l">北海道</td><td>64.8</td></tr><tr><td class="l">7</td><td class="l">福岡県</td><td>60.5</td></tr><tr><td class="l">8</td><td class="l">埼玉県</td><td>54.7</td></tr><tr><td class="l">9</td><td class="l">千葉県</td><td>46.3</td></tr><tr><td class="l">10</td><td class="l">広島県</td><td>42.1</td></tr></tbody></table>
+<h2>人口で揃えると</h2>
+<p>実数を第１号被保険者数（令和8年3月末現在（令和7年度末））で割り、「第１号被保険者1,000人あたりの年間実受給者数」に直して比べます。人口規模の違いを取り除いたうえでの地域差を見るためです。</p>
+<h3>人口比が高い10都道府県</h3>
+<div class="aul-bar"><span class="nm">兵庫県</span><span class="tr"><span class="fl" style="width:100.0%"></span></span><span class="vl">57.6</span></div><div class="aul-bar"><span class="nm">広島県</span><span class="tr"><span class="fl" style="width:89.5%"></span></span><span class="vl">51.5</span></div><div class="aul-bar"><span class="nm">島根県</span><span class="tr"><span class="fl" style="width:88.8%"></span></span><span class="vl">51.1</span></div><div class="aul-bar"><span class="nm">愛媛県</span><span class="tr"><span class="fl" style="width:86.5%"></span></span><span class="vl">49.8</span></div><div class="aul-bar"><span class="nm">岡山県</span><span class="tr"><span class="fl" style="width:81.5%"></span></span><span class="vl">47.0</span></div><div class="aul-bar"><span class="nm">大阪府</span><span class="tr"><span class="fl" style="width:80.8%"></span></span><span class="vl">46.5</span></div><div class="aul-bar"><span class="nm">佐賀県</span><span class="tr"><span class="fl" style="width:80.4%"></span></span><span class="vl">46.3</span></div><div class="aul-bar"><span class="nm">和歌山県</span><span class="tr"><span class="fl" style="width:78.4%"></span></span><span class="vl">45.2</span></div><div class="aul-bar"><span class="nm">愛知県</span><span class="tr"><span class="fl" style="width:78.1%"></span></span><span class="vl">45.0</span></div><div class="aul-bar"><span class="nm">香川県</span><span class="tr"><span class="fl" style="width:76.1%"></span></span><span class="vl">43.8</span></div>
+<h3>人口比が低い10都道府県</h3>
+<div class="aul-bar"><span class="nm">青森県</span><span class="tr"><span class="fl lo" style="width:31.2%"></span></span><span class="vl">18.0</span></div><div class="aul-bar"><span class="nm">山梨県</span><span class="tr"><span class="fl lo" style="width:34.8%"></span></span><span class="vl">20.1</span></div><div class="aul-bar"><span class="nm">茨城県</span><span class="tr"><span class="fl lo" style="width:45.3%"></span></span><span class="vl">26.1</span></div><div class="aul-bar"><span class="nm">千葉県</span><span class="tr"><span class="fl lo" style="width:46.1%"></span></span><span class="vl">26.6</span></div><div class="aul-bar"><span class="nm">埼玉県</span><span class="tr"><span class="fl lo" style="width:47.8%"></span></span><span class="vl">27.5</span></div><div class="aul-bar"><span class="nm">秋田県</span><span class="tr"><span class="fl lo" style="width:49.3%"></span></span><span class="vl">28.4</span></div><div class="aul-bar"><span class="nm">宮崎県</span><span class="tr"><span class="fl lo" style="width:49.5%"></span></span><span class="vl">28.5</span></div><div class="aul-bar"><span class="nm">山形県</span><span class="tr"><span class="fl lo" style="width:50.2%"></span></span><span class="vl">28.9</span></div><div class="aul-bar"><span class="nm">岩手県</span><span class="tr"><span class="fl lo" style="width:51.3%"></span></span><span class="vl">29.5</span></div><div class="aul-bar"><span class="nm">沖縄県</span><span class="tr"><span class="fl lo" style="width:52.7%"></span></span><span class="vl">30.4</span></div>
+<h2>サービスの種類別に見る</h2>
+<p>人口比で比べられるサービスの種類について、全国平均と、最も高い都道府県・最も低い都道府県を示します（第１号被保険者1,000人あたり、単位は人）。</p>
+<table class="aul-sum-table"><thead><tr><th class="l">サービスの種類</th><th>全国平均</th><th>最も高い都道府県</th><th>最も低い都道府県</th><th>最大÷最小</th></tr></thead><tbody><tr><td class="l">総数</td><td>38.0</td><td>兵庫県（57.6）</td><td>青森県（18.0）</td><td>3.20倍</td></tr><tr><td class="l">介護予防居宅サービス</td><td>37.6</td><td>兵庫県（57.2）</td><td>青森県（17.5）</td><td>3.26倍</td></tr><tr><td class="l">訪問通所</td><td>34.9</td><td>兵庫県（53.2）</td><td>青森県（17.0）</td><td>3.12倍</td></tr><tr><td class="l">介護予防通所リハビリテーション</td><td>7.7</td><td>佐賀県（19.2）</td><td>神奈川県（2.9）</td><td>6.68倍</td></tr><tr><td class="l">介護予防福祉用具貸与</td><td>27.9</td><td>島根県（41.7）</td><td>青森県（12.2）</td><td>3.41倍</td></tr><tr><td class="l">介護予防支援</td><td>35.1</td><td>兵庫県（53.4）</td><td>青森県（17.3）</td><td>3.09倍</td></tr></tbody></table>
+<p>次の列は、人口比の順位付けをしていません。理由は表のとおりです。実数と欠損記号は、元の統計表でそのまま確認できます。</p>
+<table class="aul-sum-table"><thead><tr><th class="l">サービスの種類</th><th class="l">順位付けしない理由</th></tr></thead><tbody><tr><td class="l">介護予防訪問入浴介護</td><td class="l">「-」（計数のない場合）の都道府県が1あり、全都道府県を比べられないため順位付けしない</td></tr><tr><td class="l">介護予防訪問看護</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防訪問リハビリテーション</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">短期入所</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防短期入所生活介護</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防短期入所療養介護（老健）</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防短期入所療養介護（病院等）</td><td class="l">「-」（計数のない場合）の都道府県が29あり、全都道府県を比べられないため順位付けしない</td></tr><tr><td class="l">介護予防短期入所療養介護（医療院）</td><td class="l">「-」（計数のない場合）の都道府県が27あり、全都道府県を比べられないため順位付けしない</td></tr><tr><td class="l">介護予防居宅療養管理指導</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防特定施設入居者生活介護</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">地域密着型介護予防サービス</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防認知症対応型通所介護</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防小規模多機能型居宅介護（短期利用以外）</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防小規模多機能型居宅介護（短期利用）</td><td class="l">「-」（計数のない場合）の都道府県が8あり、全都道府県を比べられないため順位付けしない</td></tr><tr><td class="l">介護予防認知症対応型共同生活介護（短期利用以外）</td><td class="l">千人単位の丸めに対して値が小さく、人口比の順位が不正確になるため順位付けしない</td></tr><tr><td class="l">介護予防認知症対応型共同生活介護（短期利用）</td><td class="l">「-」（計数のない場合）の都道府県が25あり、全都道府県を比べられないため順位付けしない</td></tr></tbody></table>
+<h2>47都道府県の一覧（総数）</h2>
+<table class="aul-sum-table"><thead><tr><th class="l">人口比の順位</th><th class="l">都道府県</th><th>第１号被保険者1,000人あたりの年間実受給者数</th><th>実数（千人）</th><th>実数の順位</th></tr></thead><tbody><tr><td class="l">1</td><td class="l">兵庫県</td><td>57.6</td><td>91.1</td><td>3</td></tr><tr><td class="l">2</td><td class="l">広島県</td><td>51.5</td><td>42.1</td><td>10</td></tr><tr><td class="l">3</td><td class="l">島根県</td><td>51.1</td><td>11.4</td><td>37</td></tr><tr><td class="l">4</td><td class="l">愛媛県</td><td>49.8</td><td>21.7</td><td>20</td></tr><tr><td class="l">5</td><td class="l">岡山県</td><td>47.0</td><td>26.4</td><td>14</td></tr><tr><td class="l">6</td><td class="l">大阪府</td><td>46.5</td><td>109.1</td><td>2</td></tr><tr><td class="l">7</td><td class="l">佐賀県</td><td>46.3</td><td>11.6</td><td>35</td></tr><tr><td class="l">8</td><td class="l">和歌山県</td><td>45.2</td><td>13.7</td><td>31</td></tr><tr><td class="l">9</td><td class="l">愛知県</td><td>45.0</td><td>85.8</td><td>4</td></tr><tr><td class="l">10</td><td class="l">香川県</td><td>43.8</td><td>13.1</td><td>32</td></tr><tr><td class="l">11</td><td class="l">京都府</td><td>43.8</td><td>32.0</td><td>12</td></tr><tr><td class="l">12</td><td class="l">鳥取県</td><td>43.5</td><td>7.7</td><td>45</td></tr><tr><td class="l">13</td><td class="l">福岡県</td><td>42.3</td><td>60.5</td><td>7</td></tr><tr><td class="l">14</td><td class="l">大分県</td><td>42.2</td><td>15.7</td><td>28</td></tr><tr><td class="l">15</td><td class="l">徳島県</td><td>41.6</td><td>10.0</td><td>41</td></tr><tr><td class="l">16</td><td class="l">奈良県</td><td>41.3</td><td>17.4</td><td>26</td></tr><tr><td class="l">17</td><td class="l">熊本県</td><td>40.7</td><td>22.5</td><td>19</td></tr><tr><td class="l">18</td><td class="l">滋賀県</td><td>39.2</td><td>15.0</td><td>29</td></tr><tr><td class="l">19</td><td class="l">北海道</td><td>39.1</td><td>64.8</td><td>6</td></tr><tr><td class="l">20</td><td class="l">岐阜県</td><td>39.0</td><td>23.5</td><td>17</td></tr><tr><td class="l">21</td><td class="l">福井県</td><td>38.7</td><td>9.0</td><td>43</td></tr><tr><td class="l">22</td><td class="l">新潟県</td><td>38.7</td><td>27.5</td><td>13</td></tr><tr><td class="l">23</td><td class="l">三重県</td><td>38.4</td><td>20.3</td><td>21</td></tr><tr><td class="l">24</td><td class="l">山口県</td><td>37.4</td><td>16.8</td><td>27</td></tr><tr><td class="l">25</td><td class="l">鹿児島県</td><td>37.1</td><td>19.4</td><td>23</td></tr><tr><td class="l">26</td><td class="l">長野県</td><td>36.9</td><td>24.0</td><td>16</td></tr><tr><td class="l">27</td><td class="l">宮城県</td><td>36.8</td><td>24.3</td><td>15</td></tr><tr><td class="l">28</td><td class="l">石川県</td><td>36.3</td><td>12.1</td><td>33</td></tr><tr><td class="l">29</td><td class="l">静岡県</td><td>36.0</td><td>39.6</td><td>11</td></tr><tr><td class="l">30</td><td class="l">東京都</td><td>35.7</td><td>113.4</td><td>1</td></tr><tr><td class="l">31</td><td class="l">富山県</td><td>35.1</td><td>11.5</td><td>36</td></tr><tr><td class="l">32</td><td class="l">高知県</td><td>34.9</td><td>8.3</td><td>44</td></tr><tr><td class="l">33</td><td class="l">栃木県</td><td>34.6</td><td>19.9</td><td>22</td></tr><tr><td class="l">34</td><td class="l">長崎県</td><td>33.9</td><td>14.8</td><td>30</td></tr><tr><td class="l">35</td><td class="l">神奈川県</td><td>33.7</td><td>79.8</td><td>5</td></tr><tr><td class="l">36</td><td class="l">群馬県</td><td>31.3</td><td>18.1</td><td>24</td></tr><tr><td class="l">37</td><td class="l">福島県</td><td>30.5</td><td>18.0</td><td>25</td></tr><tr><td class="l">38</td><td class="l">沖縄県</td><td>30.4</td><td>10.9</td><td>38</td></tr><tr><td class="l">39</td><td class="l">岩手県</td><td>29.5</td><td>11.9</td><td>34</td></tr><tr><td class="l">40</td><td class="l">山形県</td><td>28.9</td><td>10.3</td><td>39</td></tr><tr><td class="l">41</td><td class="l">宮崎県</td><td>28.5</td><td>10.0</td><td>42</td></tr><tr><td class="l">42</td><td class="l">秋田県</td><td>28.4</td><td>10.0</td><td>40</td></tr><tr><td class="l">43</td><td class="l">埼玉県</td><td>27.5</td><td>54.7</td><td>8</td></tr><tr><td class="l">44</td><td class="l">千葉県</td><td>26.6</td><td>46.3</td><td>9</td></tr><tr><td class="l">45</td><td class="l">茨城県</td><td>26.1</td><td>22.5</td><td>18</td></tr><tr><td class="l">46</td><td class="l">山梨県</td><td>20.1</td><td>5.1</td><td>47</td></tr><tr><td class="l">47</td><td class="l">青森県</td><td>18.0</td><td>7.5</td><td>46</td></tr></tbody></table>
+<h2>データの出典と読み方の注意</h2>
+<ul>
+<li><strong>出典：</strong>e-Stat「介護給付費等実態統計」統計表第５表 年間実受給者数，都道府県・介護予防サービス種類別（令和7（2025）年5月審査分～令和8（2026）年4月審査分、ファイル mr_05.csv）。</li>
+<li><strong>人口の分母：</strong>介護保険事業状況報告（暫定）令和8年3月分 第１表 保険者別 第１号被保険者数（令和8年3月末現在）。暫定値。令和7年度介護保険事業状況報告（年報）第２表（確定値）の公表後に置き換える。</li>
+<li><strong>時点の違い：</strong>実態統計は審査月（給付月）ごとの集計、分母は3月末現在の被保険者数で、時点が異なります。</li>
+<li><strong>対象年齢：</strong>受給者には第２号被保険者（40〜64歳）も含まれます。分母は第１号被保険者（65歳以上）のみのため、人口比は目安として読んでください。</li>
+<li><strong>丸め：</strong>元の表は千人単位で小数第1位まで表示されています。人口比は丸められた値から計算しており、小さい値の列は順位付けを省いています。</li>
+<li><strong>表章記号：</strong>この表に出てくる記号と件数は 「-」90件（計数のない場合） です。値のないセルとして扱い、ゼロとは区別しています。</li>
+<li>本結果は集計値であり、個別の事業所や地域の状況を直接示すものではありません。順位は数値の単純比較で、統計的な有意性の検定は行っていません。</li>
+</ul>
+
+<p class="aul-sw-foot">生成日時: 2026-10-03 05:49</p>
+</article>
+</div>
+</div>

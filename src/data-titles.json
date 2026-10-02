@@ -160,5 +160,6 @@
   "dashboards/keiei/r6-kaigo-todofuken-dai7-3-iryoin": "施設介護サービス受給者数（３割負担対象者分）　介護医療院（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai7-3-roken": "施設介護サービス受給者数（３割負担対象者分）　介護老人保健施設（令和６年度・都道府県別）",
   "dashboards/keiei/r6-kaigo-todofuken-dai7-3-ryoyo": "施設介護サービス受給者数（３割負担対象者分）　介護療養型医療施設（令和６年度・都道府県別）",
-  "dashboards/keiei/r6-kaigo-todofuken-dai7-3-tokuyou": "施設介護サービス受給者数（３割負担対象者分）　介護老人福祉施設（令和６年度・都道府県別）"
+  "dashboards/keiei/r6-kaigo-todofuken-dai7-3-tokuyou": "施設介護サービス受給者数（３割負担対象者分）　介護老人福祉施設（令和６年度・都道府県別）",
+  "dashboards/keiei/r7-kyufu-todofuken-dai5": "年間実受給者数　介護予防サービス（令和７年度・都道府県別）"
 }
