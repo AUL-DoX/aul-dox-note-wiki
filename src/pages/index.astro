@@ -8,7 +8,7 @@ const areas = [
   { name: 'Suite', href: '/suite/', description: 'AUL DoXが開発したツールやプロトタイプを見る' },
 ];
 
-const latestItems = await getLatestContent(6);
+const latestItems = await getLatestContent(9);
 ---
 <WikiLayout wide home title="AUL DoX | 医療・介護・障がい福祉のデータ分析・AI・業務ツール" description="AUL DoXは、医療・介護・障がい福祉を中心に、データ分析やAI・業務ツールを設計・開発するAIアーキテクトです。Reference・Data・Suiteから知識、分析、開発実績をご覧いただけます。">
   <section class="home-directory" aria-labelledby="home-title">
@@ -34,11 +34,11 @@ const latestItems = await getLatestContent(6);
       {latestItems.map((item) => (
         <article class="latest-card">
           <p class="latest-card__category">{item.typeLabel} / {item.category}</p>
-          <h3><a href={item.href}>{item.title}</a></h3>
+          <h3><a href={item.href} target="_blank" rel="noopener noreferrer">{item.title}</a></h3>
           <p class="latest-card__description">{item.description}</p>
           <footer class="latest-card__footer">
-            <time datetime={item.date.toISOString().slice(0, 10)}>{item.dateLabel}</time>
-            <a href={item.href} aria-label={`${item.title}を読む`}>続きを読む <span aria-hidden="true">→</span></a>
+            <time datetime={item.date.toISOString()}>{item.dateLabel}</time>
+            <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.title}を読む`}>続きを読む <span aria-hidden="true">→</span></a>
           </footer>
         </article>
       ))}
