@@ -1,6 +1,9 @@
 import { getCollection } from 'astro:content';
-import { getNoteCategories, getNoteIndexData, getNoteTags, getTotalNotePages } from '../content/noteIndex';
+import { getNoteIndexData } from '../content/noteIndex';
 import { getEntryUpdatedTime, getWikiPath, isPublicEntry } from '../content/wiki';
+
+const dashboardFiles = Object.keys(import.meta.glob('../dashboards/**/*.html'));
+const deepResearchFiles = Object.keys(import.meta.glob('../Deep-Research/**/*.html'));
 
 const SITE_URL = import.meta.env.SITE ?? 'https://aul-dox.jp';
 
@@ -35,8 +38,7 @@ function urlEntry(path: string, lastmod: Date | string, priority = '0.7') {
 export async function GET() {
   const today = new Date();
   const wikiEntries = (await getCollection('wiki')).filter(isPublicEntry);
-  const { allItems, categories, sortedTags } = await getNoteIndexData();
-  const totalNotePages = getTotalNotePages(allItems);
+  const { categories } = await getNoteIndexData();
   const urls = new Map<string, string>();
 
   const addUrl = (path: string, lastmod: Date | string, priority?: string) => {
@@ -62,29 +64,19 @@ export async function GET() {
   addUrl('/why-what-how-prompt-builder-プライバシーポリシー/', today, '0.4');
   addUrl('/安全性について/', today, '0.4');
 
-  for (let page = 2; page <= totalNotePages; page += 1) {
-    addUrl(`/page/${page}/`, today, '0.8');
-  }
-
+  // Keep indexable category landing pages, but omit low-value archive pagination and tag filters.
   for (const category of categories) {
-    const categoryItems = allItems.filter((item) => getNoteCategories(item).includes(category.slug));
-    const totalPages = getTotalNotePages(categoryItems);
     addUrl(`/categories/${category.slug}/`, today, '0.8');
-
-    for (let page = 2; page <= totalPages; page += 1) {
-      addUrl(`/categories/${category.slug}/page/${page}/`, today, '0.6');
-    }
   }
 
-  for (const [tag] of sortedTags) {
-    const tagItems = allItems.filter((item) => getNoteTags(item).includes(tag));
-    const totalPages = getTotalNotePages(tagItems);
-    const tagPath = `/tags/${encodeURIComponent(tag)}/`;
-    addUrl(tagPath, today, '0.7');
+  for (const path of dashboardFiles) {
+    const slug = path.replace('../dashboards/', '').replace(/\.html$/, '');
+    addUrl(`/data/${slug}/`, today, '0.7');
+  }
 
-    for (let page = 2; page <= totalPages; page += 1) {
-      addUrl(`${tagPath}page/${page}/`, today, '0.5');
-    }
+  for (const path of deepResearchFiles) {
+    const slug = path.replace('../Deep-Research/', '').replace(/\.html$/, '');
+    addUrl(`/reports/${slug}/`, today, '0.7');
   }
 
   for (const entry of wikiEntries) {
