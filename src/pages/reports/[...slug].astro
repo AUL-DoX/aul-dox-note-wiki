@@ -39,7 +39,7 @@ const adsenseScript = rawHtml.includes('adsbygoogle.js')
   ? ''
   : '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5257393735098403" crossorigin="anonymous"></script>';
 
-const linkedHtml = rawHtml.replace(/<\/head>/i, adsenseScript + '<style>a { color: inherit; text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 0.18em; } a:hover { text-decoration-thickness: 2px; }</style></head>');
+const linkedHtml = rawHtml.replace(/<\/head>/i, adsenseScript + '<link rel="icon" type="image/png" href="/favicon.png"><style>a { color: inherit; text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 0.18em; } a:hover { text-decoration-thickness: 2px; }</style></head>');
 const html = linkedHtml.replace(/<body([^>]*)>/, (_match: string, attrs: string) => `<body${attrs}>${backBar}`);
 ---
 <Fragment set:html={html} />
