@@ -1,0 +1,90 @@
+<div class="aul-report" data-slug="r7-kyufu-zenkoku-dai7">
+<div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ol,.aul-summary-web .aul-sum-doc ul{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-bar{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+.aul-summary-web .aul-bar .nm{flex:0 0 5.5em;color:var(--ink);font-weight:600}
+.aul-summary-web .aul-bar .tr{flex:1;background:var(--line-soft);border-radius:4px;height:16px}
+.aul-summary-web .aul-bar .fl{display:block;height:16px;border-radius:4px;background:var(--teal)}
+.aul-summary-web .aul-bar .fl.lo{background:var(--clay)}
+.aul-summary-web .aul-bar .vl{flex:0 0 4.5em;text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">統計表第７表 費用額，月・年齢階級・介護予防サービス種類・要支援状態区分別</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">令和7（2025）年5月審査分～令和8（2026）年4月審査分</span><span class="aul-sw-tag">統計表第7表</span><span class="aul-sw-tag">全国・月別</span></div>
+</div>
+<article class="aul-sum-doc">
+<h2>概要</h2>
+<blockquote class="aul-sum-quote">令和7（2025）年5月審査分～令和8（2026）年4月審査分の介護予防サービスの費用額は、月平均で28,348百万円（約283億円）、12か月の累計（各月の合計）で340,171百万円です。月別の総数は、令和7年5月の27,319百万円から令和8年4月の29,201百万円へ6.9%増え、最も多い月は令和8年4月（29,201百万円）、最も少ない月は令和7年5月（27,319百万円）です。</blockquote>
+<h2>主要ポイント</h2>
+<ol><li><strong>規模と区分の構成：</strong>12か月累計340,171百万円の内訳は、要支援１が31.9%、要支援２が67.9%です。区分の割合を足しても100%にならないのは、表の注記のとおり、月の途中で状態区分が変わった人が総数に含まれ、内訳には含まれないためです。</li><li><strong>月別の推移：</strong>総数は令和7年5月から令和8年4月までに+6.9%変化しました。前月より増えた月は、11回の変化のうち6回です。区分別の変化は、要支援１は+6.9%、要支援２は+6.9%です。</li><li><strong>年齢構成：</strong>累計に占める割合が最も大きい年齢階級は85～89歳（26.3%）、65歳以上は97.2%、75歳以上は87.7%です。</li><li><strong>サービス別の利用割合：</strong>総数に対する利用割合が高いサービスは、介護予防通所リハビリテーション（26.3%）、介護予防福祉用具貸与（19.3%）、介護予防支援（15.4%）です。同じ人が複数のサービスを使うため、サービス別の割合を足しても100%にはなりません。</li><li><strong>サービス別の伸び：</strong>主要サービスのうち、令和7年5月から令和8年4月までの増加率が最も大きいのは介護予防訪問看護（+12.5%）、最も小さいのは介護予防認知症対応型共同生活介護(短期利用以外)（-3.5%）です。</li><li><strong>データの確かさ：</strong>累計と、12か月の合計を617セルで照合し、すべてが表示の丸めの範囲に収まりました（最大の差は4百万円）。年齢階級別の合計も総数と一致します（差は最大1百万円）。</li></ol>
+<hr class="aul-sum-hr">
+
+<h2>この表は何を表しているか</h2>
+<p>「統計表第７表 費用額，月・年齢階級・介護予防サービス種類・要支援状態区分別」は、厚生労働省「介護給付費等実態統計」（令和7（2025）年5月審査分～令和8（2026）年4月審査分）の統計表です。
+全国の介護予防サービスの費用額を、月（審査月）・年齢階級・サービスの種類・状態区分別に示しています。単位は百万円です。</p>
+<p>審査月とは、国民健康保険団体連合会が介護給付費の請求を審査した月です。累計は、5月審査分から翌年4月審査分までの12か月の合計です。</p>
+<ul><li>注： 月の途中で要支援から要介護に変更となった者は、総数に含み内訳には含まない。</li></ul>
+<h2>月別の推移</h2>
+<p>総数と状態区分ごとの、審査月別の費用額です。折れ線の縦軸は、区分ごとの最小〜最大の範囲に合わせています（区分どうしの高さは比べられません）。</p>
+<figure style="margin:8px 0;padding:8px 10px;border:1px solid #dde5ec;border-radius:8px;background:#fff"><figcaption style="font-size:12.5px;font-weight:700;color:#16263a">総数<span style="font-weight:400;color:#8294a6">（縦軸は27,319〜29,201百万円の範囲）</span></figcaption><svg viewBox="0 0 600 200" width="100%" style="max-height:230px" role="img" aria-label="総数の月別推移"><polyline points="44.0,145.5 90.5,104.6 137.1,110.9 183.6,84.1 230.2,117.5 276.7,87.8 323.3,60.6 369.8,93.2 416.4,66.5 462.9,84.8 509.5,105.8 556.0,48.5" fill="none" stroke="#15786a" stroke-width="2.5"/><circle cx="44.0" cy="145.5" r="3.5" fill="#15786a"/><circle cx="90.5" cy="104.6" r="3.5" fill="#15786a"/><circle cx="137.1" cy="110.9" r="3.5" fill="#15786a"/><circle cx="183.6" cy="84.1" r="3.5" fill="#15786a"/><circle cx="230.2" cy="117.5" r="3.5" fill="#15786a"/><circle cx="276.7" cy="87.8" r="3.5" fill="#15786a"/><circle cx="323.3" cy="60.6" r="3.5" fill="#15786a"/><circle cx="369.8" cy="93.2" r="3.5" fill="#15786a"/><circle cx="416.4" cy="66.5" r="3.5" fill="#15786a"/><circle cx="462.9" cy="84.8" r="3.5" fill="#15786a"/><circle cx="509.5" cy="105.8" r="3.5" fill="#15786a"/><circle cx="556.0" cy="48.5" r="3.5" fill="#15786a"/><text x="44.0" y="165.5" font-size="14" fill="#16263a" text-anchor="start" font-weight="700">27,319</text><text x="556.0" y="38.5" font-size="14" fill="#16263a" text-anchor="end" font-weight="700">29,201</text><text x="44" y="188" font-size="13" fill="#8294a6" text-anchor="start">令和7年5月</text><text x="556" y="188" font-size="13" fill="#8294a6" text-anchor="end">令和8年4月</text></svg></figure><figure style="margin:8px 0;padding:8px 10px;border:1px solid #dde5ec;border-radius:8px;background:#fff"><figcaption style="font-size:12.5px;font-weight:700;color:#16263a">要支援１<span style="font-weight:400;color:#8294a6">（縦軸は8,718〜9,320百万円の範囲）</span></figcaption><svg viewBox="0 0 600 200" width="100%" style="max-height:230px" role="img" aria-label="要支援１の月別推移"><polyline points="44.0,145.5 90.5,108.1 137.1,113.3 183.6,87.8 230.2,118.9 276.7,90.1 323.3,64.2 369.8,91.0 416.4,68.2 462.9,81.9 509.5,101.8 556.0,48.5" fill="none" stroke="#15786a" stroke-width="2.5"/><circle cx="44.0" cy="145.5" r="3.5" fill="#15786a"/><circle cx="90.5" cy="108.1" r="3.5" fill="#15786a"/><circle cx="137.1" cy="113.3" r="3.5" fill="#15786a"/><circle cx="183.6" cy="87.8" r="3.5" fill="#15786a"/><circle cx="230.2" cy="118.9" r="3.5" fill="#15786a"/><circle cx="276.7" cy="90.1" r="3.5" fill="#15786a"/><circle cx="323.3" cy="64.2" r="3.5" fill="#15786a"/><circle cx="369.8" cy="91.0" r="3.5" fill="#15786a"/><circle cx="416.4" cy="68.2" r="3.5" fill="#15786a"/><circle cx="462.9" cy="81.9" r="3.5" fill="#15786a"/><circle cx="509.5" cy="101.8" r="3.5" fill="#15786a"/><circle cx="556.0" cy="48.5" r="3.5" fill="#15786a"/><text x="44.0" y="165.5" font-size="14" fill="#16263a" text-anchor="start" font-weight="700">8,718</text><text x="556.0" y="38.5" font-size="14" fill="#16263a" text-anchor="end" font-weight="700">9,320</text><text x="44" y="188" font-size="13" fill="#8294a6" text-anchor="start">令和7年5月</text><text x="556" y="188" font-size="13" fill="#8294a6" text-anchor="end">令和8年4月</text></svg></figure><figure style="margin:8px 0;padding:8px 10px;border:1px solid #dde5ec;border-radius:8px;background:#fff"><figcaption style="font-size:12.5px;font-weight:700;color:#16263a">要支援２<span style="font-weight:400;color:#8294a6">（縦軸は18,529〜19,804百万円の範囲）</span></figcaption><svg viewBox="0 0 600 200" width="100%" style="max-height:230px" role="img" aria-label="要支援２の月別推移"><polyline points="44.0,145.5 90.5,102.5 137.1,109.7 183.6,82.0 230.2,116.5 276.7,86.2 323.3,58.3 369.8,93.6 416.4,64.8 462.9,85.0 509.5,107.3 556.0,48.5" fill="none" stroke="#15786a" stroke-width="2.5"/><circle cx="44.0" cy="145.5" r="3.5" fill="#15786a"/><circle cx="90.5" cy="102.5" r="3.5" fill="#15786a"/><circle cx="137.1" cy="109.7" r="3.5" fill="#15786a"/><circle cx="183.6" cy="82.0" r="3.5" fill="#15786a"/><circle cx="230.2" cy="116.5" r="3.5" fill="#15786a"/><circle cx="276.7" cy="86.2" r="3.5" fill="#15786a"/><circle cx="323.3" cy="58.3" r="3.5" fill="#15786a"/><circle cx="369.8" cy="93.6" r="3.5" fill="#15786a"/><circle cx="416.4" cy="64.8" r="3.5" fill="#15786a"/><circle cx="462.9" cy="85.0" r="3.5" fill="#15786a"/><circle cx="509.5" cy="107.3" r="3.5" fill="#15786a"/><circle cx="556.0" cy="48.5" r="3.5" fill="#15786a"/><text x="44.0" y="165.5" font-size="14" fill="#16263a" text-anchor="start" font-weight="700">18,529</text><text x="556.0" y="38.5" font-size="14" fill="#16263a" text-anchor="end" font-weight="700">19,804</text><text x="44" y="188" font-size="13" fill="#8294a6" text-anchor="start">令和7年5月</text><text x="556" y="188" font-size="13" fill="#8294a6" text-anchor="end">令和8年4月</text></svg></figure>
+<table class="aul-sum-table"><thead><tr><th class="l">審査月</th><th>総数</th><th>要支援１</th><th>要支援２</th><th>総数の前月比（%）</th></tr></thead><tbody><tr><td class="l">令和7年5月</td><td>27,319</td><td>8,718</td><td>18,529</td><td>―</td></tr><tr><td class="l">令和7年6月</td><td>28,113</td><td>8,950</td><td>19,094</td><td>+2.9</td></tr><tr><td class="l">令和7年7月</td><td>27,991</td><td>8,918</td><td>18,999</td><td>-0.4</td></tr><tr><td class="l">令和7年8月</td><td>28,510</td><td>9,076</td><td>19,364</td><td>+1.9</td></tr><tr><td class="l">令和7年9月</td><td>27,861</td><td>8,883</td><td>18,910</td><td>-2.3</td></tr><tr><td class="l">令和7年10月</td><td>28,439</td><td>9,062</td><td>19,308</td><td>+2.1</td></tr><tr><td class="l">令和7年11月</td><td>28,966</td><td>9,223</td><td>19,676</td><td>+1.9</td></tr><tr><td class="l">令和7年12月</td><td>28,333</td><td>9,056</td><td>19,211</td><td>-2.2</td></tr><tr><td class="l">令和8年1月</td><td>28,853</td><td>9,198</td><td>19,590</td><td>+1.8</td></tr><tr><td class="l">令和8年2月</td><td>28,496</td><td>9,113</td><td>19,324</td><td>-1.2</td></tr><tr><td class="l">令和8年3月</td><td>28,090</td><td>8,989</td><td>19,031</td><td>-1.4</td></tr><tr><td class="l">令和8年4月</td><td>29,201</td><td>9,320</td><td>19,804</td><td>+4.0</td></tr><tr><td class="l">12か月累計</td><td>340,171</td><td>108,505</td><td>230,840</td><td>―</td></tr></tbody></table>
+<h2>年齢階級別の構成</h2>
+<p>12か月累計の年齢階級別の内訳です。右側の列は、各年齢階級の中での状態区分の割合を示します。</p>
+<table class="aul-sum-table"><thead><tr><th class="l">年齢階級</th><th>累計（百万円）</th><th>累計に占める割合（%）</th><th>要支援１の割合（%）</th><th>要支援２の割合（%）</th></tr></thead><tbody><tr><td class="l">40～64歳</td><td>9,470</td><td>2.8</td><td>20.8</td><td>79.1</td></tr><tr><td class="l">65～69歳</td><td>9,959</td><td>2.9</td><td>27.3</td><td>72.6</td></tr><tr><td class="l">70～74歳</td><td>22,425</td><td>6.6</td><td>29.6</td><td>70.2</td></tr><tr><td class="l">75～79歳</td><td>47,708</td><td>14.0</td><td>32.0</td><td>67.8</td></tr><tr><td class="l">80～84歳</td><td>74,904</td><td>22.0</td><td>34.3</td><td>65.5</td></tr><tr><td class="l">85～89歳</td><td>89,570</td><td>26.3</td><td>33.5</td><td>66.3</td></tr><tr><td class="l">90～94歳</td><td>65,371</td><td>19.2</td><td>30.9</td><td>68.7</td></tr><tr><td class="l">95歳以上</td><td>20,764</td><td>6.1</td><td>28.8</td><td>70.7</td></tr></tbody></table>
+<h2>サービス別の利用割合と推移</h2>
+<p>全国・全年齢の累計で、各サービスが総数に対してどれだけ使われているか（利用割合）と、令和7年5月から令和8年4月までの変化です。
+同じ人が複数のサービスを使うため、割合を足し上げることはできません。小さい値のサービスは、百万円単位の丸めの影響が大きいため、変化率を示していません。</p>
+<table class="aul-sum-table"><thead><tr><th class="l">サービス</th><th>累計（百万円）</th><th>総数に対する利用割合（%）</th><th>令和7年5月→令和8年4月の変化（%）</th></tr></thead><tbody><tr><td class="l">【大区分】介護予防居宅サービス</td><td>272,752</td><td>80.2</td><td>―</td></tr><tr><td class="l">【大区分】介護予防支援</td><td>52,285</td><td>15.4</td><td>―</td></tr><tr><td class="l">【大区分】地域密着型介護予防サービス</td><td>15,134</td><td>4.4</td><td>―</td></tr><tr><td class="l">介護予防通所リハビリテーション</td><td>89,486</td><td>26.3</td><td>+3.9</td></tr><tr><td class="l">介護予防福祉用具貸与</td><td>65,523</td><td>19.3</td><td>+10.2</td></tr><tr><td class="l">介護予防支援</td><td>52,285</td><td>15.4</td><td>+4.7</td></tr><tr><td class="l">介護予防訪問看護</td><td>51,601</td><td>15.2</td><td>+12.5</td></tr><tr><td class="l">介護予防特定施設入居者生活介護</td><td>36,908</td><td>10.8</td><td>+5.2</td></tr><tr><td class="l">介護予防居宅療養管理指導</td><td>12,774</td><td>3.8</td><td>+8.9</td></tr><tr><td class="l">介護予防訪問リハビリテーション</td><td>11,607</td><td>3.4</td><td>+12.0</td></tr><tr><td class="l">介護予防小規模多機能型居宅介護（短期利用以外）</td><td>10,972</td><td>3.2</td><td>+0.4</td></tr><tr><td class="l">介護予防短期入所生活介護</td><td>4,244</td><td>1.2</td><td>+5.0</td></tr><tr><td class="l">介護予防認知症対応型共同生活介護(短期利用以外)</td><td>3,704</td><td>1.1</td><td>-3.5</td></tr></tbody></table>
+<h2>データの出典と読み方の注意</h2>
+<ul>
+<li><strong>出典：</strong>e-Stat「介護給付費等実態統計」統計表第７表 費用額，月・年齢階級・介護予防サービス種類・要支援状態区分別（令和7（2025）年5月審査分～令和8（2026）年4月審査分、累計ファイル mr_07.csv と月別12ファイル）。</li>
+<li><strong>累計の意味：</strong>累計は各審査月の値の合計で、12か月の合計値です。</li>
+<li><strong>サービス別の値：</strong>同じ人が複数のサービスを使うため、サービス別の人数の合計は総数になりません。大区分と個別サービスは重なりを含むので、足し上げないでください。</li>
+<li><strong>丸め：</strong>値は百万円単位で整数で表示されています。累計と12か月の合計の差は、この丸めによるものです。</li>
+<li><strong>増減の読み方：</strong>12か月のうちの推移であり、季節性や制度の変更の影響を区別したものではありません。</li>
+<li>本結果は集計値であり、個別の事業所や地域の状況を直接示すものではありません。数値の単純比較で、統計的な有意性の検定は行っていません。</li>
+</ul>
+
+<p class="aul-sw-foot">生成日時: 2026-10-10 16:58</p>
+</article>
+</div>
+</div>
