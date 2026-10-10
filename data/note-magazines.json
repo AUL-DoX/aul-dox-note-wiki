@@ -1,6 +1,19 @@
 {
-  "fetchedAt": "2026-10-04T06:47:50.004Z",
+  "fetchedAt": "2026-10-10T08:12:44.073Z",
   "magazines": [
+    {
+      "key": "md8c9d1a601ac",
+      "title": "就労継続支援事業の問題点",
+      "url": "https://note.com/chic_wren6567/m/md8c9d1a601ac",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/n81f913977332",
+        "https://note.com/chic_wren6567/n/n643f5a64f7e8",
+        "https://note.com/chic_wren6567/n/n76520bf4dd98",
+        "https://note.com/chic_wren6567/n/n2b6a5066923e",
+        "https://note.com/chic_wren6567/n/n517f6a58b302",
+        "https://note.com/chic_wren6567/n/ne2badb2e788d"
+      ]
+    },
     {
       "key": "m72791e9e4563",
       "title": "Obsidian 全員集合！",
@@ -238,23 +251,6 @@
         "https://note.com/chic_wren6567/n/n2f648e899a11",
         "https://note.com/chic_wren6567/n/n7b2d5604880a",
         "https://note.com/chic_wren6567/n/nda250f00d97b"
-      ]
-    },
-    {
-      "key": "m9291b375e323",
-      "title": "AIに会社を経営させてみたくなった",
-      "url": "https://note.com/chic_wren6567/m/m9291b375e323",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/nbf35975952f0",
-        "https://note.com/chic_wren6567/n/n1b955783fe42",
-        "https://note.com/chic_wren6567/n/n336e157e3e57",
-        "https://note.com/chic_wren6567/n/nfeffaa67291f",
-        "https://note.com/chic_wren6567/n/n6deb3382467f",
-        "https://note.com/chic_wren6567/n/nec5216a74c31",
-        "https://note.com/chic_wren6567/n/n024d4c928666",
-        "https://note.com/chic_wren6567/n/n6734996fa661",
-        "https://note.com/chic_wren6567/n/ne7ab4b93fd4e",
-        "https://note.com/chic_wren6567/n/n78fa1ba46406"
       ]
     }
   ]

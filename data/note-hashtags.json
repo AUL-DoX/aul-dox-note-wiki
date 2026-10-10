@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-04T06:52:04.133Z",
+  "fetchedAt": "2026-10-10T08:35:42.207Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -573,8 +573,8 @@
     ],
     "https://note.com/chic_wren6567/n/na69541f42152": [
       "ClaudeCode",
-      "DX推進",
       "Codex",
+      "DX推進",
       "AI開発",
       "AIツール開発"
     ],
@@ -624,8 +624,8 @@
       "ChatGPT",
       "Gemini",
       "プロンプト",
-      "GPTs",
       "チャット",
+      "GPTs",
       "GEMS"
     ],
     "https://note.com/chic_wren6567/n/n3ae9853c7174": [
@@ -926,8 +926,8 @@
     ],
     "https://note.com/chic_wren6567/n/n3f65402fa886": [
       "AIエージェント",
-      "python",
       "個人開発",
+      "python",
       "プロンプトインジェクション",
       "LLMセキュリティ",
       "LLMガードレール"
@@ -1510,8 +1510,8 @@
     ],
     "https://note.com/chic_wren6567/n/n09aeb881a756": [
       "ClaudeCode",
-      "python",
       "個人開発",
+      "python",
       "Codex",
       "CSharp",
       "開発ワークスペース"
@@ -2285,8 +2285,8 @@
     "https://note.com/chic_wren6567/n/n0eff08c46a89": [
       "ClaudeCode",
       "Obsidian",
-      "ナレッジマネジメント",
       "介護DX",
+      "ナレッジマネジメント",
       "wiki",
       "AIワークフロー"
     ],
@@ -2364,8 +2364,8 @@
     "https://note.com/chic_wren6567/n/nf0175aa44af6": [
       "障害福祉",
       "生活支援",
-      "リアルな話",
       "食と健康",
+      "リアルな話",
       "福祉の現場",
       "利用者支援",
       "家族の負担",
@@ -2478,8 +2478,8 @@
     ],
     "https://note.com/chic_wren6567/n/n6f0137cba88c": [
       "スキルアップ",
-      "ビジネスゲーム",
       "経営シミュレーション",
+      "ビジネスゲーム",
       "ロールプレイゲーム",
       "VirtualCompanyStudio"
     ],
@@ -2519,8 +2519,8 @@
     "https://note.com/chic_wren6567/n/nde47aa24f205": [
       "訪問介護",
       "介護DX",
-      "介護離職",
       "介護経営",
+      "介護離職",
       "職員エンゲージメント"
     ],
     "https://note.com/chic_wren6567/n/n7ccae718aee9": [
@@ -3657,15 +3657,6 @@
       "dox",
       "アンビエントインテリジェンス"
     ],
-    "https://note.com/chic_wren6567/n/nd7a2bf3a65f6": [
-      "仕事",
-      "DX",
-      "分析",
-      "観察",
-      "AX",
-      "週刊DoX",
-      "DigitalOfExperience"
-    ],
     "https://note.com/chic_wren6567/n/n1d0e1c1e6e4c": [
       "Gemini",
       "WorkSpaceStudio",
@@ -4123,8 +4114,8 @@
       "コスト削減",
       "厚労省",
       "介護DX",
-      "障害福祉DX",
-      "国保連請求"
+      "国保連請求",
+      "障害福祉DX"
     ],
     "https://note.com/chic_wren6567/n/n32ed5503a82e": [
       "合理的配慮",
@@ -4986,8 +4977,8 @@
     "https://note.com/chic_wren6567/n/n91431da2f9c9": [
       "業務効率化",
       "生成AI活用",
-      "非エンジニア",
       "情報セキュリティ",
+      "非エンジニア",
       "AIガバナンス",
       "E2Eテスト"
     ],
@@ -5654,6 +5645,76 @@
       "福祉DX",
       "オンデバイスAI",
       "GoogleAIEdgeGallery"
+    ],
+    "https://note.com/chic_wren6567/n/n753e271e1cd1": [
+      "障害者雇用",
+      "就労継続支援B型",
+      "障害福祉",
+      "就労継続支援A型",
+      "福祉制度"
+    ],
+    "https://note.com/chic_wren6567/n/n5a66b3e486d0": [
+      "医療制度",
+      "介護報酬改定",
+      "医療福祉",
+      "障害者就労",
+      "障害福祉報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n2031ed512040": [
+      "介護予防",
+      "地域包括ケア",
+      "総合事業",
+      "地域支援事業",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/na3d4c2345160": [
+      "AIエージェント",
+      "情報セキュリティ",
+      "業務自動化",
+      "AI社員",
+      "HITL"
+    ],
+    "https://note.com/chic_wren6567/n/ne02747076ae7": [
+      "介護経営",
+      "地域包括ケア",
+      "介護事業所",
+      "介護人材",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/nd6f54f94f5d4": [
+      "AIエージェント",
+      "サイバーセキュリティ",
+      "vercel",
+      "個人情報漏洩",
+      "WEBサイト運営"
+    ],
+    "https://note.com/chic_wren6567/n/n4f09735f77f4": [
+      "訪問看護",
+      "訪問介護",
+      "介護経営",
+      "地域包括ケア",
+      "介護サービス"
+    ],
+    "https://note.com/chic_wren6567/n/ndc7e986c748f": [
+      "介護予防",
+      "介護経営",
+      "地域包括ケア",
+      "都道府県比較",
+      "介護給付費等実態統計"
+    ],
+    "https://note.com/chic_wren6567/n/nca5c1bd8debf": [
+      "特別養護老人ホーム",
+      "介護経営",
+      "社会福祉法人",
+      "経営分析",
+      "WAM短観"
+    ],
+    "https://note.com/chic_wren6567/n/ncc2b017a47fa": [
+      "障害福祉",
+      "人材確保",
+      "福祉DX",
+      "介護福祉経営",
+      "DI調査"
     ]
   }
 }
