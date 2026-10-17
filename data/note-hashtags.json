@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-10T08:45:57.729Z",
+  "fetchedAt": "2026-10-17T20:49:53.759Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -170,8 +170,8 @@
       "AULLocalFolderIndex"
     ],
     "https://note.com/chic_wren6567/n/nce5457debbae": [
-      "Obsidian",
       "Github",
+      "Obsidian",
       "プラグイン",
       "文書管理",
       "ナレッジベース",
@@ -814,8 +814,8 @@
     ],
     "https://note.com/chic_wren6567/n/nf7db979fe694": [
       "訪問介護",
-      "働き方を変えるツール",
       "見える化",
+      "働き方を変えるツール",
       "介護経営分析Gem"
     ],
     "https://note.com/chic_wren6567/n/ne8ea17055d48": [
@@ -830,8 +830,8 @@
     "https://note.com/chic_wren6567/n/n4c7a15eb1a30": [
       "障害者雇用",
       "就労支援",
-      "就労継続支援A型",
       "介護DX",
+      "就労継続支援A型",
       "障がい福祉"
     ],
     "https://note.com/chic_wren6567/n/n97f318894d41": [
@@ -902,8 +902,8 @@
       "就労継続支援B型",
       "障害福祉",
       "タグ",
-      "B型事業所",
       "福祉経営",
+      "B型事業所",
       "報酬改定"
     ],
     "https://note.com/chic_wren6567/n/nbcc895701f22": [
@@ -1634,8 +1634,8 @@
     ],
     "https://note.com/chic_wren6567/n/nf267ed911f08": [
       "障害福祉",
-      "医療政策",
       "意思決定支援",
+      "医療政策",
       "介護報酬改定",
       "処遇改善加算"
     ],
@@ -2213,8 +2213,8 @@
     ],
     "https://note.com/chic_wren6567/n/nd29367108cca": [
       "障害福祉",
-      "Obsidian",
       "Github",
+      "Obsidian",
       "介護DX",
       "wiki",
       "nextjs",
@@ -2244,8 +2244,8 @@
     "https://note.com/chic_wren6567/n/ne1b3f3e7ec2f": [
       "AI活用",
       "業務効率化",
-      "Obsidian",
       "Github",
+      "Obsidian",
       "ナレッジ管理",
       "ObsidianSkills",
       "ObosidianSkills"
@@ -2377,8 +2377,8 @@
       "介護",
       "デイサービス",
       "訪問介護",
-      "都道府県",
       "要介護",
+      "都道府県",
       "介護費用"
     ],
     "https://note.com/chic_wren6567/n/n1105b034b0df": [
@@ -2742,8 +2742,8 @@
       "Gemini",
       "Claude",
       "AIエージェント",
-      "AIツール",
       "Codex",
+      "AIツール",
       "AntiGravity",
       "ClaudeCowork",
       "e2e"
@@ -3711,6 +3711,16 @@
       "死ぬ瞬間",
       "終末期患者"
     ],
+    "https://note.com/chic_wren6567/n/n9740ea163dfa": [
+      "医療",
+      "看護師の離職",
+      "精神科病院の身体拘束",
+      "人員基準緩和",
+      "処遇改善加算の一本化",
+      "一般病院の約7割が赤字経営",
+      "アルツハイマー病新治療薬",
+      "従来型特養の約5割が赤字"
+    ],
     "https://note.com/chic_wren6567/n/n0749bc2c0456": [
       "DX",
       "組織",
@@ -4416,8 +4426,8 @@
     ],
     "https://note.com/chic_wren6567/n/nb79f205a60d3": [
       "スプレッドシート",
-      "働き方を変えるツール",
       "見える化",
+      "働き方を変えるツール",
       "介護事業所",
       "Googleフォーム",
       "経営分析",
@@ -4958,8 +4968,8 @@
     ],
     "https://note.com/chic_wren6567/n/n7c0de499bbac": [
       "個人開発",
-      "Obsidian",
       "Github",
+      "Obsidian",
       "nextjs",
       "vercel",
       "claudeapi",
@@ -5072,8 +5082,8 @@
       "特別支援教育",
       "GoogleAppsScript",
       "ローマ帝国",
-      "rubicon",
-      "combos"
+      "combos",
+      "rubicon"
     ],
     "https://note.com/chic_wren6567/n/n074e0c77718d": [
       "AIエージェント",
@@ -5113,8 +5123,8 @@
       "生成AI",
       "FX",
       "AI開発",
-      "vercel",
-      "AIagent"
+      "AIagent",
+      "vercel"
     ],
     "https://note.com/chic_wren6567/n/n1178b999a88e": [
       "生成AI",
@@ -5372,8 +5382,8 @@
     "https://note.com/chic_wren6567/n/n678de24ec225": [
       "AIエージェント",
       "業務設計",
-      "vercel",
       "FDE",
+      "vercel",
       "Hermethea"
     ],
     "https://note.com/chic_wren6567/n/n8151ba609039": [
@@ -5714,6 +5724,138 @@
       "福祉DX",
       "介護福祉経営",
       "DI調査"
+    ],
+    "https://note.com/chic_wren6567/n/n0dbd7fd984aa": [
+      "GEO",
+      "LLMO",
+      "行政DX",
+      "vercel",
+      "GoogleOther"
+    ],
+    "https://note.com/chic_wren6567/n/nec40d91dc64c": [
+      "wordpress",
+      "vercel",
+      "サイト移行",
+      "画像移行",
+      "移行マニュアル"
+    ],
+    "https://note.com/chic_wren6567/n/n421938140925": [
+      "障害者雇用",
+      "障害福祉",
+      "医療制度",
+      "介護報酬改定",
+      "医療福祉"
+    ],
+    "https://note.com/chic_wren6567/n/nb696d484f04f": [
+      "生成AI",
+      "Webマーケティング",
+      "SEO",
+      "AI検索",
+      "LLMO"
+    ],
+    "https://note.com/chic_wren6567/n/n440abb9e891f": [
+      "wordpress",
+      "Markdown",
+      "vercel",
+      "サイト移行",
+      "移行マニュアル"
+    ],
+    "https://note.com/chic_wren6567/n/nd2d80003804d": [
+      "特別支援学校",
+      "障がい者雇用",
+      "就労継続支援",
+      "障がい福祉",
+      "一般就労",
+      "卒業後の進路"
+    ],
+    "https://note.com/chic_wren6567/n/nb88dff7f0686": [
+      "wordpress",
+      "Webサイト制作",
+      "vercel",
+      "サイト移行",
+      "移行マニュアル"
+    ],
+    "https://note.com/chic_wren6567/n/nbcf30afe8856": [
+      "介護保険",
+      "介護予防",
+      "高齢者福祉",
+      "総合事業",
+      "介護データ"
+    ],
+    "https://note.com/chic_wren6567/n/n0e8f07c331d0": [
+      "wordpress",
+      "AI開発",
+      "LLMO",
+      "Webサイト制作",
+      "vercel"
+    ],
+    "https://note.com/chic_wren6567/n/nb5ec27d16f2a": [
+      "介護保険",
+      "介護サービス",
+      "高齢者福祉",
+      "介護給付費",
+      "介護データ"
+    ],
+    "https://note.com/chic_wren6567/n/n3bf2dd10a67a": [
+      "wordpress",
+      "AI開発",
+      "Web開発",
+      "vercel",
+      "サイト移行"
+    ],
+    "https://note.com/chic_wren6567/n/nbefceca1ea67": [
+      "介護保険",
+      "介護予防",
+      "高齢者福祉",
+      "介護給付費",
+      "介護データ"
+    ],
+    "https://note.com/chic_wren6567/n/n5573c666ac11": [
+      "ChatGPT",
+      "札幌市",
+      "介護事業所",
+      "福祉DX",
+      "どうすればいいの"
+    ],
+    "https://note.com/chic_wren6567/n/n769226334aaa": [
+      "wordpress",
+      "LLMO",
+      "vercel",
+      "web運営",
+      "サイト移行"
+    ],
+    "https://note.com/chic_wren6567/n/n4b4b45b2bbb4": [
+      "介護保険",
+      "介護DX",
+      "地域包括ケア",
+      "介護給付費",
+      "介護データ"
+    ],
+    "https://note.com/chic_wren6567/n/n2bd4c69826b7": [
+      "生成AI",
+      "AI活用",
+      "業務効率化",
+      "DX",
+      "生産性向上",
+      "AI導入",
+      "AX",
+      "福祉DX",
+      "生産性パラドックス"
+    ],
+    "https://note.com/chic_wren6567/n/ncbe3969d1980": [
+      "Google",
+      "SEO",
+      "AI検索",
+      "LLMO",
+      "vercel",
+      "WEBサイト運営"
+    ],
+    "https://note.com/chic_wren6567/n/n54589029719d": [
+      "介護経営",
+      "地域包括ケア",
+      "介護事業所",
+      "総合事業",
+      "地域支援事業"
     ]
   }
 }
