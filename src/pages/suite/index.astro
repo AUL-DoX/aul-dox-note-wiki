@@ -15,7 +15,10 @@ import { suiteTools } from '../../suite-tools';
       {suiteTools.map((tool) => (
         <li id={`tool-${tool.slug}`}>
           <strong>{tool.name}</strong>
-          <span>{tool.summary}</span>
+          <span>
+            {tool.summary}
+            {tool.noteUrl && (<> <a href={tool.noteUrl} target="_blank" rel="noopener noreferrer">解説記事（note）</a></>)}
+          </span>
         </li>
       ))}
     </ul>

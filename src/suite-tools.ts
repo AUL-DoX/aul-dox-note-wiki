@@ -15,6 +15,8 @@ export interface SuiteTool {
   summary: string;
   /** サイト内検索用の追加キーワード */
   keywords: string[];
+  /** 解説するnote記事（あれば）。一覧に「解説記事」リンクとして出る */
+  noteUrl?: string;
 }
 
 export const suiteTools: SuiteTool[] = [
@@ -23,6 +25,7 @@ export const suiteTools: SuiteTool[] = [
     name: 'PDF One Click Print',
     summary:
       'フォルダを選ぶだけで、中のPDFをまとめて印刷するWindows用ツール。印刷前に対象ファイルと使用するプリンターを確認する。',
+    noteUrl: 'https://note.com/chic_wren6567/n/n1a0f91c4a542',
     keywords: ['PDF', '一括印刷', '印刷', '納品書', '請求書', 'Windows', 'フォルダ', '業務改善', 'Python', 'デスクトップツール'],
   },
 ];
