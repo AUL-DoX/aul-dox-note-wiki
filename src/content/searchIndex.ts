@@ -1,6 +1,7 @@
 import { getNoteIndexData, getNoteCategories, getNoteTags } from './noteIndex';
 import { deepResearchTags, formatYearMonth, getCategoryLabel } from '../data-categories';
 import titleOverrides from '../data-titles.json';
+import { suiteTools } from '../suite-tools';
 
 export type SearchSection = 'reference' | 'data' | 'deep-research' | 'suite';
 
@@ -88,7 +89,17 @@ export async function getSearchIndex(): Promise<SearchItem[]> {
     };
   });
 
+  const suiteToolItems: SearchItem[] = suiteTools.map((tool) => ({
+    section: 'suite',
+    sectionLabel: 'Suite',
+    title: tool.name,
+    description: tool.summary,
+    href: `/suite/#tool-${tool.slug}`,
+    searchText: [tool.name, tool.summary, ...tool.keywords].join(' '),
+  }));
+
   const suiteItems: SearchItem[] = [
+    ...suiteToolItems,
     {
       section: 'suite',
       sectionLabel: 'Suite',

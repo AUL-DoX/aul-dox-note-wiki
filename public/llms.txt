@@ -7,7 +7,7 @@
 - [トップページ](/): AUL DoXの概要とReference・Data・Suiteへの入口
 - [Reference](/reference/): 記事・知識・開発記録の一覧と検索
 - [Data](/data/): データ分析ダッシュボードとレポート
-- [Suite](/suite/): 開発ツールとプロトタイプのポートフォリオ（一般配布していないものを含む）
+- [Suite](/suite/): これまでに開発したツールとプロトタイプの一覧（基本的に一般配布していません）
 - [最新更新](/latest): 最近更新されたwikiページ一覧
 - [note記事一覧](/notes): note記事URLの取得状況（RSS/Google由来、wiki紐づけ状況）
 

@@ -62,7 +62,6 @@ export async function GET() {
   addUrl('/aulブランドにおけるapiツール開発の方向性（基本方針）/', today, '0.4');
   addUrl('/gemini-context-manager-プライバシーポリシー/', today, '0.4');
   addUrl('/why-what-how-prompt-builder-プライバシーポリシー/', today, '0.4');
-  addUrl('/安全性について/', today, '0.4');
 
   // Keep indexable category landing pages, but omit low-value archive pagination and tag filters.
   for (const category of categories) {

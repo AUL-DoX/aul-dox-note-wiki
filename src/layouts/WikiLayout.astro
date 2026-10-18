@@ -11,6 +11,7 @@ const {
   noteUrl,
   wide = false,
   home = false,
+  noindex = false,
 } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://aul-dox.jp');
 // noteなどにリンクを貼った時のカード画像（1200x630。public/og-image.png）。
@@ -25,6 +26,7 @@ const ogImageUrl = new URL('/og-image.png', Astro.site ?? 'https://aul-dox.jp');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:type" content={home ? 'website' : 'article'} />
     <meta property="og:site_name" content="AUL DoX" />
     <meta property="og:locale" content="ja_JP" />

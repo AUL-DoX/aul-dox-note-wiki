@@ -1,12 +1,24 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
+import { suiteTools } from '../../suite-tools';
 ---
-<WikiLayout wide title="Suite | AUL DoXのツール・プロトタイプ" description="AUL DoXがこれまでに開発したツールやプロトタイプを紹介するポートフォリオ。業務改善ツールと開発記録を掲載し、現在一般配布していないものも含みます。">
+<WikiLayout wide title="Suite | AUL DoXのツール・プロトタイプ" description="AUL DoXがこれまでに開発したツールやプロトタイプの一覧。業務改善ツールと開発記録を掲載しています。掲載ツールは基本的に一般配布していません。">
   <section class="page-header">
     <p class="eyebrow">Tools & Prototypes</p>
     <h1>Suite</h1>
     <p class="lead">Suiteは、AUL DoXがこれまでに開発したツールやプロトタイプを紹介するポートフォリオです。</p>
-    <p class="availability-note">掲載ツールには、現在一般配布していないものも含まれます。</p>
+    <p class="availability-note">掲載しているツールは、基本的に一般配布していません。</p>
+  </section>
+  <section class="section" aria-labelledby="suite-tools">
+    <h2 id="suite-tools">これまでに作ったツール</h2>
+    <ul class="suite-tool-list">
+      {suiteTools.map((tool) => (
+        <li id={`tool-${tool.slug}`}>
+          <strong>{tool.name}</strong>
+          <span>{tool.summary}</span>
+        </li>
+      ))}
+    </ul>
   </section>
   <section class="section" aria-labelledby="suite-records">
     <h2 id="suite-records">ツールと開発記録</h2>
@@ -16,3 +28,30 @@ import WikiLayout from '../../layouts/WikiLayout.astro';
     </div>
   </section>
 </WikiLayout>
+
+<style>
+  .suite-tool-list {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+  }
+  .suite-tool-list li {
+    display: grid;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+    gap: 6px 24px;
+    padding: 16px 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .suite-tool-list strong {
+    font-weight: 800;
+  }
+  .suite-tool-list span {
+    color: #1f1f1f;
+  }
+  @media (max-width: 600px) {
+    .suite-tool-list li {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
