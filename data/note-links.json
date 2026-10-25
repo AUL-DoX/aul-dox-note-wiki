@@ -1,7 +1,7 @@
 {
   "source": "https://note.com/api/v2/creators/contents",
-  "fetchedAt": "2026-10-17T20:45:37.407Z",
-  "count": 761,
+  "fetchedAt": "2026-10-25T09:00:36.805Z",
+  "count": 781,
   "items": [
     {
       "title": "「自分のページは自分で決める」——セクションをキャンバス上で自由に動かせるLP生成ツールを作った。AUL web block",
@@ -5328,6 +5328,146 @@
       "url": "https://note.com/chic_wren6567/n/n54589029719d",
       "published": "2026-10-11T04:58:15+09:00",
       "description": "令和8年4月審査分の総合事業サービス請求事業所数は全国62,538事業所だった。第1号被保険者1,000人あたりでは全国平均1.7事業所、和歌山県2.8事業所、山形県1.3事業所で、2.12倍の差がある。総合事業の提供体制は、介護保険サービス以上に市町村の制度設計や地域資源の組み…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル――最終回「移行が終わったら、しばらく触らない」",
+      "url": "https://note.com/chic_wren6567/n/n3bfb022584d3",
+      "published": "2026-10-25T17:18:43+09:00",
+      "description": "ここまでで、WordPressからVercelへの移行はほぼ完了した。 独自ドメインを切り替え、Search Consoleを確認し、アクセス解析も動いている。 旧レンタルサーバーも、問題がなければ解約できる状態になった。 ここまで来ると、新しい機能を追加したくなる。 でも、私は…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからEmDashに簡単に移行って、大丈夫？――そのWordPressで積み上げた検索順位と売上まで引き継げますか？",
+      "url": "https://note.com/chic_wren6567/n/n40f0415fad5b",
+      "published": "2026-10-25T11:02:36+09:00",
+      "description": "「簡単に乗り換えられる」という言葉の落とし穴最近、WordPressから別の環境へ移行する動きが話題になっている。Claude Codeなどを使えば、従来より短時間でサイトを再構築できるという。 技術の進歩は歓迎したい。しかし、気になることがある。 その乗り換え、本当に大丈夫です…",
+      "source": "rss"
+    },
+    {
+      "title": "突然ClaudeBotがやってきた！――福祉通知Wikiに10,700件、過去最高のAIクローラー巡回を記録",
+      "url": "https://note.com/chic_wren6567/n/n30d4813224cc",
+      "published": "2026-10-25T04:59:58+09:00",
+      "description": "今まで静かだったClaudeBotが、突然1位になった2026年10月24日、VercelのFirewall（ファイアウォール）でアクセス状況を確認して、思わず画面を二度見してしまった。 ClaudeBotが10.7K。つまり１日で約10,700件のリクエストを記録していたのだ。…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第13回「レンタルサーバーはいつ解約する？」",
+      "url": "https://note.com/chic_wren6567/n/n442d1d638a1a",
+      "published": "2026-10-24T17:47:04+09:00",
+      "description": "ここまでで、Vercel側のサイトはかなり安定してきた。 独自ドメインも切り替えた。 Search Consoleも確認した。 アクセス解析も動いている。 画像や301リダイレクトもチェックした。 そこで最後に出てくるのが、 「旧WordPressのレンタルサーバーは、いつ解約す…",
+      "source": "rss"
+    },
+    {
+      "title": "【2026年10月第4週】医療福祉 週次トピック｜地域医療再編、訪問介護報酬、障害者雇用制度の見直し",
+      "url": "https://note.com/chic_wren6567/n/n7c1497bc807c",
+      "published": "2026-10-24T12:01:32+09:00",
+      "description": "2026年10月19日（月）から10月23日（金）までに公開・更新された、厚生労働省などの一次情報を調査しました。 今週は、医療では北海道・西胆振地域の医療機能再編に向けた重点支援区域の選定、介護では2027年度介護報酬改定に向けた訪問系サービスの検討、障がい福祉では障害者雇用納…",
+      "source": "rss"
+    },
+    {
+      "title": "Google SkillsのBigQueryラボで詰まった人へ――100点を取るまでに分かった「指示書を丸のみしない」進め方",
+      "url": "https://note.com/chic_wren6567/n/nef2901124f85",
+      "published": "2026-10-24T06:16:11+09:00",
+      "description": "今朝gmailを開くと、Google Skillsチームから「BigQueryでGeminiでデータを探索のタスク２が直ったから、再度、挑戦してみて」とメールが届いていたのだ、早速、Google Skillsの「BigQueryでGeminiでデータを探索」に再挑戦して、ようやく…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第12回「移行後チェックリスト」",
+      "url": "https://note.com/chic_wren6567/n/n194dd188d40c",
+      "published": "2026-10-23T18:31:26+09:00",
+      "description": "ここまでで、WordPressからVercelへの移行作業はかなり進んだ。 記事、画像、URL、独自ドメイン、Search Console、アクセス解析。 今回は、一度ここで立ち止まって、移行後の状態をまとめて確認する。 この回の目的は、新しい機能を追加することではない。 「移行…",
+      "source": "rss"
+    },
+    {
+      "title": "ゼロクリック検索対策・実践シリーズ【最終回】――GEO対策では作れない、口コミされる企業の価値",
+      "url": "https://note.com/chic_wren6567/n/n2186618c56fc",
+      "published": "2026-10-23T04:42:23+09:00",
+      "description": "AIに選ばれることが、企業の目的なのだろうか？「AI検索に自社の情報を表示させたい」「ChatGPTに自社の商品やサービスを紹介してもらいたい」 最近、こうした期待がGEO対策への関心を高めている。しかし、私はこの流れを見ながら、少し違和感を覚えている。 企業は、いつから検索エン…",
+      "source": "rss"
+    },
+    {
+      "title": "PHPの脆弱性でWordPressをやめたい人へ――EmDashとVercelを比較してみた",
+      "url": "https://note.com/chic_wren6567/n/n5ebe102e3cfb",
+      "published": "2026-10-22T19:47:19+09:00",
+      "description": "2026年10月21日、PHPに重大な脆弱性が発見され、日本各地の自治体や企業が対応に追われる事態となった。 札幌市では公式ホームページを一時停止し、緊急時の簡易サイトへ切り替えた。函館市や大阪府でも、修正プログラムの適用や一部サービスの停止などの対応が行われた。 今回の問題はW…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第11回「アクセス解析とAI Botを確認する」",
+      "url": "https://note.com/chic_wren6567/n/n4c6670ddbcd8",
+      "published": "2026-10-22T18:25:50+09:00",
+      "description": "前回は、Google Search Consoleで移行後の状態を確認した。 今回は、実際にサイトへどんなアクセスが来ているかを見る。 確認するのは、大きく2つ。 1つは人のアクセス。 もう1つはBotのアクセスだ。 Vercelへ移行した後は、この2つを分けて見るとサイトの動き…",
+      "source": "rss"
+    },
+    {
+      "title": "ゼロクリック検索対策・実践シリーズ【第2回】――一次情報から売り上げまでの接続を考える",
+      "url": "https://note.com/chic_wren6567/n/n656a2e4afe76",
+      "published": "2026-10-22T04:45:34+09:00",
+      "description": "AI検索に引用されるだけでは、ビジネスは完結しないGEO対策を始めた企業は、次に何をすればよいのだろうか。 AI Overviewに表示された。ChatGPTに自社の情報が紹介された。ブログへのアクセスが増えた。 しかし、その先にある問い合わせや契約まで、どのようにつなげるのか。…",
+      "source": "rss"
+    },
+    {
+      "title": "札幌プロダクト横丁で生まれたつながり。次は何を持っていこうか？",
+      "url": "https://note.com/chic_wren6567/n/n5f8cd852084f",
+      "published": "2026-10-21T19:34:57+09:00",
+      "description": "AIで作ったツールが、人との出会いにつながった2026年9月に開催された「第2回札幌プロダクト横丁」に参加しました。私は、PythonとBlenderを使って開発した「かんたん作図ツール（AUL AI×3D）」を発表しました。 このツールは、特別支援学校の生徒が、難しい操作を覚え…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第10回「Search Consoleを確認する」",
+      "url": "https://note.com/chic_wren6567/n/n5085d765ba23",
+      "published": "2026-10-21T18:28:51+09:00",
+      "description": "独自ドメインをVercelへ切り替えたら、次に確認したいのがGoogle Search Consoleだ。 サイトが普通に表示されていても、Googleが正常にページを読めているとは限らない。 移行後は、Search ConsoleでエラーやURLの変化を確認しておく。 1. ま…",
+      "source": "rss"
+    },
+    {
+      "title": "ゼロクリック検索対策・実践シリーズ【第1回】――企業が高額なGEO対策費を払う前に考えたいこと",
+      "url": "https://note.com/chic_wren6567/n/na456fb61643e",
+      "published": "2026-10-21T04:54:38+09:00",
+      "description": "SEOからGEOへ。今度は何にお金を払うのか？「これからはSEOではなくGEO対策が必要です」 最近、こんな言葉を目にする機会が増えた。GoogleのAI Overviewをはじめ、AI検索に自社の情報を取り上げてもらうための対策だという。 私自身、介護・障がい福祉に関するWeb…",
+      "source": "rss"
+    },
+    {
+      "title": "Hermethea Pips FDEは「構想」から実装段階へ――Vercel DrivesとPythonで変わった現在地",
+      "url": "https://note.com/chic_wren6567/n/n939191946ea3",
+      "published": "2026-10-20T19:28:13+09:00",
+      "description": "Hermethea Pips FDEの価値は、AIに答えを出させることではなく、人がより良い判断をするために「差分」を見つけることにある。 事前に聞いていた話と現場の実態は同じなのか。管理者が考えていることと職員が感じていることにズレはないか。前回訪問時と今回で何が変わったのか。…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第9回「独自ドメインをVercelへ切り替える」",
+      "url": "https://note.com/chic_wren6567/n/n6dce502a8a8b",
+      "published": "2026-10-20T18:39:46+09:00",
+      "description": "前回は、URLと301リダイレクトを確認した。 今回は、いよいよ独自ドメインをWordPress側からVercel側へ切り替える。 ここは移行作業の中でも緊張するところだ。 ただし、やることを分けて考えれば難しくない。 一番大事なのは、 Webサイトだけ切り替えて、メール設定を壊…",
+      "source": "rss"
+    },
+    {
+      "title": "AI Overviewに表示されました。それで、売り上げは増えましたか？",
+      "url": "https://note.com/chic_wren6567/n/n2a89ca31928a",
+      "published": "2026-10-20T04:46:55+09:00",
+      "description": "Web制作会社やマーケティング会社の記事を読んでいると、「これからはSEOだけでなく、GEOやAIO対策が必要」という言葉をよく目にする。 GoogleのAI Overviewに自社サイトが引用されれば、ゼロクリック検索の時代でも認知度を高められる。AI検索に選ばれるサイトを作る…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第8回「URLと301リダイレクトを確認する」",
+      "url": "https://note.com/chic_wren6567/n/n5b5039b73b84",
+      "published": "2026-10-19T19:01:04+09:00",
+      "description": "前回は、Vercel側に新しいサイトを作り、仮URLで表示するところまで進めた。 今回はURLを確認する。 ここは、すでにGoogle検索からアクセスがあるサイトほど重要になる。 移行後も同じURLを維持できれば、利用者もGoogleも迷いにくい。 1. まず現在のURL構造を確…",
+      "source": "rss"
+    },
+    {
+      "title": "AI時代のサイトの作り方は、ホームページビルダー時代へ逆戻りするのか",
+      "url": "https://note.com/chic_wren6567/n/n19a53cc8f4c0",
+      "published": "2026-10-19T04:47:14+09:00",
+      "description": "昔のホームページ作りを覚えている人なら、少し懐かしく感じるかもしれない。 HTMLを手打ちして、1ページずつ作る。 リンクをつないで、画像を置いて、必要なら表を作る。 今のようにCMSへログインして記事を書くのではなく、「ページそのもの」を作っていた時代だ。 当時はホームページビ…",
+      "source": "rss"
+    },
+    {
+      "title": "WordPressからVercelへ移行する実践マニュアル【基礎編】――第7回「Vercel側に新しいサイトを作る」",
+      "url": "https://note.com/chic_wren6567/n/nc3edc61fb0a8",
+      "published": "2026-10-18T17:20:02+09:00",
+      "description": "前回までで、WordPressの記事と画像を取り出した。 今回から、Vercel側に新しいサイトを作っていく。 ここでの目標は一つ。 独自ドメインをまだ切り替えず、Vercelの仮URLで新しいサイトを表示すること。 いきなり本番サイトを切り替える必要はない。 まずは、新しい環境…",
       "source": "rss"
     }
   ],

@@ -1,17 +1,40 @@
 {
-  "fetchedAt": "2026-10-17T20:45:40.614Z",
+  "fetchedAt": "2026-10-25T09:00:40.035Z",
   "magazines": [
     {
       "key": "ma7626f7ceba8",
       "title": "WordPressからVercelへ移行する実践マニュアル",
       "url": "https://note.com/chic_wren6567/m/ma7626f7ceba8",
       "articleUrls": [
+        "https://note.com/chic_wren6567/n/n3bfb022584d3",
+        "https://note.com/chic_wren6567/n/n442d1d638a1a",
+        "https://note.com/chic_wren6567/n/n194dd188d40c",
+        "https://note.com/chic_wren6567/n/n5ebe102e3cfb",
+        "https://note.com/chic_wren6567/n/n5085d765ba23",
+        "https://note.com/chic_wren6567/n/n6dce502a8a8b",
+        "https://note.com/chic_wren6567/n/nc3edc61fb0a8",
+        "https://note.com/chic_wren6567/n/nec40d91dc64c",
         "https://note.com/chic_wren6567/n/n440abb9e891f",
         "https://note.com/chic_wren6567/n/nb88dff7f0686",
         "https://note.com/chic_wren6567/n/n0e8f07c331d0",
         "https://note.com/chic_wren6567/n/n3bf2dd10a67a",
-        "https://note.com/chic_wren6567/n/n769226334aaa",
-        "https://note.com/chic_wren6567/n/ncbe3969d1980"
+        "https://note.com/chic_wren6567/n/n769226334aaa"
+      ]
+    },
+    {
+      "key": "mafedff9c500a",
+      "title": "AIネイティブLLMOを考える",
+      "url": "https://note.com/chic_wren6567/m/mafedff9c500a",
+      "articleUrls": [
+        "https://note.com/chic_wren6567/n/n2186618c56fc",
+        "https://note.com/chic_wren6567/n/n656a2e4afe76",
+        "https://note.com/chic_wren6567/n/na456fb61643e",
+        "https://note.com/chic_wren6567/n/n2a89ca31928a",
+        "https://note.com/chic_wren6567/n/ncbe3969d1980",
+        "https://note.com/chic_wren6567/n/nd6f54f94f5d4",
+        "https://note.com/chic_wren6567/n/n19a53cc8f4c0",
+        "https://note.com/chic_wren6567/n/n0dbd7fd984aa",
+        "https://note.com/chic_wren6567/n/nb696d484f04f"
       ]
     },
     {
@@ -196,38 +219,6 @@
         "https://note.com/chic_wren6567/n/ne904b6982773",
         "https://note.com/chic_wren6567/n/n8c7dc82f0d63",
         "https://note.com/chic_wren6567/n/nba1f66fc4791"
-      ]
-    },
-    {
-      "key": "me4cdb6505532",
-      "title": "介護給付費等実態統計 「あなたの事業所なら、どうする？」",
-      "url": "https://note.com/chic_wren6567/m/me4cdb6505532",
-      "articleUrls": [
-        "https://note.com/chic_wren6567/n/n2c244197d9ca",
-        "https://note.com/chic_wren6567/n/nc9173c33efea",
-        "https://note.com/chic_wren6567/n/n4ef8b120f00c",
-        "https://note.com/chic_wren6567/n/n29fa98258ca4",
-        "https://note.com/chic_wren6567/n/na4a5f9437873",
-        "https://note.com/chic_wren6567/n/n75e5efb55ecf",
-        "https://note.com/chic_wren6567/n/n0e80665d237e",
-        "https://note.com/chic_wren6567/n/n6d1cfa8aad6e",
-        "https://note.com/chic_wren6567/n/n22dfa77801d7",
-        "https://note.com/chic_wren6567/n/nbbec32b642a6",
-        "https://note.com/chic_wren6567/n/n3845985c0943",
-        "https://note.com/chic_wren6567/n/nb6bdb3db746d",
-        "https://note.com/chic_wren6567/n/n4e77828c2be4",
-        "https://note.com/chic_wren6567/n/n1b2f4a070450",
-        "https://note.com/chic_wren6567/n/n0785ff4db34c",
-        "https://note.com/chic_wren6567/n/nfbdbc0ccd1f4",
-        "https://note.com/chic_wren6567/n/n18d97cb80781",
-        "https://note.com/chic_wren6567/n/n689fe3fd4684",
-        "https://note.com/chic_wren6567/n/n4ad92a2fce3a",
-        "https://note.com/chic_wren6567/n/n31ade23ee820",
-        "https://note.com/chic_wren6567/n/n8eb74e348669",
-        "https://note.com/chic_wren6567/n/nf3e969cd5bb0",
-        "https://note.com/chic_wren6567/n/n219808662895",
-        "https://note.com/chic_wren6567/n/ne2003c753280",
-        "https://note.com/chic_wren6567/n/nab05556de4b4"
       ]
     }
   ]
