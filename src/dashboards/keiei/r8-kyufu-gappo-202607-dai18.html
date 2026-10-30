@@ -1,0 +1,90 @@
+<div class="aul-report" data-slug="r8-kyufu-gappo-202607-dai18">
+<div class="aul-summary-web" id="aul-summary-web">
+<style>
+.aul-summary-web {
+  --ink:#16263a; --ink-soft:#43566b; --ink-faint:#8294a6;
+  --paper:#eef2f6; --card:#fff; --line:#dde5ec; --line-soft:#eaeff4;
+  --teal:#15786a; --teal-soft:#d6ebe6; --teal-deep:#0f5a50; --clay:#c0573f;
+  --shadow:0 1px 2px rgba(22,38,58,.05),0 8px 24px rgba(22,38,58,.06); --r:14px;
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Meiryo",system-ui,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased; box-sizing:border-box;
+}
+.aul-summary-web,.aul-summary-web *{box-sizing:border-box;margin:0;padding:0}
+.aul-summary-web .aul-sw-header{background:linear-gradient(165deg,#13212f 0%,#1c3247 60%,#1a3a44 100%);color:#fff;padding:30px 32px 26px;border-radius:var(--r) var(--r) 0 0}
+.aul-summary-web .aul-sw-eyebrow{font-size:12px;letter-spacing:.18em;color:#9fd6cb;font-weight:700;margin-bottom:10px}
+.aul-summary-web .aul-sw-eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:#36a690;vertical-align:middle;margin-right:8px}
+.aul-summary-web .aul-sw-htitle{font-size:clamp(18px,2.6vw,24px);font-weight:800;line-height:1.4}
+.aul-summary-web .aul-sw-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.aul-summary-web .aul-sw-tag{font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#cfdae4;padding:4px 11px;border-radius:999px;font-weight:600}
+.aul-summary-web .aul-sum-doc{background:var(--card);border:1px solid var(--line);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:var(--shadow);padding:28px 32px 32px}
+.aul-summary-web .aul-sum-doc h2{font-size:17px;font-weight:800;color:var(--ink);margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--teal);line-height:1.4}
+.aul-summary-web .aul-sum-doc h2:first-of-type{margin-top:8px}
+.aul-summary-web .aul-sum-doc h3{font-size:14px;font-weight:800;color:var(--teal-deep);margin:18px 0 8px}
+.aul-summary-web .aul-sum-doc p{font-size:14.5px;line-height:1.85;color:var(--ink-soft);margin:8px 0}
+.aul-summary-web .aul-sum-doc strong{color:var(--ink);font-weight:700}
+.aul-summary-web .aul-sum-doc ol,.aul-summary-web .aul-sum-doc ul{margin:10px 0 10px 22px;padding:0}
+.aul-summary-web .aul-sum-doc li{font-size:14px;line-height:1.8;color:var(--ink-soft);margin:5px 0}
+.aul-summary-web .aul-sum-doc .aul-sum-quote{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc .aul-sum-hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.aul-summary-web .aul-sum-doc table.aul-sum-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;border:1px solid var(--line)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th,.aul-summary-web .aul-sum-doc table.aul-sum-table td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line-soft)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{background:var(--teal-deep);color:#fff;font-weight:700}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th.l,.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{text-align:left}
+.aul-summary-web .aul-sum-doc table.aul-sum-table td.l{font-weight:600;color:var(--ink)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table tbody tr:nth-child(even) td{background:#f7fafb}
+.aul-summary-web .aul-bar{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+.aul-summary-web .aul-bar .nm{flex:0 0 5.5em;color:var(--ink);font-weight:600}
+.aul-summary-web .aul-bar .tr{flex:1;background:var(--line-soft);border-radius:4px;height:16px}
+.aul-summary-web .aul-bar .fl{display:block;height:16px;border-radius:4px;background:var(--teal)}
+.aul-summary-web .aul-bar .fl.lo{background:var(--clay)}
+.aul-summary-web .aul-bar .vl{flex:0 0 4.5em;text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.aul-summary-web .aul-sw-foot{font-size:11.5px;color:var(--ink-faint);text-align:right;margin-top:14px}
+@media(max-width:640px){
+  .aul-summary-web .aul-sw-header{padding:24px 20px 20px}
+  .aul-summary-web .aul-sum-doc{padding:22px 20px}
+  .aul-summary-web .aul-sum-doc table.aul-sum-table{display:block;overflow-x:auto}
+}
+
+.aul-summary-web .aul-sum-doc .aul-scroll{overflow-x:auto;margin:10px 0}
+.aul-summary-web .aul-sum-doc .aul-scroll table.aul-sum-table{margin:0;min-width:520px}
+.aul-summary-web .aul-sum-doc td.i1{padding-left:26px}
+.aul-summary-web .aul-sum-doc td.i2{padding-left:44px}
+.aul-summary-web .aul-sum-doc td.i3{padding-left:62px}
+.aul-summary-web .aul-sum-doc td.i4{padding-left:80px}
+.aul-summary-web .aul-sum-doc details{margin:10px 0}
+.aul-summary-web .aul-sum-doc summary{cursor:pointer;font-size:13.5px;font-weight:700;color:var(--teal-deep)}
+.aul-summary-web .aul-sum-doc table.aul-sum-table th{white-space:nowrap}
+.aul-summary-web .aul-bar .nm{flex-basis:11em}
+.aul-summary-web .aul-bar .vl{flex-basis:6.5em}
+@media(max-width:640px){.aul-summary-web .aul-bar .nm{flex-basis:7.5em;font-size:12px}.aul-summary-web .aul-bar .vl{flex-basis:5.5em;font-size:12px}}
+.aul-summary-web .aul-sum-doc .aul-cap{font-size:12.5px;color:var(--ink-faint);margin:2px 0 6px}
+</style>
+<div class="aul-sw-header">
+  <div class="aul-sw-eyebrow">エグゼクティブサマリー</div>
+  <div class="aul-sw-htitle">月報第１８表 居宅サービス給付単位数・受給者数，要介護（要支援）状態区分別</div>
+  <div class="aul-sw-tags"><span class="aul-sw-tag">令和8（2026）年7月審査分</span><span class="aul-sw-tag">月報第18表</span><span class="aul-sw-tag">全国</span></div>
+</div>
+<article class="aul-sum-doc">
+<h2>概要</h2>
+<blockquote class="aul-sum-quote">令和8（2026）年7月審査分の居宅サービス給付単位数・受給者数について、平均利用率が介護予防サービス 要支援１で27.8％、介護サービス 要介護５で68.5％です。</blockquote>
+<h2>主要ポイント</h2>
+<ol><li><strong>平均利用率：</strong>居宅サービスの給付単位数が区分支給限度基準額に占める割合（平均利用率）は、介護予防サービス 要支援１で27.8％、介護サービス 要介護５で68.5％です（平均給付単位数÷支給限度基準額）。</li><li><strong>給付単位数と限度額：</strong>介護サービス 要介護５の平均給付単位数は24,813.5単位、支給限度基準額は36,217単位です。介護予防サービス 要支援１はそれぞれ1,396.8単位、5,032単位です。</li><li><strong>算出の確認：</strong>介護予防サービス 要支援１の給付単位数合計（千単位）を受給者数合計（千人）で割ると1,396.8単位で、表の平均給付単位数と同じ定義です。</li><li><strong>表章記号：</strong>この表には、値のないセル（－・…など）はありません。</li></ol>
+<hr class="aul-sum-hr">
+<h2>この表は何を表しているか</h2>
+<p>「月報第１８表 居宅サービス給付単位数・受給者数，要介護（要支援）状態区分別」は、厚生労働省「介護給付費等実態統計月報」（令和8（2026）年7月審査分）の統計表です。単位は各値です。</p>
+<p>審査月とは、国民健康保険団体連合会が介護給付費の請求を審査した月で、令和8（2026）年7月審査分は主に前月に提供されたサービスが対象です。月報は単月の集計で、年間の累計ではありません。</p>
+<h2>表の全体</h2><p class="aul-cap">原表のとおり、5行を示します。「―」は値のないセルです（0ではありません）。</p><div class="aul-scroll"><table class="aul-sum-table" data-kind="data"><thead><tr><th class="l">区分</th><th>単位</th><th>介護予防サービス 要支援１</th><th>介護予防サービス 要支援２</th><th>介護サービス 要介護１</th><th>介護サービス 要介護２</th><th>介護サービス 要介護３</th><th>介護サービス 要介護４</th><th>介護サービス 要介護５</th></tr></thead><tbody><tr><td class="l">居宅サービス給付単位数合計</td><td>千単位</td><td data-l="9" data-c="2">536,500</td><td data-l="9" data-c="3">1,326,163</td><td data-l="9" data-c="4">8,274,699</td><td data-l="9" data-c="5">9,935,084</td><td data-l="9" data-c="6">8,751,512</td><td data-l="9" data-c="7">7,815,398</td><td data-l="9" data-c="8">5,837,425</td></tr><tr><td class="l">居宅サービス給付受給者数合計</td><td>千人</td><td data-l="10" data-c="2">384.1</td><td data-l="10" data-c="3">583.6</td><td data-l="10" data-c="4">1,133.9</td><td data-l="10" data-c="5">967.6</td><td data-l="10" data-c="6">548.8</td><td data-l="10" data-c="7">395.6</td><td data-l="10" data-c="8">235.3</td></tr><tr><td class="l">平均給付単位数</td><td>居宅サービス給付単位数合計／居宅サービス給付受給者数合計</td><td data-l="11" data-c="2">1,396.8</td><td data-l="11" data-c="3">2,272.2</td><td data-l="11" data-c="4">7,297.4</td><td data-l="11" data-c="5">10,267.5</td><td data-l="11" data-c="6">15,946.9</td><td data-l="11" data-c="7">19,754.4</td><td data-l="11" data-c="8">24,813.5</td></tr><tr><td class="l">支給限度基準額</td><td>単位数</td><td data-l="12" data-c="2">5,032</td><td data-l="12" data-c="3">10,531</td><td data-l="12" data-c="4">16,765</td><td data-l="12" data-c="5">19,705</td><td data-l="12" data-c="6">27,048</td><td data-l="12" data-c="7">30,938</td><td data-l="12" data-c="8">36,217</td></tr><tr><td class="l">平均利用率（％）</td><td>平均給付単位数／支給限度基準額</td><td data-l="13" data-c="2">27.8</td><td data-l="13" data-c="3">21.6</td><td data-l="13" data-c="4">43.5</td><td data-l="13" data-c="5">52.1</td><td data-l="13" data-c="6">59.0</td><td data-l="13" data-c="7">63.9</td><td data-l="13" data-c="8">68.5</td></tr></tbody></table></div>
+<h2>表の注記（原表）</h2><ul><li>注：１） 居宅サービス給付単位数合計は、介護給付費明細書のうち、居宅サービス支給限度額管理対象単位数の合計である。</li><li>２） 居宅サービス給付受給者数合計は、居宅サービス給付単位数合計の対象者を名寄せしたものである。</li><li>３） 支給限度基準額は、『居宅介護サービス費区分支給限度基準額及び居宅支援サービス費区分支給限度基準額』（平成十二年厚生省告示第三十三号）</li><li>に定められたものをいい、保険者ごとの区分支給限度基準額の引上げ／引下げは考慮しない。</li></ul>
+<h2>データの出典と読み方の注意</h2>
+<ul>
+<li><strong>出典：</strong>e-Stat「介護給付費等実態統計月報」月報第１８表 居宅サービス給付単位数・受給者数，要介護（要支援）状態区分別（令和8（2026）年7月審査分、mr_hyo0018.csv）。</li>
+<li><strong>表中の記号：</strong>「―」は計数のない場合、「・」は統計項目のあり得ない場合、「…」は定義なしを表します。いずれも0ではありません。</li>
+<li><strong>人数の扱い：</strong>受給者数は同じ人が複数のサービスを使うため、サービス別の人数を足しても総数になりません。</li>
+<li><strong>丸め：</strong>値は原表と同じ桁数で示しています。内訳の和と総数の差の一部は、この丸めによります。</li>
+<li>本結果は単月の集計値であり、個別の事業所や地域の状況を直接示すものではありません。他の月や年度との比較は、制度改定（報酬改定など）の影響を区別したものではありません。</li>
+</ul>
+<p class="aul-sw-foot">生成日時: 2026-10-31 08:29</p>
+</article>
+</div>
+</div>
