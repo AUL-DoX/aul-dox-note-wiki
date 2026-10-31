@@ -1,12 +1,102 @@
 {
   "dataCategories": [
-    { "slug": "kaigo", "label": "介護分野" },
-    { "slug": "shogai", "label": "障がい分野" },
-    { "slug": "keiei", "label": "経営の見える化" }
+    {
+      "slug": "kaigo",
+      "label": "介護分野",
+      "groups": [
+        {
+          "slug": "jigyo-r6",
+          "label": "介護保険事業状況報告（令和6年度・全国計）",
+          "prefixes": [
+            "r6-kaigo-zenkokukei"
+          ]
+        },
+        {
+          "slug": "gaikyou",
+          "label": "経営概況（第1〜50表）",
+          "prefixes": [
+            "kaigo-keiei-gaikyou"
+          ]
+        },
+        {
+          "slug": "sogo",
+          "label": "総合事業の分析",
+          "prefixes": [
+            "sogo-jigyo",
+            "supplementary-benefits"
+          ]
+        },
+        {
+          "slug": "2026-02",
+          "label": "認定・費用・限度額（2026年2月）",
+          "prefixes": [
+            "care-certification",
+            "care-costs",
+            "home-care-limit"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "shogai",
+      "label": "障がい分野"
+    },
+    {
+      "slug": "keiei",
+      "label": "経営の見える化",
+      "groups": [
+        {
+          "slug": "jigyo-r6-pref",
+          "label": "介護保険事業状況報告（令和6年度・都道府県別）",
+          "prefixes": [
+            "r6-kaigo-todofuken"
+          ]
+        },
+        {
+          "slug": "kyufu-r7",
+          "label": "給付費等実態統計（令和7年度・全国・月別）",
+          "prefixes": [
+            "r7-kyufu-zenkoku"
+          ]
+        },
+        {
+          "slug": "kyufu-r7-pref",
+          "label": "給付費等実態統計（令和7年度・都道府県別）",
+          "prefixes": [
+            "r7-kyufu-todofuken"
+          ]
+        },
+        {
+          "slug": "kyufu-gappo",
+          "label": "給付費等実態統計・月報（令和8年7月審査分）",
+          "prefixes": [
+            "r8-kyufu-gappo"
+          ]
+        },
+        {
+          "slug": "survey",
+          "label": "経営動向調査・経営状況",
+          "prefixes": [
+            "wam-survey",
+            "shakai-fukushi-hojin",
+            "nicchu-katsudo"
+          ]
+        }
+      ]
+    }
   ],
   "deepResearchTags": [
-    { "slug": "kaigo", "label": "介護" },
-    { "slug": "shogai", "label": "障がい" },
-    { "slug": "keiei", "label": "経営" }
+    {
+      "slug": "kaigo",
+      "label": "介護"
+    },
+    {
+      "slug": "shogai",
+      "label": "障がい"
+    },
+    {
+      "slug": "keiei",
+      "label": "経営"
+    }
   ]
 }

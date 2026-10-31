@@ -5,9 +5,16 @@
 
 import raw from './data-categories.json';
 
+export interface DataCategoryGroup {
+  slug: string;
+  label: string;
+  prefixes: string[];
+}
+
 export interface DataCategory {
   slug: string;
   label: string;
+  groups?: DataCategoryGroup[];
 }
 
 export const dataCategories: DataCategory[] = raw.dataCategories;

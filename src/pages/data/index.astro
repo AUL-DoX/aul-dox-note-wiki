@@ -36,14 +36,21 @@ function getTagLabel(slug: string) {
 const dashboardItems = Object.entries(dashboardModules).map(([path, html]) => {
   const rel = path.replace('../../dashboards/', '').replace(/\.html$/, '');
   const category = rel.split('/')[0] ?? '';
-  return { category, title: titleFor(`dashboards/${rel}`, html, rel), href: `/data/${rel}/` };
-});
+  return { category, file: rel.split('/').slice(1).join('/'), title: titleFor(`dashboards/${rel}`, html, rel), href: `/data/${rel}/` };
+}).sort((a, b) => a.file.localeCompare(b.file, 'en', { numeric: true }));
 
 // dashboards側の3タブ（介護分野・障がい分野・経営の見える化）。
-const dashboardTabs = dataCategories.map((cat) => ({
-  ...cat,
-  items: dashboardItems.filter((i) => i.category === cat.slug),
-}));
+// 子カテゴリ（data-categories.json の groups）はファイル名の接頭辞で振り分ける。どれにも当たらないものは「その他」。
+const dashboardTabs = dataCategories.map((cat) => {
+  const groups = cat.groups ?? [];
+  const items = dashboardItems
+    .filter((i) => i.category === cat.slug)
+    .map((i) => ({ ...i, group: groups.find((g) => g.prefixes.some((p) => i.file.startsWith(p)))?.slug ?? (groups.length ? 'other' : '') }));
+  const options = groups.map((g) => ({ slug: g.slug, label: g.label, count: items.filter((i) => i.group === g.slug).length }));
+  const others = items.filter((i) => i.group === 'other').length;
+  if (others > 0) options.push({ slug: 'other', label: 'その他', count: others });
+  return { ...cat, items, options: options.filter((o) => o.count > 0) };
+});
 
 // src/Deep-Research/<カテゴリ>/<年月>/<ファイル>.html -> { tag, month, title, href }
 const deepResearchItems = Object.entries(deepResearchModules).map(([path, html]) => {
@@ -88,13 +95,26 @@ const tabs = [
       {cat.items.length === 0 ? (
         <p class="data-empty">このカテゴリのコンテンツはまだありません。</p>
       ) : (
-        <ul class="wiki-index-list">
-          {cat.items.map((item) => (
-            <li class="wiki-index-item">
-              <a href={item.href}>{item.title}</a>
-            </li>
-          ))}
-        </ul>
+        <>
+          {cat.options.length > 1 && (
+            <div class="data-filter">
+              <label for={`group-${cat.slug}`}>分類で絞り込み</label>
+              <select id={`group-${cat.slug}`} class="data-group-select" data-for={cat.slug}>
+                <option value="">すべての分類（{cat.items.length}件）</option>
+                {cat.options.map((o) => (
+                  <option value={o.slug}>{o.label}（{o.count}件）</option>
+                ))}
+              </select>
+            </div>
+          )}
+          <ul class="wiki-index-list" data-list={cat.slug}>
+            {cat.items.map((item) => (
+              <li class="wiki-index-item" data-group={item.group}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </section>
   ))}
@@ -137,6 +157,16 @@ const tabs = [
           const id = tab.dataset.tab;
           tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
           panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+        });
+      });
+
+      document.querySelectorAll('.data-group-select').forEach((select) => {
+        select.addEventListener('change', () => {
+          const list = document.querySelector(`[data-list="${select.dataset.for}"]`);
+          if (!list) return;
+          list.querySelectorAll('.wiki-index-item').forEach((item) => {
+            item.hidden = select.value !== '' && item.dataset.group !== select.value;
+          });
         });
       });
 
@@ -208,7 +238,8 @@ const tabs = [
       color: var(--muted);
     }
 
-    .data-month-select {
+    .data-month-select,
+    .data-group-select {
       border: 1px solid var(--border);
       border-radius: 8px;
       background: var(--card);
