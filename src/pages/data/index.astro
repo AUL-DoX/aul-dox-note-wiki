@@ -268,6 +268,11 @@ const tabs = [
       white-space: nowrap;
     }
 
+    /* .wiki-index-item の display:grid が hidden 属性に勝つため、絞り込みで隠した項目を確実に消す */
+    .wiki-index-item[hidden] {
+      display: none;
+    }
+
     .data-empty {
       color: var(--muted);
     }
