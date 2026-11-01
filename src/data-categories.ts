@@ -24,6 +24,23 @@ export function getCategoryLabel(slug: string): string {
   return dataCategories.find((c) => c.slug === slug)?.label ?? slug;
 }
 
+// ダッシュボードのファイル名（接頭辞）から、/dataのプルダウンの分類slugを返す。
+// 分類を持つカテゴリでどれにも当たらなければ 'other'、分類が無いカテゴリなら ''。
+export function getGroupSlug(category: string, file: string): string {
+  const groups = dataCategories.find((c) => c.slug === category)?.groups ?? [];
+  if (!groups.length) return '';
+  return groups.find((g) => g.prefixes.some((p) => file.startsWith(p)))?.slug ?? 'other';
+}
+
+// /data 一覧の該当タブ・分類を開いた状態のURL。
+export function getDataIndexUrl(category: string, group = ''): string {
+  const params = new URLSearchParams();
+  if (category && category !== dataCategories[0]?.slug) params.set('tab', category);
+  if (group) params.set(category === 'deep-research' ? 'month' : 'group', group);
+  const query = params.toString();
+  return `/data/${query ? `?${query}` : ''}`;
+}
+
 // "2026-07" -> "2026年7月"。想定外の形式はそのまま返す。
 export function formatYearMonth(ym: string): string {
   const match = ym.match(/^(\d{4})-(\d{2})$/);

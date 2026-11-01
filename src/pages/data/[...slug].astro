@@ -4,6 +4,7 @@
 
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import titleOverrides from '../../data-titles.json';
+import { getCategoryLabel, getDataIndexUrl, getGroupSlug } from '../../data-categories';
 
 const overrides = titleOverrides as Record<string, string>;
 
@@ -31,9 +32,33 @@ const entry = Object.entries(htmlModules).find(
   ([path]) => path === `../../dashboards/${slug}.html`,
 );
 const dashboardHtml = entry?.[1] ?? '';
-const pageTitle = overrides[`dashboards/${slug}`]?.trim() || slug;
+const h1 = dashboardHtml.match(/<h1>([\s\S]*?)<\/h1>/)?.[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+const pageTitle = overrides[`dashboards/${slug}`]?.trim() || h1 || slug;
+
+// 一覧へ戻るリンク：/data の同じタブ・同じ分類を開いた状態で戻す。
+const [category = '', ...rest] = (slug ?? '').split('/');
+const categoryLabel = getCategoryLabel(category);
+const backUrl = getDataIndexUrl(category, getGroupSlug(category, rest.join('/')));
 ---
 
-<WikiLayout wide title={`${pageTitle} | データ分析 | AUL DoX Reference`}>
+<WikiLayout wide title={`${pageTitle} | データ分析 | AUL DoX Reference`} description={`${pageTitle}（${categoryLabel}）。AUL DoXのデータ分析ダッシュボード。`}>
+  <nav class="data-back" aria-label="データ分析一覧へ戻る"><a href={backUrl}>← {categoryLabel}の一覧に戻る</a></nav>
   <Fragment set:html={dashboardHtml} />
+  <nav class="data-back data-back-bottom" aria-label="データ分析一覧へ戻る"><a href={backUrl}>← {categoryLabel}の一覧に戻る</a></nav>
 </WikiLayout>
+
+<style>
+  .data-back {
+    margin: 0 0 16px;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+  .data-back a {
+    color: var(--accent);
+  }
+  .data-back-bottom {
+    margin: 32px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+</style>

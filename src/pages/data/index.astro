@@ -1,6 +1,6 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
-import { dataCategories, deepResearchTags, formatYearMonth } from '../../data-categories';
+import { dataCategories, deepResearchTags, formatYearMonth, getGroupSlug } from '../../data-categories';
 import titleOverrides from '../../data-titles.json';
 
 const dashboardModules = import.meta.glob('../../dashboards/**/*.html', {
@@ -45,7 +45,7 @@ const dashboardTabs = dataCategories.map((cat) => {
   const groups = cat.groups ?? [];
   const items = dashboardItems
     .filter((i) => i.category === cat.slug)
-    .map((i) => ({ ...i, group: groups.find((g) => g.prefixes.some((p) => i.file.startsWith(p)))?.slug ?? (groups.length ? 'other' : '') }));
+    .map((i) => ({ ...i, group: getGroupSlug(cat.slug, i.file) }));
   const options = groups.map((g) => ({ slug: g.slug, label: g.label, count: items.filter((i) => i.group === g.slug).length }));
   const others = items.filter((i) => i.group === 'other').length;
   if (others > 0) options.push({ slug: 'other', label: 'その他', count: others });
@@ -82,8 +82,10 @@ const tabs = [
   <div class="data-tabs" role="tablist">
     {tabs.map((tab, i) => (
       <button
+        type="button"
         class:list={['data-tab', i === 0 && 'is-active']}
         role="tab"
+        aria-selected={i === 0 ? 'true' : 'false'}
         data-tab={tab.slug}
       >{tab.label}</button>
     ))}
@@ -99,7 +101,7 @@ const tabs = [
           {cat.options.length > 1 && (
             <div class="data-filter">
               <label for={`group-${cat.slug}`}>分類で絞り込み</label>
-              <select id={`group-${cat.slug}`} class="data-group-select" data-for={cat.slug}>
+              <select id={`group-${cat.slug}`} class="data-group-select" data-for={cat.slug} autocomplete="off">
                 <option value="">すべての分類（{cat.items.length}件）</option>
                 {cat.options.map((o) => (
                   <option value={o.slug}>{o.label}（{o.count}件）</option>
@@ -124,7 +126,7 @@ const tabs = [
     {deepResearchMonths.length > 0 && (
       <div class="data-filter">
         <label for="month-deep-research">年月で絞り込み</label>
-        <select id="month-deep-research" class="data-month-select" data-for="deep-research">
+        <select id="month-deep-research" class="data-month-select" data-for="deep-research" autocomplete="off">
           <option value="">すべての年月</option>
           {deepResearchMonths.map((m) => (
             <option value={m}>{formatYearMonth(m)}</option>
@@ -148,38 +150,74 @@ const tabs = [
   </section>
 
   <script is:inline>
+    // タブと絞り込みの状態はURL（?tab=…&group=… / ?month=…）に持たせる。
+    // ブラウザの「戻る」やダッシュボードの「一覧に戻る」リンクで来ても、同じ絞り込みが再現される。
     (() => {
       const tabs = [...document.querySelectorAll('.data-tab')];
       const panels = [...document.querySelectorAll('.data-panel')];
+      const selects = [...document.querySelectorAll('.data-group-select, .data-month-select')];
+
+      const filterList = (select) => {
+        const list = document.querySelector(`[data-list="${select.dataset.for}"]`);
+        if (!list) return;
+        const key = select.classList.contains('data-month-select') ? 'month' : 'group';
+        list.querySelectorAll('.wiki-index-item').forEach((item) => {
+          item.hidden = select.value !== '' && item.dataset[key] !== select.value;
+        });
+      };
+
+      const activateTab = (id) => {
+        if (!tabs.some((t) => t.dataset.tab === id)) id = tabs[0]?.dataset.tab;
+        tabs.forEach((t) => {
+          const on = t.dataset.tab === id;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+        return id;
+      };
+
+      const selectFor = (id) => selects.find((s) => s.dataset.for === id);
+
+      const saveState = () => {
+        const id = document.querySelector('.data-tab.is-active')?.dataset.tab;
+        const params = new URLSearchParams();
+        if (id && id !== tabs[0]?.dataset.tab) params.set('tab', id);
+        const select = selectFor(id);
+        if (select?.value) params.set(select.classList.contains('data-month-select') ? 'month' : 'group', select.value);
+        const query = params.toString();
+        history.replaceState(history.state, '', location.pathname + (query ? `?${query}` : '') + location.hash);
+      };
+
+      const restoreState = () => {
+        const params = new URLSearchParams(location.search);
+        const id = activateTab(params.get('tab'));
+        selects.forEach((select) => {
+          const key = select.classList.contains('data-month-select') ? 'month' : 'group';
+          const value = select.dataset.for === id ? params.get(key) ?? '' : '';
+          select.value = [...select.options].some((o) => o.value === value) ? value : '';
+          filterList(select);
+        });
+      };
 
       tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
-          const id = tab.dataset.tab;
-          tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
-          panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+          activateTab(tab.dataset.tab);
+          saveState();
         });
       });
 
-      document.querySelectorAll('.data-group-select').forEach((select) => {
+      selects.forEach((select) => {
         select.addEventListener('change', () => {
-          const list = document.querySelector(`[data-list="${select.dataset.for}"]`);
-          if (!list) return;
-          list.querySelectorAll('.wiki-index-item').forEach((item) => {
-            item.hidden = select.value !== '' && item.dataset.group !== select.value;
-          });
+          filterList(select);
+          saveState();
         });
       });
 
-      document.querySelectorAll('.data-month-select').forEach((select) => {
-        select.addEventListener('change', () => {
-          const listId = select.dataset.for;
-          const value = select.value;
-          const list = document.querySelector(`[data-list="${listId}"]`);
-          if (!list) return;
-          list.querySelectorAll('.wiki-index-item').forEach((item) => {
-            item.hidden = value !== '' && item.dataset.month !== value;
-          });
-        });
+      restoreState();
+      // bfcache（戻る・進むでページがそのまま復元される場合）でも、URLとの食い違いを直す。
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) restoreState();
       });
     })();
   </script>

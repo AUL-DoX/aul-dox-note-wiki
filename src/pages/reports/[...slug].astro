@@ -4,6 +4,8 @@
 // src/Deep-Research/<カテゴリ>/<年月>/<ファイル>.html を /reports/<カテゴリ>/<年月>/<ファイル>/ として配信する。
 // WikiLayoutで包まず、<body>直後にサイトへ戻る小さなバーだけ自動挿入する。
 
+import { getDataIndexUrl } from '../../data-categories';
+
 const htmlModules = import.meta.glob('../../Deep-Research/**/*.html', {
   query: '?raw',
   import: 'default',
@@ -29,9 +31,13 @@ const entry = Object.entries(htmlModules).find(
 );
 const rawHtml = entry?.[1] ?? '<!doctype html><html><body>Not found</body></html>';
 
+// 一覧へ戻るリンクは、/data の Deep Research タブを同じ年月で開いた状態にする。
+const month = /^\d{4}-\d{2}$/.test(slug?.split('/')[1] ?? '') ? slug!.split('/')[1] : '';
+const backUrl = getDataIndexUrl('deep-research', month);
+
 const backBar = `<div style="position:sticky;top:0;z-index:999;background:#222;color:#fff;font:14px/1.6 -apple-system,'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;padding:10px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">` +
   `<a href="/reference/" style="color:#fff;font-weight:700">← AUL DoX Reference</a>` +
-  `<a href="/data/" style="color:#fff;">データ分析一覧</a>` +
+  `<a href="${backUrl}" style="color:#fff;">データ分析一覧</a>` +
   `</div>`;
 
 // WikiLayoutと同じAdSense基本コード。元HTMLに既に含まれている場合は二重に入れない。
