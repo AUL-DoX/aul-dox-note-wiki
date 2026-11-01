@@ -1,0 +1,20 @@
+---
+// /data/<タブ>/（kaigo・shogai・keiei・deep-research）。中身は /data/ と同じ一覧で、そのタブを開いた状態で表示する。
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import DataIndex from '../../components/DataIndex.astro';
+import { dataCategories } from '../../data-categories';
+
+export function getStaticPaths() {
+  return [
+    ...dataCategories.map((c) => ({ params: { tab: c.slug }, props: { label: c.label } })),
+    { params: { tab: 'deep-research' }, props: { label: 'Deep Research' } },
+  ];
+}
+
+const { tab } = Astro.params;
+const { label } = Astro.props;
+---
+
+<WikiLayout wide title={`${label} | Data | AUL DoXのデータ分析`} description={`${label}のデータ分析ダッシュボード・レポート一覧。医療・介護・障がい福祉などの公的統計をもとにしています。`}>
+  <DataIndex active={tab} />
+</WikiLayout>

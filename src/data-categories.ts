@@ -32,13 +32,10 @@ export function getGroupSlug(category: string, file: string): string {
   return groups.find((g) => g.prefixes.some((p) => file.startsWith(p)))?.slug ?? 'other';
 }
 
-// /data 一覧の該当タブ・分類を開いた状態のURL。
-export function getDataIndexUrl(category: string, group = ''): string {
-  const params = new URLSearchParams();
-  if (category && category !== dataCategories[0]?.slug) params.set('tab', category);
-  if (group) params.set(category === 'deep-research' ? 'month' : 'group', group);
-  const query = params.toString();
-  return `/data/${query ? `?${query}` : ''}`;
+// /data 一覧の該当タブ・分類を開いた状態のURL（例：/data/keiei/?group=kyufu-r7）。
+export function getDataIndexUrl(tab: string, filter = ''): string {
+  const key = tab === 'deep-research' ? 'month' : 'group';
+  return `/data/${tab}/${filter ? `?${key}=${encodeURIComponent(filter)}` : ''}`;
 }
 
 // "2026-07" -> "2026年7月"。想定外の形式はそのまま返す。

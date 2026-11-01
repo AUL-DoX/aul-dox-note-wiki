@@ -1,0 +1,323 @@
+---
+// /data 一覧の本体。/data/ と /data/<タブ>/ の各ページから使う。active は最初に開くタブのslug。
+import { dataCategories, deepResearchTags, formatYearMonth, getGroupSlug } from '../data-categories';
+import titleOverrides from '../data-titles.json';
+
+interface Props {
+  active?: string;
+}
+
+const dashboardModules = import.meta.glob('../dashboards/**/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const deepResearchModules = import.meta.glob('../Deep-Research/**/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
+const overrides = titleOverrides as Record<string, string>;
+
+function extractTitle(html: string, fallback: string) {
+  const match = html.match(/<h1>([\s\S]*?)<\/h1>/);
+  if (!match) return fallback;
+  return match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+// 管理画面で編集したタイトル（data-titles.json）があれば優先。無ければHTMLの<h1>から抽出。
+function titleFor(key: string, html: string, fallback: string) {
+  return overrides[key]?.trim() || extractTitle(html, fallback);
+}
+
+function getTagLabel(slug: string) {
+  return deepResearchTags.find((t) => t.slug === slug)?.label ?? slug;
+}
+
+// src/dashboards/<カテゴリ>/<ファイル>.html -> { category, slug, title, href }
+const dashboardItems = Object.entries(dashboardModules).map(([path, html]) => {
+  const rel = path.replace('../dashboards/', '').replace(/\.html$/, '');
+  const category = rel.split('/')[0] ?? '';
+  return { category, file: rel.split('/').slice(1).join('/'), title: titleFor(`dashboards/${rel}`, html, rel), href: `/data/${rel}/` };
+}).sort((a, b) => a.file.localeCompare(b.file, 'en', { numeric: true }));
+
+// dashboards側の3タブ（介護分野・障がい分野・経営の見える化）。
+// 子カテゴリ（data-categories.json の groups）はファイル名の接頭辞で振り分ける。どれにも当たらないものは「その他」。
+const dashboardTabs = dataCategories.map((cat) => {
+  const groups = cat.groups ?? [];
+  const items = dashboardItems
+    .filter((i) => i.category === cat.slug)
+    .map((i) => ({ ...i, group: getGroupSlug(cat.slug, i.file) }));
+  const options = groups.map((g) => ({ slug: g.slug, label: g.label, count: items.filter((i) => i.group === g.slug).length }));
+  const others = items.filter((i) => i.group === 'other').length;
+  if (others > 0) options.push({ slug: 'other', label: 'その他', count: others });
+  return { ...cat, items, options: options.filter((o) => o.count > 0) };
+});
+
+// src/Deep-Research/<カテゴリ>/<年月>/<ファイル>.html -> { tag, month, title, href }
+const deepResearchItems = Object.entries(deepResearchModules).map(([path, html]) => {
+  const rel = path.replace('../Deep-Research/', '').replace(/\.html$/, '');
+  const segments = rel.split('/');
+  const tag = segments[0] ?? '';
+  const month = /^\d{4}-\d{2}$/.test(segments[1] ?? '') ? segments[1] : '';
+  return { tag, month, title: titleFor(`Deep-Research/${rel}`, html, rel), href: `/reports/${rel}/` };
+}).sort((a, b) => b.month.localeCompare(a.month) || a.title.localeCompare(b.title, 'ja'));
+
+const deepResearchMonths = [...new Set(deepResearchItems.map((i) => i.month).filter(Boolean))].sort().reverse();
+
+// 4タブ：介護分野・障がい分野・経営の見える化・Deep Research。
+const tabs = [
+  ...dashboardTabs.map((t) => ({ slug: t.slug, label: t.label })),
+  { slug: 'deep-research', label: 'Deep Research' },
+];
+const active = tabs.some((t) => t.slug === Astro.props.active) ? Astro.props.active : tabs[0].slug;
+---
+
+  <section class="wiki-home-header">
+    <div>
+      <p class="eyebrow">Data Index</p>
+      <h1>データ分析</h1>
+      <p>厚生労働省統計等をもとにした、AUL DoXのデータ分析ダッシュボード・レポートの一覧です。</p>
+    </div>
+  </section>
+
+  <div class="data-tabs" role="tablist">
+    {tabs.map((tab) => (
+      <button
+        type="button"
+        class:list={['data-tab', tab.slug === active && 'is-active']}
+        role="tab"
+        aria-selected={tab.slug === active ? 'true' : 'false'}
+        data-tab={tab.slug}
+      >{tab.label}</button>
+    ))}
+  </div>
+
+  {/* 介護分野・障がい分野・経営の見える化（dashboards） */}
+  {dashboardTabs.map((cat) => (
+    <section class:list={['data-panel', cat.slug === active && 'is-active']} data-panel={cat.slug}>
+      {cat.items.length === 0 ? (
+        <p class="data-empty">このカテゴリのコンテンツはまだありません。</p>
+      ) : (
+        <>
+          {cat.options.length > 1 && (
+            <div class="data-filter">
+              <label for={`group-${cat.slug}`}>分類で絞り込み</label>
+              <select id={`group-${cat.slug}`} class="data-group-select" data-for={cat.slug} autocomplete="off">
+                <option value="">すべての分類（{cat.items.length}件）</option>
+                {cat.options.map((o) => (
+                  <option value={o.slug}>{o.label}（{o.count}件）</option>
+                ))}
+              </select>
+            </div>
+          )}
+          <ul class="wiki-index-list" data-list={cat.slug}>
+            {cat.items.map((item) => (
+              <li class="wiki-index-item" data-group={item.group}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
+  ))}
+
+  {/* Deep Research（Codex等） */}
+  <section class:list={['data-panel', active === 'deep-research' && 'is-active']} data-panel="deep-research">
+    {deepResearchMonths.length > 0 && (
+      <div class="data-filter">
+        <label for="month-deep-research">年月で絞り込み</label>
+        <select id="month-deep-research" class="data-month-select" data-for="deep-research" autocomplete="off">
+          <option value="">すべての年月</option>
+          {deepResearchMonths.map((m) => (
+            <option value={m}>{formatYearMonth(m)}</option>
+          ))}
+        </select>
+      </div>
+    )}
+    {deepResearchItems.length === 0 ? (
+      <p class="data-empty">Deep Researchのコンテンツはまだありません。</p>
+    ) : (
+      <ul class="wiki-index-list" data-list="deep-research">
+        {deepResearchItems.map((item) => (
+          <li class="wiki-index-item" data-month={item.month}>
+            <a href={item.href}>{item.title}</a>
+            <span class="data-tag">{getTagLabel(item.tag)}</span>
+            {item.month && <span class="data-month-tag">{formatYearMonth(item.month)}</span>}
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  <script is:inline>
+    // 開いているタブはパス（/data/<タブ>/）、絞り込みはクエリ（?group=… / ?month=…）でURLに持たせる。
+    // ブラウザの「戻る」やダッシュボードの「一覧に戻る」リンクで来ても、同じ状態が再現される。
+    (() => {
+      const tabs = [...document.querySelectorAll('.data-tab')];
+      const panels = [...document.querySelectorAll('.data-panel')];
+      const selects = [...document.querySelectorAll('.data-group-select, .data-month-select')];
+      const keyOf = (select) => (select.classList.contains('data-month-select') ? 'month' : 'group');
+
+      const filterList = (select) => {
+        const list = document.querySelector(`[data-list="${select.dataset.for}"]`);
+        if (!list) return;
+        const key = keyOf(select);
+        list.querySelectorAll('.wiki-index-item').forEach((item) => {
+          item.hidden = select.value !== '' && item.dataset[key] !== select.value;
+        });
+      };
+
+      const activateTab = (id) => {
+        if (!tabs.some((t) => t.dataset.tab === id)) id = tabs[0]?.dataset.tab;
+        tabs.forEach((t) => {
+          const on = t.dataset.tab === id;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+        return id;
+      };
+
+      const selectFor = (id) => selects.find((s) => s.dataset.for === id);
+      const tabFromPath = () => location.pathname.match(/^\/data\/([^/]+)\/?$/)?.[1] ?? '';
+
+      const saveState = () => {
+        const id = document.querySelector('.data-tab.is-active')?.dataset.tab;
+        const select = selectFor(id);
+        const query = select?.value ? `?${keyOf(select)}=${encodeURIComponent(select.value)}` : '';
+        history.replaceState(history.state, '', `/data/${id}/${query}${location.hash}`);
+        // /data/<タブ>/ ページと同じタイトルにそろえる（ブラウザのタブ名・履歴に出る）。
+        const label = document.querySelector('.data-tab.is-active')?.textContent?.trim();
+        if (label) document.title = `${label} | Data | AUL DoXのデータ分析`;
+      };
+
+      const restoreState = () => {
+        const params = new URLSearchParams(location.search);
+        // ?tab= は、パス形式にする前の短い期間に共有されたURL向けの互換。
+        const id = activateTab(tabFromPath() || params.get('tab') || document.querySelector('.data-tab.is-active')?.dataset.tab);
+        selects.forEach((select) => {
+          const value = select.dataset.for === id ? params.get(keyOf(select)) ?? '' : '';
+          select.value = [...select.options].some((o) => o.value === value) ? value : '';
+          filterList(select);
+        });
+      };
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          activateTab(tab.dataset.tab);
+          saveState();
+        });
+      });
+
+      selects.forEach((select) => {
+        select.addEventListener('change', () => {
+          filterList(select);
+          saveState();
+        });
+      });
+
+      restoreState();
+      // bfcache（戻る・進むでページがそのまま復元される場合）でも、URLとの食い違いを直す。
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) restoreState();
+      });
+    })();
+  </script>
+
+  <style>
+    .data-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 22px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .data-tab {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--muted);
+      font: inherit;
+      font-weight: 800;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+
+    .data-tab:hover {
+      border-color: var(--border);
+      color: var(--accent);
+    }
+
+    .data-tab.is-active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .data-panel {
+      display: none;
+    }
+
+    .data-panel.is-active {
+      display: block;
+    }
+
+    .data-filter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .data-filter label {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .data-month-select,
+    .data-group-select {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--text);
+      font: inherit;
+      padding: 8px 12px;
+      min-height: 40px;
+      cursor: pointer;
+    }
+
+    .data-tag {
+      margin-left: 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--soft);
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+
+    .data-month-tag {
+      margin-left: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* .wiki-index-item の display:grid が hidden 属性に勝つため、絞り込みで隠した項目を確実に消す */
+    .wiki-index-item[hidden] {
+      display: none;
+    }
+
+    .data-empty {
+      color: var(--muted);
+    }
+  </style>
