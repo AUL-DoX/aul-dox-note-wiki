@@ -1,6 +1,6 @@
 ---
 import WikiLayout from '../layouts/WikiLayout.astro';
-import { getLatestContent } from '../content/latestContent';
+import { getLatestSiteUpdates } from '../content/siteUpdates';
 
 const areas = [
   { name: 'Reference', href: '/reference/', description: '記事・知識・開発記録を調べる' },
@@ -8,7 +8,7 @@ const areas = [
   { name: 'Suite', href: '/suite/', description: 'AUL DoXが開発したツールやプロトタイプを見る' },
 ];
 
-const latestItems = await getLatestContent(9);
+const latestItems = getLatestSiteUpdates(6);
 ---
 <WikiLayout wide home title="AUL DoX | 医療・介護・障がい福祉のデータ分析・AI・業務ツール" description="AUL DoXは、医療・介護・障がい福祉を中心に、データ分析やAI・業務ツールを設計・開発するAIアーキテクトです。Reference・Data・Suiteから知識、分析、開発実績をご覧いただけます。">
   <section class="home-directory" aria-labelledby="home-title">
@@ -25,25 +25,25 @@ const latestItems = await getLatestContent(9);
 
   <section class="latest-insights" aria-labelledby="latest-insights-title">
     <header class="latest-insights__header">
-      <p class="eyebrow">Latest Insights</p>
-      <h2 id="latest-insights-title">最新記事</h2>
-      <p>AUL DoXが公開しているデータ分析、調査レポート、知識・開発記録から、最近更新された内容をご紹介します。</p>
+      <p class="eyebrow">Updates</p>
+      <h2 id="latest-insights-title">最近の更新</h2>
+      <p>Data・Suiteなど、このサイトで最近追加・更新した内容です。</p>
     </header>
 
     <div class="latest-grid">
       {latestItems.map((item) => (
         <article class="latest-card">
-          <p class="latest-card__category">{item.typeLabel} / {item.category}</p>
-          <h3><a href={item.href} target="_blank" rel="noopener noreferrer">{item.title}</a></h3>
+          <p class="latest-card__category">{item.type}</p>
+          <h3><a href={item.href}>{item.title}</a></h3>
           <p class="latest-card__description">{item.description}</p>
           <footer class="latest-card__footer">
-            <time datetime={item.date.toISOString()}>{item.dateLabel}</time>
-            <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.title}を読む`}>続きを読む <span aria-hidden="true">→</span></a>
+            <time datetime={item.date}>{item.dateLabel}</time>
+            <a href={item.href} aria-label={`${item.title}を見る`}>見る <span aria-hidden="true">→</span></a>
           </footer>
         </article>
       ))}
     </div>
 
-    <p class="latest-insights__more"><a href="/search/">すべての記事・データを探す <span aria-hidden="true">→</span></a></p>
+    <p class="latest-insights__more"><a href="/search/">すべてのデータ・記事を探す <span aria-hidden="true">→</span></a></p>
   </section>
 </WikiLayout>
