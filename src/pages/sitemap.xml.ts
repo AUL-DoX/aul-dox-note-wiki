@@ -1,5 +1,4 @@
 import { getCollection } from 'astro:content';
-import { getNoteIndexData } from '../content/noteIndex';
 import { getEntryUpdatedTime, getWikiPath, isPublicEntry } from '../content/wiki';
 
 const dashboardFiles = Object.keys(import.meta.glob('../dashboards/**/*.html'));
@@ -38,7 +37,6 @@ function urlEntry(path: string, lastmod: Date | string, priority = '0.7') {
 export async function GET() {
   const today = new Date();
   const wikiEntries = (await getCollection('wiki')).filter(isPublicEntry);
-  const { categories } = await getNoteIndexData();
   const urls = new Map<string, string>();
 
   const addUrl = (path: string, lastmod: Date | string, priority?: string) => {
@@ -63,10 +61,7 @@ export async function GET() {
   addUrl('/gemini-context-manager-プライバシーポリシー/', today, '0.4');
   addUrl('/why-what-how-prompt-builder-プライバシーポリシー/', today, '0.4');
 
-  // Keep indexable category landing pages, but omit low-value archive pagination and tag filters.
-  for (const category of categories) {
-    addUrl(`/categories/${category.slug}/`, today, '0.8');
-  }
+  // カテゴリ・タグ・ページ送りの一覧は noindex（検索結果に出さない）にしているので、sitemapにも載せない。
 
   for (const path of dashboardFiles) {
     const slug = path.replace('../dashboards/', '').replace(/\.html$/, '');
