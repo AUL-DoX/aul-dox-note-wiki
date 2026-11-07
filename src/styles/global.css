@@ -980,7 +980,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .header-inner { min-height: 128px; padding-block: 24px; flex-direction: row; align-items: center; }
 .brand { font-size: clamp(1.25rem, 3vw, 1.85rem); letter-spacing: .02em; }
 .brand-tagline { margin: 5px 0 0; font-size: .85rem; color: var(--muted); }
-.ai-button { display: grid; place-items: center; flex: 0 0 54px; height: 54px; border: 1px solid #222; border-radius: 50%; background: #222; color: #fff; font-weight: 700; }
+.header-note-button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; flex: 0 0 auto; height: 44px; padding: 0 18px; border: 1px solid #222; border-radius: 999px; background: #222; color: #fff; font-weight: 700; white-space: nowrap; text-decoration: none; }
+.header-note-button:hover { background: #fff; color: #222; }
 .owl-hero { max-width: 1600px; margin-inline: auto; background: #eee; }
 .owl-hero img { display: block; width: 100%; height: auto; object-fit: cover; filter: grayscale(1); }
 .primary-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 40px; padding-block: 22px; color: #111; font-size: 1.125rem; font-weight: 700; }
