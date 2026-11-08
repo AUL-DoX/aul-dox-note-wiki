@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T09:14:44.259Z",
+  "fetchedAt": "2026-11-08T04:34:16.048Z",
   "items": {
     "https://note.com/chic_wren6567/n/neb51186fbb51": [
       "wordpress",
@@ -193,8 +193,8 @@
       "介護",
       "Gemini",
       "GoogleWorkspace",
-      "要介護",
       "認知症ケア",
+      "要介護",
       "ケアプラン",
       "長期記憶",
       "短期記憶"
@@ -279,8 +279,8 @@
       "ケアマネ",
       "介護予防",
       "加算",
-      "要支援",
       "サービス提供責任者",
+      "要支援",
       "通所リハビリ"
     ],
     "https://note.com/chic_wren6567/n/n356bb0a994b1": [
@@ -549,8 +549,8 @@
       "介護予防",
       "特別養護老人ホーム",
       "要介護",
-      "介護老人保健施設",
       "介護費用",
+      "介護老人保健施設",
       "都道府県別"
     ],
     "https://note.com/chic_wren6567/n/nbc2d8f8b20b6": [
@@ -624,8 +624,8 @@
       "ChatGPT",
       "Gemini",
       "プロンプト",
-      "GPTs",
       "チャット",
+      "GPTs",
       "GEMS"
     ],
     "https://note.com/chic_wren6567/n/n3ae9853c7174": [
@@ -867,8 +867,8 @@
     ],
     "https://note.com/chic_wren6567/n/n4455ba5ca68b": [
       "生産性向上",
-      "就労B型事業所",
-      "工賃アップ"
+      "工賃アップ",
+      "就労B型事業所"
     ],
     "https://note.com/chic_wren6567/n/nf3e4a36c595e": [
       "介護",
@@ -910,8 +910,8 @@
       "クリニック",
       "Obsidian",
       "GoogleAppsScript",
-      "介護離職",
       "障害福祉サービス",
+      "介護離職",
       "介護DX",
       "訪問看護ステーション",
       "介護施設マネジメント",
@@ -1337,13 +1337,13 @@
     "https://note.com/chic_wren6567/n/nfd5103e8cc18": [
       "生成AI",
       "Claude",
-      "ClaudeCode",
       "AIエージェント",
+      "ClaudeCode",
       "AI開発"
     ],
     "https://note.com/chic_wren6567/n/n963695d3b92e": [
-      "ClaudeCode",
       "AIエージェント",
+      "ClaudeCode",
       "福祉DX",
       "ドメイン知識",
       "現場発ツール開発"
@@ -1484,11 +1484,11 @@
     "https://note.com/chic_wren6567/n/nf17843c3b02b": [
       "ChatGPT",
       "Claude",
-      "ClaudeCode",
       "AIエージェント",
+      "ClaudeCode",
       "OpenAI",
-      "Anthropic",
       "Codex",
+      "Anthropic",
       "人的資本",
       "黒字リストラ"
     ],
@@ -1817,8 +1817,8 @@
       "障害福祉",
       "介護保険",
       "診療報酬",
-      "医療制度",
-      "介護報酬改定"
+      "介護報酬改定",
+      "医療制度"
     ],
     "https://note.com/chic_wren6567/n/n3554d2d4076b": [
       "介護経営",
@@ -2141,8 +2141,8 @@
       "社会保険改革"
     ],
     "https://note.com/chic_wren6567/n/n227f04c989d3": [
-      "生活介護",
       "障害福祉サービス",
+      "生活介護",
       "就労継続支援",
       "報酬改定",
       "在宅支援",
@@ -2500,8 +2500,8 @@
     "https://note.com/chic_wren6567/n/ne2003c753280": [
       "在宅介護",
       "介護保険",
-      "要介護",
       "介護経営",
+      "要介護",
       "重度化防止"
     ],
     "https://note.com/chic_wren6567/n/n8e17636873bd": [
@@ -2519,8 +2519,8 @@
     "https://note.com/chic_wren6567/n/nde47aa24f205": [
       "訪問介護",
       "介護離職",
-      "介護DX",
       "介護経営",
+      "介護DX",
       "職員エンゲージメント"
     ],
     "https://note.com/chic_wren6567/n/n7ccae718aee9": [
@@ -2745,8 +2745,8 @@
       "Codex",
       "AIツール",
       "AntiGravity",
-      "ClaudeCowork",
-      "e2e"
+      "e2e",
+      "ClaudeCowork"
     ],
     "https://note.com/chic_wren6567/n/ncecb7847a09a": [
       "介護",
@@ -2859,8 +2859,8 @@
     "https://note.com/chic_wren6567/n/nfeffaa67291f": [
       "AI",
       "ゲーム",
-      "レベルアップ",
       "開発日誌",
+      "レベルアップ",
       "VCS",
       "AIに会社を経営させてみたくなった"
     ],
@@ -3442,8 +3442,8 @@
       "福祉",
       "幼稚園",
       "居酒屋",
-      "保育",
       "スーパー",
+      "保育",
       "レストラン",
       "アルゴリズム",
       "コールセンター",
@@ -3621,8 +3621,8 @@
       "関節リウマチ",
       "脂肪肝",
       "障がい福祉",
-      "重度訪問介護",
       "介護報酬改定",
+      "重度訪問介護",
       "肝臓がん",
       "障害者スポーツ",
       "肝炎",
@@ -3635,8 +3635,8 @@
       "医療",
       "予測",
       "未来の当たり前にしたいこと",
-      "障がい福祉",
       "AX",
+      "障がい福祉",
       "申し送り",
       "dox",
       "KakakaniProject"
@@ -3951,8 +3951,8 @@
     "https://note.com/chic_wren6567/n/n4cc8f11b48af": [
       "介護",
       "データサイエンス",
-      "マザーテレサ",
       "障がい福祉",
+      "マザーテレサ",
       "ガンジー",
       "保険外"
     ],
@@ -4428,8 +4428,8 @@
       "スプレッドシート",
       "見える化",
       "働き方を変えるツール",
-      "Googleフォーム",
       "介護事業所",
+      "Googleフォーム",
       "経営分析",
       "業務別管理利益表"
     ],
@@ -4571,8 +4571,8 @@
       "社会保険料",
       "最低賃金",
       "契約社員",
-      "勤務時間",
       "扶養控除",
+      "勤務時間",
       "パートタイマー"
     ],
     "https://note.com/chic_wren6567/n/n3f792144c160": [
@@ -4735,8 +4735,8 @@
     "https://note.com/chic_wren6567/n/ndbc89d6dfacb": [
       "就労継続支援B型",
       "就労継続支援A型",
-      "生活介護",
       "障害福祉サービス",
+      "生活介護",
       "福祉経営"
     ],
     "https://note.com/chic_wren6567/n/ncb99cce83c15": [
@@ -4915,8 +4915,8 @@
       "国保連"
     ],
     "https://note.com/chic_wren6567/n/ne06e55d83506": [
-      "マネジメント",
       "Claude",
+      "マネジメント",
       "python",
       "Blender",
       "1on1",
@@ -4925,8 +4925,8 @@
       "人事考課"
     ],
     "https://note.com/chic_wren6567/n/n5ef68c30fcdf": [
-      "マネジメント",
       "Claude",
+      "マネジメント",
       "python",
       "Blender",
       "1on1",
@@ -5010,8 +5010,8 @@
       "DX推進",
       "組織改革",
       "AI人材",
-      "生成AI導入",
-      "経営責任"
+      "経営責任",
+      "生成AI導入"
     ],
     "https://note.com/chic_wren6567/n/n8067c72dd2ee": [
       "業務効率化",
@@ -5248,8 +5248,8 @@
       "DX",
       "業務改善",
       "セキュリティ",
-      "パート",
       "クラウド",
+      "パート",
       "正社員",
       "Microsoft365",
       "ITガバナンス"
@@ -5302,6 +5302,15 @@
       "vercel",
       "AULDoX"
     ],
+    "https://note.com/chic_wren6567/n/na56801e52d7a": [
+      "業務効率化",
+      "GAS",
+      "GoogleWorkspace",
+      "札幌市",
+      "障がい福祉",
+      "BCP策定",
+      "通所交通費助成金"
+    ],
     "https://note.com/chic_wren6567/n/ne442d5898174": [
       "AIエージェント",
       "業務設計",
@@ -5314,8 +5323,8 @@
     "https://note.com/chic_wren6567/n/n6c4cd9129ea0": [
       "障害福祉",
       "life",
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "OTC類似薬"
     ],
     "https://note.com/chic_wren6567/n/na265ee631dc0": [
@@ -5373,14 +5382,14 @@
     "https://note.com/chic_wren6567/n/n678de24ec225": [
       "AIエージェント",
       "業務設計",
-      "vercel",
       "FDE",
+      "vercel",
       "Hermethea"
     ],
     "https://note.com/chic_wren6567/n/n8151ba609039": [
       "障害福祉",
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "障害者就労",
       "OTC類似薬"
     ],
@@ -5452,8 +5461,8 @@
     "https://note.com/chic_wren6567/n/n501653435ac7": [
       "障害者雇用",
       "障害福祉",
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "OTC類似薬"
     ],
     "https://note.com/chic_wren6567/n/n81f913977332": [
@@ -5529,15 +5538,15 @@
       "AI開発",
       "FDE",
       "OODA",
-      "Hermethea",
-      "AULDoX"
+      "AULDoX",
+      "Hermethea"
     ],
     "https://note.com/chic_wren6567/n/n412a71802b76": [
       "障害福祉",
       "介護保険",
       "医療制度",
-      "かかりつけ医機能",
       "障害福祉報酬改定",
+      "かかりつけ医機能",
       "ナビイ"
     ],
     "https://note.com/chic_wren6567/n/nf9bb0d11fe52": [
@@ -5551,8 +5560,8 @@
       "AI開発",
       "FDE",
       "OODA",
-      "Hermethea",
-      "AULDoX"
+      "AULDoX",
+      "Hermethea"
     ],
     "https://note.com/chic_wren6567/n/na4a48744145c": [
       "介護",
@@ -5604,8 +5613,8 @@
       "人間の存在意義"
     ],
     "https://note.com/chic_wren6567/n/n6ea795106fbc": [
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "医療福祉",
       "障害者就労",
       "障害福祉報酬改定"
@@ -5654,8 +5663,8 @@
       "福祉制度"
     ],
     "https://note.com/chic_wren6567/n/n5a66b3e486d0": [
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "医療福祉",
       "障害者就労",
       "障害福祉報酬改定"
@@ -5733,8 +5742,8 @@
     "https://note.com/chic_wren6567/n/n421938140925": [
       "障害者雇用",
       "障害福祉",
-      "医療制度",
       "介護報酬改定",
+      "医療制度",
       "医療福祉"
     ],
     "https://note.com/chic_wren6567/n/nb696d484f04f": [
@@ -5937,8 +5946,8 @@
       "Blender",
       "AI開発",
       "特別支援学校",
-      "Hermethea",
       "AULDoX",
+      "Hermethea",
       "札幌プロダクト横丁",
       "claudeハッカソン"
     ],
@@ -5959,8 +5968,8 @@
     "https://note.com/chic_wren6567/n/n939191946ea3": [
       "AIエージェント",
       "python",
-      "vercel",
       "FDE",
+      "vercel",
       "AIアーキテクト",
       "Hermethea"
     ],
@@ -5975,8 +5984,8 @@
       "Webマーケティング",
       "GEO",
       "AiO",
-      "AIOverview",
-      "介護施設経営"
+      "介護施設経営",
+      "AIOverview"
     ],
     "https://note.com/chic_wren6567/n/n5b5039b73b84": [
       "SEO",
@@ -5999,6 +6008,201 @@
       "vercel",
       "サイト移行",
       "移行マニュアル"
+    ],
+    "https://note.com/chic_wren6567/n/n6f6e8e6bb159": [
+      "介護保険",
+      "介護サービス",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/na82d0ff82dac": [
+      "相談支援専門員",
+      "介護報酬改定",
+      "高齢者医療",
+      "医療福祉",
+      "障害福祉報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/n4d763708aa83": [
+      "介護保険",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "介護予防サービス",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n3d4d07d7ff5c": [
+      "データ分析",
+      "AI検索",
+      "GEO",
+      "LLMO",
+      "vercel"
+    ],
+    "https://note.com/chic_wren6567/n/nd92cb3aa77e4": [
+      "介護サービス",
+      "介護報酬",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n1a249552b00d": [
+      "GoogleAppsScript",
+      "GEO",
+      "LLMO",
+      "vercel",
+      "AIクローラー"
+    ],
+    "https://note.com/chic_wren6567/n/n5333081d310a": [
+      "介護報酬",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "介護予防サービス",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n03b10d1428e2": [
+      "GoogleWorkspace",
+      "品質保証",
+      "クラウド運用",
+      "GoogleSkills",
+      "AIアドミニストレータ"
+    ],
+    "https://note.com/chic_wren6567/n/n3229772d1b82": [
+      "介護保険",
+      "高齢者介護",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n9bfb921005b9": [
+      "情報セキュリティ",
+      "GoogleWorkspace",
+      "データガバナンス",
+      "GoogleSkills",
+      "AIアドミニストレータ"
+    ],
+    "https://note.com/chic_wren6567/n/n9c712a1d1bff": [
+      "vercel",
+      "Web制作会社",
+      "AI検索対策",
+      "Webサイト運用",
+      "クラウド管理"
+    ],
+    "https://note.com/chic_wren6567/n/n038a66c3bde4": [
+      "介護保険",
+      "介護サービス",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n48826b2579c8": [
+      "AIエージェント",
+      "GoogleWorkspace",
+      "Gear",
+      "GoogleSkills",
+      "AIアドミニストレータ"
+    ],
+    "https://note.com/chic_wren6567/n/n9bb2fb04f14e": [
+      "Cloudflare",
+      "vercel",
+      "クラウド管理",
+      "Wordpress移行",
+      "AIアドミニストレータ"
+    ],
+    "https://note.com/chic_wren6567/n/nb31e38732891": [
+      "介護報酬改定",
+      "介護事業所経営",
+      "介護給付費等実態統計",
+      "介護予防サービス",
+      "AULDoX"
+    ],
+    "https://note.com/chic_wren6567/n/n10660939255a": [
+      "AIエージェント",
+      "ClaudeCode",
+      "障がい者雇用",
+      "ユニバーサルデザイン",
+      "Aequithea",
+      "エクイテア"
+    ],
+    "https://note.com/chic_wren6567/n/n897a267440e0": [
+      "AI活用",
+      "ClaudeCode",
+      "業務改善",
+      "Codex",
+      "5W1H"
+    ],
+    "https://note.com/chic_wren6567/n/nf01d2612503a": [
+      "ClaudeCode",
+      "Codex",
+      "プロンプトエンジニアリング",
+      "AI開発",
+      "5W1H"
+    ],
+    "https://note.com/chic_wren6567/n/n410c5651b531": [
+      "訪問看護",
+      "介護保険制度",
+      "介護報酬改定",
+      "医療福祉",
+      "障害福祉報酬改定"
+    ],
+    "https://note.com/chic_wren6567/n/nb155db779717": [
+      "老害",
+      "GoogleWorkspace",
+      "GoogleCloud",
+      "GoogleSkills",
+      "60代の学び直し",
+      "AIArchitect",
+      "AIAdministrator"
+    ],
+    "https://note.com/chic_wren6567/n/nba73cdc9d486": [
+      "ClaudeCode",
+      "サイバーセキュリティ",
+      "AI開発",
+      "AIガバナンス",
+      "AIアーキテクト",
+      "AIアドミニストレータ"
+    ],
+    "https://note.com/chic_wren6567/n/n44140a1a8b0f": [
+      "生成AI",
+      "介護保険",
+      "LLMO",
+      "vercel",
+      "GEO対策",
+      "国保連請求"
+    ],
+    "https://note.com/chic_wren6567/n/n66172b76553f": [
+      "AI検索",
+      "LLMO",
+      "vercel",
+      "サイト運営",
+      "AIクローラー"
+    ],
+    "https://note.com/chic_wren6567/n/ne1feca852fe6": [
+      "生成AI",
+      "AIエージェント",
+      "情報セキュリティ",
+      "AIガバナンス",
+      "GoogleCloud"
+    ],
+    "https://note.com/chic_wren6567/n/n11d500bccc79": [
+      "AIエージェント",
+      "ClaudeCode",
+      "Codex",
+      "ダッシュボード",
+      "AIデータ分析"
+    ],
+    "https://note.com/chic_wren6567/n/na75c2a7953e1": [
+      "AI活用",
+      "AIエージェント",
+      "業務改善",
+      "DX推進",
+      "AIアーキテクト"
+    ],
+    "https://note.com/chic_wren6567/n/ncf087f685895": [
+      "AIエージェント",
+      "個人開発",
+      "AI開発",
+      "FDE",
+      "差分分析",
+      "HermetheaPipsFDE"
     ]
   }
 }
