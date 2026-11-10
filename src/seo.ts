@@ -32,7 +32,8 @@ export const websiteLd = {
   publisher,
 };
 
-const iso = (value: Date | string) => new Date(value).toISOString().slice(0, 10);
+// Googleは「日時＋タイムゾーン」形式（ISO 8601）を求める。日付だけの値は日本時間の0時として扱う。
+const iso = (value: Date | string) => `${new Date(value).toISOString().slice(0, 10)}T00:00:00+09:00`;
 
 export function articleLd(opts: { title: string; description: string; path: string; published: Date | string; modified?: Date | string; keywords?: string[] }) {
   return {
@@ -46,7 +47,7 @@ export function articleLd(opts: { title: string; description: string; path: stri
     mainEntityOfPage: abs(opts.path),
     image: abs('/og-image.png'),
     keywords: opts.keywords?.join(','),
-    author: publisher,
+    author: { '@type': 'Organization', name: 'AUL DoX', url: abs('/') },
     publisher,
   };
 }
@@ -59,7 +60,7 @@ export function webPageLd(opts: { title: string; description: string; path: stri
     description: opts.description,
     inLanguage: 'ja',
     url: abs(opts.path),
-    ...(opts.modified ? { dateModified: opts.modified } : {}),
+    ...(opts.modified ? { dateModified: iso(opts.modified) } : {}),
     isPartOf: { '@type': 'WebSite', name: 'AUL DoX', url: abs('/') },
     publisher,
   };
