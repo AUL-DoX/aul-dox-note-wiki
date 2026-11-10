@@ -4,6 +4,7 @@ import { render } from 'astro:content';
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import { formatDate } from '../../content/wiki';
 import { getCategoryBySlug } from '../../content/categories';
+import { articleLd, breadcrumb } from '../../seo';
 import { dataSlugExists, getAnalysisEntries, getAnalysisIndexData, getDataTitle } from '../../content/analysis';
 
 export async function getStaticPaths() {
@@ -26,9 +27,18 @@ const dataLinks = await Promise.all(
     .map(async (slug) => ({ href: `/data/${slug}/`, title: await getDataTitle(slug) })),
 );
 const updated = entry.data.updated;
+const path = `/reference/${entry.id.replace(/\.mdx?$/, '')}/`;
+const jsonLd = [
+  articleLd({ title: entry.data.title, description: entry.data.description, path, published: entry.data.date, modified: updated, keywords: entry.data.tags }),
+  breadcrumb([
+    { name: 'ホーム', path: '/' },
+    { name: 'Reference', path: '/reference/' },
+    { name: entry.data.title, path },
+  ]),
+];
 ---
 
-<WikiLayout title={`${entry.data.title} | AUL DoX Reference`} description={entry.data.description}>
+<WikiLayout title={`${entry.data.title} | AUL DoX Reference`} description={entry.data.description} jsonLd={jsonLd}>
   <article class="article">
     <div class="article-meta">
       {category ? <a href={`/categories/${category.slug}/`}>{category.title}</a> : <span>{entry.data.category}</span>}

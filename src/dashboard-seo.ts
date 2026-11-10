@@ -82,3 +82,20 @@ export function getDashboardSeo(html: string, baseTitle: string, categoryLabel: 
 
   return { title, description };
 }
+
+// ダッシュボード末尾の「生成日時: YYYY-MM-DD hh:mm」から更新日を取る（sitemapのlastmod・構造化データ用）。
+// 取れなければ null（その場合はlastmodを出さない。実際と違う日付を出すより省く方が検索エンジンに信頼される）。
+export function getDashboardDate(html: string): string | null {
+  const matches = [...html.matchAll(/(?:生成日時|生成日|作成日|更新日)[^0-9]{0,6}(\d{4}-\d{2}-\d{2})/g)];
+  return matches.length ? matches[matches.length - 1][1] : null;
+}
+
+// 本文に <h1> が無いダッシュボード（見出しが <div class="aul-sw-htitle"> のもの）の見出しを <h1> にする。
+// クラス名はそのままなのでCSSは変わらない。元のHTMLファイルは編集しない。
+export function ensureH1(html: string): string {
+  if (/<h1[\s>]/.test(html)) return html;
+  return html.replace(
+    /<div([^>]*class="[^"]*\baul-sw-htitle\b[^"]*"[^>]*)>([\s\S]*?)<\/div>/,
+    '<h1$1>$2</h1>',
+  );
+}

@@ -5,7 +5,8 @@
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import titleOverrides from '../../data-titles.json';
 import { getCategoryLabel, getDataIndexUrl, getGroupSlug } from '../../data-categories';
-import { getDashboardSeo } from '../../dashboard-seo';
+import { ensureH1, getDashboardDate, getDashboardSeo } from '../../dashboard-seo';
+import { breadcrumb, webPageLd } from '../../seo';
 import { getAnalysisForData, getAnalysisPath } from '../../content/analysis';
 
 const overrides = titleOverrides as Record<string, string>;
@@ -46,12 +47,23 @@ const categoryLabel = getCategoryLabel(category);
 const seo = getDashboardSeo(dashboardHtml, baseTitle ?? '', categoryLabel);
 const backUrl = getDataIndexUrl(category, getGroupSlug(category, rest.join('/')));
 // このデータを解説しているReferenceの分析記事（記事側の dataSlugs から逆引き）。
+const dashboardDate = getDashboardDate(dashboardHtml);
+const pageTitle = `${seo.title} | AUL DoX データ分析`;
+const jsonLd = [
+  webPageLd({ title: pageTitle, description: seo.description, path: `/data/${slug}/`, modified: dashboardDate }),
+  breadcrumb([
+    { name: 'ホーム', path: '/' },
+    { name: 'Data', path: '/data/' },
+    { name: categoryLabel, path: `/data/${category}/` },
+    { name: baseTitle ?? '', path: `/data/${slug}/` },
+  ]),
+];
 const analysisEntries = await getAnalysisForData(slug ?? '');
 ---
 
-<WikiLayout wide title={`${seo.title} | AUL DoX データ分析`} description={seo.description}>
+<WikiLayout wide title={pageTitle} description={seo.description} jsonLd={jsonLd}>
   <nav class="data-back" aria-label="データ分析一覧へ戻る"><a href={backUrl}>← {categoryLabel}の一覧に戻る</a></nav>
-  <Fragment set:html={dashboardHtml} />
+  <Fragment set:html={ensureH1(dashboardHtml)} />
   {
     analysisEntries.length > 0 && (
       <aside class="data-link-box" aria-labelledby="analysis-link-heading">
