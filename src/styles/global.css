@@ -1077,3 +1077,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .desktop-break { display: none; }
   .footer-links { flex-direction: column; }
 }
+
+/* Reference分析記事 ↔ Data の相互リンク枠 */
+.data-link-box {
+  margin: 20px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: var(--surface, transparent);
+}
+.data-link-box h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+.data-link-box ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.data-link-box a {
+  color: var(--accent);
+  font-weight: 700;
+}
+.article .data-back-bottom {
+  margin: 32px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+.article .data-back-bottom a {
+  color: var(--accent);
+}

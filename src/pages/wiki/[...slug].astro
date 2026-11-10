@@ -3,11 +3,11 @@ import { getCollection, render } from 'astro:content';
 import WikiLayout from '../../layouts/WikiLayout.astro';
 import { formatDate, getEntryUpdatedTime, isPublicEntry } from '../../content/wiki';
 import { getCategoryBySlug, getCategorySlug } from '../../content/categories';
-import { getNoteIndexData } from '../../content/noteIndex';
+import { getAnalysisIndexData } from '../../content/analysis';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('wiki')).filter(isPublicEntry);
-  const { sortedTags } = await getNoteIndexData();
+  const { sortedTags } = await getAnalysisIndexData();
   const availableTags = sortedTags.map(([tag]) => tag);
 
   return entries.map((entry) => {

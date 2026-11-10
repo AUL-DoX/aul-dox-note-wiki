@@ -1,12 +1,12 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
-import NoteArticleList from '../../components/NoteArticleList.astro';
+import AnalysisList from '../../components/AnalysisList.astro';
 import WikiSidebar from '../../components/WikiSidebar.astro';
-import { getNoteIndexData, getNotePageItems, getTotalNotePages } from '../../content/noteIndex';
+import { getAnalysisIndexData, getAnalysisPageItems, getTotalAnalysisPages } from '../../content/analysis';
 
 export async function getStaticPaths() {
-  const { allItems } = await getNoteIndexData();
-  const totalPages = getTotalNotePages(allItems);
+  const { allItems } = await getAnalysisIndexData();
+  const totalPages = getTotalAnalysisPages(allItems);
 
   return Array.from({ length: totalPages - 1 }, (_, index) => {
     const page = index + 2;
@@ -15,22 +15,22 @@ export async function getStaticPaths() {
 }
 
 const { page: currentPage } = Astro.props;
-const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
-const totalPages = getTotalNotePages(allItems);
-const pageItems = getNotePageItems(allItems, currentPage);
+const { allItems, categories, categoryCounts, sortedTags } = await getAnalysisIndexData();
+const totalPages = getTotalAnalysisPages(allItems);
+const pageItems = getAnalysisPageItems(allItems, currentPage);
 ---
 
-<WikiLayout wide noindex title={`note記事一覧 ${currentPage}ページ目 | AUL DoX Reference`}>
+<WikiLayout wide noindex title={`分析記事一覧 ${currentPage}ページ目 | AUL DoX Reference`}>
   <section class="wiki-home-header">
     <div>
-      <p class="eyebrow">Note Index</p>
-      <h1>note記事一覧</h1>
-      <p>note記事を10件ずつ、新しい順に表示しています。</p>
+      <p class="eyebrow">Analysis Index</p>
+      <h1>分析記事一覧</h1>
+      <p>分析記事を10件ずつ、新しい順に表示しています。</p>
     </div>
   </section>
 
   <div class="wiki-shell">
     <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
-    <NoteArticleList items={pageItems} currentPage={currentPage} totalPages={totalPages} totalItems={allItems.length} />
+    <AnalysisList items={pageItems} currentPage={currentPage} totalPages={totalPages} totalItems={allItems.length} />
   </div>
 </WikiLayout>

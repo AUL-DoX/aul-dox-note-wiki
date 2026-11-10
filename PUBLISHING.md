@@ -1,4 +1,4 @@
-# 公開手順書：note記事とHTML（ダッシュボード／レポート）
+# 公開手順書：Reference分析記事とHTML（ダッシュボード／レポート）
 
 `ref.aul-dox.jp` に何かを公開するときの手順を、コンテンツの種類別にまとめたもの。
 技術的な背景・設計判断は [README.md](./README.md) や
@@ -9,47 +9,36 @@
 
 ---
 
-## 1. note記事を反映する
+## 1. Reference（分析記事）を公開する
 
-note.comに投稿した記事を、`ref.aul-dox.jp` トップの記事一覧に反映する手順。
+Dataの分析結果を読み解くサマリ記事は、noteではなくReferenceに置く。
+note記事のRSS収集は廃止した（ヘッダーの「note」ボタンからnote本体へ移動するだけ）。
 
-### 一番簡単な方法
-
-`scripts\publish.cmd` をダブルクリック（またはターミナルで実行）する。以下を自動で行う。
-
-1. `npm run sync:note` — note.comのRSS・マガジン・ハッシュタグから新着記事を収集し、
-   `data/note-links.json` 等をローカルで更新（この時点ではまだ本番に反映されない）
-2. `npm run build` — ビルドエラーがないか確認
-3. 変更があれば `git add` → `git commit` → `git push`（Vercelが自動ビルドし、数分後に本番反映）
-
-実行中は「何かキーを押してください」と出るまで進行状況が表示される。**この時点で処理はすでに完了している**。
-キーを押すとウィンドウが閉じるだけで、本番には影響しない（`Ctrl+C`で中断する場面とは別物）。
-
-### 手動でやる場合
-
-```bash
-cd "C:\AUL DoX Reference"
-npm run sync:note   # ①収集（ローカルのみ更新）
-npm run build       # ②ビルド確認（任意）
-git add data/note-links.json data/note-magazines.json data/note-hashtags.json
-git commit -m "Update note links"
-git push             # ③本番反映
-```
-
-### 記事とwikiページを紐付けたい場合（任意）
-
-`sync:note`が`reports/note-link-suggestions.md`に候補を出力するので、それを見て
-`src/content/wiki/*.md`の`noteArticles`に採用したいURLを手動転記する。
+1. `src/content/analysis/<スラッグ>.md` を作る（スラッグは英数字・ハイフン推奨。URLは `/reference/<スラッグ>/`）
+2. frontmatterを書く（`category` はDataのタブslug、`dataSlugs` は元データのスラッグ）
 
 ```md
 ---
-title: "ページタイトル"
-noteArticles:
-  - title: "note記事タイトル"
-    url: "https://note.com/chic_wren6567/n/xxxx"
+title: "記事タイトル"
+description: "検索結果やSNSに出る説明文"
+category: "keiei"
+tags:
+  - 介護給付費等実態統計
+dataSlugs:
+  - keiei/r8-kyufu-gappo-202607-dai1
+date: 2026-11-10
 draft: false
 ---
+
+本文（本文先頭に # 見出しは書かない。タイトルは自動表示される）
 ```
+
+3. `npm run dev` で `http://localhost:4321/reference/<スラッグ>/` と、元データ側 `/data/<dataSlugs>/` の「このデータを読み解く記事」を確認
+4. `src/content/siteUpdates.ts` の配列の先頭に `type: 'Reference'` で1件足す（トップの「最近の更新」用）
+5. `scripts\publish.cmd` を実行（ビルド確認 → `src/content/analysis` 等をstage・commit・push）
+
+`dataSlugs` に書いたスラッグが実在しないと、記事側にはリンクが出ない。`/reference/` の一覧には、
+新しい順に自動で載る（タグ・カテゴリ別の一覧、サイト内検索、sitemapも自動）。
 
 ---
 

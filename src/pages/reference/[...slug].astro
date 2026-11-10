@@ -1,0 +1,60 @@
+---
+// Dataの分析結果を読み解く記事。src/content/analysis/<スラッグ>.md を /reference/<スラッグ>/ で配信する。
+import { render } from 'astro:content';
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import { formatDate } from '../../content/wiki';
+import { getCategoryBySlug } from '../../content/categories';
+import { dataSlugExists, getAnalysisEntries, getAnalysisIndexData, getDataTitle } from '../../content/analysis';
+
+export async function getStaticPaths() {
+  const entries = await getAnalysisEntries();
+  const { sortedTags } = await getAnalysisIndexData();
+  const availableTags = sortedTags.map(([tag]) => tag);
+
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace(/\.mdx?$/, '') },
+    props: { entry, availableTags },
+  }));
+}
+
+const { entry, availableTags } = Astro.props;
+const { Content } = await render(entry);
+const category = getCategoryBySlug(entry.data.category);
+const dataLinks = await Promise.all(
+  entry.data.dataSlugs
+    .filter((slug) => dataSlugExists(slug))
+    .map(async (slug) => ({ href: `/data/${slug}/`, title: await getDataTitle(slug) })),
+);
+const updated = entry.data.updated;
+---
+
+<WikiLayout title={`${entry.data.title} | AUL DoX Reference`} description={entry.data.description}>
+  <article class="article">
+    <div class="article-meta">
+      {category ? <a href={`/categories/${category.slug}/`}>{category.title}</a> : <span>{entry.data.category}</span>}
+      <span>公開: {formatDate(entry.data.date)}</span>
+      {updated && <span>更新: {formatDate(updated)}</span>}
+    </div>
+    <h1>{entry.data.title}</h1>
+    <p class="article-description">{entry.data.description}</p>
+    <div class="tag-list article-tags">
+      {entry.data.tags.map((tag) => availableTags.includes(tag) ? <a href={`/tags/${encodeURIComponent(tag)}/`}>#{tag}</a> : <span>#{tag}</span>)}
+    </div>
+    {
+      dataLinks.length > 0 && (
+        <aside class="data-link-box" aria-labelledby="data-link-heading">
+          <h2 id="data-link-heading">この記事の元データ（Data）</h2>
+          <ul>
+            {dataLinks.map((link) => (
+              <li><a href={link.href}>{link.title}</a></li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+    <div class="prose">
+      <Content />
+    </div>
+    <nav class="data-back data-back-bottom" aria-label="Reference一覧へ戻る"><a href="/reference/">← Referenceの一覧に戻る</a></nav>
+  </article>
+</WikiLayout>

@@ -1,17 +1,17 @@
 ---
 import WikiLayout from '../../../../layouts/WikiLayout.astro';
-import NoteArticleList from '../../../../components/NoteArticleList.astro';
+import AnalysisList from '../../../../components/AnalysisList.astro';
 import WikiSidebar from '../../../../components/WikiSidebar.astro';
 import { getCategoryBySlug } from '../../../../content/categories';
-import { getNoteCategories, getNoteIndexData, getNotePageItems, getTotalNotePages } from '../../../../content/noteIndex';
+import { getAnalysisIndexData, getAnalysisPageItems, getTotalAnalysisPages } from '../../../../content/analysis';
 
 export async function getStaticPaths() {
-  const { allItems, categories } = await getNoteIndexData();
+  const { allItems, categories } = await getAnalysisIndexData();
   const paths = [];
 
   for (const category of categories) {
-    const filteredItems = allItems.filter((item) => getNoteCategories(item).includes(category.slug));
-    const totalPages = getTotalNotePages(filteredItems);
+    const filteredItems = allItems.filter((entry) => entry.data.category === category.slug);
+    const totalPages = getTotalAnalysisPages(filteredItems);
     for (let page = 2; page <= totalPages; page += 1) {
       paths.push({ params: { category: category.slug, page: String(page) }, props: { page } });
     }
@@ -22,26 +22,26 @@ export async function getStaticPaths() {
 
 const { category } = Astro.params;
 const { page: currentPage } = Astro.props;
-const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
+const { allItems, categories, categoryCounts, sortedTags } = await getAnalysisIndexData();
 const categoryInfo = getCategoryBySlug(category);
-const filteredItems = allItems.filter((item) => getNoteCategories(item).includes(category));
-const totalPages = getTotalNotePages(filteredItems);
-const pageItems = getNotePageItems(filteredItems, currentPage);
+const filteredItems = allItems.filter((entry) => entry.data.category === category);
+const totalPages = getTotalAnalysisPages(filteredItems);
+const pageItems = getAnalysisPageItems(filteredItems, currentPage);
 const title = categoryInfo?.title ?? category;
 ---
 
-<WikiLayout wide noindex title={`${title} ${currentPage}ページ目 | AUL DoX Reference`} description={`${title}に関連するnote記事一覧`}>
+<WikiLayout wide noindex title={`${title} ${currentPage}ページ目 | AUL DoX Reference`} description={`${title}の分析記事一覧`}>
   <section class="wiki-home-header">
     <div>
       <p class="eyebrow">Category</p>
       <h1>{title}</h1>
-      <p>note記事を10件ずつ表示しています。</p>
+      <p>分析記事を10件ずつ表示しています。</p>
     </div>
   </section>
 
   <div class="wiki-shell">
     <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
-    <NoteArticleList
+    <AnalysisList
       items={pageItems}
       currentPage={currentPage}
       totalPages={totalPages}

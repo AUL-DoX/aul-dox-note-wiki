@@ -1,16 +1,16 @@
 ---
 import WikiLayout from '../../../../layouts/WikiLayout.astro';
-import NoteArticleList from '../../../../components/NoteArticleList.astro';
+import AnalysisList from '../../../../components/AnalysisList.astro';
 import WikiSidebar from '../../../../components/WikiSidebar.astro';
-import { getNoteIndexData, getNotePageItems, getNoteTags, getTotalNotePages } from '../../../../content/noteIndex';
+import { getAnalysisIndexData, getAnalysisPageItems, getTotalAnalysisPages } from '../../../../content/analysis';
 
 export async function getStaticPaths() {
-  const { allItems, sortedTags } = await getNoteIndexData();
+  const { allItems, sortedTags } = await getAnalysisIndexData();
   const paths = [];
 
   for (const [tag] of sortedTags) {
-    const filteredItems = allItems.filter((item) => getNoteTags(item).includes(tag));
-    const totalPages = getTotalNotePages(filteredItems);
+    const filteredItems = allItems.filter((entry) => entry.data.tags.includes(tag));
+    const totalPages = getTotalAnalysisPages(filteredItems);
     for (let page = 2; page <= totalPages; page += 1) {
       paths.push({ params: { tag, page: String(page) }, props: { tag, page } });
     }
@@ -20,24 +20,24 @@ export async function getStaticPaths() {
 }
 
 const { tag, page: currentPage } = Astro.props;
-const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
-const filteredItems = allItems.filter((item) => getNoteTags(item).includes(tag));
-const totalPages = getTotalNotePages(filteredItems);
-const pageItems = getNotePageItems(filteredItems, currentPage);
+const { allItems, categories, categoryCounts, sortedTags } = await getAnalysisIndexData();
+const filteredItems = allItems.filter((entry) => entry.data.tags.includes(tag));
+const totalPages = getTotalAnalysisPages(filteredItems);
+const pageItems = getAnalysisPageItems(filteredItems, currentPage);
 ---
 
-<WikiLayout wide noindex title={`#${tag} ${currentPage}ページ目 | AUL DoX Reference`} description={`#${tag} に関連するnote記事一覧`}>
+<WikiLayout wide noindex title={`#${tag} ${currentPage}ページ目 | AUL DoX Reference`} description={`#${tag} の分析記事一覧`}>
   <section class="wiki-home-header">
     <div>
       <p class="eyebrow">Tag</p>
       <h1>#{tag}</h1>
-      <p>note記事を10件ずつ表示しています。</p>
+      <p>分析記事を10件ずつ表示しています。</p>
     </div>
   </section>
 
   <div class="wiki-shell">
     <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
-    <NoteArticleList
+    <AnalysisList
       items={pageItems}
       currentPage={currentPage}
       totalPages={totalPages}

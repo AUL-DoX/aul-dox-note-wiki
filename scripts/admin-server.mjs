@@ -97,37 +97,6 @@ function runGit(paths, message) {
   return { ok: true, changed: true, log: log.join('\n\n') };
 }
 
-// note.comから新着記事を収集して commit/push する（PUBLISHING.mdの手動手順と同じ内容）。
-// npm run sync:note は記事数が多いと数分かかるため、レスポンスを長めに待つ想定。
-async function handleSyncNote(req, res) {
-  let syncOutput = '';
-  try {
-    // Windowsでは npm.cmd（バッチファイル）を shell 経由でないと起動できない（EINVAL）ため shell:true が必須。
-    syncOutput = execFileSync('npm.cmd', ['run', 'sync:note'], {
-      cwd: REPO_ROOT,
-      encoding: 'utf-8',
-      maxBuffer: 1024 * 1024 * 20,
-      shell: true,
-    });
-  } catch (e) {
-    return json(res, 500, { error: `sync:note が失敗しました: ${e.message}`, log: e.stdout || '' });
-  }
-
-  try {
-    const result = runGit(
-      ['data/note-links.json', 'data/note-magazines.json', 'data/note-hashtags.json'],
-      'Update note links',
-    );
-    return json(res, 200, {
-      ok: true,
-      message: result.changed ? '新着記事を公開しました。' : '新着記事はありませんでした。',
-      log: `${syncOutput}\n\n${result.log}`,
-    });
-  } catch (e) {
-    return json(res, 500, { error: `記事は取得しましたが git 操作に失敗しました: ${e.message}`, log: syncOutput });
-  }
-}
-
 function json(res, status, body) {
   const payload = JSON.stringify(body);
   res.writeHead(status, {
@@ -310,7 +279,6 @@ const server = createServer(async (req, res) => {
     if (req.method === 'POST' && req.url === '/api/titles') return await handleTitles(req, res);
     if (req.method === 'POST' && req.url === '/api/delete') return await handleDelete(req, res);
     if (req.method === 'POST' && req.url === '/api/move') return await handleMove(req, res);
-    if (req.method === 'POST' && req.url === '/api/sync-note') return await handleSyncNote(req, res);
     json(res, 404, { error: 'not found' });
   } catch (e) {
     json(res, 500, { error: e.message });

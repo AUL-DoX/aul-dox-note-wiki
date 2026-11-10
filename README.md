@@ -26,27 +26,18 @@ Windows環境でnpmスクリプトが動かない場合は `npm.cmd` を使っ�
 
 コマンドをコピペする際、`# コメント`の部分は含めないでください。cmd.exeは`#`をコメント記号として扱わないため、そのまま貼ると`npm error`になります。
 
-## 公開方法（新着記事の収集〜本番反映）
+## 公開方法（本番反映）
 
 一番簡単なのは `scripts\publish.cmd` をダブルクリック（またはターミナルから実行）することです。
-以下を自動で順番に実行し、新着があれば本番まで反映します。
+以下を自動で順番に実行し、変更があれば本番まで反映します。
 
-1. `npm run sync:note` — note.comから新着記事を収集（ローカルの`data/*.json`を更新するだけ、この時点ではまだ本番に反映されない）
-2. `npm run build` — ビルドエラーがないか確認
-3. `data/*.json` を `git add`
-4. 新着があれば `git commit` → `git push`（Vercelが自動ビルドして`ref.aul-dox.jp`に反映。数分かかる）
+1. `npm run build` — ビルドエラーがないか確認
+2. `src/content/analysis`（Reference分析記事）と `src/dashboards` 等（Dataコンテンツ）を `git add`
+3. 変更があれば `git commit` → `git push`（Vercelが自動ビルドして`ref.aul-dox.jp`に反映。数分かかる）
 
 実行中は「何かキーを押してください」と出るまで進行状況が表示されます。**この時点で処理はすでに完了しています**。キーを押すとウィンドウが閉じるだけで、それによって本番が止まったりすることはありません（`Ctrl+C`で中断する場面とは別物です）。
 
-手動でステップごとに実行したい場合は以下の通りです。
-
-```bash
-npm run sync:note   # ①収集（ローカルのみ更新）
-npm run build       # ②ビルド確認（任意）
-git add data/note-links.json data/note-magazines.json data/note-hashtags.json
-git commit -m "Update note links"
-git push             # ③本番反映
-```
+noteの記事は**サイトに取り込みません**。ヘッダーの「note」ボタンからnote本体へ移動するだけです（RSS収集は廃止）。
 
 ## Content
 
@@ -74,50 +65,31 @@ draft: false
 
 `draft: true` の記事は一覧と詳細ページに表示されません。
 
-## note Links
+## Reference（分析記事）
 
-note記事URL一覧を更新します。
+Referenceは、Dataで公開している統計・ダッシュボードの分析結果を読み解く記事（サマリ）を置く場所です。
+noteには載せず、`src/content/analysis/<スラッグ>.md` に追加すると `/reference/<スラッグ>/` で公開され、
+`/reference/` の一覧・タグ・カテゴリ・サイト内検索・sitemapに自動で反映されます。
 
-```bash
-npm run sync:note
+```md
+---
+title: "記事タイトル"
+description: "検索結果やSNSに出る説明文"
+category: "keiei"          # Dataのタブslug（kaigo / shogai / keiei）
+tags:
+  - 介護給付費等実態統計
+dataSlugs:                 # 元データ（src/dashboards/ からの相対パス）。複数可
+  - keiei/r8-kyufu-gappo-202607-dai1
+date: 2026-11-10
+draft: false
+---
+
+本文（タイトルは自動で表示されるので、本文先頭に # 見出しは書かない）
 ```
 
-`sync:note` はRSSの新着・更新記事を `data/note-links.json` にマージし、noteのマガジン・ハッシュタグ情報を取得し直し、wikiページごとの候補レポートを再生成します。
-
-個別に実行する場合:
-
-```bash
-npm run fetch:note
-npm run fetch:note:google
-npm run fetch:note-magazines
-npm run fetch:note-hashtags
-npm run suggest:note-links
-```
-
-- `fetch:note-magazines`: 自分のnoteマガジン一覧を取得し、マガジンごとのRSSから収録記事URLを `data/note-magazines.json` に保存します。**カテゴリはここで取得したマガジン名がそのまま使われます**（マガジンに入っていない記事は「未分類」になります）。新しいマガジンを作れば、次の`sync:note`で自動的に新カテゴリとして反映されます。
-- `fetch:note-hashtags`: 記事ごとに note.com の記事API (`/api/v3/notes/{key}`) からハッシュタグを取得し `data/note-hashtags.json` に保存します。**タグは記事に付けたハッシュタグがそのまま使われます**。197記事分を1件ずつ取得するため数十秒かかります。
-
-ブラウザで開いたGoogle検索結果をHTML保存した場合は、そのHTMLも取り込めます。
-
-```bash
-npm run fetch:note:google -- path/to/google-results.html
-```
-
-生成物:
-
-- `data/note-links.json`: RSSとGoogle site searchから取得した記事一覧
-- `reports/note-link-suggestions.md`: wikiページごとのリンク候補
-
-候補を確認して、採用するURLだけ各Markdownの `noteArticles` に転記します。
-サイト上では `/notes/` でRSS取得済みの記事一覧と紐づけ状態を確認できます。
-
-通常運用:
-
-1. `npm run sync:note`
-2. `reports/note-link-suggestions.md` を確認
-3. 採用する記事だけMarkdownの `noteArticles` に転記
-4. `npm run build`
-5. GitHubへpushしてVercelへ反映
+- **相互リンクは自動**：記事側に「この記事の元データ（Data）」、`dataSlugs` に指定したData側のページに「このデータを読み解く記事（Reference）」が出ます。リンクの手書きは不要です。
+- 記事を公開したら、トップの「最近の更新」用に `src/content/siteUpdates.ts` の先頭へ `type: 'Reference'` で1件足します。
+- 旧来の `src/content/wiki/`（Suite等の補足ページ）はそのまま使えます。`noteArticles` で個別のnote記事URLを手動で載せることもできます。
 
 ## データ分析（/data）
 

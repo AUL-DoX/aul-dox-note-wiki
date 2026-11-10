@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { getEntryUpdatedTime, getWikiPath, isPublicEntry } from '../content/wiki';
+import { getAnalysisEntries, getAnalysisPath } from '../content/analysis';
 
 const dashboardFiles = Object.keys(import.meta.glob('../dashboards/**/*.html'));
 const deepResearchFiles = Object.keys(import.meta.glob('../Deep-Research/**/*.html'));
@@ -45,7 +46,6 @@ export async function GET() {
 
   addUrl('/', today, '1.0');
   addUrl('/latest/', today, '0.6');
-  addUrl('/notes/', today, '0.5');
   addUrl('/reference/', today, '0.8');
   addUrl('/data/', today, '0.8');
   addUrl('/suite/', today, '0.7');
@@ -71,6 +71,10 @@ export async function GET() {
   for (const path of deepResearchFiles) {
     const slug = path.replace('../Deep-Research/', '').replace(/\.html$/, '');
     addUrl(`/reports/${slug}/`, today, '0.7');
+  }
+
+  for (const entry of await getAnalysisEntries()) {
+    addUrl(getAnalysisPath(entry), entry.data.updated ?? entry.data.date, '0.8');
   }
 
   for (const entry of wikiEntries) {

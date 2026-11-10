@@ -1,17 +1,12 @@
-import noteMagazines from '../../data/note-magazines.json';
+// Referenceのカテゴリ = Dataのタブ（data-categories.json）と同じ分類。
+// 分析記事の frontmatter `category` にタブのslug（kaigo / shogai / keiei）を書く。
+import { dataCategories } from '../data-categories';
 
-const magazineCategories = noteMagazines.magazines.map((magazine) => ({
-  title: magazine.title,
-  slug: magazine.key,
-  description: `noteマガジン「${magazine.title}」に収録された記事。`,
+export const categories = dataCategories.map((category) => ({
+  title: category.label,
+  slug: category.slug,
+  description: `${category.label}のデータ分析結果を読み解く記事。`,
 }));
-
-export const UNCATEGORIZED_SLUG = 'uncategorized';
-
-export const categories = [
-  ...magazineCategories,
-  { title: '未分類', slug: UNCATEGORIZED_SLUG, description: 'マガジンに含まれていない記事（古い記事、単発の記事など）。' },
-];
 
 export function getCategoryBySlug(slug: string) {
   return categories.find((category) => category.slug === slug);

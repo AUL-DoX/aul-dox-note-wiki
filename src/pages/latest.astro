@@ -3,11 +3,11 @@ import { getCollection } from 'astro:content';
 import WikiLayout from '../layouts/WikiLayout.astro';
 import WikiCard from '../components/WikiCard.astro';
 import { isPublicEntry, sortByUpdatedDesc } from '../content/wiki';
-import { getNoteIndexData } from '../content/noteIndex';
+import { getAnalysisIndexData } from '../content/analysis';
 
 const allEntries = await getCollection('wiki');
 const entries = sortByUpdatedDesc(allEntries.filter(isPublicEntry));
-const { categories, sortedTags } = await getNoteIndexData();
+const { categories, sortedTags } = await getAnalysisIndexData();
 const availableCategorySlugs = categories.map((category) => category.slug);
 const availableTags = sortedTags.map(([tag]) => tag);
 ---

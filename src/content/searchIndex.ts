@@ -1,4 +1,5 @@
-import { getNoteIndexData, getNoteCategories, getNoteTags } from './noteIndex';
+import { getAnalysisEntries, getAnalysisPath } from './analysis';
+import { getCategoryBySlug } from './categories';
 import { deepResearchTags, formatYearMonth, getCategoryLabel } from '../data-categories';
 import titleOverrides from '../data-titles.json';
 import { suiteTools } from '../suite-tools';
@@ -42,19 +43,18 @@ function deepResearchLabel(slug: string) {
 }
 
 export async function getSearchIndex(): Promise<SearchItem[]> {
-  const { allItems } = await getNoteIndexData();
+  const analysisEntries = await getAnalysisEntries();
 
-  const referenceItems: SearchItem[] = allItems.map((item) => {
-    const categories = getNoteCategories(item).join(' ');
-    const tags = getNoteTags(item).join(' ');
-    const description = item.description ?? '';
+  const referenceItems: SearchItem[] = analysisEntries.map((entry) => {
+    const category = getCategoryBySlug(entry.data.category)?.title ?? '';
+    const tags = entry.data.tags.join(' ');
     return {
       section: 'reference',
       sectionLabel: 'Reference',
-      title: item.title,
-      description,
-      href: item.url,
-      searchText: `${item.title} ${description} ${categories} ${tags}`,
+      title: entry.data.title,
+      description: entry.data.description,
+      href: getAnalysisPath(entry),
+      searchText: `${entry.data.title} ${entry.data.description} ${category} ${tags}`,
     };
   });
 

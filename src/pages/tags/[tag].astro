@@ -1,34 +1,34 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
-import NoteArticleList from '../../components/NoteArticleList.astro';
+import AnalysisList from '../../components/AnalysisList.astro';
 import WikiSidebar from '../../components/WikiSidebar.astro';
-import { getNoteIndexData, getNotePageItems, getNoteTags, getTotalNotePages } from '../../content/noteIndex';
+import { getAnalysisIndexData, getAnalysisPageItems, getTotalAnalysisPages } from '../../content/analysis';
 
 export async function getStaticPaths() {
-  const { sortedTags } = await getNoteIndexData();
+  const { sortedTags } = await getAnalysisIndexData();
   return sortedTags.map(([tag]) => ({ params: { tag }, props: { tag } }));
 }
 
 const { tag } = Astro.props;
-const { allItems, categories, categoryCounts, sortedTags } = await getNoteIndexData();
-const filteredItems = allItems.filter((item) => getNoteTags(item).includes(tag));
+const { allItems, categories, categoryCounts, sortedTags } = await getAnalysisIndexData();
+const filteredItems = allItems.filter((entry) => entry.data.tags.includes(tag));
 const currentPage = 1;
-const totalPages = getTotalNotePages(filteredItems);
-const pageItems = getNotePageItems(filteredItems, currentPage);
+const totalPages = getTotalAnalysisPages(filteredItems);
+const pageItems = getAnalysisPageItems(filteredItems, currentPage);
 ---
 
-<WikiLayout wide noindex title={`#${tag} | AUL DoX Reference`} description={`#${tag} に関連するnote記事一覧`}>
+<WikiLayout wide noindex title={`#${tag} | AUL DoX Reference`} description={`#${tag} の分析記事一覧`}>
   <section class="wiki-home-header">
     <div>
       <p class="eyebrow">Tag</p>
       <h1>#{tag}</h1>
-      <p>このタグに関連するnote記事を新しい順に表示しています。</p>
+      <p>このタグの分析記事を新しい順に表示しています。</p>
     </div>
   </section>
 
   <div class="wiki-shell">
     <WikiSidebar categories={categories} categoryCounts={categoryCounts} sortedTags={sortedTags} totalItems={allItems.length} />
-    <NoteArticleList
+    <AnalysisList
       items={pageItems}
       currentPage={currentPage}
       totalPages={totalPages}

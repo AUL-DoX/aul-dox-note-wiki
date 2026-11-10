@@ -14,6 +14,13 @@ export interface SiteUpdate {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    type: 'Reference',
+    date: '2026-11-10',
+    title: '介護予防サービス約104万人・約300億円の利用構造と費用配分（2026年7月審査分・第1表）',
+    description: '給付費等実態統計・月報の第1表を読み解く分析記事。元データのダッシュボードとあわせて確認できます。',
+    href: '/reference/r8-kyufu-202607-dai1/',
+  },
+  {
     type: 'Data',
     date: '2026-10-31',
     title: '給付費等実態統計・月報（令和8年7月審査分）27表',
