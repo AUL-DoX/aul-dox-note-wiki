@@ -21,7 +21,8 @@ export function getAnalysisTime(entry: AnalysisEntry) {
 }
 
 export async function getAnalysisEntries() {
-  const entries = (await getCollection('analysis')).filter((entry) => entry.data.draft !== true);
+  // 下書き（draft: true）は本番ビルドには出さない。ローカルの npm run dev では確認用に表示する。
+  const entries = (await getCollection('analysis')).filter((entry) => import.meta.env.DEV || entry.data.draft !== true);
   return entries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime() || a.data.title.localeCompare(b.data.title, 'ja'));
 }
 

@@ -52,9 +52,10 @@ let previousYear: number | null = null;
                 {entry.data.dataSlugs.length > 0 && (
                   <div class="linked-pages">
                     <span>元データ</span>
-                    {entry.data.dataSlugs.map((slug) => (
+                    {entry.data.dataSlugs.slice(0, 3).map((slug) => (
                       <a href={`/data/${slug}/`}>{slug.split('/').pop()}</a>
                     ))}
+                    {entry.data.dataSlugs.length > 3 && <span>ほか{entry.data.dataSlugs.length - 3}表</span>}
                   </div>
                 )}
               </div>

@@ -15,6 +15,13 @@ export interface SiteUpdate {
 export const siteUpdates: SiteUpdate[] = [
   {
     type: 'Reference',
+    date: '2026-11-11',
+    title: '介護の認定率は、人口で揃えると大阪府が最多：令和6年度・都道府県別の地域差',
+    description: '介護保険事業状況報告（令和6年度・都道府県別）108表を、第1号被保険者1,000人あたりで読み直しました。',
+    href: '/reference/r6-kaigo-todofuken-hub/',
+  },
+  {
+    type: 'Reference',
     date: '2026-11-10',
     title: '介護予防サービス約104万人・約300億円の利用構造と費用配分（2026年7月審査分・第1表）',
     description: '給付費等実態統計・月報の第1表を読み解く分析記事。元データのダッシュボードとあわせて確認できます。',

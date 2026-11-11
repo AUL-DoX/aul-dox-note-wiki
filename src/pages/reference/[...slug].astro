@@ -54,11 +54,23 @@ const jsonLd = [
       dataLinks.length > 0 && (
         <aside class="data-link-box" aria-labelledby="data-link-heading">
           <h2 id="data-link-heading">この記事の元データ（Data）</h2>
-          <ul>
-            {dataLinks.map((link) => (
-              <li><a href={link.href}>{link.title}</a></li>
-            ))}
-          </ul>
+          {dataLinks.length > 12 ? (
+            // 多数の表を束ねるハブ記事は、リンクを折りたたむ（本文の冒頭が押し下げられないように）。
+            <details>
+              <summary>{dataLinks.length}表の一覧を開く</summary>
+              <ul>
+                {dataLinks.map((link) => (
+                  <li><a href={link.href}>{link.title}</a></li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <ul>
+              {dataLinks.map((link) => (
+                <li><a href={link.href}>{link.title}</a></li>
+              ))}
+            </ul>
+          )}
         </aside>
       )
     }

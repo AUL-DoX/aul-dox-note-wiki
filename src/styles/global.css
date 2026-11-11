@@ -693,6 +693,33 @@ h3 {
   font-weight: 700;
 }
 
+.prose table {
+  width: 100%;
+  margin: 18px 0;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose :where(th, td) {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  background: var(--soft);
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 .prose :where(code) {
   border-radius: 6px;
   background: var(--soft);
