@@ -14,31 +14,35 @@
 Dataの分析結果を読み解くサマリ記事は、noteではなくReferenceに置く。
 note記事のRSS収集は廃止した（ヘッダーの「note」ボタンからnote本体へ移動するだけ）。
 
-1. `src/content/analysis/<スラッグ>.md` を作る（スラッグは英数字・ハイフン推奨。URLは `/reference/<スラッグ>/`）
-2. frontmatterを書く（`category` はDataのタブslug、`dataSlugs` は元データのスラッグ）
+### 記事の種類とテンプレート
 
-```md
----
-title: "記事タイトル"
-description: "検索結果やSNSに出る説明文"
-category: "keiei"
-tags:
-  - 介護給付費等実態統計
-dataSlugs:
-  - keiei/r8-kyufu-gappo-202607-dai1
-date: 2026-11-10
-draft: false
----
+| 種類 | テンプレート | 使いどき |
+|---|---|---|
+| 単表の分析記事 | `templates/analysis-single.md` | 1つの表（または数表）の数字を読み解く。例：月報第1表 |
+| ハブ記事 | `templates/analysis-hub.md` | 多数の表を束ねて、「この統計から何が言えるか」を示す。例：令和6年度・都道府県別の108表 |
 
-本文（本文先頭に # 見出しは書かない。タイトルは自動表示される）
-```
+どちらも、冒頭3行の結論 → 扱う統計（出典・期間・単位）→ 本文 → 現場でどう使うか → 読むときの注意 → 出典、の順。
+表のページ（Data）は「数値を確認する場所」、記事（Reference）は「意味を読む場所」と役割を分ける。
 
+### 手順
+
+1. テンプレートを `src/content/analysis/<スラッグ>.md` にコピーする（スラッグは英数字・ハイフン推奨。URLは `/reference/<スラッグ>/`）
+2. 【…】の部分をすべて書き換える。`category` はDataのタブslug、`dataSlugs` は元データのスラッグ。
+   書き終わるまでは `draft: true` のままにする（本番には出ず、`npm run dev` でだけ見える）
 3. `npm run dev` で `http://localhost:4321/reference/<スラッグ>/` と、元データ側 `/data/<dataSlugs>/` の「このデータを読み解く記事」を確認
-4. `src/content/siteUpdates.ts` の配列の先頭に `type: 'Reference'` で1件足す（トップの「最近の更新」用）
+4. `draft: false` にする
 5. `scripts\publish.cmd` を実行（ビルド確認 → `src/content/analysis` 等をstage・commit・push）
 
-`dataSlugs` に書いたスラッグが実在しないと、記事側にはリンクが出ない。`/reference/` の一覧には、
-新しい順に自動で載る（タグ・カテゴリ別の一覧、サイト内検索、sitemapも自動）。
+- 【…】が残ったまま `draft: false` にすると、ビルドが止まる（公開されない）。
+- `dataSlugs` に書いたスラッグが実在しないと、記事側にはリンクが出ない。
+- 日付（`date`）は記事の公開日。トップの「最近の更新」、`/reference/` の一覧、タグ別の一覧、サイト内検索、sitemapには、
+  すべて自動で載る（`siteUpdates.ts` に足す必要はない）。
+- 多数の表を束ねる記事では、`dataSlugs` の一覧をコマンドで作れる（ハブ記事のテンプレートに例がある）。
+
+### noteとの関係
+
+データの分析記事は本サイトで公開する。noteの記事からは、本サイトの記事のURLを貼って案内する
+（現場の視点の短い読み物 → 本サイトの分析記事、という流れ）。
 
 ---
 
@@ -110,6 +114,12 @@ src/reports/
 `/data`ページでは「経営の見える化（ダッシュボード）」「介護分野」「障がい分野」の3タブに分かれ、
 介護・障がい分野は年月プルダウンで絞り込める。ファイルを正しいカテゴリ／年月フォルダに置けば、
 タブ・プルダウンへの反映は自動。
+
+### トップの「最近の更新」に出したいとき（Data・Suite）
+
+ダッシュボードやSuiteの追加は自動では載らない。トップに出したい場合だけ、`src/content/siteUpdates.ts` の配列の先頭に
+1件足す（`type: 'Data'` など。分類で絞り込んだURL `/data/keiei/?group=<分類>` を `href` にすると見やすい）。
+Reference（分析記事）は、記事の `date` から自動で載る。
 
 ### 共通の注意点
 

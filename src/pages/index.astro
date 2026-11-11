@@ -8,7 +8,7 @@ const areas = [
   { name: 'Suite', href: '/suite/', description: 'AUL DoXが開発したツールやプロトタイプを見る' },
 ];
 
-const latestItems = getLatestSiteUpdates(6);
+const latestItems = await getLatestSiteUpdates(6);
 ---
 <WikiLayout wide home title="AUL DoX | 医療・介護・障がい福祉のデータ分析・AI・業務ツール" description="AUL DoXは、医療・介護・障がい福祉を中心に、データ分析やAI・業務ツールを設計・開発するAIアーキテクトです。Reference・Data・Suiteから知識、分析、開発実績をご覧いただけます。">
   <section class="home-directory" aria-labelledby="home-title">

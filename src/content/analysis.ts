@@ -22,7 +22,15 @@ export function getAnalysisTime(entry: AnalysisEntry) {
 
 export async function getAnalysisEntries() {
   // 下書き（draft: true）は本番ビルドには出さない。ローカルの npm run dev では確認用に表示する。
-  const entries = (await getCollection('analysis')).filter((entry) => import.meta.env.DEV || entry.data.draft !== true);
+  const all = await getCollection('analysis');
+  // テンプレート（templates/）の【…】が残ったまま公開しようとしたら、ビルドを止める。
+  const unfinished = all.filter(
+    (entry) => entry.data.draft !== true && /【/.test(`${entry.data.title}${entry.data.description}${entry.body ?? ''}`),
+  );
+  if (unfinished.length > 0 && !import.meta.env.DEV) {
+    throw new Error(`テンプレートの【…】が残っています（公開前に書き換える）: ${unfinished.map((e) => e.id).join(', ')}`);
+  }
+  const entries = all.filter((entry) => import.meta.env.DEV || entry.data.draft !== true);
   return entries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime() || a.data.title.localeCompare(b.data.title, 'ja'));
 }
 

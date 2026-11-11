@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 import { getEntryUpdatedTime, getWikiPath, isPublicEntry } from '../content/wiki';
 import { getAnalysisEntries, getAnalysisPath } from '../content/analysis';
 import { getDashboardDate } from '../dashboard-seo';
-import { siteUpdates } from '../content/siteUpdates';
+import { getAllSiteUpdates } from '../content/siteUpdates';
 
 // ダッシュボードは本文末尾の「生成日時」を lastmod に使う（getDashboardDate）。
 const dashboardFiles = import.meta.glob('../dashboards/**/*.html', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
@@ -48,6 +48,7 @@ export async function GET() {
   };
 
   const analysisEntries = await getAnalysisEntries();
+  const siteUpdates = await getAllSiteUpdates();
   const latestOf = (dates: (Date | string | null | undefined)[]) =>
     dates.filter((d): d is Date | string => Boolean(d)).map((d) => formatDate(d)).sort().at(-1) ?? null;
   const updatesOf = (type: string) => latestOf(siteUpdates.filter((u) => u.type === type).map((u) => u.date));

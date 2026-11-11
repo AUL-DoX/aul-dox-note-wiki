@@ -1,8 +1,11 @@
 // トップページ「最近の更新」の元データ。自サイト内（Data・Suite・Referenceなど）の更新だけを載せる。
-// 新しい更新を公開したら、配列の先頭に1件足す。トップには新しい順に先頭から6件が出る。
-//   type  : 'Data' | 'Suite' | 'Reference' | 'Deep Research'
+// Reference（分析記事）は src/content/analysis/ の記事の date から自動で入るので、ここには書かない。
+// Data・Suiteなど、記事以外の更新は、公開したら配列の先頭に1件足す。トップには新しい順に6件が出る。
+//   type  : 'Data' | 'Suite' | 'Deep Research'（'Reference' は自動）
 //   date  : 公開日（YYYY-MM-DD）
 //   href  : サイト内のURL（Dataの分類は /data/<タブ>/?group=<分類> で絞り込んだ状態にできる）
+
+import { getAnalysisEntries, getAnalysisPath } from './analysis';
 
 export interface SiteUpdate {
   type: 'Data' | 'Suite' | 'Reference' | 'Deep Research';
@@ -13,20 +16,6 @@ export interface SiteUpdate {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-  {
-    type: 'Reference',
-    date: '2026-11-11',
-    title: '介護の認定率は、人口で揃えると大阪府が最多：令和6年度・都道府県別の地域差',
-    description: '介護保険事業状況報告（令和6年度・都道府県別）108表を、第1号被保険者1,000人あたりで読み直しました。',
-    href: '/reference/r6-kaigo-todofuken-hub/',
-  },
-  {
-    type: 'Reference',
-    date: '2026-11-10',
-    title: '介護予防サービス約104万人・約300億円の利用構造と費用配分（2026年7月審査分・第1表）',
-    description: '給付費等実態統計・月報の第1表を読み解く分析記事。元データのダッシュボードとあわせて確認できます。',
-    href: '/reference/r8-kyufu-202607-dai1/',
-  },
   {
     type: 'Data',
     date: '2026-10-31',
@@ -71,9 +60,22 @@ export const siteUpdates: SiteUpdate[] = [
   },
 ];
 
-export function getLatestSiteUpdates(limit = 6) {
-  return [...siteUpdates]
-    .sort((a, b) => b.date.localeCompare(a.date))
+const clip = (text: string, max: number) => (text.length <= max ? text : `${text.slice(0, max - 1).replace(/[、。\s]+$/u, '')}…`);
+
+// 手動の更新（上の配列）と、Reference の分析記事（自動）を合わせた全件。新しい順。
+export async function getAllSiteUpdates(): Promise<SiteUpdate[]> {
+  const articles: SiteUpdate[] = (await getAnalysisEntries()).map((entry) => ({
+    type: 'Reference',
+    date: entry.data.date.toISOString().slice(0, 10),
+    title: entry.data.title,
+    description: clip(entry.data.description, 90),
+    href: getAnalysisPath(entry),
+  }));
+  return [...siteUpdates, ...articles].sort((a, b) => b.date.localeCompare(a.date));
+}
+
+export async function getLatestSiteUpdates(limit = 6) {
+  return (await getAllSiteUpdates())
     .slice(0, limit)
     .map((item) => ({ ...item, dateLabel: item.date.replaceAll('-', '.') }));
 }
