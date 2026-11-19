@@ -31,7 +31,10 @@ export async function getAnalysisEntries() {
     throw new Error(`テンプレートの【…】が残っています（公開前に書き換える）: ${unfinished.map((e) => e.id).join(', ')}`);
   }
   const entries = all.filter((entry) => import.meta.env.DEV || entry.data.draft !== true);
-  return entries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime() || a.data.title.localeCompare(b.data.title, 'ja'));
+  // 同じ公開日の記事は、スラッグの数字が大きい順（第10表 → 第2表 のように後の表が上）に並べる。
+  return entries.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime() || b.id.localeCompare(a.id, 'ja', { numeric: true }),
+  );
 }
 
 export async function getAnalysisIndexData() {
